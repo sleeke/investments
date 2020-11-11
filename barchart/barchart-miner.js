@@ -1,21 +1,6 @@
 // Mining BarChart.com for values
 // To imput into google sheets
 
-// Runtime
-
-// const rp = require('request-promise');
-// const $ = require('cheerio');
-// const barchartURL = 'https://www.barchart.com/stocks/quotes/WST';
-
-// rp(barchartURL)
-//   .then(function(html){
-//     //success!
-//     console.log($('title', html));
-//   })
-//   .catch(function(err){
-//     //handle error
-//   });
-
 // Formatters
 
 function getValuesFormattedForSheet() {
@@ -45,6 +30,10 @@ function getFundamentalAnalysisFormula() {
   var targetPriceSales = 1.56;
   var targetPriceBook = 2.82;
   var targetPriceCashflow = 20;
+
+  if (!isStock()) {
+    return "--";
+  }
 
   var output = "=";
 
@@ -77,6 +66,10 @@ function getOffsetFormula(columns) {
 }
 
 function getPriceSalesFormula() {
+  if (!isStock()) {
+    return "--";
+  }
+  
   return "=" + getCurrentValue() + "/(" + getSales() + "/" + getShares() + ")";
 }
 
@@ -88,28 +81,48 @@ function getCurrentValue() {
 }
 
 function getShares() {
+  if (!isStock()) {
+    return "--";
+  }
+
   var unsanitized = getTopHalfRows().childNodes[3].childNodes[3].innerText;
   unsanitized += "000";
   return sanitize(unsanitized);
 }
 
 function getSales() {
+  if (!isStock()) {
+    return "--";
+  }
+
   var unsanitized = getTopHalfRows().childNodes[5].childNodes[3].innerText;
   return sanitize(unsanitized);
 }
 
 function getPriceCashFlow() {
+  if (!isStock()) {
+    return "--";
+  }
+
   var unsanitized = getTopHalfRows().childNodes[13].childNodes[3].innerText;
   return sanitize(unsanitized);
 }
 
 function getPriceBook() {
+  if (!isStock()) {
+    return "--";
+  }
+
   var unsanitized = getTopHalfRows().childNodes[15].childNodes[3].innerText;
   return sanitize(unsanitized);
 }
 
 function getPriceEarnings() {
-  var unsanitized = getBottomHalfRows().childNodes[1].childNodes[3].innerText;
+  if (!isStock()) {
+    return "--";
+  }
+
+var unsanitized = getBottomHalfRows().childNodes[1].childNodes[3].innerText;
   return sanitize(unsanitized);
 }
 
@@ -127,8 +140,12 @@ function get3mLow() {
 
 // Block finders
 
+function getBarchartContentBlock() {
+  return document.getElementsByClassName("barchart-content-block");
+}
+
 function getFundamentals() {
-  var barchartContentBlock = document.getElementsByClassName("barchart-content-block");
+  var barchartContentBlock = getBarchartContentBlock();
   var blockContent = barchartContentBlock[0].getElementsByClassName("block-content");
 
   return blockContent;
@@ -173,4 +190,9 @@ function sanitize(unsanitized) {
 
   sanitized = sanitized.replace(/,/g, "");
   return sanitized;
+}
+
+function isStock() {
+  var barchartContentBlock = getBarchartContentBlock();
+  return barchartContentBlock[0].innerText.startsWith("Fundamentals")
 }
