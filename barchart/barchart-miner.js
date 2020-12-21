@@ -122,19 +122,33 @@ function getPriceEarnings() {
     return "--";
   }
 
-var unsanitized = getBottomHalfRows().childNodes[1].childNodes[3].innerText;
+  var unsanitized = getBottomHalfRows().childNodes[1].childNodes[3].innerText;
   return sanitize(unsanitized);
 }
 
 function get52wHigh() {
-  return sanitize(getHighValue(2));
+  var high = getHighValue(2);
+  if (high == null) {
+    return sanitize(get3mHigh());
+  }
+
+  return sanitize(high);
 }
 
 function get3mHigh() {
+  var high = getHighValue(1);
+  if (high == null) {
+    return sanitize(getHighValue(0));
+  }
+
   return sanitize(getHighValue(1));
 }
 
 function get3mLow() {
+  var low = getLowValue(1);
+  if (low == null) {
+    return sanitize(getLowValue(0));
+  }
   return sanitize(getLowValue(1));
 }
 
@@ -164,11 +178,19 @@ function getPerformanceTable() {
 }
 
 function getLowValue(period) {
-  return getPerformanceTable().getElementsByClassName("cell-period-low")[period+1].getElementsByClassName("price")[0].childNodes[1].innerText;
+  var element = getPerformanceTable().getElementsByClassName("cell-period-low")[period+1];  // Since the first instance is the header
+  if (typeof element == 'undefined') {
+    return null;
+  }
+  return element.getElementsByClassName("price")[0].childNodes[1].innerText;
 }
 
 function getHighValue(period) {
-  return getPerformanceTable().getElementsByClassName("cell-period-high")[period+1].getElementsByClassName("price")[0].childNodes[1].innerText;
+  var element = getPerformanceTable().getElementsByClassName("cell-period-high")[period+1];  // Since the first instance is the header
+  if (typeof element == 'undefined') {
+    return null;
+  }
+  return element.getElementsByClassName("price")[0].childNodes[1].innerText;
 }
 
 // Utils
