@@ -1,0 +1,16 @@
+{
+  "name": "bargainhunt",
+  "version": "0.0.1",
+  "description": "Find me a bargain",
+  "main": "networkService.js",
+  "dependencies": {
+    "alpha_vantage_api_wrapper": "^0.1.1",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Selwyn Leeke",
+  "license": "ISC"
+}
