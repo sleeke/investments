@@ -1,3 +1,5 @@
+// Local modules
+const analysis = require('./analysis');
 const fileService = require('./fileService');
 const networkService = require('./networkService');
 
@@ -7,7 +9,9 @@ fileService.symbols((symbols) => {
   }
   else {
     for (var symbolIndex = 0; symbolIndex < symbols.length; symbolIndex++) {
-      networkService.momentumForSymbol(symbols[symbolIndex])
+      networkService.timeSeriesDaily(symbols[symbolIndex], (symbol, timeSeriesDaily) => {
+        analysis.analyze(symbol, timeSeriesDaily)
+      })
     }
   }
 })
