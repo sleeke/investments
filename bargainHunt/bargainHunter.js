@@ -2,6 +2,7 @@
 const analysis = require('./analysis');
 const fileService = require('./storage/fileService');
 const networkService = require('./network/networkFacade');
+const utils = require('./utils');
 
 var symbolIndex = 0
 var globalSymbols
@@ -17,25 +18,30 @@ fileService.symbols((symbols) => {
 })
 
 function analyze(symbol) {
-  quote(symbol)
-
-  // networkService.timeSeriesDaily(symbol, (symbol, timeSeriesDaily) => {
-  //   analysis.analyze(symbol, timeSeriesDaily)
-  //   quote(symbol)
-  // })
+  networkService.daily(symbol, (symbol, dailyData) => {
+    analysis.analyze(symbol, dailyData)
+    quote(symbol)
+  })
 }
 
 function quote(symbol) {
   networkService.quote(symbol, (quotePackage) => {
     analysis.current(symbol, quotePackage)
 
-    // symbolIndex++
-    // if (symbolIndex < globalSymbols.length) {
-    //   nextSymbol()
-    // }
+    symbolIndex++
+    if (symbolIndex < globalSymbols.length) {
+      nextSymbol()
+    }
   })
 }
 
 function nextSymbol() {
-  analyze(globalSymbols[symbolIndex])
+
+  var symbol = globalSymbols[symbolIndex]
+  console.log('\n')
+  console.log(utils.stringOfChars('=', symbol.length))
+  console.log(symbol)
+  console.log(utils.stringOfChars('=', symbol.length))
+
+  analyze(symbol)
 }

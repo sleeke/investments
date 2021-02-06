@@ -10,9 +10,6 @@ const debugMomentum = false
 // Exports
 
 module.exports.analyze = function(symbol, dailyTimeSeries) {
-  console.log(symbol)
-  console.log(utils.stringOfChars('=', symbol.length))
-
   if (typeof dailyTimeSeries === 'undefined') {
     console.log(`Error getting DailyTimeSeries for ${symbol}`)
   }
@@ -27,12 +24,12 @@ module.exports.analyze = function(symbol, dailyTimeSeries) {
 
 function momentum(array) {
 
-  var previousClose = array[0][closeKey]
+  var previousClose = array[0]['close']
   var momentum = {
     streak: 0,
     magnitude: -1,
     lastClose: previousClose,
-    firstLow: array[0][lowKey]
+    firstLow: array[0]['low']
   }
 
   for (index = 1; index < array.length; index++) {
@@ -40,12 +37,12 @@ function momentum(array) {
       outputDailyStats(array[index])
     }
 
-    var newClose = array[index][closeKey]
+    var newClose = array[index]['close']
 
     if (newClose < previousClose) {
       // Contiguous momentum found
       previousClose = newClose
-      momentum.firstLow = array[index][lowKey]
+      momentum.firstLow = array[index]['low']
       
       momentum.streak = momentum.streak + 1
     }
@@ -77,7 +74,7 @@ function greenDays(dailyStats) {
 
   var greenStreak = 0
   for (index = 0; index < array.length; index++) {
-    if (array[index][closeKey] > array[index][openKey]) {
+    if (array[index]['close'] > array[index]['open']) {
       greenStreak++
     }
     else {
