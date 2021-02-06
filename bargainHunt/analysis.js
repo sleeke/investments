@@ -1,13 +1,7 @@
 // Local modules
 
+const { quote } = require('./network/networkService');
 const utils = require('./utils');
-
-// Model 
-
-const openKey = '1. open'
-const highKey = '2. high'
-const lowKey = '3. low'
-const closeKey = '4. close'
 
 // Debug flags
 
@@ -19,9 +13,14 @@ module.exports.analyze = function(symbol, dailyTimeSeries) {
   console.log(symbol)
   console.log(utils.stringOfChars('=', symbol.length))
 
-  var dailyData = dailyTimeSeriesToArray(dailyTimeSeries)
-  greenDays(dailyData)
-  momentum(dailyData)
+  if (typeof dailyTimeSeries === 'undefined') {
+    console.log(`Error getting DailyTimeSeries for ${symbol}`)
+  }
+  else {
+    var dailyData = dailyTimeSeriesToArray(dailyTimeSeries)
+    greenDays(dailyData)
+    momentum(dailyData)
+  }
 }
 
 // Analysis
@@ -89,6 +88,24 @@ function greenDays(dailyStats) {
   console.log(`Green days: ${greenStreak}`)
 }
 
+module.exports.current = function(symbol, quoteData) {
+  if (typeof quoteData === 'undefined') {
+    console.log(`Error getting quoteData for ${symbol}`)
+  }
+  else {
+    outputDailyStats(quoteData)
+  }
+}
+
+// Utils
+
 function outputDailyStats(dayStats) {
-  console.log(dayStats)
+  var dayRange = dayStats['high'] - dayStats['low']
+  var dayPosition = (dayStats['price'] - dayStats['low']) / dayRange
+  var formattedDayPosition = new Intl.NumberFormat('en-IN', { minimumFractionDigits: 1 }).format(dayPosition)
+
+  console.log('Current status:')
+  console.log(`Price: ${dayStats['price']}`)
+  console.log(`Day position: ${formattedDayPosition}%`)
+  console.log(`Change: ${dayStats['changePercent']}`)
 }

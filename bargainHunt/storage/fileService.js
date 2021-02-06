@@ -3,10 +3,10 @@ const { Console } = require("console");
 var fs = require("fs");
 
 // Local modules
-const utils = require('./utils');
+const utils = require('../utils');
 
 module.exports.symbols = function (callback) {
-  getFileData("symbols.txt", (data) => {
+  getFileData("storage/symbols.txt", (data) => {
     symbolsFromFileData (data, callback)
   })
 }
