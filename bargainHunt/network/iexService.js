@@ -6,7 +6,8 @@ const network = require('./networkService')
 
 // Constants
 
-var serviceUrl = 'https://sandbox.iexapis.com/stable/stock/'
+var serviceUrlSandbox = 'https://sandbox.iexapis.com/stable/stock/'
+var serviceUrl = 'https://cloud.iexapis.com/stable/stock/'
 
 // =======
 // Methods
@@ -41,8 +42,6 @@ module.exports.quote = function(symbol, callback) {
 
 // Daily
 
-// https://sandbox.iexapis.com/stable/stock/VXRT/chart?token=Tsk_29905f8777324e63926f8c5ff94a0d4c
-
 module.exports.daily = function (symbol, callback) {
   var dailyUrl = serviceUrl + translateSymbol(symbol) + '/chart'
 
@@ -56,7 +55,7 @@ module.exports.daily = function (symbol, callback) {
     var dailyPackage = []
     for (dayIndex = dailyArray.length - 1; dayIndex >= 0 ; dayIndex--) {
       var day = dailyArray[dayIndex]
-      dailyPackage[dayIndex] = {
+      dailyPackage[dailyArray.length - dayIndex] = {
         open: day['open'],
         high: day['high'],
         low: day['low'],

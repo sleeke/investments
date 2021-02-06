@@ -39,9 +39,9 @@ function nextSymbol() {
 
   var symbol = globalSymbols[symbolIndex]
   console.log('\n')
-  console.log(utils.stringOfChars('=', symbol.length))
-  console.log(symbol)
-  console.log(utils.stringOfChars('=', symbol.length))
+  console.log(utils.info(utils.stringOfChars('=', symbol.length)))
+  console.log(utils.info(symbol))
+  console.log(utils.info(utils.stringOfChars('=', symbol.length)))
 
   analyze(symbol)
 }

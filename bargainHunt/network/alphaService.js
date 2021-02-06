@@ -52,7 +52,7 @@ module.exports.daily = function (symbol, callback) {
   var parameters = {
     function:'TIME_SERIES_DAILY', 
     symbol:symbol,
-    apikey: secrets.apikey  
+    apikey: secrets.alphaApikey  
   }
 
   network.query(serviceUrl, parameters, (json) => {

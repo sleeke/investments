@@ -6,6 +6,7 @@ const utils = require('./utils');
 // Debug flags
 
 const debugMomentum = false
+const debugGreenDays = false
 
 // Exports
 
@@ -34,7 +35,8 @@ function momentum(array) {
 
   for (index = 1; index < array.length; index++) {
     if (debugMomentum) {
-      outputDailyStats(array[index])
+      console.log(`Today - ${index}`)
+      console.log(array[index])
     }
 
     var newClose = array[index]['close']
@@ -53,8 +55,8 @@ function momentum(array) {
       var formattedMax = new Intl.NumberFormat('en-IN', { minimumFractionDigits: 3 }).format(momentum.lastClose)
       var formattedMag = new Intl.NumberFormat('en-IN', { minimumFractionDigits: 3 }).format(momentum.magnitude)
       
-      console.log(`Streak: ${momentum.streak} day(s)`)
-      console.log(`Magnitude: ${formattedMag}% (${formattedMin} - ${formattedMax})`)
+      console.log(colorizeString(momentum.streak, `Streak: ${momentum.streak} day(s)`))
+      console.log(colorizeString(momentum.magnitude - 10, `Magnitude: ${formattedMag}% (${formattedMin} - ${formattedMax})`))
       
       break
     }
@@ -74,6 +76,11 @@ function greenDays(dailyStats) {
 
   var greenStreak = 0
   for (index = 0; index < array.length; index++) {
+    if (debugGreenDays) {
+      console.log(`Today - ${index}`)
+      console.log(array[index])
+    }
+
     if (array[index]['close'] > array[index]['open']) {
       greenStreak++
     }
@@ -82,7 +89,7 @@ function greenDays(dailyStats) {
     }
   }
 
-  console.log(`Green days: ${greenStreak}`)
+  console.log(colorizeString(greenStreak, `Green days: ${greenStreak}`))
 }
 
 module.exports.current = function(symbol, quoteData) {
@@ -94,15 +101,26 @@ module.exports.current = function(symbol, quoteData) {
   }
 }
 
-// Utils
-
 function outputDailyStats(dayStats) {
   var dayRange = dayStats['high'] - dayStats['low']
   var dayPosition = (dayStats['price'] - dayStats['low']) / dayRange
   var formattedDayPosition = new Intl.NumberFormat('en-IN', { minimumFractionDigits: 1 }).format(dayPosition)
+  var formattedChangePercent = new Intl.NumberFormat('en-IN', { minimumFractionDigits: 1 }).format(dayStats['changePercent'])
 
-  console.log('Current status:')
+  console.log(utils.info('\nCurrent status:'))
   console.log(`Price: ${dayStats['price']}`)
-  console.log(`Day position: ${formattedDayPosition}%`)
-  console.log(`Change: ${dayStats['changePercent']}`)
+  console.log(colorizeString(dayPosition, `Day position: ${formattedDayPosition}%`))
+  console.log(colorizeString(dayStats['changePercent'], `Change: ${formattedChangePercent}%`))
 }
+
+function colorizeString(value, string) {
+  if (value > 0) {
+    string = utils.textColor.FgGreen + string + utils.textColor.Reset
+  }
+  else {
+    string = utils.textColor.FgRed + string + utils.textColor.Reset
+  }
+
+  return string
+}
+
