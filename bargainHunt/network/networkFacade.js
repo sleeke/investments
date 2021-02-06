@@ -1,4 +1,4 @@
-const networkImp = require('./alphaService');
+const networkImp = require('./iexService');
 
 module.exports.quote = function(symbol, callback) {
   networkImp.quote(symbol, callback)

@@ -18,7 +18,7 @@ module.exports.quote = function(symbol, callback) {
   var parameters = {
     function:'GLOBAL_QUOTE', 
     symbol:symbol,
-    apikey: secrets.apikey  
+    apikey: secrets.alphaApikey  
   }
 
   network.query(serviceUrl, parameters, (json) => {
