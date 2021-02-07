@@ -18,36 +18,29 @@ fileService.symbols((symbols) => {
 })
 
 function analyze(symbol) {
-  networkService.daily(symbol)
-  // .then(console.log)
-  .then(analysis.analyze)
-  .then(quote(symbol))
-    // .then(nextSymbol)
-}
-
-function quote(symbol) {
-  networkService.quote(symbol, (quotePackage) => {
-    analysis.current(symbol, quotePackage)
-
-    symbolIndex++
-    if (symbolIndex < globalSymbols.length) {
-      nextSymbol()
-    }
-  }, () => {
-    symbolIndex++
-    if (symbolIndex < globalSymbols.length) {
-      nextSymbol()
-    }
-  })
-}
-
-function nextSymbol() {
-
-  var symbol = globalSymbols[symbolIndex]
   console.log('\n')
   console.log(utils.info(utils.stringOfChars('=', symbol.length)))
   console.log(utils.info(symbol))
   console.log(utils.info(utils.stringOfChars('=', symbol.length)))
 
+  networkService.daily(symbol)
+  .then(analysis.analyze)
+  .then(quote(symbol))
+  .then(nextSymbol)
+}
+
+function quote(symbol) {
+  return networkService.quote(symbol)
+    .then(analysis.current)
+}
+
+function nextSymbol() {
+  symbolIndex++
+  
+  if (symbolIndex >= globalSymbols.length) {
+    return
+  }
+
+  var symbol = globalSymbols[symbolIndex]
   analyze(symbol)
 }

@@ -53,3 +53,5 @@ module.exports.error = function(string) {
 module.exports.warn = function(string) {
   return (this.textColor.FgYellow + string + this.textColor.Reset)
 }
+
+module.exports.debugMode = true

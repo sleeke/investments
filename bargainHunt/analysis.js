@@ -54,8 +54,8 @@ function momentum(array) {
       var formattedMax = new Intl.NumberFormat('en-IN', { minimumFractionDigits: 3 }).format(momentum.lastClose)
       var formattedMag = new Intl.NumberFormat('en-IN', { minimumFractionDigits: 3 }).format(momentum.magnitude)
       
-      console.log(colorizeString(momentum.streak, `Streak: ${momentum.streak} day(s)`))
-      console.log(colorizeString(momentum.magnitude - 10, `Magnitude: ${formattedMag}% (${formattedMin} - ${formattedMax})`))
+      console.log(colorizeString(0, 0, momentum.streak, `Streak: ${momentum.streak} day(s)`))
+      console.log(colorizeString(3, 5, momentum.magnitude, `Magnitude: ${formattedMag}% (${formattedMin} - ${formattedMax})`))
       
       break
     }
@@ -88,12 +88,12 @@ function greenDays(dailyStats) {
     }
   }
 
-  console.log(colorizeString(greenStreak, `Green days: ${greenStreak}`))
+  console.log(colorizeString(0, 0, greenStreak, `Green days: ${greenStreak}`))
 }
 
-module.exports.current = function(symbol, quoteData) {
+module.exports.current = function(quoteData) {
   if (typeof quoteData === 'undefined') {
-    console.log(`Error getting quoteData for ${symbol}`)
+    console.log(`Error getting quoteData`)
   }
   else {
     outputDailyStats(quoteData)
@@ -109,14 +109,14 @@ function outputDailyStats(dayStats) {
   console.log(utils.info('\nCurrent status:'))
   console.log(`Price: ${dayStats['price']}`)
   console.log(`Day position: ${formattedDayPosition}%`)
-  console.log(colorizeString(dayStats['changePercent'], `Change: ${formattedChangePercent}%`))
+  console.log(colorizeString(0, 0, dayStats['changePercent'], `Change: ${formattedChangePercent}%`))
 }
 
-function colorizeString(value, string) {
-  if (value > 0) {
+function colorizeString(badValue, goodValue, value, string) {
+  if (value >= goodValue) {
     string = utils.textColor.FgGreen + string + utils.textColor.Reset
   }
-  else {
+  else if (value <= badValue) {
     string = utils.textColor.FgRed + string + utils.textColor.Reset
   }
 
