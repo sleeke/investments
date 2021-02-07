@@ -18,16 +18,11 @@ fileService.symbols((symbols) => {
 })
 
 function analyze(symbol) {
-  networkService.daily(symbol, (symbol, dailyData) => {
-    analysis.analyze(symbol, dailyData)
-    quote(symbol)
-  }, (errorMessage) => {
-    if (typeof errorMessage != 'undefined') {
-      console.log(errorMessage)
-    }
-    symbolIndex++
-    nextSymbol()
-  })
+  networkService.daily(symbol)
+  // .then(console.log)
+  .then(analysis.analyze)
+  .then(quote(symbol))
+    // .then(nextSymbol)
 }
 
 function quote(symbol) {

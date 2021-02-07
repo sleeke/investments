@@ -10,12 +10,11 @@ const debugGreenDays = false
 
 // Exports
 
-module.exports.analyze = function(symbol, dailyTimeSeries) {
-  if (typeof dailyTimeSeries === 'undefined' || dailyTimeSeries.length == 0) {
-    console.log(`Error getting DailyTimeSeries for ${symbol}`)
+module.exports.analyze = function(dailyData) {
+  if (typeof dailyData === 'undefined' || dailyData.length == 0) {
+    console.log(`Error getting DailyTimeSeries`)
   }
   else {
-    var dailyData = dailyTimeSeriesToArray(dailyTimeSeries)
     greenDays(dailyData)
     momentum(dailyData)
   }

@@ -42,35 +42,38 @@ module.exports.quote = function(symbol, callback, onError) {
 
 // Daily
 
-module.exports.daily = function (symbol, callback, onError) {
+module.exports.daily = function (symbol) {
   var dailyUrl = serviceUrl + translateSymbol(symbol) + '/chart'
 
   var parameters = {
     token: secrets.iexApikey  
   }
 
-  network.query(dailyUrl, parameters, (json) => {
-    var dailyArray = utils.dictionaryToArray(json)
+  return network.query(dailyUrl, parameters)
+    .then(extractdailyData)
+ }
 
-    if (dailyArray.length == 0) {
-      onError(`Daily data is empty in response from ${dailyUrl}`)
-    }
-    else {
-      var dailyPackage = []
-      for (dayIndex = dailyArray.length - 1; dayIndex >= 0 ; dayIndex--) {
-        var day = dailyArray[dayIndex]
-        dailyPackage[dailyArray.length - dayIndex] = {
-          open: day['open'],
-          high: day['high'],
-          low: day['low'],
-          close: day['close'],
-          volume: day['volume']        
-        }
+function extractdailyData(json) {
+  var dailyArray = utils.dictionaryToArray(json)
+
+  if (dailyArray.length == 0) {
+    onError(`Daily data is empty in response from ${dailyUrl}`)
+  }
+  else {
+    var dailyPackage = []
+    for (dayIndex = dailyArray.length - 1; dayIndex >= 0 ; dayIndex--) {
+      var day = dailyArray[dayIndex]
+      dailyPackage[dailyArray.length - 1 - dayIndex] = {
+        open: day['open'],
+        high: day['high'],
+        low: day['low'],
+        close: day['close'],
+        volume: day['volume']        
       }
-  
-      callback(symbol, dailyPackage)
     }
-  })
+
+    return dailyPackage
+  }
 }
 
 function translateSymbol(symbol) {
