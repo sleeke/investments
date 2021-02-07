@@ -11,7 +11,7 @@ const debugGreenDays = false
 // Exports
 
 module.exports.analyze = function(symbol, dailyTimeSeries) {
-  if (typeof dailyTimeSeries === 'undefined') {
+  if (typeof dailyTimeSeries === 'undefined' || dailyTimeSeries.length == 0) {
     console.log(`Error getting DailyTimeSeries for ${symbol}`)
   }
   else {
@@ -104,12 +104,12 @@ module.exports.current = function(symbol, quoteData) {
 function outputDailyStats(dayStats) {
   var dayRange = dayStats['high'] - dayStats['low']
   var dayPosition = (dayStats['price'] - dayStats['low']) / dayRange
-  var formattedDayPosition = new Intl.NumberFormat('en-IN', { minimumFractionDigits: 1 }).format(dayPosition)
+  var formattedDayPosition = new Intl.NumberFormat('en-IN', { minimumFractionDigits: 1 }).format(dayPosition * 100)
   var formattedChangePercent = new Intl.NumberFormat('en-IN', { minimumFractionDigits: 1 }).format(dayStats['changePercent'])
 
   console.log(utils.info('\nCurrent status:'))
   console.log(`Price: ${dayStats['price']}`)
-  console.log(colorizeString(dayPosition, `Day position: ${formattedDayPosition}%`))
+  console.log(`Day position: ${formattedDayPosition}%`)
   console.log(colorizeString(dayStats['changePercent'], `Change: ${formattedChangePercent}%`))
 }
 

@@ -21,6 +21,12 @@ function analyze(symbol) {
   networkService.daily(symbol, (symbol, dailyData) => {
     analysis.analyze(symbol, dailyData)
     quote(symbol)
+  }, (errorMessage) => {
+    if (typeof errorMessage != 'undefined') {
+      console.log(errorMessage)
+    }
+    symbolIndex++
+    nextSymbol()
   })
 }
 
@@ -28,6 +34,11 @@ function quote(symbol) {
   networkService.quote(symbol, (quotePackage) => {
     analysis.current(symbol, quotePackage)
 
+    symbolIndex++
+    if (symbolIndex < globalSymbols.length) {
+      nextSymbol()
+    }
+  }, () => {
     symbolIndex++
     if (symbolIndex < globalSymbols.length) {
       nextSymbol()

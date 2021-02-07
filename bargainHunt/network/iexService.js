@@ -15,7 +15,7 @@ var serviceUrl = 'https://cloud.iexapis.com/stable/stock/'
 
 // Quote
 
-module.exports.quote = function(symbol, callback) {
+module.exports.quote = function(symbol, callback, onError) {
   var quoteUrl = serviceUrl + translateSymbol(symbol) + '/quote'
   var parameters = {
     token: secrets.iexApikey  
@@ -37,12 +37,12 @@ module.exports.quote = function(symbol, callback) {
     if (utils.isFunction(callback)) {
       callback(quotePackage)
     }
-  })
+  }, onError)
 }
 
 // Daily
 
-module.exports.daily = function (symbol, callback) {
+module.exports.daily = function (symbol, callback, onError) {
   var dailyUrl = serviceUrl + translateSymbol(symbol) + '/chart'
 
   var parameters = {
@@ -52,19 +52,24 @@ module.exports.daily = function (symbol, callback) {
   network.query(dailyUrl, parameters, (json) => {
     var dailyArray = utils.dictionaryToArray(json)
 
-    var dailyPackage = []
-    for (dayIndex = dailyArray.length - 1; dayIndex >= 0 ; dayIndex--) {
-      var day = dailyArray[dayIndex]
-      dailyPackage[dailyArray.length - dayIndex] = {
-        open: day['open'],
-        high: day['high'],
-        low: day['low'],
-        close: day['close'],
-        volume: day['volume']        
-      }
+    if (dailyArray.length == 0) {
+      onError(`Daily data is empty in response from ${dailyUrl}`)
     }
-
-    callback(symbol, dailyPackage)
+    else {
+      var dailyPackage = []
+      for (dayIndex = dailyArray.length - 1; dayIndex >= 0 ; dayIndex--) {
+        var day = dailyArray[dayIndex]
+        dailyPackage[dailyArray.length - dayIndex] = {
+          open: day['open'],
+          high: day['high'],
+          low: day['low'],
+          close: day['close'],
+          volume: day['volume']        
+        }
+      }
+  
+      callback(symbol, dailyPackage)
+    }
   })
 }
 

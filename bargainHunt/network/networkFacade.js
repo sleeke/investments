@@ -1,9 +1,9 @@
 const networkImp = require('./iexService');
 
-module.exports.quote = function(symbol, callback) {
-  networkImp.quote(symbol, callback)
+module.exports.quote = function(symbol, callback, onError) {
+  networkImp.quote(symbol, callback, onError)
 }
 
-module.exports.daily = function(symbol, callback) {
-  networkImp.daily(symbol, callback)
+module.exports.daily = function(symbol, callback, onError) {
+  networkImp.daily(symbol, callback, onError)
 }
