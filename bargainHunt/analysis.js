@@ -11,10 +11,8 @@ const debugGreenDays = false
 // Exports
 
 module.exports.analyze = function(dailyData) {
-  if (typeof dailyData === 'undefined' || dailyData.length == 0) {
-    console.log(`Error getting DailyTimeSeries`)
-  }
-  else {
+  if (typeof dailyData != 'undefined' && dailyData.length > 0) {
+    console.log(`\n${utils.textColor.FgBlue}Momentum Analysis:${utils.textColor.Reset}\n`)
     greenDays(dailyData)
     momentum(dailyData)
   }
@@ -92,10 +90,7 @@ function greenDays(dailyStats) {
 }
 
 module.exports.current = function(quoteData) {
-  if (typeof quoteData === 'undefined') {
-    console.log(`Error getting quoteData`)
-  }
-  else {
+  if (typeof quoteData != 'undefined') {
     outputDailyStats(quoteData)
   }
 }
@@ -106,9 +101,9 @@ function outputDailyStats(dayStats) {
   var formattedDayPosition = new Intl.NumberFormat('en-IN', { minimumFractionDigits: 1 }).format(dayPosition * 100)
   var formattedChangePercent = new Intl.NumberFormat('en-IN', { minimumFractionDigits: 1 }).format(dayStats['changePercent'])
 
-  console.log(utils.info('\nCurrent status:'))
+  console.log(utils.info('\nCurrent status:\n'))
   console.log(`Price: ${dayStats['price']}`)
-  console.log(`Day position: ${formattedDayPosition}%`)
+  console.log(colorizeString(0.4, 0.6, dayPosition, `Day position: ${formattedDayPosition}%`))
   console.log(colorizeString(0, 0, dayStats['changePercent'], `Change: ${formattedChangePercent}%`))
 }
 

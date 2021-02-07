@@ -35,12 +35,12 @@ function quote(symbol) {
 }
 
 function nextSymbol() {
-  symbolIndex++
-  
   if (symbolIndex >= globalSymbols.length) {
     return
   }
 
   var symbol = globalSymbols[symbolIndex]
   analyze(symbol)
+
+  symbolIndex++
 }

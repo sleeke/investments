@@ -38,7 +38,8 @@ module.exports.quote = function(symbol) {
   }
 
   return network.query(quoteUrl, parameters)
-    .then(extractQuoteData)
+  .then(extractQuoteData)
+  .catch(error => console.log("Error getting quote data, please check symbol is valid"))
 }
 
 function extractQuoteData(quoteJson) {
@@ -68,7 +69,8 @@ module.exports.daily = function (symbol) {
 
   return network.query(dailyUrl, parameters)
     .then(extractdailyData)
- }
+    .catch(error => console.log("Error getting daily data, please check symbol is valid"))
+  }
 
 function extractdailyData(json) {
   var dailyArray = utils.dictionaryToArray(json)
@@ -96,6 +98,7 @@ function extractdailyData(json) {
 function translateSymbol(symbol) {
   var newSymbol = symbol. replace('.TO', '-CT')
   var newSymbol = newSymbol. replace('.V', '-CV')
+  var newSymbol = newSymbol. replace('.CN', '-CF')
 
   return newSymbol
 }
