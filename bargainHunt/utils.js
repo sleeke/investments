@@ -54,4 +54,5 @@ module.exports.warn = function(string) {
   return (this.textColor.FgYellow + string + this.textColor.Reset)
 }
 
+// Sets paid API key enabled/disabled
 module.exports.debugMode = true

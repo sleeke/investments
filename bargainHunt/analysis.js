@@ -52,7 +52,7 @@ function momentum(array) {
       var formattedMax = new Intl.NumberFormat('en-IN', { minimumFractionDigits: 3 }).format(momentum.lastClose)
       var formattedMag = new Intl.NumberFormat('en-IN', { minimumFractionDigits: 3 }).format(momentum.magnitude)
       
-      console.log(colorizeString(0, 0, momentum.streak, `Streak: ${momentum.streak} day(s)`))
+      console.log(colorizeString(1, 2, momentum.streak, `Streak: ${momentum.streak} day(s)`))
       console.log(colorizeString(3, 5, momentum.magnitude, `Magnitude: ${formattedMag}% (${formattedMin} - ${formattedMax})`))
       
       break
@@ -78,7 +78,7 @@ function greenDays(dailyStats) {
       console.log(array[index])
     }
 
-    if (array[index]['close'] > array[index]['open']) {
+    if (array[index]['close'] >= array[index]['open']) {
       greenStreak++
     }
     else {
@@ -86,7 +86,7 @@ function greenDays(dailyStats) {
     }
   }
 
-  console.log(colorizeString(0, 0, greenStreak, `Green days: ${greenStreak}`))
+  console.log(colorizeString(1, 3, greenStreak, `Green days: ${greenStreak}`))
 }
 
 module.exports.current = function(quoteData) {

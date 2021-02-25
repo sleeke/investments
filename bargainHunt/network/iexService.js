@@ -15,13 +15,13 @@ var apiKey
 
 if (utils.debugMode) {
   console.log(`${utils.textColor.FgGreen}INFO: You are using the SANDBOX API key; values will not be accurate${utils.textColor.Reset}`)
-  var serviceUrl = serviceUrlSandbox
-  var apiKey = secrets.iexApikeySandbox
+  serviceUrl = serviceUrlSandbox
+  apiKey = secrets.iexApikeySandbox
 }
 else {
   console.log(`${utils.textColor.FgRed}WARNING: You are using the PAID API key; don't go crazy!${utils.textColor.Reset}`)
-  var serviceUrl = serviceUrlProd
-  var apiKey = secrets.iexApikeyProd  
+  serviceUrl = serviceUrlProd
+  apiKey = secrets.iexApikeyProd  
 }
 
 // =======
@@ -33,13 +33,13 @@ else {
 module.exports.quote = function(symbol) {
   var quoteUrl = serviceUrl + translateSymbol(symbol) + '/quote'
   var parameters = {
-    token: apiKey = secrets.iexApikeySandbox
+    token: apiKey = apiKey
   
   }
 
   return network.query(quoteUrl, parameters)
   .then(extractQuoteData)
-  .catch(error => console.log("Error getting quote data, please check symbol is valid"))
+  // .catch(error => console.log("Error getting quote data, please check symbol is valid"))
 }
 
 function extractQuoteData(quoteJson) {
@@ -94,6 +94,12 @@ function extractdailyData(json) {
     return dailyPackage
   }
 }
+
+// =====
+// UTILS
+// =====
+
+// Symbol translation
 
 function translateSymbol(symbol) {
   var newSymbol = symbol. replace('.TO', '-CT')

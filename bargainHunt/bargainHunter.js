@@ -40,7 +40,9 @@ function nextSymbol() {
   }
 
   var symbol = globalSymbols[symbolIndex]
-  analyze(symbol)
+
+  // Timeout is a hacky way of avoiding concurrency issues messing up the results ;) 
+  setTimeout(() => {analyze(symbol)}, 200)
 
   symbolIndex++
 }
