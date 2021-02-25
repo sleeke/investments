@@ -20,16 +20,28 @@ module.exports.analyze = function(dailyData) {
 // Analysis
 
 function momentum(array) {
+  var firstValidIndex = 0
 
-  var previousClose = array[0]['close']
+  for (index = 0; index < array.length; index++) {
+    if (utils.isInvalidDay(array[index])) {
+      firstValidIndex++
+    }
+  }
+
+  var previousClose = array[firstValidIndex]['close']
   var momentum = {
     streak: 0,
     magnitude: -1,
     lastClose: previousClose,
-    firstLow: array[0]['low']
+    firstLow: array[firstValidIndex]['low']
   }
 
-  for (index = 1; index < array.length; index++) {
+  for (index = firstValidIndex + 1; index < array.length; index++) {
+    if (utils.isInvalidDay(array[index])) {
+      index++
+      continue
+    }
+
     if (debugMomentum) {
       console.log(`Today - ${index}`)
       console.log(array[index])
@@ -72,6 +84,11 @@ function greenDays(dailyStats) {
 
   var greenStreak = 0
   for (index = 0; index < array.length; index++) {
+    if (utils.isInvalidDay(array[index])) {
+      index++
+      continue
+    }
+
     if (debugGreenDays) {
       console.log(`Today - ${index}`)
       console.log(array[index])

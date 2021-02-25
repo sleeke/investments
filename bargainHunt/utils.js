@@ -1,6 +1,24 @@
+// =====
+// FLAGS
+// =====
+
+module.exports.debugMode = true // Sets paid API key enabled/disabled
+
+// ========
+// VALIDITY
+// ========
+
 module.exports.isFunction = function(suspectVariable) {
   return (suspectVariable && {}.toString.call(suspectVariable) === '[object Function]')
 }
+
+module.exports.isInvalidDay = function(dayData) {
+  return dayData['open'] == 0 && dayData['close'] == 0
+}
+
+// ===============
+// DATA CONVERSION
+// ===============
 
 module.exports.stringOfChars = function(char, numChars) {
   return new Array(numChars + 1).join( char );
@@ -13,6 +31,10 @@ module.exports.dictionaryToArray = function(inputDictionary) {
 
   return array
 }
+
+// ===================
+// STRING MANIPULATION
+// ===================
 
 module.exports.textColor = {
   Reset: "\x1b[0m",
@@ -54,5 +76,3 @@ module.exports.warn = function(string) {
   return (this.textColor.FgYellow + string + this.textColor.Reset)
 }
 
-// Sets paid API key enabled/disabled
-module.exports.debugMode = true
