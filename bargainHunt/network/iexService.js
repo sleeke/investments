@@ -118,6 +118,9 @@ function translateSymbol(symbol) {
   var newSymbol = symbol. replace('.TO', '-CT')
   var newSymbol = newSymbol. replace('.V', '-CV')
   var newSymbol = newSymbol. replace('.CN', '-CF')
+  var newSymbol = newSymbol. replace('-UN', '.UN')
+  var newSymbol = newSymbol. replace('-A', '.A')
+  var newSymbol = newSymbol. replace('-B', '.B')
 
   return newSymbol
 }
