@@ -1,6 +1,5 @@
 // Local modules
 
-const { quote } = require('./network/networkService');
 const utils = require('./utils');
 
 // Debug flags
@@ -89,19 +88,43 @@ function greenDays(dailyStats) {
   console.log(colorizeString(1, 3, greenStreak, `Green days: ${greenStreak}`))
 }
 
-module.exports.current = function(quoteData) {
+module.exports.current = function(quoteData, currentPriceOut) {
   if (typeof quoteData != 'undefined') {
-    outputDailyStats(quoteData)
+    quoteData = sanitizeDailyStats(quoteData)
+
+    outputDailyStats(quoteData, currentPriceOut)
+
+    return quoteData['price']
   }
 }
 
-function outputDailyStats(dayStats) {
+function sanitizeDailyStats(quoteData) {
+  var sanitizationNecessary = false
+
+  if (quoteData['price'] == null) {
+    sanitizationNecessary = true
+    quoteData['price'] = quoteData['prevClose']
+  }
+
+  quoteData['sanitized'] = sanitizationNecessary
+  
+  return quoteData
+}
+
+function outputDailyStats(dayStats, currentPriceOut) {
   var dayRange = dayStats['high'] - dayStats['low']
   var dayPosition = (dayStats['price'] - dayStats['low']) / dayRange
   var formattedDayPosition = new Intl.NumberFormat('en-IN', { minimumFractionDigits: 1 }).format(dayPosition * 100)
   var formattedChangePercent = new Intl.NumberFormat('en-IN', { minimumFractionDigits: 1 }).format(dayStats['changePercent'])
 
-  console.log(utils.info('\nCurrent status:\n'))
+  var statusText = 'Current status'
+  
+  if (dayStats['sanitized']) {
+    statusText += ' [sanitized data]'
+  }
+
+  console.log(utils.info(`\n${statusText}:\n`))
+
   console.log(`Price: ${dayStats['price']}`)
   console.log(colorizeString(0.4, 0.6, dayPosition, `Day position: ${formattedDayPosition}%`))
   console.log(colorizeString(0, 0, dayStats['changePercent'], `Change: ${formattedChangePercent}%`))
@@ -118,3 +141,10 @@ function colorizeString(badValue, goodValue, value, string) {
   return string
 }
 
+module.exports.percent52wHigh = function(high52w, currentPrice) {
+  var percent52wHigh = currentPrice / high52w
+  var formattedPercent = new Intl.NumberFormat('en-IN', { minimumFractionDigits: 1 }).format(percent52wHigh * 100)
+
+  console.log(utils.info('\nRatio to current highs\n'))
+  console.log(colorizeString(0.8, 0.95, percent52wHigh, `52w: ${formattedPercent}%`))
+}

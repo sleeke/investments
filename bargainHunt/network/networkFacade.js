@@ -7,3 +7,7 @@ module.exports.quote = function(symbol, callback, onError) {
 module.exports.daily = function(symbol) {
   return networkImp.daily(symbol)
 }
+
+module.exports.high52w = function(symbol) {
+  return networkImp.high52w(symbol)
+}

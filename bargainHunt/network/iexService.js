@@ -70,7 +70,7 @@ module.exports.daily = function (symbol) {
   return network.query(dailyUrl, parameters)
     .then(extractdailyData)
     .catch(error => console.log("Error getting daily data, please check symbol is valid"))
-  }
+}
 
 function extractdailyData(json) {
   var dailyArray = utils.dictionaryToArray(json)
@@ -93,6 +93,19 @@ function extractdailyData(json) {
 
     return dailyPackage
   }
+}
+
+// 52w High
+
+module.exports.high52w = function (symbol) {
+  var high52wUrl = serviceUrl + translateSymbol(symbol) + '/stats/week52high'
+
+  var parameters = {
+    token: apiKey  
+  }
+
+  return network.query(high52wUrl, parameters)
+    .catch(error => console.log("Error getting 52w high, please check symbol is valid"))
 }
 
 // =====

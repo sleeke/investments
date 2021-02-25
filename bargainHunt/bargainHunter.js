@@ -24,14 +24,36 @@ function analyze(symbol) {
   console.log(utils.info(utils.stringOfChars('=', symbol.length)))
 
   networkService.daily(symbol)
-  .then(analysis.analyze)
-  .then(quote(symbol))
+  .then(function(dailyData) {
+    return new Promise(function(resolve, reject) {
+      resolve(analysis.analyze(dailyData))
+    })
+  })
+  .then(function() {
+    return new Promise(function(resolve, reject) {
+      resolve(quote(symbol))
+    })
+  })
+  .then(function(currentPrice) {
+    return new Promise(function(resolve, reject) {
+      resolve(percent52wHigh(symbol, currentPrice))
+    })
+  })
   .then(nextSymbol)
 }
 
 function quote(symbol) {
   return networkService.quote(symbol)
     .then(analysis.current)
+}
+
+function percent52wHigh(symbol, currentPrice) {
+  return networkService.high52w(symbol)
+    .then(function(high52w) {
+      return new Promise(function(resolve, reject) {
+        resolve(analysis.percent52wHigh(high52w, currentPrice))
+      })
+    })    
 }
 
 function nextSymbol() {
