@@ -6,6 +6,7 @@ const utils = require('./utils');
 
 var symbolIndex = 0
 var globalSymbols
+global.analysisOutput = {}
 
 fileService.symbols((symbols) => {
   if (typeof symbols === 'undefined' || symbols.length == 0) {
@@ -23,41 +24,56 @@ function analyze(symbol) {
   console.log(utils.info(symbol))
   console.log(utils.info(utils.stringOfChars('=', symbol.length)))
 
+  var symbolAnalysisOutput = {}
+  global.analysisOutput[`${symbol}`] = symbolAnalysisOutput
+
   networkService.daily(symbol)
   .then(function(dailyData) {
     return new Promise(function(resolve, reject) {
-      resolve(analysis.analyze(dailyData))
+      resolve(analysis.analyze(dailyData, symbolAnalysisOutput))
     })
   })
-  .then(function() {
+  .then(function(symbolAnalysisOutput) {
     return new Promise(function(resolve, reject) {
-      resolve(quote(symbol))
+      resolve(quote(symbol, symbolAnalysisOutput))
     })
   })
-  .then(function(currentPrice) {
+  .then(function(symbolAnalysisOutput) {
     return new Promise(function(resolve, reject) {
-      resolve(percent52wHigh(symbol, currentPrice))
+      resolve(percent52wHigh(symbol, symbolAnalysisOutput))
     })
   })
-  .then(nextSymbol)
+  .then(function(symbolAnalysisOutput) {
+    return new Promise(function(resolve, reject) {
+      resolve(nextSymbol())
+    })
+  }).catch(function(error) {
+    console.log(`Error getting data for URL: ${error.options.uri}`)
+    nextSymbol(symbolAnalysisOutput)
+  })
 }
 
-function quote(symbol) {
+function quote(symbol, symbolAnalysisOutput) {
   return networkService.quote(symbol)
-    .then(analysis.current)
+    .then(function(quoteData) {
+      return new Promise(function(resolve, reject) {
+        resolve(analysis.current(quoteData, symbolAnalysisOutput))
+      })
+    })
 }
 
-function percent52wHigh(symbol, currentPrice) {
+function percent52wHigh(symbol, symbolAnalysisOutput) {
   return networkService.high52w(symbol)
     .then(function(high52w) {
       return new Promise(function(resolve, reject) {
-        resolve(analysis.percent52wHigh(high52w, currentPrice))
+        resolve(analysis.percent52wHigh(high52w, symbolAnalysisOutput))
       })
     })    
 }
 
 function nextSymbol() {
   if (symbolIndex >= globalSymbols.length) {
+    fileService.saveAnalysis(global.analysisOutput)
     return
   }
 
@@ -68,3 +84,4 @@ function nextSymbol() {
 
   symbolIndex++
 }
+

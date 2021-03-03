@@ -34,3 +34,9 @@ function outputSymbols(symbols) {
     console.log(`${index + 1}: ${symbols[index]}`)
   }
 }
+
+module.exports.saveAnalysis = function(outputJson) {
+  fs.writeFile('output.json', JSON.stringify(outputJson), function (err) {
+    if (err) return console.log(err)
+  })
+}
