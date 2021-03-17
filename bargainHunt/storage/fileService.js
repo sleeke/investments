@@ -36,7 +36,7 @@ function outputSymbols(symbols) {
 }
 
 module.exports.saveAnalysis = function(outputJson) {
-  fs.writeFile('output.json', JSON.stringify(outputJson), function (err) {
+  fs.writeFile('output.json', JSON.stringify(outputJson, null, 2), function (err) {
     if (err) return console.log(err)
   })
 }

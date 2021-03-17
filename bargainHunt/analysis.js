@@ -1,29 +1,48 @@
-// Local modules
-
 const utils = require('./utils');
 
-// Debug flags
+//=============//
+// DEBUG FLAGS //
+//=============//
 
 const debugMomentum = false
 const debugGreenDays = false
 
-// Exports
+//=========//
+// EXPORTS //
+//=========//
 
 module.exports.analyze = function(dailyData, analysisOutput) {
-  if (typeof dailyData != 'undefined' && dailyData.length > 0) {
-    console.log(`\n${utils.textColor.FgBlue}Momentum Analysis:${utils.textColor.Reset}\n`)
-    
-    analysisOutput['Momentum Analysis'] = {}
-    
-    greenDays(dailyData, analysisOutput['Momentum Analysis'])
-    momentum(dailyData, analysisOutput['Momentum Analysis'])
+  return new Promise(function(resolve, reject) {
+    if (typeof dailyData != 'undefined' && dailyData.length > 0) {
+      console.log(`\n${utils.textColor.FgBlue}Momentum Analysis:${utils.textColor.Reset}\n`)
+      
+      analysisOutput.momentumAnalysis = {}
+      
+      greenDays(dailyData, analysisOutput.momentumAnalysis)
+      momentum(dailyData, analysisOutput.momentumAnalysis)
 
-  }
+    }
 
-  return analysisOutput
+    resolve(analysisOutput)
+  }) 
 }
 
-// Analysis
+module.exports.current = function(quoteData, analysisOutput) {
+  return new Promise(function(resolve, reject) {
+    if (typeof quoteData != 'undefined') {
+      quoteData = sanitizeDailyStats(quoteData)
+  
+      outputDailyStats(quoteData, analysisOutput)
+  
+      resolve(analysisOutput)
+    }
+    reject('Quote Data is undefined in analysis.current')
+  })
+}
+
+//==========//
+// ANALYSIS //
+//==========//
 
 function momentum(array, momentumAnalysis) {
   var firstValidIndex = 0
@@ -38,8 +57,8 @@ function momentum(array, momentumAnalysis) {
   var momentum = {
     streak: 0,
     magnitude: -1,
-    lastClose: previousClose,
-    firstLow: array[firstValidIndex]['low']
+    lastClose: utils.roundPrice(previousClose),
+    firstLow: utils.roundPrice(array[firstValidIndex]['low'])
   }
 
   for (index = firstValidIndex + 1; index < array.length; index++) {
@@ -58,22 +77,29 @@ function momentum(array, momentumAnalysis) {
     if (newClose < previousClose) {
       // Contiguous momentum found
       previousClose = newClose
-      momentum.firstLow = array[index]['low']
+      momentum.firstLow = utils.roundPrice(array[index]['low'])
       
       momentum.streak = momentum.streak + 1
     }
     else {
       // Contiguous momentum is no more...
-      momentum.magnitude = (momentum.lastClose / momentum.firstLow - 1) * 100
-      var formattedMin = new Intl.NumberFormat('en-IN', { minimumFractionDigits: 3 }).format(momentum.firstLow)
-      var formattedMax = new Intl.NumberFormat('en-IN', { minimumFractionDigits: 3 }).format(momentum.lastClose)
-      var formattedMag = new Intl.NumberFormat('en-IN', { minimumFractionDigits: 3 }).format(momentum.magnitude)
+      momentum.magnitude = utils.roundPercent((momentum.lastClose / momentum.firstLow - 1) * 100)
       
-      console.log(colorizeString(1, 2, momentum.streak, `Streak: ${momentum.streak} day(s)`))
-      console.log(colorizeString(3, 5, momentum.magnitude, `Magnitude: ${formattedMag}% (${formattedMin} - ${formattedMax})`))
+      // Console
+      console.log(utils.colorizeString(1, 2, momentum.streak, `Streak: ${momentum.streak} day(s)`))
+      console.log(utils.colorizeString(3, 5, momentum.magnitude, `Magnitude: ${momentum.magnitude}% (${momentum.firstLow} - ${momentum.lastClose})`))
       
-      momentumAnalysis['Streak'] = `${momentum.streak} day(s)`
-      momentumAnalysis['Magnitude'] = `${formattedMag}% (${formattedMin} - ${formattedMax})`
+      // JSON
+      momentumAnalysis.streakDays = momentum.streak
+      momentumAnalysis.magnitude = {
+        'min' : momentum.firstLow,
+        'max' : momentum.lastClose,
+        'percentChange' : momentum.magnitude,
+      }
+
+      if (momentum.streak > 0) {
+        momentumAnalysis.magnitude.dailyPercentChange = utils.roundPercent(momentum.magnitude / momentum.streak)
+      }
 
       break
     }
@@ -87,6 +113,9 @@ function dailyTimeSeriesToArray(dailyTimeSeries) {
 
   return array
 }
+
+// TODO: Green days seems to under-report (1 day instead of 2)
+// Not seen in initial case, more testing needed...
 
 function greenDays(dailyStats, momentumAnalysis) {
   var array = dailyTimeSeriesToArray(dailyStats)
@@ -111,80 +140,110 @@ function greenDays(dailyStats, momentumAnalysis) {
     }
   }
 
-  console.log(colorizeString(1, 3, greenStreak, `Green days: ${greenStreak}`))
+  console.log(utils.colorizeString(1, 3, greenStreak, `Green days: ${greenStreak}`))
 
-  momentumAnalysis['Green days'] = greenStreak
+  momentumAnalysis.greenDays = greenStreak
 }
 
-module.exports.current = function(quoteData, analysisOutput) {
-  if (typeof quoteData != 'undefined') {
-    quoteData = sanitizeDailyStats(quoteData)
-
-    outputDailyStats(quoteData, analysisOutput)
-
-    return analysisOutput
-  }
-}
+//========//
+// OUTPUT //
+//========//
 
 function sanitizeDailyStats(quoteData) {
   var sanitizationNecessary = false
 
-  if (quoteData['price'] == null) {
+  if (quoteData.price == null) {
     sanitizationNecessary = true
-    quoteData['price'] = quoteData['prevClose']
+    quoteData.price = quoteData.prevClose
   }
 
-  quoteData['sanitized'] = sanitizationNecessary
+  quoteData.sanitized = sanitizationNecessary
   
   return quoteData
 }
 
 function outputDailyStats(dayStats, analysisOutput) {
-  var dayRange = dayStats['high'] - dayStats['low']
-  var dayPosition = (dayStats['price'] - dayStats['low']) / dayRange
+  var dayRange = dayStats.high - dayStats.low
+  var dayPosition = (dayStats.price - dayStats.low) / dayRange
   var formattedDayPosition = new Intl.NumberFormat('en-IN', { minimumFractionDigits: 1 }).format(dayPosition * 100)
-  var formattedChangePercent = new Intl.NumberFormat('en-IN', { minimumFractionDigits: 1 }).format(dayStats['changePercent'])
+  var formattedChangePercent = new Intl.NumberFormat('en-IN', { minimumFractionDigits: 1 }).format(dayStats.changePercent)
 
   var statusText = 'Current status'
   
-  if (dayStats['sanitized']) {
+  if (dayStats.sanitized) {
     statusText += ' [sanitized data]'
   }
 
   console.log(utils.info(`\n${statusText}:\n`))
 
-  console.log(`Price: ${dayStats['price']}`)
-  console.log(colorizeString(0.4, 0.6, dayPosition, `Day position: ${formattedDayPosition}%`))
-  console.log(colorizeString(0, 0, dayStats['changePercent'], `Change: ${formattedChangePercent}%`))
+  console.log(`Price: ${dayStats.price}`)
+  console.log(utils.colorizeString(0.4, 0.6, dayPosition, `Day position: ${formattedDayPosition}%`))
+  console.log(utils.colorizeString(0, 0, dayStats.changePercent, `Change: ${formattedChangePercent}%`))
 
-  analysisOutput['Current status'] = {}
-  var currentStatus = analysisOutput['Current status']
-  currentStatus['price'] = dayStats['price']
-  currentStatus['day position %'] = formattedDayPosition
-  currentStatus['change %'] = formattedChangePercent 
+  analysisOutput.currentStatus = {}
+  var currentStatus = analysisOutput.currentStatus
+  currentStatus.price = dayStats.price
+  currentStatus.dayPositionPercent = dayPosition * 100
+  currentStatus.changePercent = dayStats.changePercent 
 }
 
-function colorizeString(badValue, goodValue, value, string) {
-  if (value >= goodValue) {
-    string = utils.textColor.FgGreen + string + utils.textColor.Reset
-  }
-  else if (value <= badValue) {
-    string = utils.textColor.FgRed + string + utils.textColor.Reset
-  }
-
-  return string
-}
+//========//
+// RATIOS //
+//========//
 
 module.exports.percent52wHigh = function(high52w, analysisOutput) {
-  var currentPrice = analysisOutput['Current status']['price']
-  var percent52wHigh = currentPrice / high52w
-  var formattedPercent = new Intl.NumberFormat('en-IN', { minimumFractionDigits: 1 }).format(percent52wHigh * 100)
+  return new Promise(function (resolve, reject) {
+    var currentPrice = analysisOutput.currentStatus.price
+    var percent52wHigh = currentPrice / high52w
+    var formattedPercent = utils.roundPercent(percent52wHigh * 100)
+  
+    console.log(utils.info('\nRatio to current highs\n'))
+    console.log(utils.colorizeString(0.8, 0.95, percent52wHigh, `52w: ${formattedPercent}%`))
+  
+    var ratios = analysisOutput.ratios = {}
+    ratios.percent52w = formattedPercent
+  
+    resolve(analysisOutput)
+  })
+}
 
-  console.log(utils.info('\nRatio to current highs\n'))
-  console.log(colorizeString(0.8, 0.95, percent52wHigh, `52w: ${formattedPercent}%`))
+//================//
+// CATEGORIZATION //
+//================//
 
-  var ratios = analysisOutput['Ratio to current highs'] = {}
-  ratios['52w %'] = formattedPercent
+module.exports.categorize = function(symbolAnalysisOutput) {
+  return new Promise(function (resolve, reject) {
+    var momentumAnalysis = symbolAnalysisOutput.momentumAnalysis
+    
+    if (strongRecentMomentum(momentumAnalysis)) {
+      if (highDailyChange(momentumAnalysis)) {
+        symbolAnalysisOutput.category = 'ROCKET'
+      }
+      else {
+        symbolAnalysisOutput.category = 'RISER'
+      }
+    }
+    else if (closeTo52wHigh(symbolAnalysisOutput)) {
+      symbolAnalysisOutput.category = 'BREAKOUT'
+    }
+    else {
+      // Not enough momentum or proximity to 52w high
+      symbolAnalysisOutput.category = 'DUD'
+    }
 
-  return analysisOutput
+    resolve(symbolAnalysisOutput)
+  })
+}
+
+function strongRecentMomentum(momentumAnalysis) {
+  return momentumAnalysis.greenDays >= 2 
+      && momentumAnalysis.streakDays >= 2
+}
+
+function highDailyChange(momentumAnalysis) {
+  return momentumAnalysis.magnitude.dailyPercentChange > 10
+}
+
+function closeTo52wHigh(symbolAnalysis) {
+  return symbolAnalysis.ratios.percent52w > 95
 }

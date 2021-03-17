@@ -2,7 +2,7 @@
 // FLAGS
 // =====
 
-module.exports.debugMode = true // Sets paid API key enabled/disabled
+module.exports.debugMode = false // Sets paid API key enabled/disabled
 
 // ========
 // VALIDITY
@@ -76,3 +76,25 @@ module.exports.warn = function(string) {
   return (this.textColor.FgYellow + string + this.textColor.Reset)
 }
 
+//===========
+// FORMATTING
+//===========
+
+module.exports.roundPrice = function(number) {
+  return parseFloat(number.toFixed(2))
+}
+
+module.exports.roundPercent = function(number) {
+  return parseFloat(number.toFixed(2))
+}
+
+module.exports.colorizeString = function(badValue, goodValue, value, string) {
+  if (value >= goodValue) {
+    string = this.textColor.FgGreen + string + this.textColor.Reset
+  }
+  else if (value <= badValue) {
+    string = this.textColor.FgRed + string + this.textColor.Reset
+  }
+
+  return string
+}

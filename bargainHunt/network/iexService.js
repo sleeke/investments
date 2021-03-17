@@ -38,8 +38,8 @@ module.exports.quote = function(symbol) {
   }
 
   return network.query(quoteUrl, parameters)
-  .then(extractQuoteData)
-  // .catch(error => console.log("Error getting quote data, please check symbol is valid"))
+    .then(extractQuoteData)
+    .catch(_ => Promise.reject(`${utils.textColor.FgRed}Error getting quote data for '${symbol}', please check symbol is valid${utils.textColor.Reset}`))
 }
 
 function extractQuoteData(quoteJson) {
@@ -69,7 +69,7 @@ module.exports.daily = function (symbol) {
 
   return network.query(dailyUrl, parameters)
     .then(extractdailyData)
-    .catch(error => console.log("Error getting daily data, please check symbol is valid"))
+    .catch(error => Promise.reject(`Error getting daily data for '${symbol}', please check symbol is valid`))
 }
 
 function extractdailyData(json) {
