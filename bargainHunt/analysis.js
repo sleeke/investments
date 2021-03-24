@@ -44,6 +44,10 @@ module.exports.current = function(quoteData, analysisOutput) {
 // ANALYSIS //
 //==========//
 
+// TODO: Find a way to gauge even rise, e.g. 
+//  - Avg. daily range
+//  - Num up days
+
 function momentum(array, momentumAnalysis) {
   var firstValidIndex = 0
 
@@ -117,6 +121,7 @@ function dailyTimeSeriesToArray(dailyTimeSeries) {
 // TODO: Green days seems to under-report (1 day instead of 2)
 // Not seen in initial case, more testing needed...
 
+// TODO: Accuracy is an issue for lower-value stocks; days are marked as green because they're rounded, e.g. FLYY.CN
 function greenDays(dailyStats, momentumAnalysis) {
   var array = dailyTimeSeriesToArray(dailyStats)
 
@@ -207,10 +212,30 @@ module.exports.percent52wHigh = function(high52w, analysisOutput) {
   })
 }
 
+//============//
+// INDICATORS //
+//============//
+
+module.exports.rsi = function(rsiData, analysisOutput) {
+  return new Promise(function (resolve, reject) {
+
+    var rsi = rsiData.indicator[0][0]
+
+    console.log(utils.info('\nRSI\n'))
+    console.log(utils.colorizeStringInBand(66, 80, rsi, rsi))
+
+    var indicators = analysisOutput.indicators = {}
+    indicators.rsi = rsi
+
+    resolve(analysisOutput)
+  })
+}
+
 //================//
 // CATEGORIZATION //
 //================//
 
+// TODO: Allow more than one categry, e.g. EVEN, RISER, BREAKOUT
 module.exports.categorize = function(symbolAnalysisOutput) {
   return new Promise(function (resolve, reject) {
     var momentumAnalysis = symbolAnalysisOutput.momentumAnalysis

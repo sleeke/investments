@@ -11,3 +11,7 @@ module.exports.daily = function(symbol) {
 module.exports.high52w = function(symbol) {
   return networkImp.high52w(symbol)
 }
+
+module.exports.rsi = function(symbol) {
+  return networkImp.rsi(symbol)
+}

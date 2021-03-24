@@ -108,6 +108,23 @@ module.exports.high52w = function (symbol) {
     .catch(error => console.log("Error getting 52w high, please check symbol is valid"))
 }
 
+// RSI
+
+module.exports.rsi = function (symbol) {
+  var url = serviceUrl + translateSymbol(symbol) + '/indicator/rsi'
+
+  var parameters = {
+    token: apiKey,
+    input1: 14,
+    indicatorOnly: true, 
+    range: '30d',
+    lastIndicator: true
+  }
+
+  return network.query(url, parameters)
+    .catch(error => console.log("Error getting RSI, please check symbol is valid"))
+}
+
 // =====
 // UTILS
 // =====

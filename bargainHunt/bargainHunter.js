@@ -37,6 +37,8 @@ function analyze(symbol) {
   .then(quoteData => analysis.current(quoteData, symbolAnalysisOutput)))
   .then(symbolAnalysisOutput => networkService.high52w(symbol)
   .then(high52w => analysis.percent52wHigh(high52w, symbolAnalysisOutput)))
+  .then(symbolAnalysisOutput => networkService.rsi(symbol)
+  .then(rsi => analysis.rsi(rsi, symbolAnalysisOutput)))
   .then(symbolAnalysisOutput => analysis.categorize(symbolAnalysisOutput))
   .then(symbolAnalysisOutput => nextSymbol(symbolAnalysisOutput))
   .catch(function(errorText) {

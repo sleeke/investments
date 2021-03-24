@@ -98,3 +98,14 @@ module.exports.colorizeString = function(badValue, goodValue, value, string) {
 
   return string
 }
+
+module.exports.colorizeStringInBand = function(lowEnd, highEnd, value, string) {
+  if (value >= lowEnd && value <= highEnd) {
+    string = this.textColor.FgGreen + string + this.textColor.Reset
+  }
+  else {
+    string = this.textColor.FgRed + string + this.textColor.Reset
+  }
+
+  return string
+}
