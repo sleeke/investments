@@ -5,8 +5,8 @@ var fs = require("fs");
 // Local modules
 const utils = require('../utils');
 
-module.exports.symbols = function (callback) {
-  getFileData("storage/symbols.txt", (data) => {
+module.exports.symbols = function (filename, callback) {
+  getFileData(filename, (data) => {
     symbolsFromFileData (data, callback)
   })
 }

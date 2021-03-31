@@ -21,6 +21,7 @@ module.exports.analyze = function(dailyData, analysisOutput) {
       greenDays(dailyData, analysisOutput.momentumAnalysis)
       momentum(dailyData, analysisOutput.momentumAnalysis)
 
+      volatility(dailyData, analysisOutput)
     }
 
     resolve(analysisOutput)
@@ -240,24 +241,28 @@ module.exports.categorize = function(symbolAnalysisOutput) {
   return new Promise(function (resolve, reject) {
     var momentumAnalysis = symbolAnalysisOutput.momentumAnalysis
     
+    symbolAnalysisOutput.categories = []
     if (strongRecentMomentum(momentumAnalysis)) {
       if (highDailyChange(momentumAnalysis)) {
-        symbolAnalysisOutput.category = 'ROCKET'
+        symbolAnalysisOutput.categories.push('ROCKET')
       }
       else {
-        symbolAnalysisOutput.category = 'RISER'
+        symbolAnalysisOutput.categories.push('RISER')
       }
     }
-    else if (closeTo52wHigh(symbolAnalysisOutput)) {
-      symbolAnalysisOutput.category = 'BREAKOUT'
+    if (closeTo52wHigh(symbolAnalysisOutput)) {
+      symbolAnalysisOutput.categories.push('BREAKOUT')
     }
-    else {
-      // Not enough momentum or proximity to 52w high
-      symbolAnalysisOutput.category = 'DUD'
+    if (nonVolatile(symbolAnalysisOutput)) {
+      symbolAnalysisOutput.categories.push('STEADY')
     }
 
     resolve(symbolAnalysisOutput)
   })
+}
+
+function nonVolatile(symbolAnalysisOutput) {
+  return symbolAnalysisOutput.volatility['5day'] < 10
 }
 
 function strongRecentMomentum(momentumAnalysis) {
@@ -271,4 +276,25 @@ function highDailyChange(momentumAnalysis) {
 
 function closeTo52wHigh(symbolAnalysis) {
   return symbolAnalysis.ratios.percent52w > 95
+}
+
+function volatility(dailyData, symbolAnalysis) {
+  symbolAnalysis.volatility = {}
+  console.log(utils.info('\nVolatility\n'))
+
+  var numDays = 5
+  var first = dailyData[numDays - 1].close
+  var last = dailyData[0].close
+  var dailyAveragePercent = (last / first - 1) * 100 / numDays
+
+  var sum = 0
+  for (index = 0; index < numDays; index++) {
+    var percentChangeSinceStart = (dailyData[index].close / first - 1) * 100
+    var reverseIndex = numDays - index
+    sum += Math.abs(percentChangeSinceStart - reverseIndex * dailyAveragePercent)
+  }
+
+  var normalizedVolatility = sum / dailyAveragePercent
+  symbolAnalysis.volatility['5day'] = normalizedVolatility
+  console.log(utils.colorizeStringInBand(0, 5, normalizedVolatility, `5-day:: ${normalizedVolatility}`))
 }

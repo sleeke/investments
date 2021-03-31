@@ -1,9 +1,12 @@
+const yargs = require('yargs');
+
 // Local modules
 const analysis = require('./analysis');
 const fileService = require('./storage/fileService');
 const networkService = require('./network/networkFacade');
 const utils = require('./utils');
 
+var filename = "storage/symbols.txt"
 var symbolIndex = 0
 var globalSymbols
 global.analysisOutput = {
@@ -11,7 +14,9 @@ global.analysisOutput = {
   'categories' : {}
 }
 
-fileService.symbols((symbols) => {
+processArgs()
+
+fileService.symbols(filename, (symbols) => {
   if (typeof symbols === 'undefined' || symbols.length == 0) {
     console.log("No symbols found...")
   }
@@ -50,12 +55,17 @@ function analyze(symbol) {
 
 function nextSymbol(symbolAnalysisOutput) {
   return new Promise(function(resolve, reject) {
-    var category = global.analysisOutput.categories[`${symbolAnalysisOutput.category}`]
-    if (typeof category == `undefined`) {
-      category = global.analysisOutput.categories[`${symbolAnalysisOutput.category}`] = []
+    for (symbolCategoryIndex in symbolAnalysisOutput.categories) {
+      var categoryName = symbolAnalysisOutput.categories[symbolCategoryIndex]
+      
+      var categoryInOutput = global.analysisOutput.categories[`${categoryName}`]
+      if (typeof categoryInOutput == `undefined`) {
+        // No symbols have been added for this category
+        categoryInOutput = global.analysisOutput.categories[`${categoryName}`] = []
+      }
+  
+      categoryInOutput.push(symbolAnalysisOutput)
     }
-
-    category.push(symbolAnalysisOutput)
 
     // Exit condition for last symbol
     if (symbolIndex >= globalSymbols.length - 1) {
@@ -70,3 +80,22 @@ function nextSymbol(symbolAnalysisOutput) {
   })
 }
 
+function processArgs() {
+  const argv = yargs
+  .command('inFile', 'Specifies a file containing symbols', {
+    filename: {
+      description: 'The file to use',
+      alias: 'f', 
+      type: 'string',
+    }
+  })
+  .help()
+  .alias('help', 'h')
+  .argv
+  
+  if (typeof argv._ != 'undefined' && argv._.includes('inFile')) {
+    filename = argv.filename
+
+    console.log(`\n${utils.textColor.FgBlue}Loading symbols from '${filename}'${utils.textColor.Reset}\n`)
+  }
+}
