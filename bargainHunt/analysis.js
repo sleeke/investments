@@ -41,6 +41,26 @@ module.exports.current = function(quoteData, analysisOutput) {
   })
 }
 
+module.exports.fundamentals = function(fundamentals, symbolAnalysisOutput) {
+  return new Promise(function(resolve, reject) {
+    symbolAnalysisOutput.fundamentals = fundamentals
+
+    console.log('\n' + fundamentals.lastQuarter.asOfDate + '\n')
+
+    resolve(symbolAnalysisOutput)
+  })
+}
+
+module.exports.incomeHistory = function(incomeHistory, symbolAnalysisOutput) {
+  return new Promise(function(resolve, reject) {
+    symbolAnalysisOutput.incomeHistory = incomeHistory
+
+    console.log('\n' + incomeHistory.quarterly[0].profit)
+
+    resolve(symbolAnalysisOutput)
+  })
+}
+
 //==========//
 // ANALYSIS //
 //==========//
@@ -298,3 +318,5 @@ function volatility(dailyData, symbolAnalysis) {
   symbolAnalysis.volatility['5day'] = normalizedVolatility
   console.log(utils.colorizeStringInBand(0, 5, normalizedVolatility, `5-day:: ${normalizedVolatility}`))
 }
+
+

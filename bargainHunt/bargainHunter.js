@@ -45,6 +45,10 @@ function analyze(symbol) {
   .then(symbolAnalysisOutput => networkService.rsi(symbol)
   .then(rsi => analysis.rsi(rsi, symbolAnalysisOutput)))
   .then(symbolAnalysisOutput => analysis.categorize(symbolAnalysisOutput))
+  .then(symbolAnalysisOutput => networkService.fundamentals(symbolAnalysisOutput.symbol))
+  .then(fundamentals => analysis.fundamentals(fundamentals, symbolAnalysisOutput))
+  .then(symbolAnalysisOutput => networkService.incomeHistory(symbolAnalysisOutput.symbol))
+  .then(incomeHistory => analysis.incomeHistory(incomeHistory, symbolAnalysisOutput))
   .then(symbolAnalysisOutput => nextSymbol(symbolAnalysisOutput))
   .catch(function(errorText) {
     console.log(`${utils.textColor.FgRed}${errorText}${utils.textColor.Reset}`)

@@ -3,7 +3,6 @@
 const utils = require('../utils');
 const secrets = require('../secrets');
 const network = require('./networkService');
-const { quote } = require('./networkFacade');
 
 // Constants
 
@@ -33,7 +32,7 @@ else {
 module.exports.quote = function(symbol) {
   var quoteUrl = serviceUrl + translateSymbol(symbol) + '/quote'
   var parameters = {
-    token: apiKey = apiKey
+    token: apiKey
   
   }
 
