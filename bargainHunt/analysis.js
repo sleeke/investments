@@ -1,3 +1,4 @@
+const { daily } = require('./network/iexService');
 const utils = require('./utils');
 
 //=============//
@@ -87,8 +88,6 @@ module.exports.incomeHistory = function(incomeHistory, symbolAnalysisOutput) {
 //==========//
 // ANALYSIS //
 //==========//
-
-// TODO: Test compliance with MA20
 
 // TODO: Find a way to gauge even rise, e.g. 
 //  - Avg. daily range
@@ -190,7 +189,7 @@ function calculateMovingAverage(dailyStats, movingAverageLength) {
   if (dailyStats.length < movingAverageLength) return -1
 
   var movingAverage = 0
-  for (dayIndex = 0; dayIndex < movingAverageLength; dayIndex++) {
+  for (var dayIndex = 0; dayIndex < movingAverageLength; dayIndex++) {
       movingAverage += dailyStats[dayIndex].close
   }
 
@@ -240,6 +239,43 @@ function movingAverageTrend(dailyStats) {
 
   return ma20 / prevMa20 - 1
 }
+
+// TODO: Test compliance with MA20
+
+module.exports.getMovingAverageCompliance = function(dailyData, baseObject) {
+
+  baseObject.movingAverageCompliance = {
+    ma20: getMovingAverageComplianceForPeriod(dailyData, 20),
+    ma50: getMovingAverageComplianceForPeriod(dailyData, 50)
+  }
+}
+
+function getMovingAverageComplianceForPeriod(dailyData, period) {
+  var compliance = 0
+
+  for(var dayIndex = period; dayIndex < dailyData.length; dayIndex++) {
+    var close = dailyData[dayIndex].close
+    var movingAverage = movingAverageForOffset(dailyData, dayIndex, period)
+    var prevMovingAverage = movingAverageForOffset(dailyData, dayIndex - 1, period)
+    var movingAverageDelta = movingAverage / prevMovingAverage - 1
+    var deviation = close / movingAverage - 1
+
+    // TODO: Figure out why this isn't a good measure
+    // Could potentially weight the violations more than the correlations?
+
+    compliance += deviation * movingAverageDelta
+  }
+
+  return compliance / dailyData.length
+}
+
+function movingAverageForOffset(dailyData, endIndex, period) {
+  var startIndex = endIndex - period + 1
+  var movingAverageArray = dailyData.slice(startIndex, startIndex + period)
+  return calculateMovingAverage(movingAverageArray, period)
+}
+
+
 
 //========//
 // OUTPUT //

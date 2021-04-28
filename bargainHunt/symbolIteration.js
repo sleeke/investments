@@ -9,17 +9,17 @@ module.exports.moveToNextSymbol = function(promiseChain, onSuccess) {
 
 module.exports.nextSymbol = function(symbolAnalysisOutput, onSuccess) {
   return new Promise(function(resolve, reject) {
-    for (symbolCategoryIndex in symbolAnalysisOutput.categories) {
-      var categoryName = symbolAnalysisOutput.categories[symbolCategoryIndex]
+    // for (symbolCategoryIndex in symbolAnalysisOutput.categories) {
+    //   var categoryName = symbolAnalysisOutput.categories[symbolCategoryIndex]
       
-      var categoryInOutput = global.analysisOutput.categories[`${categoryName}`]
-      if (typeof categoryInOutput == `undefined`) {
-        // No symbols have been added for this category
-        categoryInOutput = global.analysisOutput.categories[`${categoryName}`] = []
-      }
+    //   var categoryInOutput = global.analysisOutput.categories[`${categoryName}`]
+    //   if (typeof categoryInOutput == `undefined`) {
+    //     // No symbols have been added for this category
+    //     categoryInOutput = global.analysisOutput.categories[`${categoryName}`] = []
+    //   }
   
-      categoryInOutput.push(symbolAnalysisOutput)
-    }
+    //   categoryInOutput.push(symbolAnalysisOutput)
+    // }
 
     // Exit condition for last symbol
     if (symbolIndex >= module.exports.globalSymbols.length - 1) {

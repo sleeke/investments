@@ -9,6 +9,10 @@ module.exports.daily = function(symbol) {
   return networkImp.daily(symbol)
 }
 
+module.exports.history = function(symbol) {
+  return networkImp.history(symbol)
+}
+
 module.exports.high52w = function(symbol) {
   return networkImp.high52w(symbol)
 }

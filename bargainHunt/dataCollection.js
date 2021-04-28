@@ -9,6 +9,11 @@ module.exports.getDailyData = function(symbol, symbolAnalysisOutput) {
     .then(quoteData => analysis.current(quoteData, symbolAnalysisOutput)));
 }
 
+module.exports.getMovingAverageCompliance = function(symbol, symbolAnalysisOutput) {
+  return networkService.history(symbol)
+    .then(dailyData => analysis.getMovingAverageCompliance(dailyData, symbolAnalysisOutput))
+}
+
 module.exports.addRatioTo52wHigh = function(promiseChain, symbol) {
   return promiseChain
   .then(symbolAnalysisOutput => networkService.high52w(symbol)

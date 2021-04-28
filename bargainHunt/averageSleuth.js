@@ -17,30 +17,17 @@ global.analysisOutput = {
 processArgs()
 
 function analyze(symbol) {
-  printSymbolHeader(symbol);
-
   // Setup container
   var symbolAnalysisOutput = {}
   symbolAnalysisOutput.symbol = symbol
   utils.addLinks(symbolAnalysisOutput, symbol)
 
-  // Optional data
   if (flags.include.rawSymbolData) {
     global.analysisOutput.symbols.push(symbolAnalysisOutput)
   }
-  if (flags.include.fundamentals) {
-    promiseChain = dataCollection.addFundamentals(promiseChain, symbolAnalysisOutput)
-  }
-  if (flags.include.high52w) {
-    promiseChain = dataCollection.addRatioTo52wHigh(promiseChain, symbol, symbolAnalysisOutput)
-  }
-  if (flags.include.rsi) {
-    promiseChain = dataCollection.addRsi(promiseChain, symbol, symbolAnalysisOutput)
-  }
 
   // Defaults
-  var promiseChain = dataCollection.getDailyData(symbol, symbolAnalysisOutput)
-  promiseChain = categorizeSymbol(promiseChain, symbolAnalysisOutput)
+  var promiseChain = dataCollection.getMovingAverageCompliance(symbol, symbolAnalysisOutput)
   promiseChain = symbolIteration.moveToNextSymbol(promiseChain, analyze)
 
   // Error catching
@@ -52,21 +39,9 @@ function analyze(symbol) {
   })
 }
 
-function categorizeSymbol(promiseChain, symbolAnalysisOutput) {
-  return promiseChain
-  .then(_ => analysis.categorize(symbolAnalysisOutput))
-}
-
 //=======//
 // UTILS //
 //=======//
-
-function printSymbolHeader(symbol) {
-  console.log('\n');
-  console.log(utils.info(utils.stringOfChars('=', symbol.length)));
-  console.log(utils.info(symbol));
-  console.log(utils.info(utils.stringOfChars('=', symbol.length)));
-}
 
 function processArgs() {
   const argv = yargs

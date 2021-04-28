@@ -3,7 +3,7 @@
 // =====
 
 // Set paid API key enabled/disabled
-module.exports.debugMode = true 
+module.exports.debugMode = false 
 
 module.exports.include = {
   
@@ -11,7 +11,7 @@ module.exports.include = {
   fundamentals: false,
 
   // Include the array of all symbols as well as the categorized list
-  rawSymbolData: false,
+  rawSymbolData: true,
 
   // Include RSI value
   rsi: false,

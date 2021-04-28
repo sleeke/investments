@@ -95,6 +95,20 @@ function extractdailyData(json) {
   }
 }
 
+// History
+
+module.exports.history = function (symbol) {
+  var dailyUrl = serviceUrl + translateSymbol(symbol) + '/chart/2y'
+
+  var parameters = {
+    chartCloseOnly: true,
+    token: apiKey  
+  }
+
+  return network.query(dailyUrl, parameters)
+    .catch(error => Promise.reject(`Error getting historic data for '${symbol}', please check symbol is valid`))
+}
+
 // 52w High
 
 module.exports.high52w = function (symbol) {
