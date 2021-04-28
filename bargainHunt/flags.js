@@ -11,11 +11,13 @@ module.exports.include = {
   fundamentals: false,
 
   // Include the array of all symbols as well as the categorized list
-  rawSymbolData: false 
+  rawSymbolData: false,
 
-  // TODO: Add flags for more stuff, in order to be most efficient on credits, e.g.
-  // - RSI
-  // - 52w High
+  // Include RSI value
+  rsi: false,
+
+  // Include 52-week high 
+  high52w: false
 
 }
 

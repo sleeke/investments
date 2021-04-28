@@ -16,13 +16,33 @@ module.exports.analyze = function(dailyData, analysisOutput) {
     if (typeof dailyData != 'undefined' && dailyData.length > 0) {
       console.log(`\n${utils.textColor.FgBlue}Momentum Analysis:${utils.textColor.Reset}\n`)
       
-      analysisOutput.momentumAnalysis = {}
-      
-      greenDays(dailyData, analysisOutput.momentumAnalysis)
-      momentum(dailyData, analysisOutput.momentumAnalysis)
+      momentumAnalysis = {}
+      greenDays(dailyData, momentumAnalysis)
+      momentum(dailyData, momentumAnalysis)
 
-      analysisOutput.buyZoneApproach = {}
-      analyzeBuyZone(dailyData, analysisOutput.buyZoneApproach)
+      // MA Trend
+      var sufficientTrend = Math.pow(1.08, (1.0 / 20)) - 1
+      ma20Trend = {}
+      ma20Trend.value = movingAverageTrend(dailyData)
+      ma20Trend.gainAt20Sessions = Math.pow((1 + ma20Trend), 20) 
+      if (ma20Trend.value < 0) {
+        ma20Trend.type = "NEGATIVE"
+      }
+      else if (ma20Trend.value < sufficientTrend / 2) {
+        ma20Trend.type = "PUNY"
+      }
+      else if (ma20Trend.value >= sufficientTrend / 2) {
+        ma20Trend.type = "WEAK"
+      }
+      else if (ma20Trend.value >= sufficientTrend) {
+        ma20Trend.type = "STRONG"
+      }
+      momentumAnalysis.ma20Trend = ma20Trend
+      analysisOutput.momentumAnalysis = momentumAnalysis
+
+      buyZoneApproach = {}
+      analyzeBuyZone(dailyData, buyZoneApproach)
+      analysisOutput.buyZoneApproach = buyZoneApproach
 
       volatility(dailyData, analysisOutput)
     }
@@ -67,6 +87,8 @@ module.exports.incomeHistory = function(incomeHistory, symbolAnalysisOutput) {
 //==========//
 // ANALYSIS //
 //==========//
+
+// TODO: Test compliance with MA20
 
 // TODO: Find a way to gauge even rise, e.g. 
 //  - Avg. daily range
@@ -144,7 +166,7 @@ function dailyTimeSeriesToArray(dailyTimeSeries) {
 
 function analyzeBuyZone(dailyStats, buyZoneApproach) {
   var ma20 = calculateMovingAverage(dailyStats, 20)
-  var prevMa20 = calculateMovingAverage(dailyStats.slice(1, dailyStats.length - 1), 20)
+  var prevMa20 = calculateMovingAverage(dailyStats.slice(1, dailyStats.length), 20)
 
   var lastPrice = dailyStats[0].close
   var prevClose = dailyStats[1].close
@@ -209,6 +231,14 @@ function greenDays(dailyStats, momentumAnalysis) {
   console.log(utils.colorizeString(1, 3, greenStreak, `Green days: ${greenStreak}`))
 
   momentumAnalysis.greenDays = greenStreak
+}
+
+function movingAverageTrend(dailyStats) {
+  // TODO: This is perhaps a little inefficient, since this is also calculated elsewhere
+  var ma20 = calculateMovingAverage(dailyStats, 20)
+  var prevMa20 = calculateMovingAverage(dailyStats.slice(1, dailyStats.length), 20)
+
+  return ma20 / prevMa20 - 1
 }
 
 //========//
@@ -296,7 +326,6 @@ module.exports.rsi = function(rsiData, analysisOutput) {
 // CATEGORIZATION //
 //================//
 
-// TODO: Allow more than one categry, e.g. EVEN, RISER, BREAKOUT
 module.exports.categorize = function(symbolAnalysisOutput) {
   return new Promise(function (resolve, reject) {
     var momentumAnalysis = symbolAnalysisOutput.momentumAnalysis
@@ -338,6 +367,8 @@ function highDailyChange(momentumAnalysis) {
 }
 
 function closeTo52wHigh(symbolAnalysis) {
+  if (typeof symbolAnalysis.ratios == `undefined`) return false
+
   return symbolAnalysis.ratios.percent52w > 95
 }
 

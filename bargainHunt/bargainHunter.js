@@ -32,10 +32,15 @@ function analyze(symbol) {
   if (flags.include.fundamentals) {
     promiseChain = addFundamentals(promiseChain, symbolAnalysisOutput)
   }
+  if (flags.include.high52w) {
+    promiseChain = addRatioTo52wHigh(promiseChain, symbol, symbolAnalysisOutput)
+  }
+  if (flags.include.rsi) {
+    promiseChain = addRsi(promiseChain, symbol, symbolAnalysisOutput)
+  }
 
+  // Defaults
   var promiseChain = getDailyData(symbol, symbolAnalysisOutput)
-  promiseChain = addRatioTo52wHigh(promiseChain, symbol, symbolAnalysisOutput)
-  promiseChain = addRsi(promiseChain, symbol, symbolAnalysisOutput)
   promiseChain = categorizeSymbol(promiseChain, symbolAnalysisOutput)
   promiseChain = moveToNextSymbol(promiseChain, symbolAnalysisOutput)
 
