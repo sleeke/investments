@@ -21,6 +21,9 @@ module.exports.analyze = function(dailyData, analysisOutput) {
       greenDays(dailyData, analysisOutput.momentumAnalysis)
       momentum(dailyData, analysisOutput.momentumAnalysis)
 
+      analysisOutput.buyZoneApproach = {}
+      analyzeBuyZone(dailyData, analysisOutput.buyZoneApproach)
+
       volatility(dailyData, analysisOutput)
     }
 
@@ -137,6 +140,43 @@ function dailyTimeSeriesToArray(dailyTimeSeries) {
   });
 
   return array
+}
+
+function analyzeBuyZone(dailyStats, buyZoneApproach) {
+  var ma20 = calculateMovingAverage(dailyStats, 20)
+  var prevMa20 = calculateMovingAverage(dailyStats.slice(1, dailyStats.length - 1), 20)
+
+  var lastPrice = dailyStats[0].close
+  var prevClose = dailyStats[1].close
+
+  buyZoneApproach.aboveMa20 = lastPrice - ma20 > 0
+  buyZoneApproach.approachingMa20 = lastPrice < prevClose
+  buyZoneApproach.closeToMa20 = isCloseToPrice(lastPrice, ma20, 5)
+  if (prevMa20 >= 0) {
+    buyZoneApproach.positiveMa20Trend = ma20 > prevMa20
+  }
+}
+
+function approachingBuyZone(symbolAnalysis) {
+  var buyZoneApproach = symbolAnalysis.buyZoneApproach
+
+  return buyZoneApproach.aboveMa20
+    && (buyZoneApproach.approachingMa20 || buyZoneApproach.closeToMa20)
+}
+
+function calculateMovingAverage(dailyStats, movingAverageLength) {
+  if (dailyStats.length < movingAverageLength) return -1
+
+  var movingAverage = 0
+  for (dayIndex = 0; dayIndex < movingAverageLength; dayIndex++) {
+      movingAverage += dailyStats[dayIndex].close
+  }
+
+  return movingAverage / movingAverageLength
+}
+
+function isCloseToPrice(price, target, rangePercent) {
+  return (price / target < (1 + rangePercent / 100))
 }
 
 // TODO: Green days seems to under-report (1 day instead of 2)
@@ -275,6 +315,9 @@ module.exports.categorize = function(symbolAnalysisOutput) {
     }
     if (nonVolatile(symbolAnalysisOutput)) {
       symbolAnalysisOutput.categories.push('STEADY')
+    }
+    if (approachingBuyZone(symbolAnalysisOutput)) {
+      symbolAnalysisOutput.categories.push('APPROACHING BUY ZONE')
     }
 
     resolve(symbolAnalysisOutput)

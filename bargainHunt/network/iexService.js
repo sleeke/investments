@@ -1,5 +1,6 @@
 // Local modules
 
+const flags = require('../flags');
 const utils = require('../utils');
 const secrets = require('../secrets');
 const network = require('./networkService');
@@ -12,7 +13,7 @@ var serviceUrlProd = 'https://cloud.iexapis.com/stable/stock/'
 var serviceUrl
 var apiKey
 
-if (utils.debugMode) {
+if (flags.debugMode) {
   console.log(`${utils.textColor.FgGreen}INFO: You are using the SANDBOX API key; values will not be accurate${utils.textColor.Reset}`)
   serviceUrl = serviceUrlSandbox
   apiKey = secrets.iexApikeySandbox

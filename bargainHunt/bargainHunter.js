@@ -1,6 +1,7 @@
 const yargs = require('yargs');
 
 // Local modules
+const flags = require('./flags');
 const analysis = require('./analysis');
 const fileService = require('./storage/fileService');
 const networkService = require('./network/networkFacade');
@@ -16,45 +17,92 @@ global.analysisOutput = {
 
 processArgs()
 
-fileService.symbols(filename, (symbols) => {
-  if (typeof symbols === 'undefined' || symbols.length == 0) {
-    console.log("No symbols found...")
-  }
-  else {
-    globalSymbols = symbols
-    analyze(symbols[0])
-  }
-})
-
 function analyze(symbol) {
-  console.log('\n')
-  console.log(utils.info(utils.stringOfChars('=', symbol.length)))
-  console.log(utils.info(symbol))
-  console.log(utils.info(utils.stringOfChars('=', symbol.length)))
+  printSymbolHeader(symbol);
 
+  // Setup container
   var symbolAnalysisOutput = {}
   symbolAnalysisOutput.symbol = symbol
-  global.analysisOutput.symbols.push(symbolAnalysisOutput)
+  addLinks(symbolAnalysisOutput, symbol)
 
-  networkService.daily(symbol)
-  .then(dailyData => analysis.analyze(dailyData, symbolAnalysisOutput))
-  .then(symbolAnalysisOutput => networkService.quote(symbol)
-  .then(quoteData => analysis.current(quoteData, symbolAnalysisOutput)))
-  .then(symbolAnalysisOutput => networkService.high52w(symbol)
-  .then(high52w => analysis.percent52wHigh(high52w, symbolAnalysisOutput)))
-  .then(symbolAnalysisOutput => networkService.rsi(symbol)
-  .then(rsi => analysis.rsi(rsi, symbolAnalysisOutput)))
-  .then(symbolAnalysisOutput => analysis.categorize(symbolAnalysisOutput))
-  .then(symbolAnalysisOutput => networkService.fundamentals(symbolAnalysisOutput.symbol))
-  .then(fundamentals => analysis.fundamentals(fundamentals, symbolAnalysisOutput))
-  .then(symbolAnalysisOutput => networkService.incomeHistory(symbolAnalysisOutput.symbol))
-  .then(incomeHistory => analysis.incomeHistory(incomeHistory, symbolAnalysisOutput))
-  .then(symbolAnalysisOutput => nextSymbol(symbolAnalysisOutput))
+  // Optional data
+  if (flags.include.rawSymbolData) {
+    global.analysisOutput.symbols.push(symbolAnalysisOutput)
+  }
+  if (flags.include.fundamentals) {
+    promiseChain = addFundamentals(promiseChain, symbolAnalysisOutput)
+  }
+
+  var promiseChain = getDailyData(symbol, symbolAnalysisOutput)
+  promiseChain = addRatioTo52wHigh(promiseChain, symbol, symbolAnalysisOutput)
+  promiseChain = addRsi(promiseChain, symbol, symbolAnalysisOutput)
+  promiseChain = categorizeSymbol(promiseChain, symbolAnalysisOutput)
+  promiseChain = moveToNextSymbol(promiseChain, symbolAnalysisOutput)
+
+  // Error catching
+  promiseChain
   .catch(function(errorText) {
     console.log(`${utils.textColor.FgRed}${errorText}${utils.textColor.Reset}`)
     symbolAnalysisOutput['error'] = errorText
     nextSymbol(symbolAnalysisOutput)
   })
+}
+
+function categorizeSymbol(promiseChain, symbolAnalysisOutput) {
+  return promiseChain
+  .then(_ => analysis.categorize(symbolAnalysisOutput))
+}
+
+//=================//
+// DATA COLLECTION //
+//=================//
+
+function getDailyData(symbol, symbolAnalysisOutput) {
+  return networkService.daily(symbol)
+    .then(dailyData => analysis.analyze(dailyData, symbolAnalysisOutput))
+    .then(symbolAnalysisOutput => networkService.quote(symbol)
+    .then(quoteData => analysis.current(quoteData, symbolAnalysisOutput)));
+}
+
+function printSymbolHeader(symbol) {
+  console.log('\n');
+  console.log(utils.info(utils.stringOfChars('=', symbol.length)));
+  console.log(utils.info(symbol));
+  console.log(utils.info(utils.stringOfChars('=', symbol.length)));
+}
+
+function addRatioTo52wHigh(promiseChain, symbol) {
+  return promiseChain
+  .then(symbolAnalysisOutput => networkService.high52w(symbol)
+  .then(high52w => analysis.percent52wHigh(high52w, symbolAnalysisOutput)))
+}
+
+function addRsi(promiseChain, symbol) {
+  return promiseChain
+  .then(symbolAnalysisOutput => networkService.rsi(symbol)
+  .then(rsi => analysis.rsi(rsi, symbolAnalysisOutput)))
+}
+
+function addFundamentals(promiseChain, symbolAnalysisOutput) {
+  return promiseChain
+  .then(symbolAnalysisOutput => networkService.fundamentals(symbolAnalysisOutput.symbol))
+  .then(fundamentals => analysis.fundamentals(fundamentals, symbolAnalysisOutput))
+  .then(symbolAnalysisOutput => networkService.incomeHistory(symbolAnalysisOutput.symbol))
+  .then(incomeHistory => analysis.incomeHistory(incomeHistory, symbolAnalysisOutput))
+}
+
+function addLinks(symbolAnalysisOutput, symbol) {
+  symbolAnalysisOutput.links = {}
+  symbolAnalysisOutput.links.yahooChart = "https://finance.yahoo.com/chart/" + symbol
+  symbolAnalysisOutput.links.barChart = "https://www.barchart.com/stocks/" + symbol
+}
+
+//==============//
+// PROGRAM FLOW //
+//==============//
+
+function moveToNextSymbol(promiseChain) {
+  return promiseChain.then(symbolAnalysisOutput => nextSymbol(symbolAnalysisOutput))
 }
 
 function nextSymbol(symbolAnalysisOutput) {
@@ -84,6 +132,10 @@ function nextSymbol(symbolAnalysisOutput) {
   })
 }
 
+//=======//
+// UTILS //
+//=======//
+
 function processArgs() {
   const argv = yargs
   .command('inFile', 'Specifies a file containing symbols', {
@@ -103,3 +155,14 @@ function processArgs() {
     console.log(`\n${utils.textColor.FgBlue}Loading symbols from '${filename}'${utils.textColor.Reset}\n`)
   }
 }
+
+fileService.symbols(filename, (symbols) => {
+  if (typeof symbols === 'undefined' || symbols.length == 0) {
+    console.log("No symbols found...")
+  }
+  else {
+    globalSymbols = symbols
+    analyze(symbols[0])
+  }
+})
+

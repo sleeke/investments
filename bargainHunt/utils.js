@@ -1,9 +1,3 @@
-// =====
-// FLAGS
-// =====
-
-module.exports.debugMode = false // Sets paid API key enabled/disabled
-
 // ========
 // VALIDITY
 // ========
