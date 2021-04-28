@@ -3,7 +3,7 @@
 // =====
 
 // Set paid API key enabled/disabled
-module.exports.debugMode = false 
+module.exports.debugMode = true 
 
 module.exports.include = {
   

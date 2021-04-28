@@ -103,3 +103,14 @@ module.exports.colorizeStringInBand = function(lowEnd, highEnd, value, string) {
 
   return string
 }
+
+//===========
+// EXTRA INFO
+//===========
+
+module.exports.addLinks = function(baseObject, symbol) {
+  baseObject.links = {}
+  baseObject.links.yahooChart = "https://finance.yahoo.com/chart/" + symbol
+  baseObject.links.barChart = "https://www.barchart.com/stocks/" + symbol
+}
+

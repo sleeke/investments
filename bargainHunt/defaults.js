@@ -1,0 +1,1 @@
+module.exports.inputFile = "storage/symbols.txt"
