@@ -32,7 +32,7 @@ module.exports.analyze = function(dailyData, analysisOutput) {
       else if (ma20Trend.value < sufficientTrend / 2) {
         ma20Trend.type = "PUNY"
       }
-      else if (ma20Trend.value >= sufficientTrend / 2) {
+      else if (ma20Trend.value < sufficientTrend) {
         ma20Trend.type = "WEAK"
       }
       else if (ma20Trend.value >= sufficientTrend) {
@@ -260,10 +260,10 @@ function getMovingAverageComplianceForPeriod(dailyData, period) {
     var movingAverageDelta = movingAverage / prevMovingAverage - 1
     var deviation = close / movingAverage - 1
 
-    // TODO: Figure out why this isn't a good measure
-    // Could potentially weight the violations more than the correlations?
+    // TODO: Add version to the JSON object to identify the method
+    // TODO: Exclude movingAverageDelta < x in future version
 
-    compliance += deviation * movingAverageDelta
+    compliance += deviation * movingAverageDelta >= 0 ? 1 : -1
   }
 
   return compliance / dailyData.length
