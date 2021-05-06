@@ -7,11 +7,12 @@
   <body>
     <canvas id="myChart" width="400" height="400"></canvas>
     <script>
-      readJson()
-      var ctx = document.getElementById('myChart').getContext('2d');
-      var labels = []
-      var values = []
-      var myChart = new Chart(ctx, {
+    var labels = []
+    var values = []
+    readJson()
+      .then(_ => {
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx, {
         type: 'bar',
         data: {
             labels: labels,
@@ -43,29 +44,29 @@
                     beginAtZero: true
                 }
             }
-        }
-    });
+        }    
+      })
+    })
 
     function readJson() {
-      fetch('output.json')
+      return fetch('output.json')
       .then(response => {
-          if (!response.ok) {
-              throw new Error("HTTP error " + response.status);
-          }
-          return response.json();
+        if (!response.ok) {
+            throw new Error("HTTP error " + response.status);
+        }
+        return response.json();
       })
       .then(json => {
         processData(json);
       })
       .catch(function () {
-          this.dataError = true;
+        this.dataError = true;
       })
     }
 
-    async function processData(data) {
+    function processData(data) {
       var symbols = data.symbols
       symbols.forEach(element => {
-        console.log(element.volatility['5day'])
         labels.push(element.symbol)
         values.push(element.volatility['5day'])
       });
