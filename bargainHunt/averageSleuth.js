@@ -10,7 +10,10 @@ const symbolIteration = require('./symbolIteration');
 const defaults = require('./defaults');
 const dataCollection = require('./dataCollection');
 
+// Command line arguments
 var filename = defaults.inputFile
+var testing = false
+
 global.analysisOutput = {
   'symbols' : [],
   'categories' : {}
@@ -31,7 +34,8 @@ function analyze(symbol) {
   }
 
   // Defaults
-  var promiseChain = dataCollection.getMovingAverageCompliance(symbol, symbolAnalysisOutput)
+  // TODO: allow date-range searches
+  var promiseChain = dataCollection.getMovingAverageCompliance(symbol, symbolAnalysisOutput, testing)
   promiseChain = symbolIteration.moveToNextSymbol(promiseChain, analyze)
 
   // Error catching
@@ -56,15 +60,29 @@ function processArgs() {
       type: 'string',
     }
   })
+  .command('test', 'Outputs test data', {
+    filename: {
+      description: 'Whether to output test data',
+      alias: 't', 
+      type: 'boolean',
+    }
+  })
   .help()
   .alias('help', 'h')
   .argv
   
-  if (typeof argv._ != 'undefined' && argv._.includes('inFile')) {
-    filename = argv.filename
+  if (typeof argv._ != 'undefined') {
+    if (argv._.includes('inFile')) {
+      filename = argv.filename
 
-    console.log(`\n${utils.textColor.FgBlue}Loading symbols from '${filename}'${utils.textColor.Reset}\n`)
-  }
+      console.log(`\n${utils.textColor.FgBlue}Loading symbols from '${filename}'${utils.textColor.Reset}\n`)
+    }
+    if (argv._.includes('test')) {
+      testing = true
+  
+      console.log(`\n${utils.textColor.FgBlue}Entering test mode...\n${utils.textColor.Reset}`)
+    }
+  }  
 }
 
 symbolIteration.loadSymbolsFromFileAndThen(filename, analyze)

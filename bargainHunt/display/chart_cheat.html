@@ -49,7 +49,7 @@
     })
 
     function readJson() {
-      return fetch('output.json')
+      return fetch('testing.json')
       .then(response => {
         if (!response.ok) {
             throw new Error("HTTP error " + response.status);
@@ -64,11 +64,14 @@
       })
     }
 
+    // TODO: Link to the development folder from the localhost
+    // TODO: Create line charts instead of bars
+    // TODO: Create multiple lines with different y-axes
+
     function processData(data) {
-      var symbols = data.symbols
-      symbols.forEach(element => {
-        labels.push(element.symbol)
-        values.push(element.volatility['5day'])
+      data.forEach(element => {
+        labels.push(element.date)
+        values.push(element.close)
       });
     }
     </script>

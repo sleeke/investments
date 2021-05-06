@@ -1,5 +1,6 @@
 const networkService = require('./network/networkFacade');
 const analysis = require('./analysis');
+const fileService = require('./storage/fileService')
 
 
 module.exports.getDailyData = function(symbol, symbolAnalysisOutput) {
@@ -9,9 +10,19 @@ module.exports.getDailyData = function(symbol, symbolAnalysisOutput) {
     .then(quoteData => analysis.current(quoteData, symbolAnalysisOutput)));
 }
 
-module.exports.getMovingAverageCompliance = function(symbol, symbolAnalysisOutput) {
-  return networkService.history(symbol)
+module.exports.getMovingAverageCompliance = function(symbol, symbolAnalysisOutput, testing) {
+  if (testing) {
+    return networkService.history(symbol)
+    .then(dailyData => outputDataToFile(dailyData, "testing.json"))
+  }
+  else {
+    return networkService.history(symbol)
     .then(dailyData => analysis.getMovingAverageCompliance(dailyData, symbolAnalysisOutput))
+  }
+}
+
+function outputDataToFile(jsonData, filename) {
+  fileService.saveAnalysis(jsonData, filename)
 }
 
 module.exports.addRatioTo52wHigh = function(promiseChain, symbol) {

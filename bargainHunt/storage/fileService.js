@@ -35,8 +35,11 @@ function outputSymbols(symbols) {
   }
 }
 
-module.exports.saveAnalysis = function(outputJson) {
-  fs.writeFile('output.json', JSON.stringify(outputJson, null, 2), function (err) {
+module.exports.saveAnalysis = function(outputJson, filename) {
+  if (typeof(filename) == 'undefined') {
+    filename = 'output.json'
+  }
+  fs.writeFile(filename, JSON.stringify(outputJson, null, 2), function (err) {
     if (err) return console.log(err)
   })
 }
