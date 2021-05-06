@@ -43,6 +43,7 @@ function analyze(symbol) {
   // Defaults
   var promiseChain = dataCollection.getDailyData(symbol, symbolAnalysisOutput)
   promiseChain = categorizeSymbol(promiseChain, symbolAnalysisOutput)
+  promiseChain = applyCategories(promiseChain, symbolAnalysisOutput)
   promiseChain = symbolIteration.moveToNextSymbol(promiseChain, analyze)
 
   // Error catching
@@ -57,6 +58,24 @@ function analyze(symbol) {
 function categorizeSymbol(promiseChain, symbolAnalysisOutput) {
   return promiseChain
   .then(_ => analysis.categorize(symbolAnalysisOutput))
+}
+
+function applyCategories(promiseChain, symbolAnalysisOutput) {
+  return promiseChain
+  .then(symbolAnalysisOutput => {
+    for (symbolCategoryIndex in symbolAnalysisOutput.categories) {
+      var categoryName = symbolAnalysisOutput.categories[symbolCategoryIndex]
+      
+      var categoryInOutput = global.analysisOutput.categories[`${categoryName}`]
+      if (typeof categoryInOutput == `undefined`) {
+        // No symbols have been added for this category
+        categoryInOutput = global.analysisOutput.categories[`${categoryName}`] = []
+      }
+  
+      categoryInOutput.push(symbolAnalysisOutput)
+    }
+
+  })
 }
 
 //=======//

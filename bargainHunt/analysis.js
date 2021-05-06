@@ -165,7 +165,7 @@ function dailyTimeSeriesToArray(dailyTimeSeries) {
 
 function analyzeBuyZone(dailyStats, buyZoneApproach) {
   var ma20 = calculateMovingAverage(dailyStats, 20)
-  var prevMa20 = calculateMovingAverage(dailyStats.slice(1, dailyStats.length), 20)
+  var prevMa20 = calculateMovingAverage(dailyStats.slice(1, dailyStats.length), 21)
 
   var lastPrice = dailyStats[0].close
   var prevClose = dailyStats[1].close
@@ -243,8 +243,9 @@ function movingAverageTrend(dailyStats) {
 // TODO: Test compliance with MA20
 
 module.exports.getMovingAverageCompliance = function(dailyData, baseObject) {
-
+  // TODO: allow date-range searches
   baseObject.movingAverageCompliance = {
+    version: "0.2",
     ma20: getMovingAverageComplianceForPeriod(dailyData, 20),
     ma50: getMovingAverageComplianceForPeriod(dailyData, 50)
   }
@@ -252,21 +253,25 @@ module.exports.getMovingAverageCompliance = function(dailyData, baseObject) {
 
 function getMovingAverageComplianceForPeriod(dailyData, period) {
   var compliance = 0
+  var significantMovingAverageDelta = 0.0015  // Admittedly, guesswork from a few charts
 
+  var numValidSessions = 0
   for(var dayIndex = period; dayIndex < dailyData.length; dayIndex++) {
     var close = dailyData[dayIndex].close
+
     var movingAverage = movingAverageForOffset(dailyData, dayIndex, period)
     var prevMovingAverage = movingAverageForOffset(dailyData, dayIndex - 1, period)
+
     var movingAverageDelta = movingAverage / prevMovingAverage - 1
     var deviation = close / movingAverage - 1
 
-    // TODO: Add version to the JSON object to identify the method
-    // TODO: Exclude movingAverageDelta < x in future version
-
-    compliance += deviation * movingAverageDelta >= 0 ? 1 : -1
+    if (Math.abs(movingAverageDelta) > significantMovingAverageDelta) {
+      compliance += deviation * movingAverageDelta >= 0 ? 1 : -1
+      numValidSessions++
+    }
   }
 
-  return compliance / dailyData.length
+  return compliance / numValidSessions
 }
 
 function movingAverageForOffset(dailyData, endIndex, period) {

@@ -19,6 +19,8 @@ global.analysisOutput = {
 processArgs()
 
 function analyze(symbol) {
+  console.log(`Analyzing ${symbol}...`)
+
   // Setup container
   var symbolAnalysisOutput = {}
   symbolAnalysisOutput.symbol = symbol
