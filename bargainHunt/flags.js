@@ -3,7 +3,15 @@
 // =====
 
 // Set paid API key enabled/disabled
-module.exports.debugMode = false 
+module.exports.sandbox = false 
+
+// Add various debugging modes
+module.exports.debug = {
+
+  // Output compliance debugging data
+  compliance: false
+
+}
 
 module.exports.include = {
   

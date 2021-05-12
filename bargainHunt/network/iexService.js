@@ -13,7 +13,7 @@ var serviceUrlProd = 'https://cloud.iexapis.com/stable/stock/'
 var serviceUrl
 var apiKey
 
-if (flags.debugMode) {
+if (flags.sandbox) {
   console.log(`${utils.textColor.FgGreen}INFO: You are using the SANDBOX API key; values will not be accurate${utils.textColor.Reset}`)
   serviceUrl = serviceUrlSandbox
   apiKey = secrets.iexApikeySandbox

@@ -5,45 +5,100 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.2.1/dist/chart.min.js"></script>
   </head> 
   <body>
-    <canvas id="myChart" width="400" height="400"></canvas>
+    <canvas id="myChart"></canvas>
     <script>
     var labels = []
     var closeValues = []
     var volumeValues = []
+    var maValues = []
+    var maPostiveDeltaValues = []
+    var maNegativeDeltaValues = []
+    var maDeviationValues = []
+    var deltaThreshold = 0.0015
+
+    Chart.defaults.scale.grid.display = false
+
     readJson()
       .then(_ => {
         var ctx = document.getElementById('myChart').getContext('2d');
         var myChart = new Chart(ctx, {
-        type: 'line',
         data: {
-            labels: labels,
-            datasets: [{
-                label: 'Close',
-                data: closeValues,
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)'
-                ],
-                borderColor: [
-                    'rgba(255, 99, 132, 1)'
-                ],
-                borderWidth: 1,
-                yAxisID: 'close',
-                radius: 0
-            },
-            {
-                label: 'Volume',
-                data: volumeValues,
-                backgroundColor: [
-                    'rgba(0, 99, 132, 0.2)'
-                ],
-                borderColor: [
-                    'rgba(0, 99, 132, 1)'
-                ],
-                borderWidth: 1,
-                yAxisID: 'volume',
-                radius: 0
-            }]
-        }    
+          labels: labels,
+          datasets: [{
+              type: 'bar',
+              label: '+ve Delta',
+              data: maPostiveDeltaValues,
+              backgroundColor: [
+                'rgba(0, 128, 0, 0.1)'
+              ],
+              borderColor: [
+                'rgba(0, 128, 0, 0.1)'
+              ],
+              barPercentage: 1,
+              barWidth: 'flex',
+              yAxisID: 'delta',
+              radius: 0
+          },
+          {
+              type: 'bar',
+              label: '-ve Delta',
+              data: maNegativeDeltaValues,
+              borderWidth:0,
+              backgroundColor: [
+                'rgba(252, 0, 0, 0.1)'
+              ],
+              borderColor: [
+                'rgba(252, 0, 0, 0.1)'
+              ],
+              barPercentage: 1,
+              barWidth: 'flex',
+              borderSkipped: false,
+              yAxisID: 'delta',
+              radius: 0
+          },
+          {
+              type: 'line',
+              label: 'Close',
+              data: closeValues,
+              backgroundColor: [
+                'rgba(0, 0, 0, 0.5)'
+              ],
+              borderColor: [
+                'rgba(0, 0, 0, 0.5)'
+              ],
+              borderWidth: 1,
+              yAxisID: 'close',
+              radius: 0
+          },
+          {
+              type: 'line',
+              label: 'MA',
+              data: maValues,
+              backgroundColor: [
+                'rgba(173, 110, 255, 1)'
+              ],
+              borderColor: [
+                'rgba(173, 110, 255, 1)'
+              ],
+              borderWidth: 2,
+              yAxisID: 'close',
+              radius: 0
+          },
+          {
+              type: 'line',
+              label: 'Deviation',
+              data: maDeviationValues,
+              backgroundColor: [
+                'rgba(114, 211, 255, 0.8)'
+              ],
+              borderColor: [
+                'rgba(114, 211, 255, 0.8)'
+              ],
+              borderWidth: 2,
+              yAxisID: 'delta',
+              radius: 0
+          }],
+        }
       })
     })
 
@@ -66,13 +121,44 @@
     // TODO: Link to the development folder from the localhost
 
     function processData(data) {
-      // var symbols = data.symbols
-      data.forEach(element => {
+      
+      // Daily data
+      var dailyData = data.dailyData
+      dailyData.forEach(element => {
         labels.push(element.date)
         closeValues.push(element.close)
         volumeValues.push(element.volume)
       });
+
+      // MA data
+      var maData = data.movingAverageData
+      maData.ma.forEach(element => {
+        maValues.push(element)
+      })
+      maData.delta.forEach(element => {
+        if (element > deltaThreshold) {
+          maPostiveDeltaValues.push(1)
+          maNegativeDeltaValues.push(0)
+        }
+        else if (element < -deltaThreshold) {
+          maPostiveDeltaValues.push(0)
+          maNegativeDeltaValues.push(1)
+        }
+        else {
+          maPostiveDeltaValues.push(0)
+          maNegativeDeltaValues.push(0)
+        }
+      })
+      maData.deviation.forEach(element => {
+        if (element >= 0) {
+          maDeviationValues.push(0.2)
+        }
+        else {
+          maDeviationValues.push(0)
+        }
+      })
     }
+
     </script>
   </body>    
 </html>

@@ -4,7 +4,6 @@ const yargs = require('yargs');
 
 // Local modules
 const flags = require('./flags');
-const analysis = require('./analysis');
 const utils = require('./utils');
 const symbolIteration = require('./symbolIteration');
 const defaults = require('./defaults');
@@ -35,7 +34,7 @@ function analyze(symbol) {
 
   // Defaults
   // TODO: allow date-range searches
-  var promiseChain = dataCollection.getMovingAverageCompliance(symbol, symbolAnalysisOutput, testing)
+  var promiseChain = dataCollection.getMovingAverageCompliance(symbol, symbolAnalysisOutput)
   promiseChain = symbolIteration.moveToNextSymbol(promiseChain, analyze)
 
   // Error catching

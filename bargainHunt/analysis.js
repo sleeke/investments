@@ -249,16 +249,10 @@ function getMovingAverageComplianceForPeriod(dailyData, period) {
 
   var numValidSessions = 0
   for(var dayIndex = period; dayIndex < dailyData.length; dayIndex++) {
-    var close = dailyData[dayIndex].close
+    var movingAverageData = getMovingAverageDataForSingleDay(dailyData, dayIndex, 20)
 
-    var movingAverage = movingAverageForOffset(dailyData, dayIndex, period)
-    var prevMovingAverage = movingAverageForOffset(dailyData, dayIndex - 1, period)
-
-    var movingAverageDelta = movingAverage / prevMovingAverage - 1
-    var deviation = close / movingAverage - 1
-
-    if (Math.abs(movingAverageDelta) > significantMovingAverageDelta) {
-      compliance += deviation * movingAverageDelta >= 0 ? 1 : -1
+    if (Math.abs(movingAverageData.delta) > significantMovingAverageDelta) {
+      compliance += movingAverageData.deviation * movingAverageData.delta >= 0 ? 1 : -1
       numValidSessions++
     }
   }
@@ -272,7 +266,39 @@ function movingAverageForOffset(dailyData, endIndex, period) {
   return calculateMovingAverage(movingAverageArray, period)
 }
 
+function getMovingAverageDataForSingleDay(dailyData, dayIndex, period) {
+  var close = dailyData[dayIndex].close
 
+  var movingAverage = movingAverageForOffset(dailyData, dayIndex, period)
+  var prevMovingAverage = movingAverageForOffset(dailyData, dayIndex - 1, period)
+
+  return {
+    ma: movingAverage,
+    delta: movingAverage / prevMovingAverage - 1,
+    deviation: close / movingAverage - 1
+  }
+}
+
+module.exports.getAllMovingAverageData = function(dailyData, baseObject) {
+  var period = 20
+  var movingAverageData = {}
+  movingAverageData.ma = []
+  movingAverageData.delta = []
+  movingAverageData.deviation = []
+
+  for(var dayIndex = period; dayIndex < dailyData.length; dayIndex++) {
+    var movingAverageDataForDay = getMovingAverageDataForSingleDay(dailyData, dayIndex, period)
+
+    movingAverageData.delta.push(movingAverageDataForDay.delta)
+    movingAverageData.ma.push(movingAverageDataForDay.ma)
+    movingAverageData.deviation.push(movingAverageDataForDay.deviation)
+  }
+
+  baseObject.dailyData = dailyData.slice(20, dailyData.length)
+  baseObject.movingAverageData = movingAverageData
+
+  return baseObject
+}
 
 //========//
 // OUTPUT //
