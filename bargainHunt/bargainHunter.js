@@ -18,8 +18,10 @@ global.analysisOutput = {
 
 processArgs()
 
+// TODO: Add command line arguments to restrict to certain categories and MA strengths
+
 function analyze(symbol) {
-  printSymbolHeader(symbol);
+  console.log(`Analyzing ${symbol}...`)
 
   // Setup container
   var symbolAnalysisOutput = {}

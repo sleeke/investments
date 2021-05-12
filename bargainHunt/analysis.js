@@ -15,7 +15,6 @@ const debugGreenDays = false
 module.exports.analyze = function(dailyData, analysisOutput) {
   return new Promise(function(resolve, reject) {
     if (typeof dailyData != 'undefined' && dailyData.length > 0) {
-      console.log(`\n${utils.textColor.FgBlue}Momentum Analysis:${utils.textColor.Reset}\n`)
       
       momentumAnalysis = {}
       greenDays(dailyData, momentumAnalysis)
@@ -57,7 +56,6 @@ module.exports.current = function(quoteData, analysisOutput) {
     if (typeof quoteData != 'undefined') {
       quoteData = sanitizeDailyStats(quoteData)
   
-      outputDailyStats(quoteData, analysisOutput)
   
       resolve(analysisOutput)
     }
@@ -69,7 +67,6 @@ module.exports.fundamentals = function(fundamentals, symbolAnalysisOutput) {
   return new Promise(function(resolve, reject) {
     symbolAnalysisOutput.fundamentals = fundamentals
 
-    console.log('\n' + fundamentals.lastQuarter.asOfDate + '\n')
 
     resolve(symbolAnalysisOutput)
   })
@@ -79,7 +76,6 @@ module.exports.incomeHistory = function(incomeHistory, symbolAnalysisOutput) {
   return new Promise(function(resolve, reject) {
     symbolAnalysisOutput.incomeHistory = incomeHistory
 
-    console.log('\n' + incomeHistory.quarterly[0].profit)
 
     resolve(symbolAnalysisOutput)
   })
@@ -135,8 +131,6 @@ function momentum(array, momentumAnalysis) {
       momentum.magnitude = utils.roundPercent((momentum.lastClose / momentum.firstLow - 1) * 100)
       
       // Console
-      console.log(utils.colorizeString(1, 2, momentum.streak, `Streak: ${momentum.streak} day(s)`))
-      console.log(utils.colorizeString(3, 5, momentum.magnitude, `Magnitude: ${momentum.magnitude}% (${momentum.firstLow} - ${momentum.lastClose})`))
       
       // JSON
       momentumAnalysis.streakDays = momentum.streak
@@ -227,7 +221,6 @@ function greenDays(dailyStats, momentumAnalysis) {
     }
   }
 
-  console.log(utils.colorizeString(1, 3, greenStreak, `Green days: ${greenStreak}`))
 
   momentumAnalysis.greenDays = greenStreak
 }
@@ -243,7 +236,6 @@ function movingAverageTrend(dailyStats) {
 // TODO: Test compliance with MA20
 
 module.exports.getMovingAverageCompliance = function(dailyData, baseObject) {
-  // TODO: allow date-range searches
   baseObject.movingAverageCompliance = {
     version: "0.2",
     ma20: getMovingAverageComplianceForPeriod(dailyData, 20),
@@ -311,11 +303,7 @@ function outputDailyStats(dayStats, analysisOutput) {
     statusText += ' [sanitized data]'
   }
 
-  console.log(utils.info(`\n${statusText}:\n`))
 
-  console.log(`Price: ${dayStats.price}`)
-  console.log(utils.colorizeString(0.4, 0.6, dayPosition, `Day position: ${formattedDayPosition}%`))
-  console.log(utils.colorizeString(0, 0, dayStats.changePercent, `Change: ${formattedChangePercent}%`))
 
   analysisOutput.currentStatus = {}
   var currentStatus = analysisOutput.currentStatus
@@ -334,8 +322,6 @@ module.exports.percent52wHigh = function(high52w, analysisOutput) {
     var percent52wHigh = currentPrice / high52w
     var formattedPercent = utils.roundPercent(percent52wHigh * 100)
   
-    console.log(utils.info('\nRatio to current highs\n'))
-    console.log(utils.colorizeString(0.8, 0.95, percent52wHigh, `52w: ${formattedPercent}%`))
   
     var ratios = analysisOutput.ratios = {}
     ratios.percent52w = formattedPercent
@@ -353,8 +339,6 @@ module.exports.rsi = function(rsiData, analysisOutput) {
 
     var rsi = rsiData.indicator[0][0]
 
-    console.log(utils.info('\nRSI\n'))
-    console.log(utils.colorizeStringInBand(66, 80, rsi, rsi))
 
     var indicators = analysisOutput.indicators = {}
     indicators.rsi = rsi
@@ -415,7 +399,6 @@ function closeTo52wHigh(symbolAnalysis) {
 
 function volatility(dailyData, symbolAnalysis) {
   symbolAnalysis.volatility = {}
-  console.log(utils.info('\nVolatility\n'))
 
   var numDays = 5
   var first = dailyData[numDays - 1].close
@@ -431,7 +414,6 @@ function volatility(dailyData, symbolAnalysis) {
 
   var normalizedVolatility = sum / dailyAveragePercent
   symbolAnalysis.volatility['5day'] = normalizedVolatility
-  console.log(utils.colorizeStringInBand(0, 5, normalizedVolatility, `5-day:: ${normalizedVolatility}`))
 }
 
 
