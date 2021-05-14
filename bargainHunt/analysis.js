@@ -243,6 +243,7 @@ module.exports.getMovingAverageCompliance = function(dailyData, baseObject) {
   }
 }
 
+// TODO: Calculate the percentage of days which are not flat
 function getMovingAverageComplianceForPeriod(dailyData, period) {
   var compliance = 0
   var significantMovingAverageDelta = 0.0015  // Admittedly, guesswork from a few charts
@@ -280,7 +281,7 @@ function getMovingAverageDataForSingleDay(dailyData, dayIndex, period) {
 }
 
 module.exports.getAllMovingAverageData = function(dailyData, baseObject) {
-  var period = 20
+  var period = 50
   var movingAverageData = {}
   movingAverageData.ma = []
   movingAverageData.delta = []
@@ -294,7 +295,7 @@ module.exports.getAllMovingAverageData = function(dailyData, baseObject) {
     movingAverageData.deviation.push(movingAverageDataForDay.deviation)
   }
 
-  baseObject.dailyData = dailyData.slice(20, dailyData.length)
+  baseObject.dailyData = dailyData.slice(period, dailyData.length)
   baseObject.movingAverageData = movingAverageData
 
   return baseObject

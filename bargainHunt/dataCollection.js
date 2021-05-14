@@ -11,7 +11,7 @@ module.exports.getDailyData = function(symbol, symbolAnalysisOutput) {
     .then(quoteData => analysis.current(quoteData, symbolAnalysisOutput)));
 }
 
-module.exports.getMovingAverageCompliance = function(symbol, symbolAnalysisOutput, testing) {
+module.exports.getMovingAverageCompliance = function(symbol, symbolAnalysisOutput) {
   if (flags.debug.compliance) {
     return networkService.history(symbol)
     .then(dailyData => analysis.getAllMovingAverageData(dailyData, symbolAnalysisOutput))

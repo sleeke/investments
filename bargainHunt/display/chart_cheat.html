@@ -14,9 +14,11 @@
     var maPostiveDeltaValues = []
     var maNegativeDeltaValues = []
     var maDeviationValues = []
-    var deltaThreshold = 0.0015
+    var maCompliance = []
+    var deltaThreshold = 0.0005
 
     Chart.defaults.scale.grid.display = false
+    Chart.defaults.scale.display = false
 
     readJson()
       .then(_ => {
@@ -61,10 +63,10 @@
               label: 'Close',
               data: closeValues,
               backgroundColor: [
-                'rgba(0, 0, 0, 0.5)'
+                'rgba(0, 0, 0, 0.3)'
               ],
               borderColor: [
-                'rgba(0, 0, 0, 0.5)'
+                'rgba(0, 0, 0, 0.3)'
               ],
               borderWidth: 1,
               yAxisID: 'close',
@@ -75,10 +77,10 @@
               label: 'MA',
               data: maValues,
               backgroundColor: [
-                'rgba(173, 110, 255, 1)'
+                'rgba(50, 128, 235, 1)'
               ],
               borderColor: [
-                'rgba(173, 110, 255, 1)'
+                'rgba(50, 128, 235, 1)'
               ],
               borderWidth: 2,
               yAxisID: 'close',
@@ -88,6 +90,20 @@
               type: 'line',
               label: 'Deviation',
               data: maDeviationValues,
+              backgroundColor: [
+                'rgba(229, 99, 42, 0.8)'
+              ],
+              borderColor: [
+                'rgba(229, 99, 42, 0.8)'
+              ],
+              borderWidth: 2,
+              yAxisID: 'delta',
+              radius: 0
+          },
+          {
+              type: 'line',
+              label: 'Compliance',
+              data: maCompliance,
               backgroundColor: [
                 'rgba(114, 211, 255, 0.8)'
               ],
@@ -118,7 +134,6 @@
       })
     }
 
-    // TODO: Link to the development folder from the localhost
 
     function processData(data) {
       
@@ -149,14 +164,28 @@
           maNegativeDeltaValues.push(0)
         }
       })
-      maData.deviation.forEach(element => {
+      // TODO: Tidy up data here so it's easier to calculate all values without relying iteratively on others, e.g. compliance
+      for (var index = 0; index < maData.deviation.length; index++) {
+        element = maData.deviation[index]
         if (element >= 0) {
-          maDeviationValues.push(0.2)
+          maDeviationValues.push(0.1)
+          if (maNegativeDeltaValues[index] == 0) {
+            maCompliance.push(1)
+          }
+          else {
+            maCompliance.push(0.9)
+          }
         }
         else {
           maDeviationValues.push(0)
+          if (maPostiveDeltaValues[index] == 0) {
+            maCompliance.push(1)
+          }
+          else {
+            maCompliance.push(0.9)
+          }
         }
-      })
+      }
     }
 
     </script>
