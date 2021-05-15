@@ -82,24 +82,26 @@ function processArgs() {
   
   if (typeof argv._ != 'undefined') {
 
+    console.log("\n")
+
     // Symbol loading
     
     if (typeof(argv.symbol) != 'undefined') {
       settings.settings.symbol = argv.symbol
-      console.log(`\n${utils.textColor.FgBlue}Analysing symbol:${settings.settings.symbol}...\n${utils.textColor.Reset}`)
+      console.log(`${utils.textColor.FgBlue}Analysing symbol:${settings.settings.symbol}...\n${utils.textColor.Reset}`)
     }
     else if (typeof(argv.inFile) != 'undefined') {
       settings.settings.symbolFile = argv.inFile
-      console.log(`\n${utils.textColor.FgBlue}Loading symbols from '${settings.settings.symbolFile}'${utils.textColor.Reset}\n`)
+      console.log(`${utils.textColor.FgBlue}Loading symbols from '${settings.settings.symbolFile}'${utils.textColor.Reset}\n`)
     }
 
     // Data validity
 
     if (argv.sandbox) {
-      console.log(`\n${utils.textColor.FgBlue}Using sandbox...\n${utils.textColor.Reset}`)
+      console.log(`${utils.textColor.FgBlue}Using sandbox...\n${utils.textColor.Reset}`)
     }
     else if (argv.realData) {
-      console.log(`\n${utils.textColor.FgBlue}NOT using sandbox...\n${utils.textColor.Reset}`)
+      console.log(`${utils.textColor.FgBlue}NOT using sandbox...\n${utils.textColor.Reset}`)
     }
 
     // Output
@@ -119,11 +121,13 @@ function processArgs() {
 
 function begin() {
   init()
-  
-  if (typeof(settings.settings.symbol) != 'undefined' && settings.settings.symbol.length != 0) {
-    analyze(settings.settings.symbol)
+
+  if (argv.sandbox) {
+    console.log(`\n${utils.textColor.FgBlue}Using sandbox...\n${utils.textColor.Reset}`)
+    settings.debug.sandbox = true
   }
-  else {
-    symbolIteration.loadSymbolsFromFileAndThen(settings.settings.symbolFile, analyze)
+  else if (argv.realData) {
+    console.log(`\n${utils.textColor.FgBlue}NOT using sandbox...\n${utils.textColor.Reset}`)
+    settings.debug.sandbox = false
   }
 }

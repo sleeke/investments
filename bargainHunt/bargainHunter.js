@@ -85,31 +85,59 @@ function applyCategories(promiseChain, symbolAnalysisOutput) {
 // UTILS //
 //=======//
 
-function printSymbolHeader(symbol) {
-  console.log('\n');
-  console.log(utils.info(utils.stringOfChars('=', symbol.length)));
-  console.log(utils.info(symbol));
-  console.log(utils.info(utils.stringOfChars('=', symbol.length)));
-}
-
 function processArgs() {
   const argv = yargs
-  .command('inFile', 'Specifies a file containing symbols', {
-    filename: {
-      description: 'The file to use',
-      alias: 'f', 
-      type: 'string',
-    }
+  .option('symbolFile', {
+    description: 'A file with symbols to analyse',
+    type: 'string',
+  })
+  .option('symbol', {
+    description: 'Which symbol to analyse. Overrides inFile',
+    type: 'string',
+  })
+  .option('sandbox', {
+    description: 'Run using sandbox data',
+    type: 'boolean',
+  })
+  .option('realData', {
+    description: 'Run using real data',
+    type: 'boolean',
   })
   .help()
   .alias('help', 'h')
   .argv
   
-  if (typeof argv._ != 'undefined' && argv._.includes('inFile')) {
-    filename = argv.filename
+  if (typeof argv._ != 'undefined') {
 
-    console.log(`\n${utils.textColor.FgBlue}Loading symbols from '${filename}'${utils.textColor.Reset}\n`)
+    console.log("\n")
+
+    // Symbol loading
+    
+    if (typeof(argv.symbol) != 'undefined') {
+      settings.settings.symbol = argv.symbol
+      console.log(`${utils.textColor.FgBlue}Analysing symbol:${settings.settings.symbol}...\n${utils.textColor.Reset}`)
+    }
+    else if (typeof(argv.inFile) != 'undefined') {
+      settings.settings.symbolFile = argv.inFile
+      console.log(`${utils.textColor.FgBlue}Loading symbols from '${settings.settings.symbolFile}'${utils.textColor.Reset}\n`)
+    }
+
+    // Data validity
+
+    if (argv.sandbox) {
+      console.log(`${utils.textColor.FgBlue}Using sandbox...\n${utils.textColor.Reset}`)
+      settings.debug.sandbox = true
+    }
+    else if (argv.realData) {
+      console.log(`${utils.textColor.FgBlue}NOT using sandbox...\n${utils.textColor.Reset}`)
+      settings.debug.sandbox = false
+    }
   }
+
+  begin()
 }
 
-symbolIteration.loadSymbolsFromFileAndThen(filename, analyze)
+function begin() {
+  dataCollection.init()
+  symbolIteration.loadSymbolsFromFileAndThen(filename, analyze)
+}

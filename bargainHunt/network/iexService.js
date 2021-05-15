@@ -14,7 +14,7 @@ var serviceUrl
 var apiKey
 
 module.exports.init = function() {
-  if (settings.debug.sandbox) {
+  if (settings.debug.sandbox == true) {
     console.log(`${utils.textColor.FgGreen}INFO: You are using the SANDBOX API key; values will not be accurate${utils.textColor.Reset}`)
     serviceUrl = serviceUrlSandbox
     apiKey = secrets.iexApikeySandbox
