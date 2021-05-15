@@ -130,4 +130,11 @@ function begin() {
     console.log(`\n${utils.textColor.FgBlue}NOT using sandbox...\n${utils.textColor.Reset}`)
     settings.debug.sandbox = false
   }
+
+  if (typeof(settings.settings.symbol) != 'undefined' && settings.settings.symbol.length != 0) {
+    analyze(settings.settings.symbol)
+  }
+  else {
+    symbolIteration.loadSymbolsFromFileAndThen(settings.settings.symbolFile, analyze)
+  }
 }

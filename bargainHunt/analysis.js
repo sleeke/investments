@@ -16,6 +16,10 @@ module.exports.analyze = function(dailyData, analysisOutput) {
   return new Promise(function(resolve, reject) {
     if (typeof dailyData != 'undefined' && dailyData.length > 0) {
       
+      if (typeof(analysisOutput.summary) == 'undefined') {
+        analysisOutput.summary = {}
+      }
+
       momentumAnalysis = {}
       greenDays(dailyData, momentumAnalysis)
       momentum(dailyData, momentumAnalysis)
@@ -25,17 +29,18 @@ module.exports.analyze = function(dailyData, analysisOutput) {
       ma20Trend = {}
       ma20Trend.value = movingAverageTrend(dailyData)
       ma20Trend.gainAt20Sessions = Math.pow((1 + ma20Trend), 20) 
+
       if (ma20Trend.value < 0) {
-        ma20Trend.type = "NEGATIVE"
+        analysisOutput.summary.ma20Trend = "NEGATIVE"
       }
       else if (ma20Trend.value < sufficientTrend / 2) {
-        ma20Trend.type = "PUNY"
+        analysisOutput.summary.ma20Trend = "PUNY"
       }
       else if (ma20Trend.value < sufficientTrend) {
-        ma20Trend.type = "WEAK"
+        analysisOutput.summary.ma20Trend = "WEAK"
       }
       else if (ma20Trend.value >= sufficientTrend) {
-        ma20Trend.type = "STRONG"
+        analysisOutput.summary.ma20Trend = "STRONG"
       }
       momentumAnalysis.ma20Trend = ma20Trend
       analysisOutput.momentumAnalysis = momentumAnalysis
@@ -387,23 +392,28 @@ module.exports.categorize = function(symbolAnalysisOutput) {
   return new Promise(function (resolve, reject) {
     var momentumAnalysis = symbolAnalysisOutput.momentumAnalysis
     
+    if (typeof(symbolAnalysisOutput.summary) == 'undefined') {
+      symbolAnalysisOutput.summary = {}
+    }
+    symbolAnalysisOutput.summary.categories = []
+
     symbolAnalysisOutput.categories = []
     if (strongRecentMomentum(momentumAnalysis)) {
       if (highDailyChange(momentumAnalysis)) {
-        symbolAnalysisOutput.categories.push('ROCKET')
+        symbolAnalysisOutput.summary.categories.push('ROCKET')
       }
       else {
-        symbolAnalysisOutput.categories.push('RISER')
+        symbolAnalysisOutput.summary.categories.push('RISER')
       }
     }
     if (closeTo52wHigh(symbolAnalysisOutput)) {
-      symbolAnalysisOutput.categories.push('BREAKOUT')
+      symbolAnalysisOutput.summary.categories.push('BREAKOUT')
     }
     if (nonVolatile(symbolAnalysisOutput)) {
-      symbolAnalysisOutput.categories.push('STEADY')
+      symbolAnalysisOutput.summary.categories.push('STEADY')
     }
     if (approachingBuyZone(symbolAnalysisOutput)) {
-      symbolAnalysisOutput.categories.push('APPROACHING BUY ZONE')
+      symbolAnalysisOutput.summary.categories.push('APPROACHING BUY ZONE')
     }
 
     resolve(symbolAnalysisOutput)

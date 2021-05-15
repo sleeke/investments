@@ -10,7 +10,6 @@ const symbolIteration = require('./symbolIteration');
 const defaults = require('./defaults');
 const dataCollection = require('./dataCollection');
 
-var filename = defaults.inputFile
 global.analysisOutput = {
   'symbols' : [],
   'categories' : {}
@@ -66,8 +65,8 @@ function categorizeSymbol(promiseChain, symbolAnalysisOutput) {
 function applyCategories(promiseChain, symbolAnalysisOutput) {
   return promiseChain
   .then(symbolAnalysisOutput => {
-    for (symbolCategoryIndex in symbolAnalysisOutput.categories) {
-      var categoryName = symbolAnalysisOutput.categories[symbolCategoryIndex]
+    for (symbolCategoryIndex in symbolAnalysisOutput.summary.categories) {
+      var categoryName = symbolAnalysisOutput.summary.categories[symbolCategoryIndex]
       
       var categoryInOutput = global.analysisOutput.categories[`${categoryName}`]
       if (typeof categoryInOutput == `undefined`) {
@@ -139,5 +138,11 @@ function processArgs() {
 
 function begin() {
   dataCollection.init()
-  symbolIteration.loadSymbolsFromFileAndThen(filename, analyze)
+
+  if (typeof(settings.settings.symbol) != 'undefined' && settings.settings.symbol.length != 0) {
+    analyze(settings.settings.symbol)
+  }
+  else {
+    symbolIteration.loadSymbolsFromFileAndThen(settings.settings.symbolFile, analyze)
+  }
 }
