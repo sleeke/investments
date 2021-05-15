@@ -3,7 +3,7 @@
 const yargs = require('yargs');
 
 // Local modules
-const flags = require('./flags');
+const settings = require('./settings');
 const analysis = require('./analysis');
 const utils = require('./utils');
 const symbolIteration = require('./symbolIteration');
@@ -30,16 +30,16 @@ function analyze(symbol) {
   utils.addLinks(symbolAnalysisOutput, symbol)
 
   // Optional data
-  if (flags.include.rawSymbolData) {
+  if (settings.include.rawSymbolData) {
     global.analysisOutput.symbols.push(symbolAnalysisOutput)
   }
-  if (flags.include.fundamentals) {
+  if (settings.include.fundamentals) {
     promiseChain = dataCollection.addFundamentals(promiseChain, symbolAnalysisOutput)
   }
-  if (flags.include.high52w) {
+  if (settings.include.high52w) {
     promiseChain = dataCollection.addRatioTo52wHigh(promiseChain, symbol, symbolAnalysisOutput)
   }
-  if (flags.include.rsi) {
+  if (settings.include.rsi) {
     promiseChain = dataCollection.addRsi(promiseChain, symbol, symbolAnalysisOutput)
   }
 

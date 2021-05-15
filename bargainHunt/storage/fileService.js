@@ -1,6 +1,7 @@
 // npm modules
 const { Console } = require("console");
 var fs = require("fs");
+var settings = require("../settings")
 
 // Local modules
 const utils = require('../utils');
@@ -37,7 +38,7 @@ function outputSymbols(symbols) {
 
 module.exports.saveAnalysis = function(outputJson, filename) {
   if (typeof(filename) == 'undefined') {
-    filename = 'output.json'
+    filename = settings.settings.outFile
   }
   fs.writeFile(filename, JSON.stringify(outputJson, null, 2), function (err) {
     if (err) return console.log(err)

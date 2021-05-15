@@ -1,8 +1,11 @@
 const networkService = require('./network/networkFacade');
 const analysis = require('./analysis');
 const fileService = require('./storage/fileService')
-const flags = require('./flags')
+const settings = require('./settings')
 
+module.exports.init = function() {
+  networkService.init()
+}
 
 module.exports.getDailyData = function(symbol, symbolAnalysisOutput) {
   return networkService.daily(symbol)
@@ -12,7 +15,7 @@ module.exports.getDailyData = function(symbol, symbolAnalysisOutput) {
 }
 
 module.exports.getMovingAverageCompliance = function(symbol, symbolAnalysisOutput) {
-  if (flags.debug.compliance) {
+  if (settings.settings.forChart == true) {
     return networkService.history(symbol)
     .then(dailyData => analysis.getAllMovingAverageData(dailyData, symbolAnalysisOutput))
     .then(symbolAnalysisOutput => outputDataToFile(symbolAnalysisOutput, "testing.json"))

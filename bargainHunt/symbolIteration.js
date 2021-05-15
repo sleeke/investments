@@ -1,6 +1,6 @@
 const fileService = require('./storage/fileService');
 
-module.exports.globalSymbols
+module.exports.globalSymbols = []
 var symbolIndex = 0
 
 module.exports.moveToNextSymbol = function(promiseChain, onSuccess) {

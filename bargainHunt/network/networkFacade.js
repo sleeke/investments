@@ -1,6 +1,10 @@
 const networkImp = require('./iexService');
 const networkImp_fundamentals = require('./alphaService');
 
+module.exports.init = function() {
+  networkImp.init()
+}
+
 module.exports.quote = function(symbol, callback, onError) {
   return networkImp.quote(symbol)
 }

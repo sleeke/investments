@@ -3,7 +3,7 @@
 const yargs = require('yargs');
 
 // Local modules
-const flags = require('./flags');
+const settings = require('./settings');
 const utils = require('./utils');
 const symbolIteration = require('./symbolIteration');
 const defaults = require('./defaults');
@@ -20,6 +20,10 @@ global.analysisOutput = {
 
 processArgs()
 
+function init() {
+  dataCollection.init()
+}
+
 function analyze(symbol) {
   console.log(`Analyzing ${symbol}...`)
 
@@ -28,7 +32,7 @@ function analyze(symbol) {
   symbolAnalysisOutput.symbol = symbol
   utils.addLinks(symbolAnalysisOutput, symbol)
 
-  if (flags.include.rawSymbolData) {
+  if (settings.include.rawSymbolData) {
     global.analysisOutput.symbols.push(symbolAnalysisOutput)
   }
 
@@ -52,36 +56,74 @@ function analyze(symbol) {
 
 function processArgs() {
   const argv = yargs
-  .command('inFile', 'Specifies a file containing symbols', {
-    filename: {
-      description: 'The file to use',
-      alias: 'f', 
-      type: 'string',
-    }
+  .option('symbolFile', {
+    description: 'A file with symbols to analyse',
+    type: 'string',
   })
-  .command('test', 'Outputs test data', {
-    filename: {
-      description: 'Whether to output test data',
-      alias: 't', 
-      type: 'boolean',
-    }
+  .option('symbol', {
+    description: 'Which symbol to analyse. Overrides inFile',
+    type: 'string',
+  })
+  .option('sandbox', {
+    description: 'Run using sandbox data',
+    type: 'boolean',
+  })
+  .option('realData', {
+    description: 'Run using real data',
+    type: 'boolean',
+  })
+  .option('forChart', {
+    description: 'Output history data for charting',
+    type: 'boolean',
   })
   .help()
   .alias('help', 'h')
   .argv
   
   if (typeof argv._ != 'undefined') {
-    if (argv._.includes('inFile')) {
-      filename = argv.filename
 
-      console.log(`\n${utils.textColor.FgBlue}Loading symbols from '${filename}'${utils.textColor.Reset}\n`)
+    // Symbol loading
+    
+    if (typeof(argv.symbol) != 'undefined') {
+      settings.settings.symbol = argv.symbol
+      console.log(`\n${utils.textColor.FgBlue}Analysing symbol:${settings.settings.symbol}...\n${utils.textColor.Reset}`)
     }
-    if (argv._.includes('test')) {
-      testing = true
-  
-      console.log(`\n${utils.textColor.FgBlue}Entering test mode...\n${utils.textColor.Reset}`)
+    else if (typeof(argv.inFile) != 'undefined') {
+      settings.settings.symbolFile = argv.inFile
+      console.log(`\n${utils.textColor.FgBlue}Loading symbols from '${settings.settings.symbolFile}'${utils.textColor.Reset}\n`)
+    }
+
+    // Data validity
+
+    if (argv.sandbox) {
+      console.log(`\n${utils.textColor.FgBlue}Using sandbox...\n${utils.textColor.Reset}`)
+    }
+    else if (argv.realData) {
+      console.log(`\n${utils.textColor.FgBlue}NOT using sandbox...\n${utils.textColor.Reset}`)
+    }
+
+    // Output
+
+    if (typeof(argv.forChart) != 'undefined') {
+      if (typeof(argv.symbol) == `undefined`) {
+        console.log(`\n${utils.textColor.FgRed}Charting should only be used with a single symbol...\n${utils.textColor.Reset}`)
+        process.exit(1)
+      }
+      settings.settings.forChart = true
+      settings.settings.outFile = `History-${settings.settings.symbol}.json`
     }
   }  
+
+  begin()
 }
 
-symbolIteration.loadSymbolsFromFileAndThen(filename, analyze)
+function begin() {
+  init()
+  
+  if (typeof(settings.settings.symbol) != 'undefined' && settings.settings.symbol.length != 0) {
+    analyze(settings.settings.symbol)
+  }
+  else {
+    symbolIteration.loadSymbolsFromFileAndThen(settings.settings.symbolFile, analyze)
+  }
+}

@@ -1,6 +1,6 @@
 // Local modules
 
-const flags = require('../flags');
+const settings = require('../settings');
 const utils = require('../utils');
 const secrets = require('../secrets');
 const network = require('./networkService');
@@ -13,15 +13,17 @@ var serviceUrlProd = 'https://cloud.iexapis.com/stable/stock/'
 var serviceUrl
 var apiKey
 
-if (flags.sandbox) {
-  console.log(`${utils.textColor.FgGreen}INFO: You are using the SANDBOX API key; values will not be accurate${utils.textColor.Reset}`)
-  serviceUrl = serviceUrlSandbox
-  apiKey = secrets.iexApikeySandbox
-}
-else {
-  console.log(`${utils.textColor.FgRed}WARNING: You are using the PAID API key; don't go crazy!${utils.textColor.Reset}`)
-  serviceUrl = serviceUrlProd
-  apiKey = secrets.iexApikeyProd  
+module.exports.init = function() {
+  if (settings.debug.sandbox) {
+    console.log(`${utils.textColor.FgGreen}INFO: You are using the SANDBOX API key; values will not be accurate${utils.textColor.Reset}`)
+    serviceUrl = serviceUrlSandbox
+    apiKey = secrets.iexApikeySandbox
+  }
+  else {
+    console.log(`${utils.textColor.FgRed}WARNING: You are using the PAID API key; don't go crazy!${utils.textColor.Reset}`)
+    serviceUrl = serviceUrlProd
+    apiKey = secrets.iexApikeyProd  
+  }
 }
 
 // =======
@@ -146,12 +148,12 @@ module.exports.rsi = function (symbol) {
 // Symbol translation
 
 function translateSymbol(symbol) {
-  var newSymbol = symbol. replace('.TO', '-CT')
-  var newSymbol = newSymbol. replace('.V', '-CV')
-  var newSymbol = newSymbol. replace('.CN', '-CF')
-  var newSymbol = newSymbol. replace('-UN', '.UN')
-  var newSymbol = newSymbol. replace('-A', '.A')
-  var newSymbol = newSymbol. replace('-B', '.B')
+  var newSymbol = symbol.replace('.TO', '-CT')
+  var newSymbol = newSymbol.replace('.V', '-CV')
+  var newSymbol = newSymbol.replace('.CN', '-CF')
+  var newSymbol = newSymbol.replace('-UN', '.UN')
+  var newSymbol = newSymbol.replace('-A', '.A')
+  var newSymbol = newSymbol.replace('-B', '.B')
 
   return newSymbol
 }
