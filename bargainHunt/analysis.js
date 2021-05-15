@@ -233,8 +233,6 @@ function movingAverageTrend(dailyStats) {
   return ma20 / prevMa20 - 1
 }
 
-// TODO: Test compliance with MA20
-
 module.exports.getMovingAverageCompliance = function(dailyData, baseObject) {
   baseObject.movingAverageCompliance = {
     version: "0.2",
@@ -281,21 +279,28 @@ function getMovingAverageDataForSingleDay(dailyData, dayIndex, period) {
 }
 
 module.exports.getAllMovingAverageData = function(dailyData, baseObject) {
-  var period = 50
+  var periods = [20, 50]
   var movingAverageData = {}
-  movingAverageData.ma = []
-  movingAverageData.delta = []
-  movingAverageData.deviation = []
+  var maxPeriod = Math.max(...periods)
 
-  for(var dayIndex = period; dayIndex < dailyData.length; dayIndex++) {
-    var movingAverageDataForDay = getMovingAverageDataForSingleDay(dailyData, dayIndex, period)
+  periods.forEach (period => {
+    var maPeriod = {}
+    maPeriod.ma = []
+    maPeriod.delta = []
+    maPeriod.deviation = []
+    for(var dayIndex = maxPeriod; dayIndex < dailyData.length; dayIndex++) {
+      var movingAverageDataForDay = getMovingAverageDataForSingleDay(dailyData, dayIndex, period)
+  
+      maPeriod.delta.push(movingAverageDataForDay.delta)
+      maPeriod.ma.push(movingAverageDataForDay.ma)
+      maPeriod.deviation.push(movingAverageDataForDay.deviation)
+    }
 
-    movingAverageData.delta.push(movingAverageDataForDay.delta)
-    movingAverageData.ma.push(movingAverageDataForDay.ma)
-    movingAverageData.deviation.push(movingAverageDataForDay.deviation)
-  }
+    movingAverageData[`ma${period}`] = maPeriod
+  })
 
-  baseObject.dailyData = dailyData.slice(period, dailyData.length)
+  // Adjust the ranges to all match
+  baseObject.dailyData = dailyData.slice(maxPeriod, dailyData.length)
   baseObject.movingAverageData = movingAverageData
 
   return baseObject
