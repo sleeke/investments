@@ -27,7 +27,7 @@ module.exports.getMovingAverageCompliance = function(symbol, symbolAnalysisOutpu
 }
 
 function outputDataToFile(jsonData, filename) {
-  fileService.saveAnalysis(jsonData, filename)
+  fileService.saveObject(jsonData, filename)
 }
 
 module.exports.addRatioTo52wHigh = function(promiseChain, symbol) {

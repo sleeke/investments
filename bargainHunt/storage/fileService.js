@@ -1,5 +1,4 @@
 // npm modules
-const { Console } = require("console");
 var fs = require("fs");
 var settings = require("../settings")
 
@@ -7,12 +6,12 @@ var settings = require("../settings")
 const utils = require('../utils');
 
 module.exports.symbols = function (filename, callback) {
-  getFileData(filename, (data) => {
+  this.getFileData(filename, (data) => {
     symbolsFromFileData (data, callback)
   })
 }
 
-function getFileData(filename,  callback) {
+module.exports.getFileData = function(filename,  callback) {
   fs.readFile(filename, "utf-8", (err, data) => {
     if (err) { console.log(err) }
   
@@ -36,7 +35,7 @@ function outputSymbols(symbols) {
   }
 }
 
-module.exports.saveAnalysis = function(outputJson, filename) {
+module.exports.saveObject = function(outputJson, filename) {
   if (typeof(filename) == 'undefined') {
     filename = settings.settings.outFile
   }

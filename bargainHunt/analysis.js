@@ -1,5 +1,6 @@
 const { daily } = require('./network/iexService');
 const utils = require('./utils');
+const settings = require('./settings')
 
 //=============//
 // DEBUG FLAGS //
@@ -54,6 +55,30 @@ module.exports.analyze = function(dailyData, analysisOutput) {
 
     resolve(analysisOutput)
   }) 
+}
+
+function separateTheWheatFromTheChaff(analysisOutput) {
+  var pass = true
+
+  settings.filters.movingAverage.reject.forEach(rejectedMaTrend => {
+    if (analysisOutput.summary.ma20Trend == rejectedMaTrend) {
+      pass = {
+        rejectionReason: `MA trend is ${rejectedMaTrend}`
+  }
+    }
+  })
+
+  if (pass == true) {
+    settings.filters.category.require.forEach(requiredCategory => {
+      if (!analysisOutput.summary.categories.includes(requiredCategory)) {
+        pass = {
+          rejectionReason: `Categories does not contain ${requiredCategory}`
+  }
+    }
+    })
+  }
+
+  return pass
 }
 
 module.exports.current = function(quoteData, analysisOutput) {
@@ -458,4 +483,13 @@ function volatility(dailyData, symbolAnalysis) {
   symbolAnalysis.volatility['5day'] = normalizedVolatility
 }
 
+module.exports.filter = function(symbolAnalysisOutput) {
+  return new Promise(function(resolve, reject) {
+    var passFail = separateTheWheatFromTheChaff(symbolAnalysisOutput)
+    if (passFail != true) {
+      reject(passFail.rejectionReason)
+    }
 
+    resolve(symbolAnalysisOutput)
+  })
+}

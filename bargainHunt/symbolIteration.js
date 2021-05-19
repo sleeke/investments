@@ -11,7 +11,7 @@ module.exports.nextSymbol = function(symbolAnalysisOutput, onSuccess) {
   return new Promise(function(resolve, reject) {
     // Exit condition for last symbol
     if (symbolIndex >= module.exports.globalSymbols.length - 1) {
-      fileService.saveAnalysis(global.analysisOutput)
+      fileService.saveObject(global.analysisOutput)
       resolve()
     }
 

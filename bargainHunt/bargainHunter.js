@@ -7,7 +7,6 @@ const settings = require('./settings');
 const analysis = require('./analysis');
 const utils = require('./utils');
 const symbolIteration = require('./symbolIteration');
-const defaults = require('./defaults');
 const dataCollection = require('./dataCollection');
 
 global.analysisOutput = {
@@ -28,6 +27,10 @@ function analyze(symbol) {
   symbolAnalysisOutput.symbol = symbol
   utils.addLinks(symbolAnalysisOutput, symbol)
 
+  // Defaults
+  var promiseChain = dataCollection.getDailyData(symbol, symbolAnalysisOutput)
+  promiseChain = categorizeSymbol(promiseChain, symbolAnalysisOutput)
+  
   // Optional data
   if (settings.include.rawSymbolData) {
     global.analysisOutput.symbols.push(symbolAnalysisOutput)
@@ -41,10 +44,8 @@ function analyze(symbol) {
   if (settings.include.rsi) {
     promiseChain = dataCollection.addRsi(promiseChain, symbol, symbolAnalysisOutput)
   }
-
-  // Defaults
-  var promiseChain = dataCollection.getDailyData(symbol, symbolAnalysisOutput)
-  promiseChain = categorizeSymbol(promiseChain, symbolAnalysisOutput)
+  
+  promiseChain = filterSymbol(promiseChain, symbolAnalysisOutput)
   promiseChain = applyCategories(promiseChain, symbolAnalysisOutput)
   promiseChain = symbolIteration.moveToNextSymbol(promiseChain, analyze)
 
@@ -62,6 +63,11 @@ function categorizeSymbol(promiseChain, symbolAnalysisOutput) {
   .then(_ => analysis.categorize(symbolAnalysisOutput))
 }
 
+function filterSymbol(promiseChain, symbolAnalysisOutput) {
+  return promiseChain
+  .then(_ => analysis.filter(symbolAnalysisOutput))
+}
+
 function applyCategories(promiseChain, symbolAnalysisOutput) {
   return promiseChain
   .then(symbolAnalysisOutput => {
@@ -74,9 +80,10 @@ function applyCategories(promiseChain, symbolAnalysisOutput) {
         categoryInOutput = global.analysisOutput.categories[`${categoryName}`] = []
       }
   
-      categoryInOutput.push(symbolAnalysisOutput)
+      if (typeof(symbolAnalysisOutput.error) == 'undefined') {
+        categoryInOutput.push(symbolAnalysisOutput)
+      }
     }
-
   })
 }
 
