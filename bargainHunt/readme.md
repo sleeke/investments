@@ -121,7 +121,7 @@ The script will output a summary of how well the specified symbol fits the theor
         "ma20": 0.8461538461538461,
         "ma50": 0.7391304347826086
       }
-    },
+    }
 ```
 
 This shows that 84.6% of the time, the closing price follows the theory above for the MA20, and 73.9% of the time for the MA50.
@@ -182,7 +182,7 @@ Using a representation of your holdings:
   {
     "ticker": "IPG",
     "offsetPercent": -1.5,
-  },
+  }
 ]
 ```
 
