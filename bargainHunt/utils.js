@@ -78,6 +78,10 @@ module.exports.roundPrice = function(number) {
   return parseFloat(number.toFixed(2))
 }
 
+module.exports.roundStop = function(number) {
+  return Math.floor(number * 100) / 100   // 2 decimal places
+}
+
 module.exports.roundPercent = function(number) {
   return parseFloat(number.toFixed(2))
 }
@@ -114,3 +118,6 @@ module.exports.addLinks = function(baseObject, symbol) {
   baseObject.links.barChart = "https://www.barchart.com/stocks/" + symbol
 }
 
+module.exports.isCanadian = function(symbol) {
+  return (symbol.includes(".TO") || symbol.includes(".CN") || symbol.includes(".V"))
+}

@@ -1,4 +1,4 @@
-# bargainHunter.js
+# `bargainHunter.js`
 
 The `bargainHunter.js` script is designed to analyze a number fo stocks for things like:
 
@@ -101,7 +101,7 @@ This will take the list of symbols (line separated) in `randomSymbols.txt` perfo
 
 This will take the list of symbols in `correlated-ma20.txt` and perform analysis on each one, using `realData`
 
-# averageSleuth.js
+# `averageSleuth.js`
 
 `averageSlueth.js` will analyse symbols to tell you whether they are a good fit to the Moving Average, i.e. do they follow the theory:
 
@@ -168,3 +168,62 @@ Provided your environment meets the requirements, you'll see a chart appear in y
 - An orange bar at the base of the chart shows where the closing price is above or below the trend
 - A blue bar at the top of the chart shows when this meets or misses the constraints of the theory set out above
 
+# Dynamic Stop Losses with `HoldingPattern.js`
+
+`holdingPattern.js` makes it easy to easily maintain stop losses which track against the Moving Average. 
+
+Using a representation of your holdings:
+```
+[
+  {
+    "ticker": "AIG",
+    "offsetPercent": 0,
+  },
+  {
+    "ticker": "IPG",
+    "offsetPercent": -1.5,
+  },
+]
+```
+
+When tracking a Moving Average, I like to assume a certain offset to allow for the price crossing the MA at some point during a session. Here you can see that the price of IPG crosses the MA20 by up to 1.4%, which is why I set the offset to -1.5%:
+
+![alt text](./resources/MAOffset.png "MA Offset")
+
+
+`holdingpattern.js` allows you to generate stop losses according to the offset percentage you decide on. 
+
+Simply run `holdingPattern.js --inFile="myHoldings.json" --realData` to get the following output:
+
+```
+[
+  {
+    "ticker": "AIG",
+    "offsetPercent": 0,
+    "links": {
+      "yahooChart": "https://finance.yahoo.com/chart/AIG",
+      "barChart": "https://www.barchart.com/stocks/AIG"
+    },
+    "ma": 51.105000000000004,
+    "newStop": 51.1
+  },
+  {
+    "ticker": "IPG",
+    "offsetPercent": -1.5,
+    "links": {
+      "yahooChart": "https://finance.yahoo.com/chart/IPG",
+      "barChart": "https://www.barchart.com/stocks/IPG"
+    },
+    "ma": 32.86749999999999,
+    "newStop": 32.37
+  }
+]
+```
+
+As you can see, you receive
+- Your original data
+- Some handy links to charting and analysis sites
+- The current MA20
+- The new stop limit for the offset you selected
+
+You can then easily copy-paste the new stop loss to your trading platform.
