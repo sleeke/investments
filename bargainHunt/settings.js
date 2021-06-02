@@ -19,7 +19,7 @@ module.exports.settings = {
   symbolFile: "storage/symbols.txt",
 
   // Placeholder for the CLI symbol
-  symbol: "",
+  symbol: "IGV",
 
   // Default output file
   outFile: "output.json",

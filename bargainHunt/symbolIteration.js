@@ -11,7 +11,7 @@ module.exports.nextSymbol = function(symbolAnalysisOutput, onSuccess) {
   return new Promise(function(resolve, reject) {
     // Exit condition for last symbol
     if (symbolIndex >= module.exports.globalSymbols.length - 1) {
-      fileService.saveObject(global.analysisOutput)
+      fileService.saveObject(global.analysisOutput, "output.json")
       resolve()
     }
 
@@ -30,6 +30,17 @@ module.exports.loadSymbolsFromFileAndThen = function(filename, onSuccess) {
     else {
       module.exports.globalSymbols = symbols
       onSuccess(symbols[0])
+    }
+  })
+}
+
+module.exports.loadJsonFileAndThen = function(filename, onSuccess) {
+  fileService.getFileData(filename, (fileData) => {
+    if (typeof(fileData) === 'undefined' || fileData.length == 0) {
+      console.log("No symbols found")
+    }
+    else {
+      onSuccess(JSON.parse(fileData), 0)
     }
   })
 }

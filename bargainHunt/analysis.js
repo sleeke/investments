@@ -64,7 +64,7 @@ function separateTheWheatFromTheChaff(analysisOutput) {
     if (analysisOutput.summary.ma20Trend == rejectedMaTrend) {
       pass = {
         rejectionReason: `MA trend is ${rejectedMaTrend}`
-  }
+      }
     }
   })
 
@@ -73,10 +73,10 @@ function separateTheWheatFromTheChaff(analysisOutput) {
       if (!analysisOutput.summary.categories.includes(requiredCategory)) {
         pass = {
           rejectionReason: `Categories does not contain ${requiredCategory}`
-  }
-    }
+        }
+      }
     })
-  }
+    }
 
   return pass
 }
@@ -269,6 +269,10 @@ module.exports.getMovingAverageCompliance = function(dailyData, baseObject) {
     ma20: getMovingAverageComplianceForPeriod(dailyData, 20),
     ma50: getMovingAverageComplianceForPeriod(dailyData, 50)
   }
+}
+
+module.exports.getMovingAverage = function(dailyData, period) {
+  return getMovingAverageDataForSingleDay(dailyData, period - 1, period)
 }
 
 // TODO: Calculate the percentage of days which are not flat

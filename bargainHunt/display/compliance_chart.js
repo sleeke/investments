@@ -112,7 +112,7 @@ readJson()
 })
 
 function readJson() {
-  return fetch('testing.json')
+  return fetch('chartData.json')
   .then(response => {
     if (!response.ok) {
         throw new Error("HTTP error " + response.status);

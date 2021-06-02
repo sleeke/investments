@@ -14,11 +14,16 @@ module.exports.getDailyData = function(symbol, symbolAnalysisOutput) {
     .then(quoteData => analysis.current(quoteData, symbolAnalysisOutput)));
 }
 
+module.exports.getMovingAverage = function(symbol, period) {
+  return networkService.daily(symbol)
+    .then(dailyData => analysis.getMovingAverage(dailyData, period))
+}
+
 module.exports.getMovingAverageCompliance = function(symbol, symbolAnalysisOutput) {
   if (settings.settings.forChart == true) {
     return networkService.history(symbol)
     .then(dailyData => analysis.getAllMovingAverageData(dailyData, symbolAnalysisOutput))
-    .then(symbolAnalysisOutput => outputDataToFile(symbolAnalysisOutput, "testing.json"))
+    .then(symbolAnalysisOutput => outputDataToFile(symbolAnalysisOutput, settings.settings.outFile))
   }
   else {
     return networkService.history(symbol)

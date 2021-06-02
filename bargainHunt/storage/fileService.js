@@ -36,6 +36,7 @@ function outputSymbols(symbols) {
 }
 
 module.exports.saveObject = function(outputJson, filename) {
+  console.log("Saving object to file: " + filename)
   if (typeof(filename) == 'undefined') {
     filename = settings.settings.outFile
   }

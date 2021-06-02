@@ -13,24 +13,33 @@ const dataCollection = require('./dataCollection');
 var filename = defaults.inputFile
 var testing = false
 
-global.analysisOutput = {
-  'symbols' : [],
-  'categories' : {}
-}
-
 processArgs()
+
+if (settings.settings.forChart == false) {
+  global.analysisOutput = {
+    'symbols' : [],
+    'categories' : {}
+  }
+}
 
 function init() {
   dataCollection.init()
 }
 
 function analyze(symbol) {
+  if (typeof(symbol) == 'undefined') {
+    return
+  }
+
   console.log(`Analyzing ${symbol}...`)
 
   // Setup container
   var symbolAnalysisOutput = {}
   symbolAnalysisOutput.symbol = symbol
-  utils.addLinks(symbolAnalysisOutput, symbol)
+
+  if (settings.settings.forChart == false) {
+    utils.addLinks(symbolAnalysisOutput, symbol)
+  }
 
   if (settings.include.rawSymbolData) {
     global.analysisOutput.symbols.push(symbolAnalysisOutput)
@@ -39,8 +48,11 @@ function analyze(symbol) {
   // Defaults
   // TODO: allow date-range searches
   var promiseChain = dataCollection.getMovingAverageCompliance(symbol, symbolAnalysisOutput)
-  promiseChain = symbolIteration.moveToNextSymbol(promiseChain, analyze)
 
+  if (settings.settings.forChart == false) {
+    promiseChain = symbolIteration.moveToNextSymbol(promiseChain, analyze)
+  }
+  
   // Error catching
   promiseChain
   .catch(function(errorText) {
@@ -99,9 +111,11 @@ function processArgs() {
 
     if (argv.sandbox) {
       console.log(`${utils.textColor.FgBlue}Using sandbox...\n${utils.textColor.Reset}`)
+      settings.debug.sandbox = true
     }
     else if (argv.realData) {
       console.log(`${utils.textColor.FgBlue}NOT using sandbox...\n${utils.textColor.Reset}`)
+      settings.debug.sandbox = false
     }
 
     // Output
@@ -112,7 +126,7 @@ function processArgs() {
         process.exit(1)
       }
       settings.settings.forChart = true
-      settings.settings.outFile = `History-${settings.settings.symbol}.json`
+      settings.settings.outFile = "./display/chartData.json"
     }
   }  
 
@@ -122,16 +136,9 @@ function processArgs() {
 function begin() {
   init()
 
-  if (argv.sandbox) {
-    console.log(`\n${utils.textColor.FgBlue}Using sandbox...\n${utils.textColor.Reset}`)
-    settings.debug.sandbox = true
-  }
-  else if (argv.realData) {
-    console.log(`\n${utils.textColor.FgBlue}NOT using sandbox...\n${utils.textColor.Reset}`)
-    settings.debug.sandbox = false
-  }
-
   if (typeof(settings.settings.symbol) != 'undefined' && settings.settings.symbol.length != 0) {
+    console.log(settings.settings.symbol)
+
     analyze(settings.settings.symbol)
   }
   else {
