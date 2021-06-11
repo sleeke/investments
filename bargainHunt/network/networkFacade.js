@@ -10,19 +10,14 @@ module.exports.quote = function(symbol, callback, onError) {
 }
 
 module.exports.daily = function(symbol) {
-  return networkImp.daily(symbol).resolve
+  return networkImp.daily(symbol).then({}, function() {
+    console.log(`Getting a second opinion for ${symbol}...`)
+    return alternateNetworkImp.daily(symbol)
+  })
 }
 
 module.exports.history = function(symbol) {
-  // return new Promise(function(resolve, reject) {
-    // return networkImp.history(symbol).then({}, alternateNetworkImp.daily(symbol))
-    return alternateNetworkImp.daily(symbol)
-  //   .catch(_ => {
-  //     console.log("OOps")
-  //     result = alternateNetworkImp.daily(symbol).resolve()
-  //   })
-  //   resolve(result)
-  // })
+    return networkImp.history(symbol).then({}, alternateNetworkImp.history)
 }
 
 module.exports.high52w = function(symbol) {

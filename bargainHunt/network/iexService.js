@@ -41,7 +41,10 @@ module.exports.quote = function(symbol) {
 
   return network.query(quoteUrl, parameters)
     .then(extractQuoteData)
-    .catch(_ => Promise.reject(`${utils.textColor.FgRed}Error getting quote data for '${symbol}', please check symbol is valid${utils.textColor.Reset}`))
+    .catch(_ => {
+      console.log(`Error getting daily data for ${symbol} using IEX`)
+      Promise.reject(`${utils.textColor.FgRed}Error getting quote data for '${symbol}', please check symbol is valid${utils.textColor.Reset}`)
+    })
 }
 
 function extractQuoteData(quoteJson) {
@@ -70,11 +73,10 @@ module.exports.daily = function (symbol) {
   }
 
   return network.query(dailyUrl, parameters)
-    .then(extractdailyData)
-    .catch(error => Promise.reject(`Error getting daily data for '${symbol}', please check symbol is valid`))
+    .then(extractDailyData)
 }
 
-function extractdailyData(json) {
+function extractDailyData(json) {
   var dailyArray = utils.dictionaryToArray(json)
 
   if (dailyArray.length == 0) {
@@ -108,7 +110,10 @@ module.exports.history = function (symbol) {
   }
 
   return network.query(dailyUrl, parameters)
-    .catch(error => Promise.reject(`Error getting historic data for '${symbol}', please check symbol is valid`))
+    .catch(error => {
+      console.log(`Error getting daily data for ${symbol} using IEX`)
+      Promise.reject(`Error getting historic data for '${symbol}', please check symbol is valid`)
+    })
 }
 
 // 52w High

@@ -84,13 +84,29 @@ function extractFundamentalData(json) {
   return fundamentals
 }
 
-module.exports.daily = function(symbol) {
+module.exports.history = function(symbol) {
   var parameters = {
-    function:'TIME_SERIES_DAILY', 
+    apikey: secrets.alphaApikey,
     symbol:translateSymbol(symbol),
-    apikey: secrets.alphaApikey  
+    function:'TIME_SERIES_DAILY',
+    outputsize: 'full' 
   }
 
+  return dailyData(parameters)
+}
+
+module.exports.daily = function(symbol) {
+  var parameters = {
+    apikey: secrets.alphaApikey,
+    symbol:translateSymbol(symbol),
+    function:'TIME_SERIES_DAILY',
+    outputsize: 'compact' 
+  }
+
+  return dailyData(parameters)
+}
+
+function dailyData(parameters) {
   return network.query(serviceUrl, parameters)
     .then(json => {
       var dailyJson = json["Time Series (Daily)"]
@@ -99,6 +115,7 @@ module.exports.daily = function(symbol) {
         return
       }
 
+      // TODO: Sometimes this fails (when running many queries, or perhaps just for VEGN.CN)
       var dailyArray = utils.dictionaryToArray(dailyJson)
 
       var dailyPackage = []
