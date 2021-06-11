@@ -1,4 +1,4 @@
-# `bargainHunter.js`
+# Momentum Analysis with `bargainHunter.js`
 
 The `bargainHunter.js` script is designed to analyze a number fo stocks for things like:
 
@@ -80,7 +80,7 @@ The `bargainHunter.js` script will categorize each symbol into these broad categ
 
 I like to use APPROACHING BUY ZONE as an indicator that there'll soon be an opportunity to buy. I'll add it to a watchlist then wait for a time when it's within reasonable range of a reversal indicator (e.g. an MA or recent low), at which point I'll buy and set a stop loss at the reversal indicator. 
 
-## Common commands
+## Options Available
 
 I've added some command line options for `bargainHunter` which allow you to customise its use.
 
@@ -91,7 +91,7 @@ Running `bargainHunter.js --help` will give the following output:
       --sandbox     Run using sandbox data                             [boolean]
       --realData    Run using real data                                [boolean]
 
-### Examples
+## Example Commands
 
 `./bargainHunter.js --inFile="randomSymbols.txt"`
 
@@ -101,7 +101,7 @@ This will take the list of symbols (line separated) in `randomSymbols.txt` perfo
 
 This will take the list of symbols in `correlated-ma20.txt` and perform analysis on each one, using `realData`
 
-# `averageSleuth.js`
+# Moving Average Compliance with `averageSleuth.js`
 
 `averageSlueth.js` will analyse symbols to tell you whether they are a good fit to the Moving Average, i.e. do they follow the theory:
 
@@ -142,16 +142,18 @@ Running `averageSleuth.js --help` will give the following output:
 
 These options are similar to `bargainHunter.js`, apart from `--forChart`, which prepares data for visualization
 
-## Charting data
+# Charting data
 
-### Requirements
+I found it difficult to trust the data coming back from `averageSleuth.js` without seeing it first hand. With that in mind, I used `chart.js` to visualize the data and make sure it made sense. It's a neat way of seeing for yourself how predictable a stock is.
+
+## Requirements
 
 - A web server running on your localhost
 - An OS which runs shell (`.sh`) files (optional)
 
-### Instructions
+## Instructions
 
-Running using the `--forChart` option outputs data that can be taken up by the charting feature (still in development). I recommed you use the default options, so you can easily export the chart data to your local server. 
+Running `averageSleuth.js` using the `--forChart` option outputs data that can be taken up by the charting feature (still in development). I recommed you use the default options, so you can easily export the chart data to your local server. 
 
 Currently, the local server location is setup as `Sites/www/` in the `publish.sh` file, but I'll adjust this later so you can easy set it to something else.
 
@@ -160,7 +162,13 @@ To show a chart of a symbol, do the following:
 1. Run `./averageSleuth.js --symbol=IGV --forChart` (this will use sandbox data unless you add `--RealData`)
 1. Run `./publish.sh` (if you don't have a shell-compatible system, or want to export the files manually, they are located in the `./display` folder)
 
-Provided your environment meets the requirements, you'll see a chart appear in your browser, where the following applies:
+Provided your environment meets the requirements, you'll see a chart appear in your browser, much like this:
+
+![compliance chart](./resources/MA-compliance.png "compliance chart")
+
+## Interpreting the chart
+
+ As the legend of the chart implies:
 
 - The daily close price is shown in dark grey
 - The moving average is shown in blue
@@ -168,11 +176,29 @@ Provided your environment meets the requirements, you'll see a chart appear in y
 - An orange bar at the base of the chart shows where the closing price is above or below the trend
 - A blue bar at the top of the chart shows when this meets or misses the constraints of the theory set out above
 
+You can see in this case that there is a very strong correlation between the MA and price action.
+
+
+
 # Dynamic Stop Losses with `HoldingPattern.js`
 
 `holdingPattern.js` makes it easy to easily maintain stop losses which track against the Moving Average. 
 
-Using a representation of your holdings:
+## Why track the moving average?
+
+As you can see from the chart data provided by `averageSleuth.js`, prices often follow the trend of the moving average quite closely, and the moving average can therefore be used to predict the proce action. 
+
+It often makes sense to buy when the price crosses above the moving average, and sell when the price crosses under it. This is why it's useful to have a stop loss which tracks relative to the average. 
+
+When tracking a Moving Average, I like to assume a certain offset to allow for the price crossing the MA at some point during a session. Here you can see that the price of IPG crosses the MA20 by up to 1.4%, which is why I set the offset to -1.5%:
+
+![MA Offset](./resources/MA-offset.png "MA Offset")
+
+## Generating Stop Losses
+
+`holdingpattern.js` allows you to generate stop losses according to the offset percentage you decide on. 
+
+1. Set up and save a JSON representation of your holdings:
 ```
 [
   {
@@ -185,15 +211,7 @@ Using a representation of your holdings:
   }
 ]
 ```
-
-When tracking a Moving Average, I like to assume a certain offset to allow for the price crossing the MA at some point during a session. Here you can see that the price of IPG crosses the MA20 by up to 1.4%, which is why I set the offset to -1.5%:
-
-![alt text](./resources/MAOffset.png "MA Offset")
-
-
-`holdingpattern.js` allows you to generate stop losses according to the offset percentage you decide on. 
-
-Simply run `holdingPattern.js --inFile="myHoldings.json" --realData` to get the following output:
+2. Run `holdingPattern.js --inFile="myHoldings.json" --realData` to get the following output:
 
 ```
 [
@@ -220,8 +238,10 @@ Simply run `holdingPattern.js --inFile="myHoldings.json" --realData` to get the 
 ]
 ```
 
+## Using the data
+
 As you can see, you receive
-- Your original data
+- Your original data (allowing you to store other information here too, e.g. account name)
 - Some handy links to charting and analysis sites
 - The current MA20
 - The new stop limit for the offset you selected

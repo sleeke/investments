@@ -45,10 +45,11 @@ function updateData(promiseChain, symbol) {
   return promiseChain
   .then(symbolOutput => {
     symbol.ma = symbolOutput.ma
-    symbol.newStop = utils.roundStop(symbol.ma * (100 + symbol.offsetPercent) / 100)
+    var newStop = utils.roundStop(symbol.ma * (100 + symbol.offsetPercent) / 100)
     if (utils.isCanadian(symbol.ticker)) {
       symbol.newLimit = utils.roundStop(symbol.newStop * 0.99) // Limit is 1% below stop by default for canadian stocks  
     }
+    symbol.newStop = newStop
   })
 }
 

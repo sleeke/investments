@@ -1,5 +1,5 @@
 const networkImp = require('./iexService');
-const networkImp_fundamentals = require('./alphaService');
+const alternateNetworkImp = require('./alphaService');
 
 module.exports.init = function() {
   networkImp.init()
@@ -10,11 +10,19 @@ module.exports.quote = function(symbol, callback, onError) {
 }
 
 module.exports.daily = function(symbol) {
-  return networkImp.daily(symbol)
+  return networkImp.daily(symbol).resolve
 }
 
 module.exports.history = function(symbol) {
-  return networkImp.history(symbol)
+  // return new Promise(function(resolve, reject) {
+    // return networkImp.history(symbol).then({}, alternateNetworkImp.daily(symbol))
+    return alternateNetworkImp.daily(symbol)
+  //   .catch(_ => {
+  //     console.log("OOps")
+  //     result = alternateNetworkImp.daily(symbol).resolve()
+  //   })
+  //   resolve(result)
+  // })
 }
 
 module.exports.high52w = function(symbol) {
@@ -26,10 +34,10 @@ module.exports.rsi = function(symbol) {
 }
 
 module.exports.fundamentals = function(symbol) {
-  return networkImp_fundamentals.fundamentals(symbol)
+  return alternateNetworkImp.fundamentals(symbol)
 }
 
 module.exports.incomeHistory = function(symbol) {
-  return networkImp_fundamentals.incomeHistory(symbol)
+  return alternateNetworkImp.incomeHistory(symbol)
 }
 

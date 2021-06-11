@@ -9,21 +9,18 @@ const symbolIteration = require('./symbolIteration');
 const defaults = require('./defaults');
 const dataCollection = require('./dataCollection');
 
-// Command line arguments
-var filename = defaults.inputFile
-var testing = false
-
+init()
 processArgs()
-
-if (settings.settings.forChart == false) {
-  global.analysisOutput = {
-    'symbols' : [],
-    'categories' : {}
-  }
-}
 
 function init() {
   dataCollection.init()
+
+  if (settings.settings.forChart == false) {
+    global.analysisOutput = {
+      'symbols' : [],
+      'categories' : {}
+    }
+  }
 }
 
 function analyze(symbol) {
@@ -41,14 +38,12 @@ function analyze(symbol) {
     utils.addLinks(symbolAnalysisOutput, symbol)
   }
 
-  if (settings.include.rawSymbolData) {
-    global.analysisOutput.symbols.push(symbolAnalysisOutput)
-  }
-
   // Defaults
   // TODO: allow date-range searches
   var promiseChain = dataCollection.getMovingAverageCompliance(symbol, symbolAnalysisOutput)
 
+  promiseChain = saveToGlobalOutput(promiseChain, symbolAnalysisOutput)
+  
   if (settings.settings.forChart == false) {
     promiseChain = symbolIteration.moveToNextSymbol(promiseChain, analyze)
   }
@@ -60,6 +55,10 @@ function analyze(symbol) {
     symbolAnalysisOutput['error'] = errorText
     symbolIteration.nextSymbol(symbolAnalysisOutput, analyze)
   })
+}
+
+function saveToGlobalOutput(promiseChain, symbolAnalysisOutput) {
+  return promiseChain.then(_ => global.analysisOutput.symbols.push(symbolAnalysisOutput))
 }
 
 //=======//
@@ -103,6 +102,7 @@ function processArgs() {
       console.log(`${utils.textColor.FgBlue}Analysing symbol:${settings.settings.symbol}...\n${utils.textColor.Reset}`)
     }
     else if (typeof(argv.inFile) != 'undefined') {
+      delete settings.settings.symbol
       settings.settings.symbolFile = argv.inFile
       console.log(`${utils.textColor.FgBlue}Loading symbols from '${settings.settings.symbolFile}'${utils.textColor.Reset}\n`)
     }

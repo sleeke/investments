@@ -84,6 +84,40 @@ function extractFundamentalData(json) {
   return fundamentals
 }
 
+module.exports.daily = function(symbol) {
+  var parameters = {
+    function:'TIME_SERIES_DAILY', 
+    symbol:translateSymbol(symbol),
+    apikey: secrets.alphaApikey  
+  }
+
+  return network.query(serviceUrl, parameters)
+    .then(json => {
+      var dailyJson = json["Time Series (Daily)"]
+
+      if (isDeniedMessage(json)) { 
+        return
+      }
+
+      var dailyArray = utils.dictionaryToArray(dailyJson)
+
+      var dailyPackage = []
+      for (dayIndex = 0; dayIndex < dailyArray.length; dayIndex++) {
+        var day = dailyArray[dayIndex]
+        dailyPackage[dayIndex] = {
+          open: parseFloat(day['1. open']),
+          high: parseFloat(day['2. high']),
+          low: parseFloat(day['3. low']),
+          close: parseFloat(day['4. close']),
+          volume: parseFloat(day['5. volume'])        
+        }
+      }
+
+      return dailyPackage
+    })
+}
+
+
 // =====
 // UTILS
 // =====
@@ -109,10 +143,10 @@ module.exports.quote = function(symbol, callback) {
     apikey: secrets.alphaApikey  
   }
 
-  network.query(serviceUrl, parameters, (json) => {
+  return network.query(serviceUrl, parameters, (json) => {
 
     if (isDeniedMessage(json)) {
-      return
+      reject("Denied")
     }
 
     var quoteJson = json["Global Quote"]
@@ -128,45 +162,12 @@ module.exports.quote = function(symbol, callback) {
       changePercent:  quoteJson["10. change percent"],
     }
 
-    if (utils.isFunction(callback)) {
-      callback(quotePackage)
-    }
+    resolve(quotePackage)
   })
 }
 
 // Daily
 
-module.exports.daily = function (symbol, callback) {
-  var parameters = {
-    function:'TIME_SERIES_DAILY', 
-    symbol:symbol,
-    apikey: secrets.alphaApikey  
-  }
-
-  network.query(serviceUrl, parameters, (json) => {
-    var dailyJson = json["Time Series (Daily)"]
-
-    if (isDeniedMessage(json)) { 
-      return
-    }
-
-    var dailyArray = utils.dictionaryToArray(dailyJson)
-
-    var dailyPackage = []
-    for (dayIndex = 0; dayIndex < dailyArray.length; dayIndex++) {
-      var day = dailyArray[dayIndex]
-      dailyPackage[dayIndex] = {
-        open: day['1. open'],
-        high: day['2. high'],
-        low: day['3. low'],
-        close: day['4. close'],
-        volume: day['5. volume']        
-      }
-    }
-
-    callback(symbol, dailyPackage)
-  })
-}
 
 function isDeniedMessage(json) {
   if (typeof json.Note != 'undefined') {
