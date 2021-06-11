@@ -7,6 +7,7 @@ const network = require('./networkService')
 // Constants
 
 var serviceUrl = 'https://www.alphavantage.co/query'
+module.exports.timeNeededToAvoidLimits = 12000
 
 // =======
 // Methods

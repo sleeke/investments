@@ -10,8 +10,9 @@ module.exports.quote = function(symbol, callback, onError) {
 }
 
 module.exports.daily = function(symbol) {
-  return networkImp.daily(symbol).then({}, function() {
+  return networkImp.daily(symbol).then({}, async function() {
     console.log(`Getting a second opinion for ${symbol}...`)
+    await new Promise(resolve => setTimeout(resolve, alternateNetworkImp.timeNeededToAvoidLimits))
     return alternateNetworkImp.daily(symbol)
   })
 }
