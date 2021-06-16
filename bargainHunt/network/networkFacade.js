@@ -7,7 +7,7 @@ module.exports.init = function() {
 
 module.exports.quote = function(symbol, callback, onError) {
   return networkImp.quote(symbol).then({}, async function() {
-    console.log(`Getting a second opinion for ${symbol}...`)
+    console.log(`Getting a second opinion for ${symbol} [quote]...`)
     await new Promise(resolve => setTimeout(resolve, alternateNetworkImp.timeNeededToAvoidLimits))
     return alternateNetworkImp.quote(symbol)
   })
@@ -15,7 +15,7 @@ module.exports.quote = function(symbol, callback, onError) {
 
 module.exports.daily = function(symbol) {
   return networkImp.daily(symbol).then({}, async function() {
-    console.log(`Getting a second opinion for ${symbol}...`)
+    console.log(`Getting a second opinion for ${symbol} [daily]...`)
     await new Promise(resolve => setTimeout(resolve, alternateNetworkImp.timeNeededToAvoidLimits))
     return alternateNetworkImp.daily(symbol)
   })
@@ -23,7 +23,7 @@ module.exports.daily = function(symbol) {
 
 module.exports.history = function(symbol) {
   return networkImp.history(symbol).then({}, async function() {
-    console.log(`Getting a second opinion for ${symbol}...`)
+    console.log(`Getting a second opinion for ${symbol} [history]...`)
     await new Promise(resolve => setTimeout(resolve, alternateNetworkImp.timeNeededToAvoidLimits))
     return alternateNetworkImp.history(symbol)
   })
