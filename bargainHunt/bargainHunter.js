@@ -18,6 +18,7 @@ processArgs()
 
 // TODO: Add command line arguments to restrict to certain categories and MA strengths (add settings module?)
 // TODO: Standardise section for categories, e.g. WEAK, RISER in a similar place
+// TODO: Add 'distance from MA' to analysis
 
 function analyze(symbol) {
   console.log(`Analyzing ${symbol}...`)

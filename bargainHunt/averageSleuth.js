@@ -91,44 +91,41 @@ function processArgs() {
   .alias('help', 'h')
   .argv
   
-  if (typeof argv._ != 'undefined') {
+  console.log("\n")
 
-    console.log("\n")
+  // Symbol loading
+  
+  if (typeof(argv.inFile) != 'undefined') {
+    delete settings.settings.symbol
+    settings.settings.symbolFile = argv.inFile
+    console.log(`${utils.textColor.FgBlue}Loading symbols from '${settings.settings.symbolFile}'${utils.textColor.Reset}\n`)
+  }
+  else if (typeof(argv.symbol) != 'undefined') {
+    settings.settings.symbol = argv.symbol
+    console.log(`${utils.textColor.FgBlue}Analysing symbol:${settings.settings.symbol}...\n${utils.textColor.Reset}`)
+  }
 
-    // Symbol loading
-    
-    if (typeof(argv.symbol) != 'undefined') {
-      settings.settings.symbol = argv.symbol
-      console.log(`${utils.textColor.FgBlue}Analysing symbol:${settings.settings.symbol}...\n${utils.textColor.Reset}`)
+  // Data validity
+
+  if (argv.sandbox) {
+    console.log(`${utils.textColor.FgBlue}Using sandbox...\n${utils.textColor.Reset}`)
+    settings.debug.sandbox = true
+  }
+  else if (argv.realData) {
+    console.log(`${utils.textColor.FgBlue}NOT using sandbox...\n${utils.textColor.Reset}`)
+    settings.debug.sandbox = false
+  }
+
+  // Output
+
+  if (typeof(argv.forChart) != 'undefined') {
+    if (typeof(argv.symbol) == `undefined`) {
+      console.log(`\n${utils.textColor.FgRed}Charting should only be used with a single symbol...\n${utils.textColor.Reset}`)
+      process.exit(1)
     }
-    else if (typeof(argv.inFile) != 'undefined') {
-      delete settings.settings.symbol
-      settings.settings.symbolFile = argv.inFile
-      console.log(`${utils.textColor.FgBlue}Loading symbols from '${settings.settings.symbolFile}'${utils.textColor.Reset}\n`)
-    }
-
-    // Data validity
-
-    if (argv.sandbox) {
-      console.log(`${utils.textColor.FgBlue}Using sandbox...\n${utils.textColor.Reset}`)
-      settings.debug.sandbox = true
-    }
-    else if (argv.realData) {
-      console.log(`${utils.textColor.FgBlue}NOT using sandbox...\n${utils.textColor.Reset}`)
-      settings.debug.sandbox = false
-    }
-
-    // Output
-
-    if (typeof(argv.forChart) != 'undefined') {
-      if (typeof(argv.symbol) == `undefined`) {
-        console.log(`\n${utils.textColor.FgRed}Charting should only be used with a single symbol...\n${utils.textColor.Reset}`)
-        process.exit(1)
-      }
-      settings.settings.forChart = true
-      settings.settings.outFile = "./display/chartData.json"
-    }
-  }  
+    settings.settings.forChart = true
+    settings.settings.outFile = "./display/chartData.json"
+  }
 
   begin()
 }

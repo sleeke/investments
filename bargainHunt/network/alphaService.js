@@ -143,9 +143,10 @@ function dailyData(parameters) {
 // Symbol translation
 
 function translateSymbol(symbol) {
-  var newSymbol = symbol.replace('.TO', '.TRT')
-  var newSymbol = newSymbol.replace('.V', '.TRV')
-  var newSymbol = newSymbol.replace('.CN', '-CF')
+  var newSymbol = symbol.replace(/\.TRT$/, '.TO')
+  var newSymbol = newSymbol.replace(/\.TRV$/, '.V')
+  var newSymbol = newSymbol.replace(/\.VN$/, '.V')
+  var newSymbol = newSymbol.replace(/-CF$/, '.CN')
 
   return newSymbol
 }

@@ -102,7 +102,8 @@ function extractDailyData(json) {
 // History
 
 module.exports.history = function (symbol) {
-  var dailyUrl = serviceUrl + translateSymbol(symbol) + '/chart/2y'
+  var translatedSymbol = translateSymbol(symbol)
+  var dailyUrl = serviceUrl + translatedSymbol + '/chart/2y'
 
   var parameters = {
     chartCloseOnly: true,
@@ -119,7 +120,8 @@ module.exports.history = function (symbol) {
 // 52w High
 
 module.exports.high52w = function (symbol) {
-  var high52wUrl = serviceUrl + translateSymbol(symbol) + '/stats/week52high'
+  var translatedSymbol = translateSymbol(symbol)
+  var high52wUrl = serviceUrl + translatedSymbol + '/stats/week52high'
 
   var parameters = {
     token: apiKey  
@@ -153,12 +155,13 @@ module.exports.rsi = function (symbol) {
 // Symbol translation
 
 function translateSymbol(symbol) {
-  var newSymbol = symbol.replace('.TO', '-CT')
-  var newSymbol = newSymbol.replace('.V', '-CV')
-  var newSymbol = newSymbol.replace('.CN', '-CF')
-  var newSymbol = newSymbol.replace('-UN', '.UN')
-  var newSymbol = newSymbol.replace('-A', '.A')
-  var newSymbol = newSymbol.replace('-B', '.B')
+  var newSymbol = symbol.replace(/.TO$/, '-CT')
+  var newSymbol = newSymbol.replace(/\.V$/, '-CV')
+  var newSymbol = newSymbol.replace(/\.VN$/, '.V')
+  var newSymbol = newSymbol.replace(/\.CN$/, '-CF')
+  var newSymbol = newSymbol.replace(/-UN$/, '.UN')
+  var newSymbol = newSymbol.replace(/-A$/, '.A')
+  var newSymbol = newSymbol.replace(/-B$/, '.B')
 
   return newSymbol
 }
