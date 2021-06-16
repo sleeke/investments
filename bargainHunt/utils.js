@@ -121,3 +121,25 @@ module.exports.addLinks = function(baseObject, symbol) {
 module.exports.isCanadian = function(symbol) {
   return (symbol.includes(".TO") || symbol.includes(".CN") || symbol.includes(".V"))
 }
+
+//============
+// CALCULATION
+//============
+
+module.exports.stdDeviation = function(inputArray){
+  var i,j,total = 0, mean = 0, diffSqredArr = [];
+  
+  for(i = 0; i < inputArray.length; i += 1) {
+      total += inputArray[i];
+  }
+
+  mean = total / inputArray.length;
+  
+  for(j=0;j<inputArray.length;j+=1){
+      diffSqredArr.push(Math.pow((inputArray[j] - mean), 2));
+  }
+  
+  return (Math.sqrt(diffSqredArr.reduce(function(firstEl, nextEl){
+           return firstEl + nextEl;
+         })/inputArray.length));
+};

@@ -2,21 +2,51 @@ const networkService = require('./network/networkFacade');
 const analysis = require('./analysis');
 const fileService = require('./storage/fileService')
 const settings = require('./settings')
+const utils = require('./utils');
 
 module.exports.init = function() {
   networkService.init()
 }
 
-module.exports.getDailyData = function(symbol, symbolAnalysisOutput) {
+//================
+// BUILDING BLOCKS
+//================
+
+// These methods should return promises which resolve dailyData and accept
+// a symbol structure to modify, making them easier to chain together
+
+module.exports.getDailyData = function(symbol) {
+  return networkService.daily(symbol)
+}
+
+module.exports.getDailyRanges = function(dailyData, symbolAnalysisOutput) {
+  return new Promise(function(resolve, reject) {
+    var rangeData = analysis.rangeData(dailyData)
+    symbolAnalysisOutput.goodDayPercent = rangeData.goodDay
+    resolve(dailyData)
+  })
+}
+
+module.exports.getMovingAverage = function(dailyData, period, symbolAnalysisOutput) {
+  return new Promise(function(resolve, reject) {
+    var fullMaData = analysis.getMovingAverage(dailyData, period)
+    symbolAnalysisOutput.ma = utils.roundPrice(fullMaData.ma)
+    resolve(dailyData)
+  })
+}
+
+//=================
+// CHAINED REQUESTS
+//=================
+
+// These are pre-packaged requests which contain a string of promises and do not obey
+// the rules outlined for Building Blocks
+
+module.exports.getDailySummary = function(symbol, symbolAnalysisOutput) {
   return networkService.daily(symbol)
     .then(dailyData => analysis.analyze(dailyData, symbolAnalysisOutput))
     .then(symbolAnalysisOutput => networkService.quote(symbol)
     .then(quoteData => analysis.current(quoteData, symbolAnalysisOutput)));
-}
-
-module.exports.getMovingAverage = function(symbol, period) {
-  return networkService.daily(symbol)
-    .then(dailyData => analysis.getMovingAverage(dailyData, period))
 }
 
 module.exports.getMovingAverageCompliance = function(symbol, symbolAnalysisOutput) {
@@ -31,10 +61,13 @@ module.exports.getMovingAverageCompliance = function(symbol, symbolAnalysisOutpu
   }
 }
 
-function outputDataToFile(jsonData, filename) {
-  fileService.saveObject(jsonData, filename)
-}
+//===============
+// PROMISE CHAINS
+//===============
 
+// These methods create chains of promises by adding to existing chains, and  
+// returning/resolving the symbol structures
+ 
 module.exports.addRatioTo52wHigh = function(promiseChain, symbol) {
   return promiseChain
   .then(symbolAnalysisOutput => networkService.high52w(symbol)
@@ -53,4 +86,12 @@ module.exports.addFundamentals = function(promiseChain, symbolAnalysisOutput) {
   .then(fundamentals => analysis.fundamentals(fundamentals, symbolAnalysisOutput))
   .then(symbolAnalysisOutput => networkService.incomeHistory(symbolAnalysisOutput.symbol))
   .then(incomeHistory => analysis.incomeHistory(incomeHistory, symbolAnalysisOutput))
+}
+
+//======
+// UTILS
+//======
+
+function outputDataToFile(jsonData, filename) {
+  fileService.saveObject(jsonData, filename)
 }

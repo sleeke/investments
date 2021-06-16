@@ -28,7 +28,10 @@ function process(symbols, symbolIndex) {
   utils.addLinks(symbol, symbol.ticker)
 
   // Process sequence
-  var promiseChain = dataCollection.getMovingAverage(symbol.ticker, 20)
+  var promiseChain = dataCollection.getDailyData(symbol.ticker)
+    .then(dailyData => dataCollection.getDailyRanges(dailyData, symbol))
+    .then(dailyData => dataCollection.getMovingAverage(dailyData, 20, symbol))
+  
   promiseChain = updateData(promiseChain, symbol)
   promiseChain = nextSymbol(promiseChain, symbols, symbolIndex)
 
@@ -43,8 +46,7 @@ function process(symbols, symbolIndex) {
 
 function updateData(promiseChain, symbol) {
   return promiseChain
-  .then(symbolOutput => {
-    symbol.ma = symbolOutput.ma
+  .then(_ => {
     var newStop = utils.roundStop(symbol.ma * (100 + symbol.offsetPercent) / 100)
     if (utils.isCanadian(symbol.ticker)) {
       symbol.newLimit = utils.roundStop(symbol.newStop * 0.99) // Limit is 1% below stop by default for canadian stocks  

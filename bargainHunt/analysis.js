@@ -256,6 +256,8 @@ function greenDays(dailyStats, momentumAnalysis) {
   momentumAnalysis.greenDays = greenStreak
 }
 
+// MOVING AVERAGES
+
 function movingAverageTrend(dailyStats) {
   // TODO: This is perhaps a little inefficient, since this is also calculated elsewhere
   var ma20 = calculateMovingAverage(dailyStats, 20)
@@ -273,6 +275,10 @@ module.exports.getMovingAverageCompliance = function(dailyData, baseObject) {
 }
 
 module.exports.getMovingAverage = function(dailyData, period) {
+  return getMovingAverageDataForSingleDay(dailyData, period - 1, period)
+}
+
+module.exports.holdingPattern = function(dailyData, period) {
   return getMovingAverageDataForSingleDay(dailyData, period - 1, period)
 }
 
@@ -339,6 +345,37 @@ module.exports.getAllMovingAverageData = function(dailyData, baseObject) {
   baseObject.movingAverageData = movingAverageData
 
   return baseObject
+}
+
+// RANGES
+
+module.exports.rangeData = function(dailyData) {
+  var rangeData = {
+    min: 0,
+    max: 0,
+    avg: 0
+  }
+
+  var dayRanges = []
+
+  for (var dayIndex = 0; dayIndex < dailyData.length; dayIndex++) {
+    var singleDay = dailyData[dayIndex]
+    var singleDayRange = (singleDay.close / singleDay.open - 1) * 100
+
+    dayRanges.push(singleDayRange)
+
+    rangeData.max = Math.max(rangeData.max, singleDayRange)
+    rangeData.min = Math.min(rangeData.min, singleDayRange)
+    rangeData.avg += singleDayRange
+  }
+
+  rangeData.avg = utils.roundPercent(rangeData.avg / dailyData.length)
+  rangeData.min = utils.roundPercent(rangeData.min)
+  rangeData.max = utils.roundPercent(rangeData.max)
+  rangeData.stdDev = utils.roundPercent(utils.stdDeviation(dayRanges))
+  rangeData.goodDay = utils.roundPercent(rangeData.avg + rangeData.stdDev)
+
+  return rangeData
 }
 
 //========//
