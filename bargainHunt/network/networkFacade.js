@@ -6,7 +6,11 @@ module.exports.init = function() {
 }
 
 module.exports.quote = function(symbol, callback, onError) {
-  return networkImp.quote(symbol)
+  return networkImp.quote(symbol).then({}, async function() {
+    console.log(`Getting a second opinion for ${symbol}...`)
+    await new Promise(resolve => setTimeout(resolve, alternateNetworkImp.timeNeededToAvoidLimits))
+    return alternateNetworkImp.quote(symbol)
+  })
 }
 
 module.exports.daily = function(symbol) {
@@ -18,7 +22,11 @@ module.exports.daily = function(symbol) {
 }
 
 module.exports.history = function(symbol) {
-    return networkImp.history(symbol).then({}, alternateNetworkImp.history)
+  return networkImp.history(symbol).then({}, async function() {
+    console.log(`Getting a second opinion for ${symbol}...`)
+    await new Promise(resolve => setTimeout(resolve, alternateNetworkImp.timeNeededToAvoidLimits))
+    return alternateNetworkImp.history(symbol)
+  })
 }
 
 module.exports.high52w = function(symbol) {

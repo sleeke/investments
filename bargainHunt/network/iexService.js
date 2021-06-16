@@ -41,10 +41,6 @@ module.exports.quote = function(symbol) {
 
   return network.query(quoteUrl, parameters)
     .then(extractQuoteData)
-    .catch(_ => {
-      console.log(`Error getting daily data for ${symbol} using IEX`)
-      Promise.reject(`${utils.textColor.FgRed}Error getting quote data for '${symbol}', please check symbol is valid${utils.textColor.Reset}`)
-    })
 }
 
 function extractQuoteData(quoteJson) {
@@ -111,10 +107,6 @@ module.exports.history = function (symbol) {
   }
 
   return network.query(dailyUrl, parameters)
-    .catch(error => {
-      console.log(`Error getting daily data for ${symbol} using IEX`)
-      Promise.reject(`Error getting historic data for '${symbol}', please check symbol is valid`)
-    })
 }
 
 // 52w High
