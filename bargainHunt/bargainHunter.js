@@ -18,7 +18,6 @@ processArgs()
 
 // TODO: Add command line arguments to restrict to certain categories and MA strengths (add settings module?)
 // TODO: Standardise section for categories, e.g. WEAK, RISER in a similar place
-// TODO: Add 'distance from MA' to analysis
 
 function analyze(symbol) {
   console.log(`Analyzing ${symbol}...`)
@@ -110,6 +109,10 @@ function processArgs() {
     description: 'Run using real data',
     type: 'boolean',
   })
+  .option('percentFromAverage', {
+    description: 'Maximum distance allowed from moving average to be categorized as APPROACHING BUY ZONE',
+    type: 'number',
+  })
   .help()
   .alias('help', 'h')
   .argv
@@ -139,6 +142,13 @@ function processArgs() {
     else if (typeof(argv.realData) != 'undefined') {
       console.log(`${utils.textColor.FgBlue}NOT using sandbox...\n${utils.textColor.Reset}`)
       settings.debug.sandbox = false
+    }
+
+    // Quantifiers
+
+    if (typeof(argv.percentFromAverage) != 'undefined') {
+      settings.quantifiers.percentFromAverage = argv.percentFromAverage
+      console.log(`${utils.textColor.FgBlue}Setting MA Approach to ${settings.quantifiers.percentFromAverage}\n${utils.textColor.Reset}`)
     }
   }
 

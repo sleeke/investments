@@ -194,9 +194,10 @@ function analyzeBuyZone(dailyStats, buyZoneApproach) {
   var lastPrice = dailyStats[0].close
   var prevClose = dailyStats[1].close
 
-  buyZoneApproach.aboveMa20 = lastPrice - ma20 > 0
+  buyZoneApproach.percentFromAverage = utils.roundPercent((lastPrice / ma20 - 1) * 100)
+  buyZoneApproach.aboveMa20 = buyZoneApproach.percentFromAverage > 0
   buyZoneApproach.approachingMa20 = lastPrice < prevClose
-  buyZoneApproach.closeToMa20 = isCloseToPrice(lastPrice, ma20, 5)
+  buyZoneApproach.closeToMa20 = isCloseToPrice(lastPrice, ma20, settings.quantifiers.percentFromAverage)
   if (prevMa20 >= 0) {
     buyZoneApproach.positiveMa20Trend = ma20 > prevMa20
   }

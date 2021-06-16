@@ -86,10 +86,12 @@ I've added some command line options for `bargainHunter` which allow you to cust
 
 Running `bargainHunter.js --help` will give the following output:
 
-      --inFile      A file with symbols to analyse                      [string]
-      --symbol      Which symbol to analyse. Overrides inFile           [string]
-      --sandbox     Run using sandbox data                             [boolean]
-      --realData    Run using real data                                [boolean]
+      --inFile              A file with symbols to analyse              [string]
+      --symbol              Which symbol to analyse. Overrides inFile   [string]
+      --sandbox             Run using sandbox data                     [boolean]
+      --realData            Run using real data                        [boolean]
+      --percentFromAverage  Maximum distance allowed from moving average to be
+                            categorized as APPROACHING BUY ZONE         [number]
 
 ## Example Commands
 
@@ -100,6 +102,10 @@ This will take the list of symbols (line separated) in `randomSymbols.txt` perfo
 `./bargainHunter.js --inFile="correlated-ma20.txt" --realData`
 
 This will take the list of symbols in `correlated-ma20.txt` and perform analysis on each one, using `realData`
+
+`./bargainHunter.js --inFile=storage/correlated-volatility.txt --percentFromAverage=10 --realData`
+
+Will take a list of symbol in `correlated-volatility.txt` and perform analysis on each, after adjusting the threshold for MA approach to 10% (default is 5%)
 
 # Moving Average Compliance with `averageSleuth.js`
 

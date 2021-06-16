@@ -62,3 +62,9 @@ module.exports.include = {
 
 }
 
+module.exports.quantifiers = {
+
+  // Threshold for MA approach (percent)
+  percentFromAverage: 5
+
+}
