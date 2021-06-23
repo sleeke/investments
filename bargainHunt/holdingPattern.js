@@ -12,6 +12,8 @@ const fileService = require('./storage/fileService');
 
 var symbolInfo = []
 
+// TODO: Add maTrend to report, to enable exit when it becomes weak
+
 processArgs()
 
 function process(symbols, symbolIndex) {
@@ -47,11 +49,13 @@ function process(symbols, symbolIndex) {
 function updateData(promiseChain, symbol) {
   return promiseChain
   .then(_ => {
+
     var newStop = utils.roundStop(symbol.ma * (100 + symbol.offsetPercent) / 100)
+    symbol.newStop = newStop
+
     if (utils.isCanadian(symbol.ticker)) {
       symbol.newLimit = utils.roundStop(symbol.newStop * 0.99) // Limit is 1% below stop by default for canadian stocks  
     }
-    symbol.newStop = newStop
   })
 }
 

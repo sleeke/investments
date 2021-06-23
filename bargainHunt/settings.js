@@ -16,7 +16,7 @@ module.exports.debug = {
 module.exports.settings = {
 
   // The default source for symbols if no CLI args are given
-  symbolFile: "storage/symbols.txt",
+  symbolFile: "symbols/wfbz-large-cap.txt",
 
   // Placeholder for the CLI symbol
   symbol: "IGV",

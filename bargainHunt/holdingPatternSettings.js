@@ -5,13 +5,13 @@
 module.exports.settings = {
 
   // The default source for symbols if no CLI args are given
-  symbolFile: "storage/holdings.json",
+  symbolFile: "symbols/holdings.json",
 
   // Placeholder for the CLI symbol
   symbol: "",
 
   // Default output file
-  outFile: "storage/holdings.json",
+  outFile: "symbols/holdings.json",
 
   // Default value for charting
   forChart: false,
