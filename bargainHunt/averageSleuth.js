@@ -66,23 +66,7 @@ function saveToGlobalOutput(promiseChain, symbolAnalysisOutput) {
 //=======//
 
 function processArgs() {
-  const argv = yargs
-  .option('symbolFile', {
-    description: 'A file with symbols to analyse',
-    type: 'string',
-  })
-  .option('symbol', {
-    description: 'Which symbol to analyse. Overrides inFile',
-    type: 'string',
-  })
-  .option('sandbox', {
-    description: 'Run using sandbox data',
-    type: 'boolean',
-  })
-  .option('realData', {
-    description: 'Run using real data',
-    type: 'boolean',
-  })
+  const argv = utils.setupHelpForSharedCommands(yargs)
   .option('forChart', {
     description: 'Output history data for charting',
     type: 'boolean',
@@ -93,28 +77,7 @@ function processArgs() {
   
   console.log("\n")
 
-  // Symbol loading
-  
-  if (typeof(argv.inFile) != 'undefined') {
-    delete settings.settings.symbol
-    settings.settings.symbolFile = argv.inFile
-    console.log(`${utils.textColor.FgBlue}Loading symbols from '${settings.settings.symbolFile}'${utils.textColor.Reset}\n`)
-  }
-  else if (typeof(argv.symbol) != 'undefined') {
-    settings.settings.symbol = argv.symbol
-    console.log(`${utils.textColor.FgBlue}Analysing symbol:${settings.settings.symbol}...\n${utils.textColor.Reset}`)
-  }
-
-  // Data validity
-
-  if (argv.sandbox) {
-    console.log(`${utils.textColor.FgBlue}Using sandbox...\n${utils.textColor.Reset}`)
-    settings.debug.sandbox = true
-  }
-  else if (argv.realData) {
-    console.log(`${utils.textColor.FgBlue}NOT using sandbox...\n${utils.textColor.Reset}`)
-    settings.debug.sandbox = false
-  }
+  utils.processSharedCommandLineArgs(argv)
 
   // Output
 

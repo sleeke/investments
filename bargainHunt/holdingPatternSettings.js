@@ -13,7 +13,4 @@ module.exports.settings = {
   // Default output file
   outFile: "symbols/holdings.json",
 
-  // Default value for charting
-  forChart: false,
-
 }

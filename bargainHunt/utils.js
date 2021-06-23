@@ -1,3 +1,5 @@
+const settings = require('./settings'); // required for processing command line args
+
 // ========
 // VALIDITY
 // ========
@@ -143,3 +145,56 @@ module.exports.stdDeviation = function(inputArray){
            return firstEl + nextEl;
          })/inputArray.length));
 };
+
+//=============
+// COMMAND LINE
+//=============
+
+module.exports.processSharedCommandLineArgs = function(argv) {
+    
+    // Symbol loading
+    
+    if (typeof(argv.inFile) != 'undefined') {
+      delete settings.settings.symbol
+      settings.settings.symbolFile = argv.inFile
+      console.log(`${this.textColor.FgBlue}Loading symbols from '${settings.settings.symbolFile}'${this.textColor.Reset}\n`)
+    }
+    else if (typeof(argv.symbol) != 'undefined') {
+      settings.settings.symbol = argv.symbol
+      console.log(`${this.textColor.FgBlue}Analysing symbol:${settings.settings.symbol}...\n${this.textColor.Reset}`)
+    }
+
+    // Output
+
+    if (typeof(argv.outFile) != 'undefined') {
+      settings.settings.outFile = argv.outFile
+      console.log(`${this.textColor.FgBlue}Setting output file to '${settings.settings.outFile}'${this.textColor.Reset}\n`)
+    }
+
+    // Data validity
+
+    if (typeof(argv.sandbox) != 'undefined') {
+      console.log(`${this.textColor.FgBlue}Using sandbox...\n${this.textColor.Reset}`)
+      settings.debug.sandbox = true
+    }
+    else if (typeof(argv.realData) != 'undefined') {
+      console.log(`${this.textColor.FgBlue}NOT using sandbox...\n${this.textColor.Reset}`)
+      settings.debug.sandbox = false
+    }
+}
+
+module.exports.setupHelpForSharedCommands = function(argv) {
+  return argv.option('inFile', {
+    description: 'A file with symbols to analyse',
+    type: 'string',
+  })
+  .option('outFile', {
+    description: 'Where to save the results',
+    type: 'string',
+  })
+  .option('symbol', {
+    description: 'Which symbol to analyse. Overrides inFile',
+    type: 'string',
+  })
+
+}

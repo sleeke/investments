@@ -71,7 +71,7 @@ function nextSymbol(promiseChain, symbols, symbolIndex) {
 //=======//
 
 function processArgs() {
-  const argv = yargs
+  const argv = utils.setupHelpForSharedCommands(yargs)
   .option('inFile', {
     description: 'A file with symbols to analyse',
     type: 'string',
@@ -92,23 +92,8 @@ function processArgs() {
 
     console.log("\n")
 
-    // Symbol loading
-    
-    if (typeof(argv.inFile) != 'undefined') {
-      settings.settings.symbolFile = argv.inFile
-      console.log(`${utils.textColor.FgBlue}Loading symbols from '${settings.settings.symbolFile}'${utils.textColor.Reset}\n`)
-    }
+    utils.processSharedCommandLineArgs(argv)
 
-    // Data validity
-
-    if (argv.sandbox) {
-      console.log(`${utils.textColor.FgBlue}Using sandbox...\n${utils.textColor.Reset}`)
-      global.debug.sandbox = true
-    }
-    else if (argv.realData) {
-      console.log(`${utils.textColor.FgBlue}NOT using sandbox...\n${utils.textColor.Reset}`)
-      global.debug.sandbox = false
-    }
   }
 
   begin()
