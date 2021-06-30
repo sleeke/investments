@@ -19,7 +19,7 @@ module.exports.settings = {
   symbolFile: "symbols/symbols.txt",
 
   // Placeholder for the CLI symbol
-  symbol: "IGV",
+  symbol: "POW.TO",
 
   // Default output file
   outFile: "output.json",
@@ -34,13 +34,16 @@ module.exports.filters = {
   movingAverage: {
     reject: [
       "NEGATIVE",
-      "PUNY"
+      "PUNY",
+      "WEAK"
     ]
   },
 
   category: {
-    require: [
+    required: [],
+    desired: [
       "APPROACHING BUY ZONE",
+      "ROCKET"
     ]
   }
 

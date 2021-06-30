@@ -74,14 +74,29 @@ function separateTheWheatFromTheChaff(analysisOutput) {
   })
 
   if (pass == true) {
-    settings.filters.category.require.forEach(requiredCategory => {
+    settings.filters.category.required.forEach(requiredCategory => {
       if (!analysisOutput.summary.categories.includes(requiredCategory)) {
         pass = {
-          rejectionReason: `Categories does not contain ${requiredCategory}`
+          rejectionReason: `Does not fulfill ${requiredCategory}`
         }
       }
     })
+  }
+
+  if (pass == true) {
+    var tempBool = false
+    settings.filters.category.desired.forEach(desiredCategory => {
+      if (analysisOutput.summary.categories.includes(desiredCategory)) {
+        tempBool = true
+      }
+    })
+
+    if (tempBool != true) {
+      pass = {
+        rejectionReason: `Does not fulfill any of the desired categories: ${settings.filters.category.desired}`
+      }
     }
+  }
 
   return pass
 }
