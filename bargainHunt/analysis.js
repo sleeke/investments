@@ -13,6 +13,8 @@ const debugGreenDays = false
 // EXPORTS //
 //=========//
 
+// TODO: Can we categorize based on the MA trend over the last X sessions?
+
 module.exports.analyze = function(dailyData, analysisOutput) {
   return new Promise(function(resolve, reject) {
     if (typeof dailyData != 'undefined' && dailyData.length > 0) {
@@ -26,10 +28,13 @@ module.exports.analyze = function(dailyData, analysisOutput) {
       momentum(dailyData, momentumAnalysis)
 
       // MA Trend
+      var movingAveragePeriod = 20
+      var periodsForMaxCalculation = 20
       var sufficientTrend = Math.pow(1.08, (1.0 / 20)) - 1
       ma20Trend = {}
-      ma20Trend.value = movingAverageTrend(dailyData)
-      ma20Trend.gainAt20Sessions = Math.pow((1 + ma20Trend), 20) 
+      ma20Trend.version = "MA-Ap-0.2.2"
+      ma20Trend.value = utils.roundTrend(maxMovingAverageTrend(dailyData, periodsForMaxCalculation))
+      ma20Trend.gainAt20Sessions = Math.pow((1 + ma20Trend), movingAveragePeriod) 
 
       if (ma20Trend.value < 0) {
         analysisOutput.summary.ma20Trend = "NEGATIVE"
@@ -257,6 +262,19 @@ function greenDays(dailyStats, momentumAnalysis) {
 }
 
 // MOVING AVERAGES
+
+function maxMovingAverageTrend(dailyStats, period) {
+  var maxMa20Trend = -1000
+  for (offset = 0; offset < period; offset++) {
+    var ma20 = calculateMovingAverage(dailyStats.slice(offset, dailyStats.length), 20)
+    var prevMa20 = calculateMovingAverage(dailyStats.slice(offset + 1, dailyStats.length), 20)
+    if (prevMa20 > 0) {
+      maxMa20Trend = Math.max(maxMa20Trend, ma20 / prevMa20 - 1)
+    }
+  }
+
+  return maxMa20Trend
+}
 
 function movingAverageTrend(dailyStats) {
   // TODO: This is perhaps a little inefficient, since this is also calculated elsewhere

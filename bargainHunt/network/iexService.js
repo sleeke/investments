@@ -62,7 +62,7 @@ function extractQuoteData(quoteJson) {
 // Daily
 
 module.exports.daily = function (symbol) {
-  var dailyUrl = serviceUrl + translateSymbol(symbol) + '/chart/40d'
+  var dailyUrl = serviceUrl + translateSymbol(symbol) + '/chart/60d'
 
   var parameters = {
     token: apiKey  

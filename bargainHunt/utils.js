@@ -76,6 +76,10 @@ module.exports.warn = function(string) {
 // FORMATTING
 //===========
 
+module.exports.roundTrend = function(number) {
+  return parseFloat(number.toFixed(3))
+}
+
 module.exports.roundPrice = function(number) {
   return parseFloat(number.toFixed(2))
 }

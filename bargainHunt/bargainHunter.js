@@ -16,9 +16,8 @@ global.analysisOutput = {
 
 processArgs()
 
-// TODO: Add command line arguments to restrict to certain categories and MA strengths (add settings module?)
 // TODO: Standardise section for categories, e.g. WEAK, RISER in a similar place
-// TODO: Add outFile option, pull common options into common handler
+// TODO: Separate WFBZ into up, down, on point (and order by closeness)
 
 function analyze(symbol) {
   console.log(`Analyzing ${symbol}...`)
