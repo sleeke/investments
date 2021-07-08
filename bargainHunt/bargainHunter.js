@@ -112,7 +112,7 @@ function processArgs() {
   if (typeof argv._ != 'undefined') {
 
     console.log("\n")
-
+    
     utils.processSharedCommandLineArgs(argv)
 
     // Quantifiers

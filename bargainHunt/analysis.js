@@ -27,28 +27,7 @@ module.exports.analyze = function(dailyData, analysisOutput) {
       greenDays(dailyData, momentumAnalysis)
       momentum(dailyData, momentumAnalysis)
 
-      // MA Trend
-      var movingAveragePeriod = 20
-      var periodsForMaxCalculation = 20
-      var sufficientTrend = Math.pow(1.08, (1.0 / 20)) - 1
-      ma20Trend = {}
-      ma20Trend.version = "MA-Ap-0.2.2"
-      ma20Trend.value = utils.roundTrend(maxMovingAverageTrend(dailyData, periodsForMaxCalculation))
-      ma20Trend.gainAt20Sessions = Math.pow((1 + ma20Trend), movingAveragePeriod) 
-
-      if (ma20Trend.value < 0) {
-        analysisOutput.summary.ma20Trend = "NEGATIVE"
-      }
-      else if (ma20Trend.value < sufficientTrend / 2) {
-        analysisOutput.summary.ma20Trend = "PUNY"
-      }
-      else if (ma20Trend.value < sufficientTrend) {
-        analysisOutput.summary.ma20Trend = "WEAK"
-      }
-      else if (ma20Trend.value >= sufficientTrend) {
-        analysisOutput.summary.ma20Trend = "STRONG"
-      }
-      momentumAnalysis.ma20Trend = ma20Trend
+      momentumAnalysis.maTrend = getMaAnalysis(dailyData, analysisOutput)
       analysisOutput.momentumAnalysis = momentumAnalysis
 
       buyZoneApproach = {}
@@ -62,16 +41,63 @@ module.exports.analyze = function(dailyData, analysisOutput) {
   }) 
 }
 
+function getMaAnalysis(dailyData, analysisOutput) {
+  var maTrend = {}
+  maTrend.version = "MA-Ap-0.2.3"
+  maTrend.ma20 = getMaAnalysisForMaPeriod(dailyData, 20)
+  maTrend.ma50 = getMaAnalysisForMaPeriod(dailyData, 50)
+
+  analysisOutput.summary.ma20Trend = maTrendSummary(maTrend.ma20.value)
+  analysisOutput.summary.ma50Trend = maTrendSummary(maTrend.ma50.value)
+}
+
+function maTrendSummary(trendValue) {
+  var sufficientTrend = Math.pow(1.08, (1.0 / 20)) - 1
+
+  if (trendValue < 0) {
+    return "NEGATIVE"
+  }
+  else if (trendValue < sufficientTrend / 2) {
+    return "PUNY"
+  }
+  else if (trendValue < sufficientTrend) {
+    return "WEAK"
+  }
+  else if (trendValue >= sufficientTrend) {
+    return "STRONG"
+  }
+
+}
+
+function getMaAnalysisForMaPeriod(dailyData, movingAveragePeriod) {
+  maTrend = {}
+
+  maTrend.value = utils.roundTrend(movingAverageTrend(dailyData, movingAveragePeriod))
+  maTrend.gainAt20Sessions = Math.pow((1 + maTrend.value), 20) 
+
+  return maTrend
+}
+
 function separateTheWheatFromTheChaff(analysisOutput) {
   var pass = true
+  var ma20Rejected = false
+  var ma50Rejected = false
 
   settings.filters.movingAverage.reject.forEach(rejectedMaTrend => {
     if (analysisOutput.summary.ma20Trend == rejectedMaTrend) {
-      pass = {
-        rejectionReason: `MA trend is ${rejectedMaTrend}`
+      ma20Rejected = rejectedMaTrend
       }
+
+    if (analysisOutput.summary.ma50Trend == rejectedMaTrend) {
+      ma50Rejected = rejectedMaTrend
     }
   })
+
+  if (ma20Rejected != false && ma50Rejected != false) {
+    pass = {
+      rejectionReason: `MA20 is ${ma20Rejected} and MA50 is ${ma50Rejected}`
+    }
+  }
 
   if (pass == true) {
     settings.filters.category.required.forEach(requiredCategory => {
@@ -291,12 +317,12 @@ function maxMovingAverageTrend(dailyStats, period) {
   return maxMa20Trend
 }
 
-function movingAverageTrend(dailyStats) {
+function movingAverageTrend(dailyStats, movingAveragePeriod) {
   // TODO: This is perhaps a little inefficient, since this is also calculated elsewhere
-  var ma20 = calculateMovingAverage(dailyStats, 20)
-  var prevMa20 = calculateMovingAverage(dailyStats.slice(1, dailyStats.length), 20)
+  var ma = calculateMovingAverage(dailyStats, movingAveragePeriod)
+  var prevMa = calculateMovingAverage(dailyStats.slice(1, dailyStats.length), movingAveragePeriod)
 
-  return ma20 / prevMa20 - 1
+  return ma / prevMa - 1
 }
 
 module.exports.getMovingAverageCompliance = function(dailyData, baseObject) {
