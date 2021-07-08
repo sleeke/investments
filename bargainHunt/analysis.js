@@ -86,7 +86,7 @@ function separateTheWheatFromTheChaff(analysisOutput) {
   settings.filters.movingAverage.reject.forEach(rejectedMaTrend => {
     if (analysisOutput.summary.ma20Trend == rejectedMaTrend) {
       ma20Rejected = rejectedMaTrend
-      }
+    }
 
     if (analysisOutput.summary.ma50Trend == rejectedMaTrend) {
       ma50Rejected = rejectedMaTrend
@@ -261,7 +261,13 @@ function calculateMovingAverage(dailyStats, movingAverageLength) {
 
   var movingAverage = 0
   for (var dayIndex = 0; dayIndex < movingAverageLength; dayIndex++) {
-      movingAverage += dailyStats[dayIndex].close
+
+    movingAverage += dailyStats[dayIndex].close
+
+    if (dailyStats[dayIndex].close == 0) {
+      // Special case for zero trades in a day (seems like a bug in the data)
+      movingAverage += dailyStats[dayIndex + 1].close
+    }
   }
 
   return movingAverage / movingAverageLength
