@@ -12,6 +12,9 @@ module.exports.nextSymbol = function(symbolAnalysisOutput, onSuccess) {
   return new Promise(function(resolve, reject) {
     // Exit condition for last symbol
     if (symbolIndex >= module.exports.globalSymbols.length - 1) {
+
+      sortResults()
+
       fileService.saveObject(global.analysisOutput, settings.settings.outFile)
       resolve()
     }
@@ -21,6 +24,14 @@ module.exports.nextSymbol = function(symbolAnalysisOutput, onSuccess) {
     var symbol = module.exports.globalSymbols[symbolIndex]
     resolve(onSuccess(symbol))  
   })
+}
+
+function sortResults() {
+  for (var category in global.analysisOutput.categories) {
+    global.analysisOutput.categories[category].sort((first, second) => {
+      return first.buyZoneApproach.percentFromAverage - second.buyZoneApproach.percentFromAverage
+    })
+  }
 }
 
 module.exports.loadSymbolsFromFileAndThen = function(filename, onSuccess) {

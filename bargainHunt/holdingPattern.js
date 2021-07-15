@@ -13,6 +13,7 @@ const fileService = require('./storage/fileService');
 var symbolInfo = []
 
 // TODO: Add maTrend to report, to enable exit when it becomes weak
+// TODO: Are .TO results 1 day behind?
 
 processArgs()
 

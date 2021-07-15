@@ -17,7 +17,8 @@ global.analysisOutput = {
 processArgs()
 
 // TODO: Standardise section for categories, e.g. WEAK, RISER in a similar place
-// TODO: Separate WFBZ into up, down, on point (and order by closeness)
+// TODO: Separate WFBZ into up, down, on point 
+// TODO: Output CSV list of symbols in each class
 
 function analyze(symbol) {
   console.log(`Analyzing ${symbol}...`)
