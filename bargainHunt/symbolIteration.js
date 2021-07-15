@@ -4,26 +4,29 @@ const settings = require('./settings');
 module.exports.globalSymbols = []
 var symbolIndex = 0
 
-module.exports.moveToNextSymbol = function(promiseChain, onSuccess) {
-  return promiseChain.then(symbolAnalysisOutput => module.exports.nextSymbol(symbolAnalysisOutput, onSuccess))
+module.exports.moveToNextSymbol = function(promiseChain, onSuccess, onComplete) {
+  return promiseChain.then(symbolAnalysisOutput => module.exports.nextSymbol(symbolAnalysisOutput, onSuccess, onComplete))
 }
 
-module.exports.nextSymbol = function(symbolAnalysisOutput, onSuccess) {
+module.exports.nextSymbol = function(symbolAnalysisOutput, onSuccess, onComplete) {
   return new Promise(function(resolve, reject) {
     // Exit condition for last symbol
     if (symbolIndex >= module.exports.globalSymbols.length - 1) {
-
-      sortResults()
-
-      fileService.saveObject(global.analysisOutput, settings.settings.outFile)
-      resolve()
+      sumUp()
+      resolve(onComplete())
     }
 
     // Increment the index and get the next symbol
     symbolIndex++
     var symbol = module.exports.globalSymbols[symbolIndex]
     resolve(onSuccess(symbol))  
-  })
+  })  
+}
+
+function sumUp() {
+  sortResults()
+
+  fileService.saveObject(global.analysisOutput, settings.settings.outFile)
 }
 
 function sortResults() {

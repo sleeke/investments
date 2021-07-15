@@ -48,15 +48,19 @@ function analyze(symbol) {
   
   promiseChain = filterSymbol(promiseChain, symbolAnalysisOutput)
   promiseChain = applyCategories(promiseChain, symbolAnalysisOutput)
-  promiseChain = symbolIteration.moveToNextSymbol(promiseChain, analyze)
+  promiseChain = symbolIteration.moveToNextSymbol(promiseChain, analyze, onComplete)
 
   // Error catching
   promiseChain
   .catch(function(errorText) {
     console.log(`${utils.textColor.FgRed}${errorText}${utils.textColor.Reset}`)
     symbolAnalysisOutput['error'] = errorText
-    symbolIteration.nextSymbol(symbolAnalysisOutput, analyze)
+    symbolIteration.nextSymbol(symbolAnalysisOutput, analyze, onComplete)
   })
+}
+
+function onComplete() {
+  outputForYahooWatchlist()
 }
 
 function categorizeSymbol(promiseChain, symbolAnalysisOutput) {
@@ -91,6 +95,33 @@ function applyCategories(promiseChain, symbolAnalysisOutput) {
 //=======//
 // UTILS //
 //=======//
+
+/**
+ * Output the selected category as an easy-to-use string of symbols that can be added to a watchlist
+ */
+function outputForYahooWatchlist() {
+  var outputStrings = {
+    inTheZone: "",
+    needsToDrop: ""
+  }
+
+  var symbolList = global.analysisOutput.categories[settings.settings.categoryForWatchlist]
+  if (typeof(symbolList) == 'undefined') return
+
+  for (var index = symbolList.length - 1; index >= 0 ; index--) { 
+    // Symbols should be in reverse order so the furthest from the MA appears at the bottom of the list
+
+    var symbolAnalysis = symbolList[index]
+    if (symbolAnalysis.buyZoneApproach.percentFromAverage <= settings.quantifiers.percentFromAverage) {
+      outputStrings.inTheZone += `${symbolAnalysis.symbol}, `
+    }
+    else {
+      outputStrings.needsToDrop += `${symbolAnalysis.symbol}, `
+    }
+  }
+
+  console.log(outputStrings)
+}
 
 function processArgs() {
   const argv = utils.setupHelpForSharedCommands(yargs)

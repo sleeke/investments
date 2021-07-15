@@ -27,6 +27,9 @@ module.exports.settings = {
   // Default value for charting
   forChart: false,
 
+  // The category to use for simple watchlist exports using bargainHunter.js
+  categoryForWatchlist: "APPROACHING BUY ZONE"
+
 }
 
 module.exports.filters = {

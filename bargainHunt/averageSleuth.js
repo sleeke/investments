@@ -40,12 +40,13 @@ function analyze(symbol) {
 
   // Defaults
   // TODO: allow date-range searches
+  // TODO: export as CSV
   var promiseChain = dataCollection.getMovingAverageCompliance(symbol, symbolAnalysisOutput)
 
   promiseChain = saveToGlobalOutput(promiseChain, symbolAnalysisOutput)
   
   if (settings.settings.forChart == false) {
-    promiseChain = symbolIteration.moveToNextSymbol(promiseChain, analyze)
+    promiseChain = symbolIteration.moveToNextSymbol(promiseChain, analyze, onComplete)
   }
   
   // Error catching
@@ -59,6 +60,10 @@ function analyze(symbol) {
 
 function saveToGlobalOutput(promiseChain, symbolAnalysisOutput) {
   return promiseChain.then(_ => global.analysisOutput.symbols.push(symbolAnalysisOutput))
+}
+
+function onComplete() {
+  // no-op
 }
 
 //=======//
