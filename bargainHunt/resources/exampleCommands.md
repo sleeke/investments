@@ -24,7 +24,7 @@ Take a current watchlist and reorder according to distance from the moving avera
 # Updating Stop Losses
 Take a list of current stocks and find new stop losses based on a allowed distance from the moving average
 ```
- ./holdingPattern.js --realData
+./holdingPattern.js --realData
 ```
 
 # Finding new correlations
