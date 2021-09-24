@@ -91,6 +91,7 @@ function extractDailyData(json) {
       }
     }
 
+    // Return the daily array, beginning with the most recent day stats
     return dailyPackage
   }
 }

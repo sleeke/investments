@@ -15,6 +15,9 @@ module.exports.init = function() {
 // These methods should return promises which resolve dailyData and accept
 // a symbol structure to modify, making them easier to chain together
 
+/**
+ * Return the daily array, beginning with the most recent day stats
+ */
 module.exports.getDailyData = function(symbol) {
   return networkService.daily(symbol)
 }
@@ -31,6 +34,8 @@ module.exports.getMovingAverage = function(dailyData, period, symbolAnalysisOutp
   return new Promise(function(resolve, reject) {
     var fullMaData = analysis.getMovingAverage(dailyData, period)
     symbolAnalysisOutput.ma = utils.roundPrice(fullMaData.ma)
+    symbolAnalysisOutput.maTrend = utils.roundPercent(fullMaData.delta * 100)
+    symbolAnalysisOutput.maPeriod = period
     resolve(dailyData)
   })
 }

@@ -375,7 +375,7 @@ function getMovingAverageDataForSingleDay(dailyData, dayIndex, period) {
   var close = dailyData[dayIndex].close
 
   var movingAverage = movingAverageForOffset(dailyData, dayIndex, period)
-  var prevMovingAverage = movingAverageForOffset(dailyData, dayIndex - 1, period)
+  var prevMovingAverage = movingAverageForOffset(dailyData, dayIndex + 1, period)
 
   return {
     ma: movingAverage,

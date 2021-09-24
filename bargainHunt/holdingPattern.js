@@ -29,11 +29,15 @@ function process(symbols, symbolIndex) {
   console.log(`Processing ${symbol.ticker}`)
 
   utils.addLinks(symbol, symbol.ticker)
+  var period = symbol.maPeriod
+  if (typeof period == 'undefined') {
+    period = 20
+  }
 
   // Process sequence
-  var promiseChain = dataCollection.getDailyData(symbol.ticker)
+  var promiseChain = dataCollection.getDailyData(symbol.ticker, period + 1)
     .then(dailyData => dataCollection.getDailyRanges(dailyData, symbol))
-    .then(dailyData => dataCollection.getMovingAverage(dailyData, 20, symbol))
+    .then(dailyData => dataCollection.getMovingAverage(dailyData, period, symbol))
   
   promiseChain = updateData(promiseChain, symbol)
   promiseChain = nextSymbol(promiseChain, symbols, symbolIndex)

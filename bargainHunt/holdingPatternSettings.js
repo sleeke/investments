@@ -5,12 +5,12 @@
 module.exports.settings = {
 
   // The default source for symbols if no CLI args are given
-  symbolFile: "symbols/holdings.json",
+  symbolFile: "./bargainHunt/symbols/holdings.json",
 
   // Placeholder for the CLI symbol
-  symbol: "",
+  symbol: "NVEI.TO",
 
   // Default output file
-  outFile: "symbols/holdings.json",
+  outFile: "./bargainHunt/symbols/holdings.json",
 
 }
