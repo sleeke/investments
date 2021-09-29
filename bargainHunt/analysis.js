@@ -333,7 +333,7 @@ function movingAverageTrend(dailyStats, movingAveragePeriod) {
 
 module.exports.getMovingAverageCompliance = function(dailyData, baseObject) {
   baseObject.movingAverageCompliance = {
-    version: "0.2",
+    version: "0.3",
     ma20: getMovingAverageComplianceForPeriod(dailyData, 20),
     ma50: getMovingAverageComplianceForPeriod(dailyData, 50)
   }
@@ -354,7 +354,7 @@ function getMovingAverageComplianceForPeriod(dailyData, period) {
 
   var numValidSessions = 0
   for(var dayIndex = period; dayIndex < dailyData.length; dayIndex++) {
-    var movingAverageData = getMovingAverageDataForSingleDay(dailyData, dayIndex, 20)
+    var movingAverageData = getMovingAverageDataForSingleDay(dailyData, dayIndex, period, 1)
 
     if (Math.abs(movingAverageData.delta) > significantMovingAverageDelta) {
       compliance += movingAverageData.deviation * movingAverageData.delta >= 0 ? 1 : -1
@@ -371,11 +371,24 @@ function movingAverageForOffset(dailyData, endIndex, period) {
   return calculateMovingAverage(movingAverageArray, period)
 }
 
-function getMovingAverageDataForSingleDay(dailyData, dayIndex, period) {
+/**
+ * 
+ * @param {array} dailyData - A list of price data for each day that is required to calculate the moving average  
+ * @param {integer} dayIndex - The day for which to get moving average data
+ * @param {integer} period - The period of the moving average
+ * @param {integer} direction - The direction of the data; -1 if newest first, +1 if oldest first
+ * @returns 
+ */
+function getMovingAverageDataForSingleDay(dailyData, dayIndex, period, direction) {
+  // TODO: Standardize array direction and remove this requirement
+  if (typeof direction == 'undefined') {
+    direction = -1  // Assume newest first, since that is used in most cases
+  }
+
   var close = dailyData[dayIndex].close
 
   var movingAverage = movingAverageForOffset(dailyData, dayIndex, period)
-  var prevMovingAverage = movingAverageForOffset(dailyData, dayIndex + 1, period)
+  var prevMovingAverage = movingAverageForOffset(dailyData, dayIndex - direction, period)
 
   return {
     ma: movingAverage,
