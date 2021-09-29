@@ -15,7 +15,7 @@ const debugGreenDays = false
 
 // TODO: Can we categorize based on the MA trend over the last X sessions?
 
-module.exports.analyze = function(dailyData, analysisOutput) {
+module.exports.analyze = function(dailyData, analysisOutput, period) {
   return new Promise(function(resolve, reject) {
     if (typeof dailyData != 'undefined' && dailyData.length > 0) {
       
@@ -31,7 +31,7 @@ module.exports.analyze = function(dailyData, analysisOutput) {
       analysisOutput.momentumAnalysis = momentumAnalysis
 
       buyZoneApproach = {}
-      analyzeBuyZone(dailyData, buyZoneApproach)
+      analyzeBuyZone(dailyData, buyZoneApproach, period)
       analysisOutput.buyZoneApproach = buyZoneApproach
 
       volatility(dailyData, analysisOutput)
@@ -84,7 +84,10 @@ function separateTheWheatFromTheChaff(analysisOutput) {
   var ma50Rejected = false
 
   settings.filters.movingAverage.reject.forEach(rejectedMaTrend => {
-    if (analysisOutput.summary.ma20Trend == rejectedMaTrend) {
+    if (settings.filters.ignoreMa20) {
+      ma20Rejected = "IGNORED"
+    }
+    else if (analysisOutput.summary.ma20Trend == rejectedMaTrend) {
       ma20Rejected = rejectedMaTrend
     }
 
@@ -93,7 +96,7 @@ function separateTheWheatFromTheChaff(analysisOutput) {
     }
   })
 
-  if (ma20Rejected != false && ma50Rejected != false) {
+  if ((ma20Rejected != false || settings.filters.ignoreMa20) && ma50Rejected != false) {
     pass = {
       rejectionReason: `MA20 is ${ma20Rejected} and MA50 is ${ma50Rejected}`
     }
@@ -233,27 +236,31 @@ function dailyTimeSeriesToArray(dailyTimeSeries) {
   return array
 }
 
-function analyzeBuyZone(dailyStats, buyZoneApproach) {
-  var ma20 = calculateMovingAverage(dailyStats, 20)
-  var prevMa20 = calculateMovingAverage(dailyStats.slice(1, dailyStats.length), 21)
+function analyzeBuyZone(dailyStats, buyZoneApproach, period) {
+  if (typeof period == 'undefined') {
+    period = 20
+  }
+  var ma = calculateMovingAverage(dailyStats, period)
+  var prevMa = calculateMovingAverage(dailyStats.slice(1, dailyStats.length), 21)
 
   var lastPrice = dailyStats[0].close
   var prevClose = dailyStats[1].close
 
-  buyZoneApproach.percentFromAverage = utils.roundPercent((lastPrice / ma20 - 1) * 100)
-  buyZoneApproach.aboveMa20 = buyZoneApproach.percentFromAverage > 0
-  buyZoneApproach.approachingMa20 = lastPrice < prevClose
-  buyZoneApproach.closeToMa20 = isCloseToPrice(lastPrice, ma20, settings.quantifiers.percentFromAverage)
-  if (prevMa20 >= 0) {
-    buyZoneApproach.positiveMa20Trend = ma20 > prevMa20
+  buyZoneApproach.percentFromAverage = utils.roundPercent((lastPrice / ma - 1) * 100)
+  buyZoneApproach.maPeriod = period
+  buyZoneApproach.aboveMa = buyZoneApproach.percentFromAverage > 0
+  buyZoneApproach.approachingMa = lastPrice < prevClose
+  buyZoneApproach.closeToMa = isCloseToPrice(lastPrice, ma, settings.quantifiers.percentFromAverage)
+  if (prevMa >= 0) {
+    buyZoneApproach.positiveMaTrend = ma > prevMa
   }
 }
 
 function approachingBuyZone(symbolAnalysis) {
   var buyZoneApproach = symbolAnalysis.buyZoneApproach
 
-  return buyZoneApproach.aboveMa20
-    && (buyZoneApproach.approachingMa20 || buyZoneApproach.closeToMa20)
+  return buyZoneApproach.aboveMa
+    && (buyZoneApproach.approachingMa || buyZoneApproach.closeToMa)
 }
 
 function calculateMovingAverage(dailyStats, movingAverageLength) {

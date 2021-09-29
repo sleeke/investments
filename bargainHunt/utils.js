@@ -185,6 +185,21 @@ module.exports.processSharedCommandLineArgs = function(argv) {
       console.log(`${this.textColor.FgBlue}NOT using sandbox...\n${this.textColor.Reset}`)
       settings.debug.sandbox = false
     }
+
+    // Quantifiers
+
+    if (typeof(argv.maPeriod) != 'undefined') {
+      settings.quantifiers.maPeriod = argv.maPeriod
+      console.log(`${this.textColor.FgBlue}Setting MA period to ${settings.quantifiers.maPeriod}${this.textColor.Reset}`)
+    }
+
+    // Filters
+
+    if (typeof(argv.ignoreMa20) != 'undefined') {
+      settings.filters.ignoreMa20 = true
+      console.log(`${this.textColor.FgBlue}Ignoring MA20${this.textColor.Reset}`)
+    }
+
 }
 
 module.exports.setupHelpForSharedCommands = function(argv) {
@@ -199,6 +214,13 @@ module.exports.setupHelpForSharedCommands = function(argv) {
   .option('symbol', {
     description: 'Which symbol to analyse. Overrides inFile',
     type: 'string',
+  })
+  .option('maPeriod', {
+    description: 'The number of sessions for the moving average',
+    type: 'number'
+  })
+  .option('ignoreMa20', {
+    description: 'Set to ignore the MA20'
   })
 
 }

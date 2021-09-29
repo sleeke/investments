@@ -19,7 +19,7 @@ module.exports.settings = {
   symbolFile: "symbols/symbols.txt",
 
   // Placeholder for the CLI symbol
-  symbol: "POW.TO",
+  symbol: "TAN",
 
   // Default output file
   outFile: "output.json",
@@ -71,6 +71,9 @@ module.exports.include = {
 module.exports.quantifiers = {
 
   // Threshold for MA approach (percent)
-  percentFromAverage: 5
+  percentFromAverage: 5,
+
+  // Moving average period
+  maPeriod: 20
 
 }

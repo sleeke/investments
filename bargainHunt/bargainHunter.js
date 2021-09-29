@@ -29,7 +29,7 @@ function analyze(symbol) {
   utils.addLinks(symbolAnalysisOutput, symbol)
 
   // Defaults
-  var promiseChain = dataCollection.getDailySummary(symbol, symbolAnalysisOutput)
+  var promiseChain = dataCollection.getDailySummary(symbol, symbolAnalysisOutput, settings.quantifiers.maPeriod)
   promiseChain = categorizeSymbol(promiseChain, symbolAnalysisOutput)
   
   // Optional data

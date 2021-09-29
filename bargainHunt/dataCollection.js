@@ -47,9 +47,9 @@ module.exports.getMovingAverage = function(dailyData, period, symbolAnalysisOutp
 // These are pre-packaged requests which contain a string of promises and do not obey
 // the rules outlined for Building Blocks
 
-module.exports.getDailySummary = function(symbol, symbolAnalysisOutput) {
+module.exports.getDailySummary = function(symbol, symbolAnalysisOutput, period) {
   return networkService.daily(symbol)
-    .then(dailyData => analysis.analyze(dailyData, symbolAnalysisOutput))
+    .then(dailyData => analysis.analyze(dailyData, symbolAnalysisOutput, period))
     .then(symbolAnalysisOutput => networkService.quote(symbol)
     .then(quoteData => analysis.current(quoteData, symbolAnalysisOutput)));
 }
