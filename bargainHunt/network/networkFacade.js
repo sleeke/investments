@@ -21,6 +21,12 @@ module.exports.daily = function(symbol) {
   })
 }
 
+/**
+ * Return the price history of the symbol as an array, beginning with the oldest data
+ * 
+ * @param {string} symbol 
+ * @returns 
+ */
 module.exports.history = function(symbol) {
   return networkImp.history(symbol).then({}, async function() {
     console.log(`Getting a second opinion for ${symbol} [history]...`)
