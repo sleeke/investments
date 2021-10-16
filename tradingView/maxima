@@ -1,0 +1,93 @@
+// This source code is subject to the terms of the Mozilla Public License 2.0 at https://mozilla.org/MPL/2.0/
+// © BritishBritishColumbian
+
+
+//@version=4
+study("Local Maxima")
+
+
+// -------//
+// Inputs //
+// -------//
+
+// The number of sessions to use for the maxima/minima
+studyRange = input(       
+     title="Number of sessions either side of local maxima/minima", 
+     type=input.integer, 
+     defval=1, 
+     minval=1, 
+     maxval=10)
+
+requiredDeltaPercent = input(       
+     title="percent change required for local maxima/minima", 
+     type=input.float, 
+     defval=1, 
+     minval=0, 
+     maxval=10)
+
+
+// ---------------------------//
+// Maxima/minima calculation //
+// ---------------------------//
+
+varip maximaHistory = array.new_float(2, 0.0)
+varip minimaHistory = array.new_float(2, 0.0)
+
+studyPeriod = array.new_float()
+for i = 0 to studyRange * 2 + 1
+	array.push(studyPeriod, close[i])
+
+
+localMinima = array.min(studyPeriod)
+localMaxima = array.max(studyPeriod)
+deltaPercent = abs(localMaxima / localMinima - 1) * 100
+
+if (array.get(studyPeriod, studyRange) >= localMaxima and deltaPercent > requiredDeltaPercent)
+    array.shift(maximaHistory)
+    array.push(maximaHistory, localMaxima)
+    // array.shift(minimaHistory)
+    // array.push(minimaHistory, 0.0)
+    
+
+if (array.get(studyPeriod, studyRange) <= localMinima and deltaPercent > requiredDeltaPercent)
+    array.shift(minimaHistory)
+    array.push(minimaHistory, localMinima)
+    // array.shift(maximaHistory)
+    // array.push(maximaHistory, 0.0)
+
+
+// --------------//
+// Study outputs //
+// --------------//
+
+// Plot colors
+resistanceColorInput = input(#FA4040, "Maxima delta", input.color)
+resistanceColor = color.new(resistanceColorInput, 30)
+resistanceFadedColor = color.new(resistanceColor, 80)
+supportColorInput = input(#51B561, "Minima delta", input.color)
+supportColor = color.new(supportColorInput, 50)
+supportFadedColor = color.new(supportColor, 80)
+
+minimaCloseDiff = close - array.get(minimaHistory, 1)
+maximaCloseDiff = close - array.get(maximaHistory, 1)
+
+minimaDiff = array.get(minimaHistory, 1) - array.get(minimaHistory, 0)
+maximaDiff = array.get(maximaHistory, 1) - array.get(maximaHistory, 0)
+
+exitSignal = 0.0
+if minimaCloseDiff < 0 
+    exitSignal := -abs(minimaCloseDiff)
+    
+enterSignal = 0.0
+if maximaCloseDiff > 0.0 or minimaDiff > 0.0
+    enterSignal := abs(maximaCloseDiff)
+    
+
+// plot(minimaDiff, style=plot.style_columns, color = (minimaDiff < 0 ? maximaDeltaColor : minimaDeltaColor))
+plot(minimaDiff, style=plot.style_columns, color = supportFadedColor)
+plot(maximaDiff, style=plot.style_columns, color = resistanceFadedColor)
+plot(exitSignal, style=plot.style_columns, color = resistanceColor)
+plot(enterSignal, style=plot.style_columns, color = supportColor)
+
+// plot(array.get(minimaHistory, 1), color = resistanceColor)
+// plot(minimaDiff, color = minimaDeltaColor)
