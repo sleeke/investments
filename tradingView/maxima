@@ -59,7 +59,7 @@ if (array.get(maximaStudyPeriod, studyRange) >= localMaxima and deltaPercent > r
 if (array.get(minimaStudyPeriod, studyRange) <= localMinima and deltaPercent > requiredDeltaPercent)
     array.shift(minimaHistory)
     array.push(minimaHistory, localMinima)
-    minimaFound := -1
+    minimaFound := 1
     // array.shift(maximaHistory)
     // array.push(maximaHistory, 0.0)
 
@@ -86,6 +86,9 @@ priceAboveLastMaxima = high - array.get(maximaHistory, 1)
 minimaDiff = array.get(minimaHistory, 1) / array.get(minimaHistory, 0) - 1
 maximaDiff = array.get(maximaHistory, 1) / array.get(maximaHistory, 0) - 1
 
+minimaFound := minimaFound * (minimaDiff >= 0 ? 1 : -1)
+maximaFound := maximaFound * (maximaDiff >= 0 ? 1 : -1)
+
 exitSignal = 0.0
 // if maximaDiff < 0 and priceAboveLastMaxima < 0 
 //     exitSignal := -1//abs(maximaDiff)
@@ -105,10 +108,6 @@ if exitSignal == 0.0
 // Plots //
 // ------//
 
-// Minima/maxima presence
-plot(minimaFound / 2, style=plot.style_columns, color = negativeColor)
-plot(maximaFound / 2, style=plot.style_columns, color = positiveColor)
-
 // Minima/maxima delta
 // plot(minimaDiff, style=plot.style_columns, color = (minimaDiff < 0 ? maximaDeltaColor : minimaDeltaColor))
 // plot(minimaDiff, color = minimaDeltaColorInput)
@@ -124,3 +123,7 @@ plot(enterSignal, style=plot.style_columns, color = positiveFadedColor)
 
 // plot(array.get(minimaHistory, 1), color = positiveColor)
 // plot(minimaDiff, color = minimaDeltaColor)
+
+// Minima/maxima presence
+plot(minimaFound / 2, style=plot.style_columns, color = negativeColor)
+plot(maximaFound / 2, style=plot.style_columns, color = positiveColor)
