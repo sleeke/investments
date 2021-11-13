@@ -1,0 +1,139 @@
+// This source code is subject to the terms of the Mozilla Public License 2.0 at https://mozilla.org/MPL/2.0/
+// © BritishBritishColumbian
+
+// TODO: Add a requirement for buy price to be close to MA
+// TODO: Adjust sell signal to be based on decline of fast MACD
+
+//@version=4
+strategy(
+     "MACD-MA-1.4", 
+     overlay=true, 
+     margin_long=0, 
+     margin_short=0, 
+     default_qty_type=strategy.percent_of_equity, 
+     default_qty_value=100)
+
+// This strategy aims to combine the use of MACD and Moving Averages to find good entry/exit points for *volatile* stocks.
+// I've found it works best with hourly charts (1mo, 3mo, 6mo), but YMMV ;)
+//
+// Every stock will react differently to both, so I suggest tinkering with the inputs to find the best match for each stock.
+// I've found it's best to work through the inputs in sequence, finding the maximum net gain for each, then moving to the next to maximize gains.
+// Take a look at the description of each input below to understand its effect :) 
+
+// -----------------//
+// Revision history //
+// -----------------//
+
+// 1.4
+// - Buy signal is dependent on distance from Moving Average
+//
+// 1.3
+// - Sell signal is dependent on negative change in MACD histogram instead of absolute values
+//
+// 1.2
+// - Added date range for fairer analyses
+//
+// 1.1
+// - Added MACD requirement for sell signal
+
+// -------//
+// Inputs //
+// -------//
+
+// The number of sessions to use for the moving average
+maPeriod = input(       
+     title="MA period", 
+     type=input.integer, 
+     defval=20, 
+     minval=1, 
+     maxval=200)
+
+// The required percentage trend in the moving average to initiate a 'buy' signal (only buy on positive trend)
+maTrendPercent = input(
+     title="Required MA trend percent for buy signal", 
+     type=input.float, 
+     defval=0.028, 
+     minval=-100, 
+     maxval=100)
+
+// The percentage offset from the moving average that will trigger a 'buy' signal
+maTrendOffsetBuyPercent = input(
+     title="Required MA offset percent for buy signal", 
+     type=input.float, 
+     defval=5, 
+     minval=-10, 
+     maxval=10)
+
+// The percentage offset from the moving average that will trigger a 'sell' signal
+maTrendOffsetSellPercent = input(
+     title="Required MA offset percent for sell signal", 
+     type=input.float, 
+     defval=0, 
+     minval=-10, 
+     maxval=10)
+     
+// The change in MACD histogram that will trigger a 'sell' signal
+histogramSellThreshold = input(
+     title="Required MACD histogram threshold for sell signal", 
+     type=input.float, 
+     defval=-0.2, 
+     minval=-5, 
+     maxval=5)
+     
+dateRange = input(
+     title="Date range to strategize over (years)", 
+     type=input.float, 
+     defval=1, 
+     minval=0, 
+     maxval=5)
+
+// ---------------------------//
+// Moving Average calculation //
+// ---------------------------//
+
+ma = sma(open, maPeriod)
+trend = ma / ma[1] - 1
+plot(ma, "MA", color.blue, 2)
+
+// -----------------//
+// MACD calculation //
+// -----------------//
+
+// Defaults for now, may add more inputs later...
+fast = 12, slow = 26
+fastMA = ema(close, fast)
+slowMA = ema(close, slow)
+macd = fastMA - slowMA
+signal = sma(macd, 9)
+histogram = macd - signal
+prevHistogram = histogram[1]
+
+// -----------------//
+// Buy/sell signals //
+// -----------------//
+
+histogramIncreasing = histogram > prevHistogram                                         // Is the distance between the MACD and signal increasing?
+histogramDecreasingSufficiently = histogram < prevHistogram + histogramSellThreshold    // Is the distance between the MACD and signal decreasing?
+histogramPositive = histogram >= 0                                                      // Is the signal above the MACD?
+sufficientMaTrend = trend > (maTrendPercent / 100)                                      // Is there sufficent Moving Average trend to buy?
+priceBelowMaSellThreshold = open <= ma * (1 + (maTrendOffsetSellPercent / 100))         // Is the price below the required offset from the Moving Average?
+priceBelowMaBuyThreshold = open <= ma * (1 + (maTrendOffsetBuyPercent / 100))           // Is the price below the required offset from the Moving Average?
+histogramBelowThreshold = histogram < histogramSellThreshold                            // Is the distance between the MACD and signal below the sell threshold?
+
+// This will cause TradingView to issue an error when setting alerts
+// It doesn't make a difference to the signals, but just set this to true if you're worried
+pastStartDate = time > timenow - (1000 *60 * 60 * 24 * 365 * dateRange) 
+
+buySignal = pastStartDate and histogramIncreasing and histogramPositive and sufficientMaTrend and priceBelowMaBuyThreshold
+sellSignal = histogramDecreasingSufficiently or priceBelowMaSellThreshold 
+
+// -----------------//
+// Strategy actions //
+// -----------------//
+
+if (buySignal)
+    strategy.entry("Long", strategy.long) 
+     
+if (sellSignal) 
+    strategy.close("Long")
+
