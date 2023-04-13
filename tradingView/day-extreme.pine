@@ -9,8 +9,6 @@ study("Day Extreme")
 // - How to quantify success/fail?
 //  - Once extreme is broken, register max change & drawdown
 // - Track momentum: EMA48-1m trend >= 0.004
-// - Drawdown should be measured against the max for the trade
-// - Gain should be able to go down as well as up
 
 // Possible strategy for testing:
 //  - Measure max drawdown without momentum
@@ -50,6 +48,7 @@ maximaDeltaColorInput = input(#53A4F3, "Maxima delta", input.color)
 minimaDeltaColorInput = input(#825FC2, "Minima delta", input.color)
 
 buyColor = color.new(#7A00FA, 50)
+debugColor = color.new(#0000FF, 100)
 
 
 // ---------------------------//
@@ -78,6 +77,7 @@ maximaFound = 0
 // -----------------//
 
 varip dayExtremes = array.new_float(2, -1.0)
+varip tradeExtremes = array.new_float(2, -1.0)
 varip gain = 0.0
 varip drawdown = 0.0
 varip minIndex = 0
@@ -91,6 +91,10 @@ varip direction = 0
 dayMin = array.get(dayExtremes, minIndex)
 dayMax = array.get(dayExtremes, maxIndex)
 
+tradeMin = array.get(tradeExtremes, minIndex)
+tradeMax = array.get(tradeExtremes, maxIndex)
+
+
 if (hour < 9 or (hour == 9 and minute < 30) or hour > 15)
     // Outside trading hours; everything should be reset
     
@@ -98,6 +102,8 @@ if (hour < 9 or (hour == 9 and minute < 30) or hour > 15)
     array.set(dayExtremes, maxIndex, -1.0)
     array.set(maximaHistory, latestMinMax, -1.0)
     array.set(minimaHistory, latestMinMax, -1.0)
+    array.set(tradeExtremes, minIndex, -1.0)
+    array.set(tradeExtremes, maxIndex, -1.0)
     buyPrice := 0.0
     gain := 0
     drawdown := 0
@@ -171,23 +177,38 @@ else
 
         // buyPrice is set; track drawdown and max gain
 
-        if (direction < 0)
-            if (low < buyPrice)
-                localGain = buyPrice - low
-                gain := max(gain, localGain)
-            else if (high > buyPrice)
-                if (time_close("") > buyBarCloseTime)   // Avoid drawdown on the first candle
-                    localDrawdown = buyPrice - high
-                    drawdown := min(drawdown, localDrawdown)
-        else if (direction > 0)
-            if (high > buyPrice)
-                localGain = high - buyPrice
-                gain := max(gain, localGain)
-            else if (low < buyPrice)
-                if (time_close("") > buyBarCloseTime)   // Avoid drawdown on the first candle
-                    localDrawdown = low - buyPrice
-                    drawdown := min(drawdown, localDrawdown)
+        if (direction < 0)  // Heading down
 
+            localGain = buyPrice - low
+            gain := localGain
+        
+            if (high > tradeMin)
+                if (time_close("") > buyBarCloseTime)   // Avoid drawdown on the first candle
+                    localDrawdown = tradeMin - high
+                    drawdown := localDrawdown
+        
+        else if (direction > 0)  // Heading up
+        
+            localGain = high - buyPrice
+            gain := localGain
+        
+            if (low < tradeMax)
+                if (time_close("") > buyBarCloseTime)   // Avoid drawdown on the first candle
+                    localDrawdown = low - tradeMin
+                    drawdown := localDrawdown
+
+        // Set trade min/max
+        if (tradeMin < 0)
+            array.set(tradeExtremes, minIndex, min(low, buyPrice))
+        else
+            array.set(tradeExtremes, minIndex, min(low, tradeMin, buyPrice))
+
+        if (tradeMax < 0)
+            array.set(tradeExtremes, maxIndex, min(high, buyPrice))
+        else
+            array.set(tradeExtremes, maxIndex, min(high, tradeMax, buyPrice))
+
+        ingoreReturnType = true
 
 
 // --------------//
@@ -232,4 +253,6 @@ plot(maximaFound / 2, style=plot.style_columns, color = positiveColor, offset = 
 plot(direction, style=plot.style_line, color = buyColor)
 plot(buyPrice, style=plot.style_line, color = buyColor)
 plot(array.get(dayExtremes, minIndex), style=plot.style_line, color = negativeFadedColor, offset = -studyRange)
-plot(array.get(dayExtremes, maxIndex), style=plot.style_line, color = positiveFadedColor, offset = -studyRange)
+// plot(dayMax, style=plot.style_line, color = positiveFadedColor, offset = -studyRange)
+plot(tradeMax, style=plot.style_line, color = positiveFadedColor, offset = -studyRange)
+plot(tradeMin, style=plot.style_line, color = debugColor, offset = -studyRange)
