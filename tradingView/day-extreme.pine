@@ -9,6 +9,7 @@ study("Day Extreme")
 // - How to quantify success/fail?
 //  - Once extreme is broken, register max change & drawdown
 // - Track momentum: EMA48-1m trend >= 0.004
+// - It seems that drawdown can be positive and gain negative in some cases, see Mar 29
 
 // Possible strategy for testing:
 //  - Measure max drawdown without momentum
@@ -48,7 +49,7 @@ maximaDeltaColorInput = input(#53A4F3, "Maxima delta", input.color)
 minimaDeltaColorInput = input(#825FC2, "Minima delta", input.color)
 
 buyColor = color.new(#7A00FA, 50)
-debugColor = color.new(#0000FF, 100)
+debugColor = color.new(#FF7F00, 0)
 
 
 // ---------------------------//
@@ -78,21 +79,68 @@ maximaFound = 0
 
 varip dayExtremes = array.new_float(2, -1.0)
 varip tradeExtremes = array.new_float(2, -1.0)
-varip gain = 0.0
-varip drawdown = 0.0
+
+varip tradeResults = array.new_float(3, 0)
+varip buyIndex = 0
+varip drawdownIndex = 1
+varip gainIndex = 2
+
+// varip buyPrice = 0.0
+// varip drawdown = 0.0
+// varip gain = 0.0
+
+
 varip minIndex = 0
 varip maxIndex = 1
 varip latestMinMax = 1
-varip buyPrice = 0.0
 varip buyBarCloseTime = 0
 varip direction = 0
 // varip indexOfDaysFirstBar = 0
+
+// ------------------//
+// Utility functions //
+// ------------------//
+
+getDrawdown() =>
+    array.get(tradeResults, drawdownIndex)
+
+setDrawdown(value) =>
+    array.set(tradeResults, drawdownIndex, value)
+
+getBuyPrice() =>
+    array.get(tradeResults, buyIndex)
+
+setBuyPrice(value) =>
+    array.set(tradeResults, buyIndex, value)
+
+getGain() =>
+    array.get(tradeResults, gainIndex)
+
+setGain(value) =>
+    array.set(tradeResults, gainIndex, value)
+
+endTrade() =>
+    array.set(tradeExtremes, minIndex, -1.0)
+    array.set(tradeExtremes, maxIndex, -1.0)
+    array.set(tradeResults, buyIndex, 0)
+    setDrawdown(0)
+    array.set(tradeResults, gainIndex, 0)
+
+
+// ---------------------------//
+// Temp variables from arrays //
+// ---------------------------//
 
 dayMin = array.get(dayExtremes, minIndex)
 dayMax = array.get(dayExtremes, maxIndex)
 
 tradeMin = array.get(tradeExtremes, minIndex)
 tradeMax = array.get(tradeExtremes, maxIndex)
+
+// buyPrice = array.get(tradeResults, buyIndex)
+// drawdown = array.get(tradeResults, drawdownIndex)
+// gain = array.get(tradeResults, gainIndex)
+
 
 
 if (hour < 9 or (hour == 9 and minute < 30) or hour > 15)
@@ -104,9 +152,10 @@ if (hour < 9 or (hour == 9 and minute < 30) or hour > 15)
     array.set(minimaHistory, latestMinMax, -1.0)
     array.set(tradeExtremes, minIndex, -1.0)
     array.set(tradeExtremes, maxIndex, -1.0)
-    buyPrice := 0.0
-    gain := 0
-    drawdown := 0
+    setBuyPrice(0)
+    setDrawdown(0)
+    setGain(0)
+
     direction := 0
 
 else if (hour < 9 or (hour == 9 and minute < 30 + studyRange * 2) or hour > 15)
@@ -149,67 +198,78 @@ else
 
         // Daily minimum is exceeded
 
-        if (buyPrice == 0 or direction > 0)
+        if (getBuyPrice() == 0 or direction > 0)
 
             // New low and buy price hasn't been set (or direction has changed); set buy price
 
-            buyPrice := low
+            setBuyPrice(low)
             buyBarCloseTime := time_close("")
             direction := -1
-            gain := 0
-            drawdown := 0
+            setGain(0)
+            setDrawdown(0)
 
     else if (array.get(dayExtremes, maxIndex) > 0 and high > array.get(dayExtremes, maxIndex) and latestMaxima > 0)
 
         // Daily maximum is exceeded
 
-        if (buyPrice == 0 or direction < 0)
+        if (getBuyPrice() == 0 or direction < 0)
 
             // New high and buy price hasn't been set (or direction has changed); set buy price
 
-            buyPrice := high
+            setBuyPrice(high)
             buyBarCloseTime := time_close("")
             direction := 1
-            gain := 0
-            drawdown := 0
+            setGain(0)
+            setDrawdown(0)
 
-    if (buyPrice != 0.0)
+    if (getBuyPrice() != 0.0)
 
         // buyPrice is set; track drawdown and max gain
 
         if (direction < 0)  // Heading down
 
-            localGain = buyPrice - low
-            gain := localGain
+            localGain = getBuyPrice() - low
+            setGain(localGain)
         
-            if (high > tradeMin)
-                if (time_close("") > buyBarCloseTime)   // Avoid drawdown on the first candle
-                    localDrawdown = tradeMin - high
-                    drawdown := localDrawdown
+            // if (high > tradeMin)
+            if (time_close("") > buyBarCloseTime)   // Avoid drawdown on the first candle
+                localDrawdown = high - tradeMin
+                setDrawdown(min(0, -localDrawdown))
         
         else if (direction > 0)  // Heading up
         
-            localGain = high - buyPrice
-            gain := localGain
+            localGain = high - getBuyPrice()
+            setGain(max(0, localGain))
         
-            if (low < tradeMax)
-                if (time_close("") > buyBarCloseTime)   // Avoid drawdown on the first candle
-                    localDrawdown = low - tradeMin
-                    drawdown := localDrawdown
-
+            // if (low < tradeMax)
+            if (time_close("") > buyBarCloseTime)   // Avoid drawdown on the first candle
+                localDrawdown = tradeMax - low 
+                setDrawdown(min(0, -localDrawdown))
+                    
         // Set trade min/max
+        // TODO: I think there's an issue here.. The trade min/max should be set based on direction, no?
         if (tradeMin < 0)
-            array.set(tradeExtremes, minIndex, min(low, buyPrice))
+            array.set(tradeExtremes, minIndex, min(low, getBuyPrice()))
         else
-            array.set(tradeExtremes, minIndex, min(low, tradeMin, buyPrice))
+            array.set(tradeExtremes, minIndex, min(low, tradeMin, getBuyPrice()))
 
         if (tradeMax < 0)
-            array.set(tradeExtremes, maxIndex, min(high, buyPrice))
+            array.set(tradeExtremes, maxIndex, max(high, getBuyPrice()))
         else
-            array.set(tradeExtremes, maxIndex, min(high, tradeMax, buyPrice))
+            array.set(tradeExtremes, maxIndex, max(high, tradeMax, getBuyPrice()))
 
         ingoreReturnType = true
 
+        // Stop the trade if it drops below the latest extreme
+        if (direction > 0 and low < latestMinima)
+            direction := 0
+            endTrade()
+            ingoreReturnTypeAgain = true
+
+        if (direction < 0 and high > latestMaxima)
+            direction := 0
+            endTrade()
+            ingoreReturnTypeAgain = true
 
 // --------------//
 // Study outputs //
@@ -242,8 +302,8 @@ if exitSignal == 0.0// and exitSignal[1] == 0.0
 // ------//
 
 // Gain / Drawdown
-plot(drawdown, style=plot.style_columns, color = negativeFadedColor)
-plot(gain, style=plot.style_columns, color = positiveFadedColor)
+plot(getDrawdown(), style=plot.style_columns, color = negativeFadedColor)
+plot(getGain(), style=plot.style_columns, color = positiveFadedColor)
 
 // Minima/maxima presence
 plot(minimaFound / 2, style=plot.style_columns, color = negativeColor, offset = -studyRange)
@@ -251,8 +311,9 @@ plot(maximaFound / 2, style=plot.style_columns, color = positiveColor, offset = 
 
 // Debug plots
 plot(direction, style=plot.style_line, color = buyColor)
-plot(buyPrice, style=plot.style_line, color = buyColor)
-plot(array.get(dayExtremes, minIndex), style=plot.style_line, color = negativeFadedColor, offset = -studyRange)
+// plot(getBuyPrice(), style=plot.style_line, color = buyColor)
+// plot(array.get(dayExtremes, minIndex), style=plot.style_line, color = negativeFadedColor, offset = -studyRange)
 // plot(dayMax, style=plot.style_line, color = positiveFadedColor, offset = -studyRange)
-plot(tradeMax, style=plot.style_line, color = positiveFadedColor, offset = -studyRange)
-plot(tradeMin, style=plot.style_line, color = debugColor, offset = -studyRange)
+// plot(tradeMin, style=plot.style_line, color = debugColor, offset = -studyRange)
+// plot(tradeMin, style=plot.style_line, color = debugColor, offset = -studyRange)
+
