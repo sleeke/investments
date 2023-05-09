@@ -1,0 +1,182 @@
+[
+  {
+    "ticker": "MAXR.TO",
+    "account": "BOTH",
+    "offsetPercent": -1,
+    "links": {
+      "yahooChart": "https://finance.yahoo.com/chart/MAXR.TO",
+      "barChart": "https://www.barchart.com/stocks/MAXR.TO"
+    },
+    "goodDayPercent": 4.71,
+    "ma": 40.44,
+    "newLimit": null,
+    "newStop": 40.03
+  },
+  {
+    "ticker": "TSM",
+    "account": "TFSA",
+    "offsetPercent": -0.5,
+    "links": {
+      "yahooChart": "https://finance.yahoo.com/chart/TSM",
+      "barChart": "https://www.barchart.com/stocks/TSM"
+    },
+    "goodDayPercent": 1.64,
+    "ma": 116.73,
+    "newStop": 116.14
+  },
+  {
+    "ticker": "PTON",
+    "account": "TFSA",
+    "offsetPercent": -1,
+    "links": {
+      "yahooChart": "https://finance.yahoo.com/chart/PTON",
+      "barChart": "https://www.barchart.com/stocks/PTON"
+    },
+    "rangeData": {
+      "min": -6.41,
+      "max": 9.6,
+      "avg": 0.96,
+      "stdDev": 3.95,
+      "goodDay": 4.91
+    },
+    "ma": 106.17,
+    "newStop": 105.1,
+    "goodDayPercent": 4.87
+  },
+  {
+    "ticker": "L.TO",
+    "account": "RRSP",
+    "offsetPercent": 0,
+    "links": {
+      "yahooChart": "https://finance.yahoo.com/chart/L.TO",
+      "barChart": "https://www.barchart.com/stocks/L.TO"
+    },
+    "ma": 75.08,
+    "newLimit": 74.18,
+    "newStop": 75.08,
+    "rangeData": {
+      "min": -1.38,
+      "max": 2.8,
+      "avg": 0.45,
+      "stdDev": 0.76,
+      "goodDay": 1.21
+    },
+    "goodDayPercent": 1.18
+  },
+  {
+    "ticker": "HDB",
+    "account": "RRSP",
+    "offsetPercent": -1,
+    "links": {
+      "yahooChart": "https://finance.yahoo.com/chart/HDB",
+      "barChart": "https://www.barchart.com/stocks/HDB"
+    },
+    "ma": 75.94,
+    "newStop": 75.18,
+    "rangeData": {
+      "min": -3.2,
+      "max": 1.85,
+      "avg": 0.21,
+      "stdDev": 1.03,
+      "goodDay": 1.24
+    },
+    "goodDayPercent": 1.28
+  },
+  {
+    "ticker": "TAN",
+    "account": "RRSP",
+    "offsetPercent": -1,
+    "links": {
+      "yahooChart": "https://finance.yahoo.com/chart/TAN",
+      "barChart": "https://www.barchart.com/stocks/TAN"
+    },
+    "ma": 78.09,
+    "newStop": 77.3,
+    "rangeData": {
+      "min": -4.03,
+      "max": 7.04,
+      "avg": 0.05,
+      "stdDev": 2.37,
+      "goodDay": 2.42
+    },
+    "goodDayPercent": 2.5
+  },
+  {
+    "ticker": "IPG",
+    "account": "TFSA",
+    "offsetPercent": -1.5,
+    "links": {
+      "yahooChart": "https://finance.yahoo.com/chart/IPG",
+      "barChart": "https://www.barchart.com/stocks/IPG"
+    },
+    "ma": 33.49,
+    "newStop": 32.98,
+    "rangeData": {
+      "min": -2.35,
+      "max": 2.51,
+      "avg": 0.01,
+      "stdDev": 1.23,
+      "goodDay": 1.24
+    },
+    "goodDayPercent": 1.04
+  },
+  {
+    "ticker": "KURE",
+    "account": "RRSP",
+    "offsetPercent": -2,
+    "links": {
+      "yahooChart": "https://finance.yahoo.com/chart/KURE",
+      "barChart": "https://www.barchart.com/stocks/KURE"
+    },
+    "ma": 44.36,
+    "newStop": 43.47,
+    "rangeData": {
+      "min": -1.85,
+      "max": 2.75,
+      "avg": 0.22,
+      "stdDev": 0.94,
+      "goodDay": 1.16
+    },
+    "goodDayPercent": 1.17
+  },
+  {
+    "ticker": "BMO.TO",
+    "account": "RRSP",
+    "offsetPercent": -1,
+    "links": {
+      "yahooChart": "https://finance.yahoo.com/chart/BMO.TO",
+      "barChart": "https://www.barchart.com/stocks/BMO.TO"
+    },
+    "ma": 126.52,
+    "newLimit": 123.65,
+    "newStop": 125.25,
+    "rangeData": {
+      "min": -0.98,
+      "max": 2.6,
+      "avg": 0.23,
+      "stdDev": 0.79,
+      "goodDay": 1.02
+    },
+    "goodDayPercent": 1.07
+  },
+  {
+    "ticker": "POW.TO",
+    "account": "RRSP",
+    "offsetPercent": 0,
+    "ma": 39.4,
+    "newLimit": 38.91,
+    "newStop": 39.4,
+    "links": {
+      "yahooChart": "https://finance.yahoo.com/chart/POW.TO",
+      "barChart": "https://www.barchart.com/stocks/POW.TO"
+    },
+    "rangeData": {
+      "min": -1.37,
+      "max": 2.63,
+      "avg": 0.29,
+      "stdDev": 0.89,
+      "goodDay": 1.18
+    },
+    "goodDayPercent": 1.17
+  }
+]

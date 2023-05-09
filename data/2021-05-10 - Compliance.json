@@ -1,0 +1,149 @@
+{
+  "symbols": [
+    {
+      "symbol": "COF",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/COF",
+        "barChart": "https://www.barchart.com/stocks/COF"
+      },
+      "movingAverageCompliance": {
+        "version": "0.2",
+        "ma20": 0.7808219178082192,
+        "ma50": 0.8159509202453987
+      }
+    },
+    {
+      "symbol": "CTXR",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/CTXR",
+        "barChart": "https://www.barchart.com/stocks/CTXR"
+      },
+      "movingAverageCompliance": {
+        "version": "0.2",
+        "ma20": 0.7441860465116279,
+        "ma50": 0.6885245901639344
+      }
+    },
+    {
+      "symbol": "RSVA",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/RSVA",
+        "barChart": "https://www.barchart.com/stocks/RSVA"
+      },
+      "movingAverageCompliance": {
+        "version": "0.2",
+        "ma20": 0.8461538461538461,
+        "ma50": 0.7391304347826086
+      }
+    },
+    {
+      "symbol": "QS",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/QS",
+        "barChart": "https://www.barchart.com/stocks/QS"
+      },
+      "movingAverageCompliance": {
+        "version": "0.2",
+        "ma20": 0.7215189873417721,
+        "ma50": 0.3391304347826087
+      }
+    },
+    {
+      "symbol": "CNC.V",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/CNC.V",
+        "barChart": "https://www.barchart.com/stocks/CNC.V"
+      },
+      "movingAverageCompliance": {
+        "version": "0.2",
+        "ma20": 0.6825396825396826,
+        "ma50": 0.5363636363636364
+      }
+    },
+    {
+      "symbol": "OBSV",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/OBSV",
+        "barChart": "https://www.barchart.com/stocks/OBSV"
+      },
+      "movingAverageCompliance": {
+        "version": "0.2",
+        "ma20": 0.6790697674418604,
+        "ma50": 0.7985611510791367
+      }
+    },
+    {
+      "symbol": "HIVE.V",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/HIVE.V",
+        "barChart": "https://www.barchart.com/stocks/HIVE.V"
+      },
+      "movingAverageCompliance": {
+        "version": "0.2",
+        "ma20": 0.7477876106194691,
+        "ma50": 0.6258992805755396
+      }
+    },
+    {
+      "symbol": "EQX.TO",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/EQX.TO",
+        "barChart": "https://www.barchart.com/stocks/EQX.TO"
+      },
+      "movingAverageCompliance": {
+        "version": "0.2",
+        "ma20": 0.8154761904761905,
+        "ma50": 0.8040540540540541
+      }
+    },
+    {
+      "symbol": "CAT",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/CAT",
+        "barChart": "https://www.barchart.com/stocks/CAT"
+      },
+      "movingAverageCompliance": {
+        "version": "0.2",
+        "ma20": 0.7087912087912088,
+        "ma50": 0.9333333333333333
+      }
+    },
+    {
+      "symbol": "CYDY",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/CYDY",
+        "barChart": "https://www.barchart.com/stocks/CYDY"
+      },
+      "movingAverageCompliance": {
+        "version": "0.2",
+        "ma20": 0.7142857142857143,
+        "ma50": 0.8265060240963855
+      }
+    },
+    {
+      "symbol": "EZA",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/EZA",
+        "barChart": "https://www.barchart.com/stocks/EZA"
+      },
+      "movingAverageCompliance": {
+        "version": "0.2",
+        "ma20": 0.7763975155279503,
+        "ma50": 0.9094076655052264
+      }
+    },
+    {
+      "symbol": "MCHI",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/MCHI",
+        "barChart": "https://www.barchart.com/stocks/MCHI"
+      },
+      "movingAverageCompliance": {
+        "version": "0.2",
+        "ma20": 0.8222222222222222,
+        "ma50": 0.911504424778761
+      }
+    }
+  ],
+  "categories": {}
+}

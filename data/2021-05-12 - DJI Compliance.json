@@ -1,0 +1,365 @@
+{
+  "symbols": [
+    {
+      "symbol": "MMM",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/MMM",
+        "barChart": "https://www.barchart.com/stocks/MMM"
+      },
+      "movingAverageCompliance": {
+        "version": "0.2",
+        "ma20": 0.8283828382838284,
+        "ma50": 0.8461538461538461
+      }
+    },
+    {
+      "symbol": "AXP",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/AXP",
+        "barChart": "https://www.barchart.com/stocks/AXP"
+      },
+      "movingAverageCompliance": {
+        "version": "0.2",
+        "ma20": 0.8429003021148036,
+        "ma50": 0.8317152103559871
+      }
+    },
+    {
+      "symbol": "AMGN",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/AMGN",
+        "barChart": "https://www.barchart.com/stocks/AMGN"
+      },
+      "movingAverageCompliance": {
+        "version": "0.2",
+        "ma20": 0.8850574712643678,
+        "ma50": 0.8888888888888888
+      }
+    },
+    {
+      "symbol": "AAPL",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/AAPL",
+        "barChart": "https://www.barchart.com/stocks/AAPL"
+      },
+      "movingAverageCompliance": {
+        "version": "0.2",
+        "ma20": 0.883248730964467,
+        "ma50": 0.8753387533875339
+      }
+    },
+    {
+      "symbol": "BA",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/BA",
+        "barChart": "https://www.barchart.com/stocks/BA"
+      },
+      "movingAverageCompliance": {
+        "version": "0.2",
+        "ma20": 0.7340153452685422,
+        "ma50": 0.746031746031746
+      }
+    },
+    {
+      "symbol": "CAT",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/CAT",
+        "barChart": "https://www.barchart.com/stocks/CAT"
+      },
+      "movingAverageCompliance": {
+        "version": "0.2",
+        "ma20": 0.7150684931506849,
+        "ma50": 0.7076023391812866
+      }
+    },
+    {
+      "symbol": "CVX",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/CVX",
+        "barChart": "https://www.barchart.com/stocks/CVX"
+      },
+      "movingAverageCompliance": {
+        "version": "0.2",
+        "ma20": 0.8181818181818182,
+        "ma50": 0.810126582278481
+      }
+    },
+    {
+      "symbol": "CSCO",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/CSCO",
+        "barChart": "https://www.barchart.com/stocks/CSCO"
+      },
+      "movingAverageCompliance": {
+        "version": "0.2",
+        "ma20": 0.8395061728395061,
+        "ma50": 0.8506493506493507
+      }
+    },
+    {
+      "symbol": "DOW",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/DOW",
+        "barChart": "https://www.barchart.com/stocks/DOW"
+      },
+      "movingAverageCompliance": {
+        "version": "0.2",
+        "ma20": 0.7514450867052023,
+        "ma50": 0.7621951219512195
+      }
+    },
+    {
+      "symbol": "GS",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/GS",
+        "barChart": "https://www.barchart.com/stocks/GS"
+      },
+      "movingAverageCompliance": {
+        "version": "0.2",
+        "ma20": 0.7771739130434783,
+        "ma50": 0.7681159420289855
+      }
+    },
+    {
+      "symbol": "HON",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/HON",
+        "barChart": "https://www.barchart.com/stocks/HON"
+      },
+      "movingAverageCompliance": {
+        "version": "0.2",
+        "ma20": 0.7966101694915254,
+        "ma50": 0.7864768683274022
+      }
+    },
+    {
+      "symbol": "IBM",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/IBM",
+        "barChart": "https://www.barchart.com/stocks/IBM"
+      },
+      "movingAverageCompliance": {
+        "version": "0.2",
+        "ma20": 0.8653846153846154,
+        "ma50": 0.8546712802768166
+      }
+    },
+    {
+      "symbol": "INTC",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/INTC",
+        "barChart": "https://www.barchart.com/stocks/INTC"
+      },
+      "movingAverageCompliance": {
+        "version": "0.2",
+        "ma20": 0.8681318681318682,
+        "ma50": 0.8588235294117647
+      }
+    },
+    {
+      "symbol": "JNJ",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/JNJ",
+        "barChart": "https://www.barchart.com/stocks/JNJ"
+      },
+      "movingAverageCompliance": {
+        "version": "0.2",
+        "ma20": 0.8201438848920863,
+        "ma50": 0.8314176245210728
+      }
+    },
+    {
+      "symbol": "JPM",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/JPM",
+        "barChart": "https://www.barchart.com/stocks/JPM"
+      },
+      "movingAverageCompliance": {
+        "version": "0.2",
+        "ma20": 0.821656050955414,
+        "ma50": 0.8151815181518152
+      }
+    },
+    {
+      "symbol": "MCD",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/MCD",
+        "barChart": "https://www.barchart.com/stocks/MCD"
+      },
+      "movingAverageCompliance": {
+        "version": "0.2",
+        "ma20": 0.9267399267399268,
+        "ma50": 0.9203187250996016
+      }
+    },
+    {
+      "symbol": "MRK",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/MRK",
+        "barChart": "https://www.barchart.com/stocks/MRK"
+      },
+      "movingAverageCompliance": {
+        "version": "0.2",
+        "ma20": 0.8703071672354948,
+        "ma50": 0.8582089552238806
+      }
+    },
+    {
+      "symbol": "MSFT",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/MSFT",
+        "barChart": "https://www.barchart.com/stocks/MSFT"
+      },
+      "movingAverageCompliance": {
+        "version": "0.2",
+        "ma20": 0.8495297805642633,
+        "ma50": 0.8378378378378378
+      }
+    },
+    {
+      "symbol": "NKE",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/NKE",
+        "barChart": "https://www.barchart.com/stocks/NKE"
+      },
+      "movingAverageCompliance": {
+        "version": "0.2",
+        "ma20": 0.8203592814371258,
+        "ma50": 0.8164556962025317
+      }
+    },
+    {
+      "symbol": "PG",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/PG",
+        "barChart": "https://www.barchart.com/stocks/PG"
+      },
+      "movingAverageCompliance": {
+        "version": "0.2",
+        "ma20": 0.9357429718875502,
+        "ma50": 0.9282511210762332
+      }
+    },
+    {
+      "symbol": "CRM",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/CRM",
+        "barChart": "https://www.barchart.com/stocks/CRM"
+      },
+      "movingAverageCompliance": {
+        "version": "0.2",
+        "ma20": 0.8,
+        "ma50": 0.8033707865168539
+      }
+    },
+    {
+      "symbol": "KO",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/KO",
+        "barChart": "https://www.barchart.com/stocks/KO"
+      },
+      "movingAverageCompliance": {
+        "version": "0.2",
+        "ma20": 0.8426966292134831,
+        "ma50": 0.84
+      }
+    },
+    {
+      "symbol": "HD",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/HD",
+        "barChart": "https://www.barchart.com/stocks/HD"
+      },
+      "movingAverageCompliance": {
+        "version": "0.2",
+        "ma20": 0.9050445103857567,
+        "ma50": 0.8964401294498382
+      }
+    },
+    {
+      "symbol": "TRV",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/TRV",
+        "barChart": "https://www.barchart.com/stocks/TRV"
+      },
+      "movingAverageCompliance": {
+        "version": "0.2",
+        "ma20": 0.8576779026217228,
+        "ma50": 0.8532818532818532
+      }
+    },
+    {
+      "symbol": "DIS",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/DIS",
+        "barChart": "https://www.barchart.com/stocks/DIS"
+      },
+      "movingAverageCompliance": {
+        "version": "0.2",
+        "ma20": 0.8233438485804416,
+        "ma50": 0.8120805369127517
+      }
+    },
+    {
+      "symbol": "UNH",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/UNH",
+        "barChart": "https://www.barchart.com/stocks/UNH"
+      },
+      "movingAverageCompliance": {
+        "version": "0.2",
+        "ma20": 0.8186968838526912,
+        "ma50": 0.8134110787172012
+      }
+    },
+    {
+      "symbol": "VZ",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/VZ",
+        "barChart": "https://www.barchart.com/stocks/VZ"
+      },
+      "movingAverageCompliance": {
+        "version": "0.2",
+        "ma20": 0.9243697478991597,
+        "ma50": 0.9396551724137931
+      }
+    },
+    {
+      "symbol": "V",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/V",
+        "barChart": "https://www.barchart.com/stocks/V"
+      },
+      "movingAverageCompliance": {
+        "version": "0.2",
+        "ma20": 0.8633093525179856,
+        "ma50": 0.8473895582329317
+      }
+    },
+    {
+      "symbol": "WBA",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/WBA",
+        "barChart": "https://www.barchart.com/stocks/WBA"
+      },
+      "movingAverageCompliance": {
+        "version": "0.2",
+        "ma20": 0.7243401759530792,
+        "ma50": 0.7169230769230769
+      }
+    },
+    {
+      "symbol": "WMT",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/WMT",
+        "barChart": "https://www.barchart.com/stocks/WMT"
+      },
+      "movingAverageCompliance": {
+        "version": "0.2",
+        "ma20": 0.7813765182186235,
+        "ma50": 0.7534246575342466
+      }
+    }
+  ],
+  "categories": {}
+}

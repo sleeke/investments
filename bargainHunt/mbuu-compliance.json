@@ -1,0 +1,17 @@
+{
+  "symbols": [
+    {
+      "symbol": "MBUU",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/MBUU",
+        "barChart": "https://www.barchart.com/stocks/MBUU"
+      },
+      "movingAverageCompliance": {
+        "version": "0.2",
+        "ma20": -0.8186274509803921,
+        "ma50": -0.8549222797927462
+      }
+    }
+  ],
+  "categories": {}
+}

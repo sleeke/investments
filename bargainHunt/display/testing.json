@@ -1,0 +1,4026 @@
+[
+  {
+    "date": "2019-05-06",
+    "close": 52.7,
+    "volume": 75071,
+    "change": 0,
+    "changePercent": 0,
+    "changeOverTime": 0
+  },
+  {
+    "date": "2019-05-07",
+    "close": 51.8,
+    "volume": 58905,
+    "change": -1.5,
+    "changePercent": -0.0295,
+    "changeOverTime": -0.029211321462478308
+  },
+  {
+    "date": "2019-05-08",
+    "close": 53.3,
+    "volume": 105671,
+    "change": 1.3364329840386124,
+    "changePercent": 0.0269,
+    "changeOverTime": -0.0039733460733959
+  },
+  {
+    "date": "2019-05-09",
+    "close": 52.15,
+    "volume": 88154,
+    "change": 0.5998663349198583,
+    "changePercent": 0.0114,
+    "changeOverTime": 0.007487737381775409
+  },
+  {
+    "date": "2019-05-10",
+    "close": 54.2,
+    "volume": 54212,
+    "change": 0.25,
+    "changePercent": 0.0048,
+    "changeOverTime": 0.012398090684767929
+  },
+  {
+    "date": "2019-05-13",
+    "close": 51.83,
+    "volume": 52491,
+    "change": -1.6172026903857,
+    "changePercent": -0.0308,
+    "changeOverTime": -0.01866515347268688
+  },
+  {
+    "date": "2019-05-14",
+    "close": 52.86,
+    "volume": 33401,
+    "change": 0.9231158378097188,
+    "changePercent": 0.018,
+    "changeOverTime": -0.000806537917150825
+  },
+  {
+    "date": "2019-05-15",
+    "close": 53.74,
+    "volume": 34584,
+    "change": 0.5673320146357524,
+    "changePercent": 0.0109,
+    "changeOverTime": 0.01007215967289207
+  },
+  {
+    "date": "2019-05-16",
+    "close": 52.48,
+    "volume": 31825,
+    "change": -0.3019066219780474,
+    "changePercent": -0.0057,
+    "changeOverTime": 0.004328465257854645
+  },
+  {
+    "date": "2019-05-17",
+    "close": 52,
+    "volume": 36325,
+    "change": -0.646021846220566,
+    "changePercent": -0.013,
+    "changeOverTime": -0.007964372884034633
+  },
+  {
+    "date": "2019-05-21",
+    "close": 50.96,
+    "volume": 32379,
+    "change": -0.19393339561345155,
+    "changePercent": -0.0038,
+    "changeOverTime": -0.011595157177674788
+  },
+  {
+    "date": "2019-05-22",
+    "close": 51.28,
+    "volume": 21337,
+    "change": -0.3327675006473169,
+    "changePercent": -0.0067,
+    "changeOverTime": -0.018522101219443483
+  },
+  {
+    "date": "2019-05-23",
+    "close": 50.66,
+    "volume": 63667,
+    "change": -1.0920103267485568,
+    "changePercent": -0.0213,
+    "changeOverTime": -0.04009772116409602
+  },
+  {
+    "date": "2019-05-24",
+    "close": 50.7,
+    "volume": 12494,
+    "change": -0.5122311422122535,
+    "changePercent": -0.0101,
+    "changeOverTime": -0.050436614142195156
+  },
+  {
+    "date": "2019-05-27",
+    "close": 51.13,
+    "volume": 37020,
+    "change": 0.4059679627764559,
+    "changePercent": 0.0084,
+    "changeOverTime": -0.0415014208343998
+  },
+  {
+    "date": "2019-05-28",
+    "close": 51.18,
+    "volume": 230268,
+    "change": 0.9200493355428945,
+    "changePercent": 0.0182,
+    "changeOverTime": -0.02399714731838824
+  },
+  {
+    "date": "2019-05-29",
+    "close": 49.65,
+    "volume": 69235,
+    "change": -1.1206067575865284,
+    "changePercent": -0.0225,
+    "changeOverTime": -0.0457107303658805
+  },
+  {
+    "date": "2019-05-30",
+    "close": 49.53,
+    "volume": 19612,
+    "change": 0.15193384565744059,
+    "changePercent": 0.0032,
+    "changeOverTime": -0.04106661015460067
+  },
+  {
+    "date": "2019-05-31",
+    "close": 50.84,
+    "volume": 29052,
+    "change": -0.4308334955456223,
+    "changePercent": -0.0089,
+    "changeOverTime": -0.05127993240397236
+  },
+  {
+    "date": "2019-06-03",
+    "close": 49.72,
+    "volume": 43410,
+    "change": -0.4090385980810225,
+    "changePercent": -0.0082,
+    "changeOverTime": -0.05786036131444934
+  },
+  {
+    "date": "2019-06-04",
+    "close": 51.25,
+    "volume": 33802,
+    "change": 1.4640307220324928,
+    "changePercent": 0.0294,
+    "changeOverTime": -0.030570063056066774
+  },
+  {
+    "date": "2019-06-05",
+    "close": 50,
+    "volume": 39424,
+    "change": 0.14375226865833773,
+    "changePercent": 0.0028,
+    "changeOverTime": -0.02745914649364702
+  },
+  {
+    "date": "2019-06-06",
+    "close": 50.92,
+    "volume": 13342,
+    "change": -0.020601071253372454,
+    "changePercent": -0.0004,
+    "changeOverTime": -0.028957709876211914
+  },
+  {
+    "date": "2019-06-07",
+    "close": 51.6,
+    "volume": 28099,
+    "change": 0.1653545352124182,
+    "changePercent": 0.0033,
+    "changeOverTime": -0.025173341017528467
+  },
+  {
+    "date": "2019-06-10",
+    "close": 51.5,
+    "volume": 24071,
+    "change": 0.779440666838926,
+    "changePercent": 0.0155,
+    "changeOverTime": -0.01001282531788597
+  },
+  {
+    "date": "2019-06-11",
+    "close": 54.39,
+    "volume": 47487,
+    "change": 1.504594154989711,
+    "changePercent": 0.0304,
+    "changeOverTime": 0.019423582123494435
+  },
+  {
+    "date": "2019-06-12",
+    "close": 51.16,
+    "volume": 47179,
+    "change": -1.275834795346988,
+    "changePercent": -0.0253,
+    "changeOverTime": -0.005392101304484514
+  },
+  {
+    "date": "2019-06-13",
+    "close": 53.6,
+    "volume": 58148,
+    "change": 1.0715607641745675,
+    "changePercent": 0.0212,
+    "changeOverTime": 0.015652739429228284
+  },
+  {
+    "date": "2019-06-14",
+    "close": 52.84,
+    "volume": 33558,
+    "change": 0.23542301727055878,
+    "changePercent": 0.0045,
+    "changeOverTime": 0.020794102422936
+  },
+  {
+    "date": "2019-06-17",
+    "close": 52.96,
+    "volume": 38944,
+    "change": -0.4603988592093135,
+    "changePercent": -0.0086,
+    "changeOverTime": 0.0117911683221927
+  },
+  {
+    "date": "2019-06-18",
+    "close": 53.33,
+    "volume": 60260,
+    "change": 0.6482894419914939,
+    "changePercent": 0.0126,
+    "changeOverTime": 0.023924897992411823
+  },
+  {
+    "date": "2019-06-19",
+    "close": 54.57,
+    "volume": 67973,
+    "change": 1.851448369765962,
+    "changePercent": 0.0343,
+    "changeOverTime": 0.061037053894135516
+  },
+  {
+    "date": "2019-06-20",
+    "close": 56.14,
+    "volume": 64700,
+    "change": 1.206360481192233,
+    "changePercent": 0.0224,
+    "changeOverTime": 0.08334833104099358
+  },
+  {
+    "date": "2019-06-21",
+    "close": 55.47,
+    "volume": 25784,
+    "change": -0.19865718760599668,
+    "changePercent": -0.0034,
+    "changeOverTime": 0.07941529955507931
+  },
+  {
+    "date": "2019-06-24",
+    "close": 56.88,
+    "volume": 23965,
+    "change": -0.6874274939368068,
+    "changePercent": -0.0125,
+    "changeOverTime": 0.06661958600950431
+  },
+  {
+    "date": "2019-06-25",
+    "close": 53.8,
+    "volume": 38165,
+    "change": -1.4636522872316635,
+    "changePercent": -0.0277,
+    "changeOverTime": 0.03732515123449
+  },
+  {
+    "date": "2019-06-26",
+    "close": 54.77,
+    "volume": 10305,
+    "change": -0.12336520319563002,
+    "changePercent": -0.0024,
+    "changeOverTime": 0.03524846239743347
+  },
+  {
+    "date": "2019-06-27",
+    "close": 52.64,
+    "volume": 22078,
+    "change": -0.782375917116583,
+    "changePercent": -0.0151,
+    "changeOverTime": 0.01977462697710745
+  },
+  {
+    "date": "2019-06-28",
+    "close": 53,
+    "volume": 22404,
+    "change": 0.5997867715617832,
+    "changePercent": 0.0117,
+    "changeOverTime": 0.03126956118023183
+  },
+  {
+    "date": "2019-07-02",
+    "close": 55.78,
+    "volume": 30712,
+    "change": 1.4477127545372648,
+    "changePercent": 0.028,
+    "changeOverTime": 0.06026731249532484
+  },
+  {
+    "date": "2019-07-03",
+    "close": 55.6,
+    "volume": 42793,
+    "change": -0.5,
+    "changePercent": -0.0096,
+    "changeOverTime": 0.05104999247482874
+  },
+  {
+    "date": "2019-07-04",
+    "close": 53.88,
+    "volume": 8465,
+    "change": -0.353501889133211,
+    "changePercent": -0.0063,
+    "changeOverTime": 0.04333803349868041
+  },
+  {
+    "date": "2019-07-05",
+    "close": 55.24,
+    "volume": 11958,
+    "change": 0.05114689351929746,
+    "changePercent": 0.0009,
+    "changeOverTime": 0.04561678608345574
+  },
+  {
+    "date": "2019-07-08",
+    "close": 53.69,
+    "volume": 17171,
+    "change": -0.15711279255421953,
+    "changePercent": -0.0029,
+    "changeOverTime": 0.04169324909359242
+  },
+  {
+    "date": "2019-07-09",
+    "close": 56.11,
+    "volume": 6912,
+    "change": 0,
+    "changePercent": 0,
+    "changeOverTime": 0.04067161026416798
+  },
+  {
+    "date": "2019-07-10",
+    "close": 54.86,
+    "volume": 19141,
+    "change": -0.4328696083713031,
+    "changePercent": -0.008,
+    "changeOverTime": 0.03370131412816777
+  },
+  {
+    "date": "2019-07-11",
+    "close": 53.4,
+    "volume": 18434,
+    "change": -0.38743094191871436,
+    "changePercent": -0.007,
+    "changeOverTime": 0.025823125137414926
+  },
+  {
+    "date": "2019-07-12",
+    "close": 54.8,
+    "volume": 18680,
+    "change": 0.8099565939783591,
+    "changePercent": 0.0154,
+    "changeOverTime": 0.040949116283836
+  },
+  {
+    "date": "2019-07-15",
+    "close": 57.35,
+    "volume": 30327,
+    "change": 1.2498151703151286,
+    "changePercent": 0.0227,
+    "changeOverTime": 0.06525585081120878
+  },
+  {
+    "date": "2019-07-16",
+    "close": 57.3,
+    "volume": 15577,
+    "change": 0.501264758368319,
+    "changePercent": 0.009,
+    "changeOverTime": 0.07680046804087823
+  },
+  {
+    "date": "2019-07-17",
+    "close": 56.86,
+    "volume": 14878,
+    "change": -0.47314821062739043,
+    "changePercent": -0.0087,
+    "changeOverTime": 0.06814846940137616
+  },
+  {
+    "date": "2019-07-18",
+    "close": 54.83,
+    "volume": 12117,
+    "change": -0.627424585653982,
+    "changePercent": -0.011,
+    "changeOverTime": 0.05342015493648174
+  },
+  {
+    "date": "2019-07-19",
+    "close": 55.92,
+    "volume": 21345,
+    "change": -0.020481578757753773,
+    "changePercent": -0.0004,
+    "changeOverTime": 0.05430371447033638
+  },
+  {
+    "date": "2019-07-22",
+    "close": 55.45,
+    "volume": 16046,
+    "change": -0.6891972342035423,
+    "changePercent": -0.0127,
+    "changeOverTime": 0.0410673246455897
+  },
+  {
+    "date": "2019-07-23",
+    "close": 54.5,
+    "volume": 18596,
+    "change": 0.04181420074257387,
+    "changePercent": 0.0007,
+    "changeOverTime": 0.0410884410815727
+  },
+  {
+    "date": "2019-07-24",
+    "close": 56.45,
+    "volume": 12714,
+    "change": 0.4231052817638078,
+    "changePercent": 0.008,
+    "changeOverTime": 0.05100566589954002
+  },
+  {
+    "date": "2019-07-25",
+    "close": 53.8,
+    "volume": 36554,
+    "change": -0.4271476336703554,
+    "changePercent": -0.0079,
+    "changeOverTime": 0.0408979805305365
+  },
+  {
+    "date": "2019-07-26",
+    "close": 55.67,
+    "volume": 15431,
+    "change": 0.3613067232960478,
+    "changePercent": 0.0068,
+    "changeOverTime": 0.04981683392805316
+  },
+  {
+    "date": "2019-07-29",
+    "close": 55.09,
+    "volume": 34743,
+    "change": 1.1115655514838743,
+    "changePercent": 0.0205,
+    "changeOverTime": 0.07056327738484561
+  },
+  {
+    "date": "2019-07-30",
+    "close": 55.64,
+    "volume": 28953,
+    "change": 0.7097253873360001,
+    "changePercent": 0.0132,
+    "changeOverTime": 0.08344076010409894
+  },
+  {
+    "date": "2019-07-31",
+    "close": 57.06,
+    "volume": 35070,
+    "change": 1.11047624717247,
+    "changePercent": 0.0203,
+    "changeOverTime": 0.10859376527227423
+  },
+  {
+    "date": "2019-08-01",
+    "close": 59.92,
+    "volume": 40816,
+    "change": 0.3640608568389717,
+    "changePercent": 0.0065,
+    "changeOverTime": 0.1147925766537073
+  },
+  {
+    "date": "2019-08-02",
+    "close": 57.49,
+    "volume": 25678,
+    "change": -1.0333736882322662,
+    "changePercent": -0.018,
+    "changeOverTime": 0.09155297344787611
+  },
+  {
+    "date": "2019-08-06",
+    "close": 56.77,
+    "volume": 27612,
+    "change": -0.5807293885101134,
+    "changePercent": -0.0107,
+    "changeOverTime": 0.08189531928035072
+  },
+  {
+    "date": "2019-08-07",
+    "close": 56,
+    "volume": 39536,
+    "change": -1.1031575173897437,
+    "changePercent": -0.0194,
+    "changeOverTime": 0.059014307032161074
+  },
+  {
+    "date": "2019-08-08",
+    "close": 62.1,
+    "volume": 123216,
+    "change": 4.829364216550159,
+    "changePercent": 0.0901,
+    "changeOverTime": 0.153009177502572
+  },
+  {
+    "date": "2019-08-09",
+    "close": 58.15,
+    "volume": 39053,
+    "change": -1.9758973034340275,
+    "changePercent": -0.0343,
+    "changeOverTime": 0.1167161520917389
+  },
+  {
+    "date": "2019-08-12",
+    "close": 57.04,
+    "volume": 48394,
+    "change": -2.723513445110895,
+    "changePercent": -0.0481,
+    "changeOverTime": 0.063033741388948
+  },
+  {
+    "date": "2019-08-13",
+    "close": 54.66,
+    "volume": 21743,
+    "change": -0.4008982922275642,
+    "changePercent": -0.0076,
+    "changeOverTime": 0.05695141478207188
+  },
+  {
+    "date": "2019-08-14",
+    "close": 51.8,
+    "volume": 87456,
+    "change": -2.993816696190526,
+    "changePercent": -0.056,
+    "changeOverTime": -0.0019481658739513665
+  },
+  {
+    "date": "2019-08-15",
+    "close": 53.62,
+    "volume": 46800,
+    "change": 0.166040010241766,
+    "changePercent": 0.0032,
+    "changeOverTime": 0.0012010755349151582
+  },
+  {
+    "date": "2019-08-16",
+    "close": 53.53,
+    "volume": 36790,
+    "change": 1.888870002328788,
+    "changePercent": 0.036,
+    "changeOverTime": 0.03728993314007367
+  },
+  {
+    "date": "2019-08-19",
+    "close": 55.43,
+    "volume": 27456,
+    "change": 1.4928580605150632,
+    "changePercent": 0.0285,
+    "changeOverTime": 0.0680420837410771
+  },
+  {
+    "date": "2019-08-20",
+    "close": 54.38,
+    "volume": 23018,
+    "change": -0.9141309344245656,
+    "changePercent": -0.0169,
+    "changeOverTime": 0.04845307980099952
+  },
+  {
+    "date": "2019-08-21",
+    "close": 55.2,
+    "volume": 9299,
+    "change": 0.030095746725537702,
+    "changePercent": 0.0006,
+    "changeOverTime": 0.04885100598367011
+  },
+  {
+    "date": "2019-08-22",
+    "close": 55.87,
+    "volume": 20867,
+    "change": 0.2996504842034215,
+    "changePercent": 0.0056,
+    "changeOverTime": 0.05577854514204349
+  },
+  {
+    "date": "2019-08-23",
+    "close": 54.88,
+    "volume": 42536,
+    "change": -1.6659306716443998,
+    "changePercent": -0.031,
+    "changeOverTime": 0.02293127137899384
+  },
+  {
+    "date": "2019-08-26",
+    "close": 55.53,
+    "volume": 44916,
+    "change": 1.0824642097888164,
+    "changePercent": 0.0211,
+    "changeOverTime": 0.04311685374266054
+  },
+  {
+    "date": "2019-08-27",
+    "close": 52.09,
+    "volume": 47550,
+    "change": -1.736675014202696,
+    "changePercent": -0.0327,
+    "changeOverTime": 0.00936998542518436
+  },
+  {
+    "date": "2019-08-28",
+    "close": 54.39,
+    "volume": 24562,
+    "change": 1.1198616815575495,
+    "changePercent": 0.0213,
+    "changeOverTime": 0.03164402613535621
+  },
+  {
+    "date": "2019-08-29",
+    "close": 54.01,
+    "volume": 27511,
+    "change": 1.027243303337943,
+    "changePercent": 0.0199,
+    "changeOverTime": 0.05236664815179996
+  },
+  {
+    "date": "2019-08-30",
+    "close": 55.55,
+    "volume": 18399,
+    "change": -0.1664870025852538,
+    "changePercent": -0.003,
+    "changeOverTime": 0.047455299230202634
+  },
+  {
+    "date": "2019-09-03",
+    "close": 53.1,
+    "volume": 32154,
+    "change": -1.7404780812411287,
+    "changePercent": -0.0333,
+    "changeOverTime": 0.014186566078803541
+  },
+  {
+    "date": "2019-09-04",
+    "close": 54.61,
+    "volume": 28976,
+    "change": 0.3406358165389984,
+    "changePercent": 0.0065,
+    "changeOverTime": 0.0200846738210432
+  },
+  {
+    "date": "2019-09-05",
+    "close": 57.49,
+    "volume": 50912,
+    "change": 2.806650308149574,
+    "changePercent": 0.0538,
+    "changeOverTime": 0.07548007380827303
+  },
+  {
+    "date": "2019-09-06",
+    "close": 56.75,
+    "volume": 23230,
+    "change": -0.5820643317553187,
+    "changePercent": -0.0107,
+    "changeOverTime": 0.06432378557080438
+  },
+  {
+    "date": "2019-09-09",
+    "close": 55.65,
+    "volume": 18723,
+    "change": -0.6445755456051192,
+    "changePercent": -0.0119,
+    "changeOverTime": 0.051239124557212995
+  },
+  {
+    "date": "2019-09-10",
+    "close": 55.96,
+    "volume": 13390,
+    "change": 0.05102156213570568,
+    "changePercent": 0.0009,
+    "changeOverTime": 0.05181155036515572
+  },
+  {
+    "date": "2019-09-11",
+    "close": 55.55,
+    "volume": 15029,
+    "change": 0.4592529915023751,
+    "changePercent": 0.0082,
+    "changeOverTime": 0.0603697893420372
+  },
+  {
+    "date": "2019-09-12",
+    "close": 56.84,
+    "volume": 18266,
+    "change": 0.573111833574686,
+    "changePercent": 0.0105,
+    "changeOverTime": 0.07302084488086204
+  },
+  {
+    "date": "2019-09-13",
+    "close": 58.52,
+    "volume": 44681,
+    "change": 1.076955298344811,
+    "changePercent": 0.0198,
+    "changeOverTime": 0.09142335734056789
+  },
+  {
+    "date": "2019-09-16",
+    "close": 58.44,
+    "volume": 37864,
+    "change": 0.07025678077563068,
+    "changePercent": 0.0012,
+    "changeOverTime": 0.09308073669606487
+  },
+  {
+    "date": "2019-09-17",
+    "close": 56.83,
+    "volume": 23168,
+    "change": 0.3028425287274721,
+    "changePercent": 0.0054,
+    "changeOverTime": 0.10072030031323581
+  },
+  {
+    "date": "2019-09-18",
+    "close": 59.36,
+    "volume": 44345,
+    "change": 0.4325951482607977,
+    "changePercent": 0.0076,
+    "changeOverTime": 0.10965196476645407
+  },
+  {
+    "date": "2019-09-19",
+    "close": 61.3,
+    "volume": 60520,
+    "change": 1.5796286453813333,
+    "changePercent": 0.0278,
+    "changeOverTime": 0.1425769140847275
+  },
+  {
+    "date": "2019-09-20",
+    "close": 59.52,
+    "volume": 46313,
+    "change": 0.0808749796942149,
+    "changePercent": 0.0015,
+    "changeOverTime": 0.1405695989579863
+  },
+  {
+    "date": "2019-09-23",
+    "close": 59.42,
+    "volume": 36216,
+    "change": 0.7231649097936884,
+    "changePercent": 0.0123,
+    "changeOverTime": 0.15722758774418044
+  },
+  {
+    "date": "2019-09-24",
+    "close": 61.88,
+    "volume": 96887,
+    "change": 0.15140296213175083,
+    "changePercent": 0.0025,
+    "changeOverTime": 0.16111411109722856
+  },
+  {
+    "date": "2019-09-25",
+    "close": 59.4,
+    "volume": 33388,
+    "change": -0.20069326861756154,
+    "changePercent": -0.0035,
+    "changeOverTime": 0.1524995077273828
+  },
+  {
+    "date": "2019-09-26",
+    "close": 63,
+    "volume": 59239,
+    "change": 0.9245363345969613,
+    "changePercent": 0.0154,
+    "changeOverTime": 0.1674480598506371
+  },
+  {
+    "date": "2019-09-27",
+    "close": 60.41,
+    "volume": 41540,
+    "change": -0.3203318080612821,
+    "changePercent": -0.0054,
+    "changeOverTime": 0.16527067711213167
+  },
+  {
+    "date": "2019-09-30",
+    "close": 59.87,
+    "volume": 27391,
+    "change": -0.13038554202621633,
+    "changePercent": -0.0023,
+    "changeOverTime": 0.16305093169444063
+  },
+  {
+    "date": "2019-10-01",
+    "close": 60.19,
+    "volume": 38001,
+    "change": -1.8580926876137733,
+    "changePercent": -0.0313,
+    "changeOverTime": 0.12427342084889471
+  },
+  {
+    "date": "2019-10-02",
+    "close": 56.44,
+    "volume": 60588,
+    "change": -1.901454550304671,
+    "changePercent": -0.033,
+    "changeOverTime": 0.091985334139896
+  },
+  {
+    "date": "2019-10-03",
+    "close": 57.08,
+    "volume": 47634,
+    "change": 0.76,
+    "changePercent": 0.0137,
+    "changeOverTime": 0.1062073515448778
+  },
+  {
+    "date": "2019-10-04",
+    "close": 58.43,
+    "volume": 14047,
+    "change": 0.6273141043274456,
+    "changePercent": 0.0109,
+    "changeOverTime": 0.11773525066348478
+  },
+  {
+    "date": "2019-10-07",
+    "close": 56.76,
+    "volume": 22905,
+    "change": -0.8121161150733663,
+    "changePercent": -0.0148,
+    "changeOverTime": 0.10218943575525849
+  },
+  {
+    "date": "2019-10-08",
+    "close": 56.46,
+    "volume": 38550,
+    "change": -0.788904591621168,
+    "changePercent": -0.0139,
+    "changeOverTime": 0.0834285021356791
+  },
+  {
+    "date": "2019-10-09",
+    "close": 56.8,
+    "volume": 27988,
+    "change": -0.0819231843494429,
+    "changePercent": -0.0015,
+    "changeOverTime": 0.0847256872705432
+  },
+  {
+    "date": "2019-10-10",
+    "close": 59.37,
+    "volume": 28518,
+    "change": 1.0841881318745958,
+    "changePercent": 0.0196,
+    "changeOverTime": 0.10467074011379121
+  },
+  {
+    "date": "2019-10-11",
+    "close": 59.82,
+    "volume": 33261,
+    "change": 0.6563283082805549,
+    "changePercent": 0.0114,
+    "changeOverTime": 0.11683170085787771
+  },
+  {
+    "date": "2019-10-15",
+    "close": 59.17,
+    "volume": 23604,
+    "change": 0.637412573648235,
+    "changePercent": 0.0109,
+    "changeOverTime": 0.13003175659972524
+  },
+  {
+    "date": "2019-10-16",
+    "close": 58.11,
+    "volume": 12096,
+    "change": -0.20290557820581215,
+    "changePercent": -0.0036,
+    "changeOverTime": 0.12404511496113807
+  },
+  {
+    "date": "2019-10-17",
+    "close": 57.82,
+    "volume": 11186,
+    "change": -0.6549529606977565,
+    "changePercent": -0.0114,
+    "changeOverTime": 0.1111733084698652
+  },
+  {
+    "date": "2019-10-18",
+    "close": 59.92,
+    "volume": 15129,
+    "change": 0.5532421744309424,
+    "changePercent": 0.0096,
+    "changeOverTime": 0.12604991061369322
+  },
+  {
+    "date": "2019-10-21",
+    "close": 58.67,
+    "volume": 44497,
+    "change": 0.23271512541993877,
+    "changePercent": 0.004,
+    "changeOverTime": 0.12679636088258317
+  },
+  {
+    "date": "2019-10-22",
+    "close": 61.92,
+    "volume": 34915,
+    "change": 1.5176539413703443,
+    "changePercent": 0.0271,
+    "changeOverTime": 0.158583152052031
+  },
+  {
+    "date": "2019-10-23",
+    "close": 61.93,
+    "volume": 37600,
+    "change": 0.21184580855522267,
+    "changePercent": 0.0035,
+    "changeOverTime": 0.16390160156672764
+  },
+  {
+    "date": "2019-10-24",
+    "close": 62.27,
+    "volume": 15435,
+    "change": -0.23001493910837675,
+    "changePercent": -0.004,
+    "changeOverTime": 0.1611370044496772
+  },
+  {
+    "date": "2019-10-25",
+    "close": 61.43,
+    "volume": 26709,
+    "change": 0.4097192222547827,
+    "changePercent": 0.0069,
+    "changeOverTime": 0.1643719536487901
+  },
+  {
+    "date": "2019-10-28",
+    "close": 62.35,
+    "volume": 39702,
+    "change": 0.2916509472153274,
+    "changePercent": 0.0049,
+    "changeOverTime": 0.16849415402782575
+  },
+  {
+    "date": "2019-10-29",
+    "close": 60.71,
+    "volume": 97334,
+    "change": 0.175939226974195,
+    "changePercent": 0.0029,
+    "changeOverTime": 0.1708795035300588
+  },
+  {
+    "date": "2019-10-30",
+    "close": 61.7,
+    "volume": 28665,
+    "change": 0.25,
+    "changePercent": 0.0043,
+    "changeOverTime": 0.1762096688641457
+  },
+  {
+    "date": "2019-10-31",
+    "close": 62.08,
+    "volume": 59816,
+    "change": -0.19828945994567035,
+    "changePercent": -0.0032,
+    "changeOverTime": 0.1801661372884653
+  },
+  {
+    "date": "2019-11-01",
+    "close": 62,
+    "volume": 48393,
+    "change": -0.2305531450594906,
+    "changePercent": -0.0038,
+    "changeOverTime": 0.1707521820297454
+  },
+  {
+    "date": "2019-11-04",
+    "close": 64.66,
+    "volume": 111206,
+    "change": 3.158719569440833,
+    "changePercent": 0.0522,
+    "changeOverTime": 0.23412791280779427
+  },
+  {
+    "date": "2019-11-05",
+    "close": 63.34,
+    "volume": 177083,
+    "change": -2.2006533990006125,
+    "changePercent": -0.0359,
+    "changeOverTime": 0.18755535181204647
+  },
+  {
+    "date": "2019-11-06",
+    "close": 63.2,
+    "volume": 109158,
+    "change": 1.7712572807243936,
+    "changePercent": 0.029,
+    "changeOverTime": 0.22173515507359146
+  },
+  {
+    "date": "2019-11-07",
+    "close": 63.8,
+    "volume": 84005,
+    "change": 0.4066562675503554,
+    "changePercent": 0.0065,
+    "changeOverTime": 0.23150361524523924
+  },
+  {
+    "date": "2019-11-08",
+    "close": 63.85,
+    "volume": 30470,
+    "change": -0.7367731313133923,
+    "changePercent": -0.0117,
+    "changeOverTime": 0.22194696847181056
+  },
+  {
+    "date": "2019-11-11",
+    "close": 64.45,
+    "volume": 27528,
+    "change": -0.2699759914809942,
+    "changePercent": -0.0042,
+    "changeOverTime": 0.2152870566846035
+  },
+  {
+    "date": "2019-11-12",
+    "close": 64.1,
+    "volume": 21812,
+    "change": 0.3853053007891304,
+    "changePercent": 0.0063,
+    "changeOverTime": 0.22498716280244935
+  },
+  {
+    "date": "2019-11-13",
+    "close": 66.82,
+    "volume": 60361,
+    "change": 2.550219539203851,
+    "changePercent": 0.0402,
+    "changeOverTime": 0.2713689062897552
+  },
+  {
+    "date": "2019-11-14",
+    "close": 66.07,
+    "volume": 58117,
+    "change": -0.502470448317716,
+    "changePercent": -0.0078,
+    "changeOverTime": 0.258996130592797
+  },
+  {
+    "date": "2019-11-15",
+    "close": 65.43,
+    "volume": 29878,
+    "change": 0.47371769785001266,
+    "changePercent": 0.0074,
+    "changeOverTime": 0.268726636194172
+  },
+  {
+    "date": "2019-11-18",
+    "close": 65.98,
+    "volume": 30927,
+    "change": -0.07191996818645578,
+    "changePercent": -0.0011,
+    "changeOverTime": 0.2700565339456788
+  },
+  {
+    "date": "2019-11-19",
+    "close": 65.2,
+    "volume": 39573,
+    "change": -0.6724694905899744,
+    "changePercent": -0.0106,
+    "changeOverTime": 0.2574860777099786
+  },
+  {
+    "date": "2019-11-20",
+    "close": 66.71,
+    "volume": 28113,
+    "change": -0.3509239110707582,
+    "changePercent": -0.0055,
+    "changeOverTime": 0.24805965544330563
+  },
+  {
+    "date": "2019-11-21",
+    "close": 66.8,
+    "volume": 24510,
+    "change": 0.8928548570024945,
+    "changePercent": 0.0139,
+    "changeOverTime": 0.263057753024483
+  },
+  {
+    "date": "2019-11-22",
+    "close": 66.46,
+    "volume": 36159,
+    "change": 0.5484642829151767,
+    "changePercent": 0.0086,
+    "changeOverTime": 0.2815542587524836
+  },
+  {
+    "date": "2019-11-25",
+    "close": 70.56,
+    "volume": 41450,
+    "change": 2.0188771523793707,
+    "changePercent": 0.0306,
+    "changeOverTime": 0.3228565536583682
+  },
+  {
+    "date": "2019-11-26",
+    "close": 70.58,
+    "volume": 69526,
+    "change": 0.4760847525074026,
+    "changePercent": 0.007,
+    "changeOverTime": 0.3268810396227421
+  },
+  {
+    "date": "2019-11-27",
+    "close": 69,
+    "volume": 79490,
+    "change": 0.3126971847011081,
+    "changePercent": 0.0048,
+    "changeOverTime": 0.3342728252928415
+  },
+  {
+    "date": "2019-11-28",
+    "close": 69.26,
+    "volume": 29052,
+    "change": -0.010255985837683326,
+    "changePercent": -0.0001,
+    "changeOverTime": 0.3341117931700713
+  },
+  {
+    "date": "2019-11-29",
+    "close": 70.06,
+    "volume": 50314,
+    "change": 1.8587427487262105,
+    "changePercent": 0.0277,
+    "changeOverTime": 0.3612736519616345
+  },
+  {
+    "date": "2019-12-02",
+    "close": 71.21,
+    "volume": 75903,
+    "change": 0.1994357023240632,
+    "changePercent": 0.0028,
+    "changeOverTime": 0.3792100286970305
+  },
+  {
+    "date": "2019-12-03",
+    "close": 71.34,
+    "volume": 50456,
+    "change": -1.1831891036351834,
+    "changePercent": -0.0168,
+    "changeOverTime": 0.3463709143104198
+  },
+  {
+    "date": "2019-12-04",
+    "close": 72.05,
+    "volume": 25054,
+    "change": 0.5070319529805838,
+    "changePercent": 0.0074,
+    "changeOverTime": 0.3579107847062147
+  },
+  {
+    "date": "2019-12-05",
+    "close": 68.71,
+    "volume": 37285,
+    "change": -0.6971287649226211,
+    "changePercent": -0.0103,
+    "changeOverTime": 0.3415699647772466
+  },
+  {
+    "date": "2019-12-06",
+    "close": 69.4,
+    "volume": 41322,
+    "change": 0.7430642603515082,
+    "changePercent": 0.0106,
+    "changeOverTime": 0.365936151228029
+  },
+  {
+    "date": "2019-12-09",
+    "close": 71.21,
+    "volume": 57614,
+    "change": -0.2715501684516692,
+    "changePercent": -0.0039,
+    "changeOverTime": 0.36160928100809747
+  },
+  {
+    "date": "2019-12-10",
+    "close": 69.76,
+    "volume": 63565,
+    "change": -0.4410584405497054,
+    "changePercent": -0.0063,
+    "changeOverTime": 0.3510940014470063
+  },
+  {
+    "date": "2019-12-11",
+    "close": 71.02,
+    "volume": 34601,
+    "change": -0.3842718544541798,
+    "changePercent": -0.0056,
+    "changeOverTime": 0.3365938778477018
+  },
+  {
+    "date": "2019-12-12",
+    "close": 68.47,
+    "volume": 38180,
+    "change": -0.700626759521139,
+    "changePercent": -0.0106,
+    "changeOverTime": 0.3243072771808483
+  },
+  {
+    "date": "2019-12-13",
+    "close": 69.9,
+    "volume": 58640,
+    "change": 0.2676851936300628,
+    "changePercent": 0.004,
+    "changeOverTime": 0.3311773294474508
+  },
+  {
+    "date": "2019-12-16",
+    "close": 71.03,
+    "volume": 60505,
+    "change": 0.15357140668777977,
+    "changePercent": 0.0023,
+    "changeOverTime": 0.335791867995009
+  },
+  {
+    "date": "2019-12-17",
+    "close": 71.26,
+    "volume": 20697,
+    "change": 0.3916043263553162,
+    "changePercent": 0.0058,
+    "changeOverTime": 0.3381354818531832
+  },
+  {
+    "date": "2019-12-18",
+    "close": 69.57,
+    "volume": 49201,
+    "change": 1.047134267768934,
+    "changePercent": 0.0157,
+    "changeOverTime": 0.3596208656114427
+  },
+  {
+    "date": "2019-12-19",
+    "close": 71.7,
+    "volume": 65504,
+    "change": 1.1945005604128969,
+    "changePercent": 0.0167,
+    "changeOverTime": 0.38042028922487126
+  },
+  {
+    "date": "2019-12-20",
+    "close": 74.14,
+    "volume": 47836,
+    "change": 0.5579470122053322,
+    "changePercent": 0.0078,
+    "changeOverTime": 0.3974189786120793
+  },
+  {
+    "date": "2019-12-23",
+    "close": 73.77,
+    "volume": 78148,
+    "change": 1.29,
+    "changePercent": 0.0184,
+    "changeOverTime": 0.4091272936325426
+  },
+  {
+    "date": "2019-12-24",
+    "close": 73,
+    "volume": 32651,
+    "change": -1.453418715613253,
+    "changePercent": -0.0192,
+    "changeOverTime": 0.3931296441776345
+  },
+  {
+    "date": "2019-12-27",
+    "close": 73.75,
+    "volume": 29430,
+    "change": 0.6645491461418868,
+    "changePercent": 0.0094,
+    "changeOverTime": 0.3976377838582867
+  },
+  {
+    "date": "2019-12-30",
+    "close": 72.73,
+    "volume": 29628,
+    "change": -1.003961145304146,
+    "changePercent": -0.0135,
+    "changeOverTime": 0.3753834858928379
+  },
+  {
+    "date": "2019-12-31",
+    "close": 72.63,
+    "volume": 29260,
+    "change": -1.1860050989999922,
+    "changePercent": -0.0169,
+    "changeOverTime": 0.3548967375525748
+  },
+  {
+    "date": "2020-01-02",
+    "close": 71.97,
+    "volume": 47656,
+    "change": 0.849813543552051,
+    "changePercent": 0.0123,
+    "changeOverTime": 0.383557426730476
+  },
+  {
+    "date": "2020-01-03",
+    "close": 70.59,
+    "volume": 31826,
+    "change": -0.2435613633506193,
+    "changePercent": -0.0034,
+    "changeOverTime": 0.369393364595094
+  },
+  {
+    "date": "2020-01-06",
+    "close": 73.66,
+    "volume": 62409,
+    "change": 0.6066032430477867,
+    "changePercent": 0.009,
+    "changeOverTime": 0.3936468485803056
+  },
+  {
+    "date": "2020-01-07",
+    "close": 75.47,
+    "volume": 59547,
+    "change": 2.040398365596509,
+    "changePercent": 0.0288,
+    "changeOverTime": 0.4199785989310831
+  },
+  {
+    "date": "2020-01-08",
+    "close": 75.56,
+    "volume": 50106,
+    "change": 0.11117445644409672,
+    "changePercent": 0.0015,
+    "changeOverTime": 0.43397025098900543
+  },
+  {
+    "date": "2020-01-09",
+    "close": 73.54,
+    "volume": 55513,
+    "change": 0.176169238630046,
+    "changePercent": 0.0024,
+    "changeOverTime": 0.4288765068047953
+  },
+  {
+    "date": "2020-01-10",
+    "close": 74.9,
+    "volume": 36562,
+    "change": -0.5533352048494472,
+    "changePercent": -0.0078,
+    "changeOverTime": 0.4114265817000342
+  },
+  {
+    "date": "2020-01-13",
+    "close": 75.9,
+    "volume": 43069,
+    "change": 0,
+    "changePercent": 0,
+    "changeOverTime": 0.4258187653781962
+  },
+  {
+    "date": "2020-01-14",
+    "close": 74.83,
+    "volume": 35134,
+    "change": 0.4725258269083617,
+    "changePercent": 0.0064,
+    "changeOverTime": 0.4390936894790328
+  },
+  {
+    "date": "2020-01-15",
+    "close": 73.57,
+    "volume": 31330,
+    "change": 0.11490102911550927,
+    "changePercent": 0.0015,
+    "changeOverTime": 0.4266829357270513
+  },
+  {
+    "date": "2020-01-16",
+    "close": 74.63,
+    "volume": 33198,
+    "change": 0.09060695015678007,
+    "changePercent": 0.0012,
+    "changeOverTime": 0.4273779957172067
+  },
+  {
+    "date": "2020-01-17",
+    "close": 75.7,
+    "volume": 29634,
+    "change": -0.11294222211361629,
+    "changePercent": -0.0016,
+    "changeOverTime": 0.4315324292101704
+  },
+  {
+    "date": "2020-01-20",
+    "close": 74.37,
+    "volume": 13835,
+    "change": 0.04039711906529481,
+    "changePercent": 0.0005,
+    "changeOverTime": 0.4264192490018681
+  },
+  {
+    "date": "2020-01-21",
+    "close": 75.96,
+    "volume": 42435,
+    "change": -0.2705054907933426,
+    "changePercent": -0.0036,
+    "changeOverTime": 0.4327503718735207
+  },
+  {
+    "date": "2020-01-22",
+    "close": 74.56,
+    "volume": 58738,
+    "change": -0.010331540298421964,
+    "changePercent": -0.0001,
+    "changeOverTime": 0.4252154035568417
+  },
+  {
+    "date": "2020-01-23",
+    "close": 73.65,
+    "volume": 45334,
+    "change": 0.58553862987474,
+    "changePercent": 0.008,
+    "changeOverTime": 0.444607928597767
+  },
+  {
+    "date": "2020-01-24",
+    "close": 74.53,
+    "volume": 36704,
+    "change": 0.04091319171348341,
+    "changePercent": 0.0005,
+    "changeOverTime": 0.4375083418312088
+  },
+  {
+    "date": "2020-01-27",
+    "close": 71.53,
+    "volume": 232067,
+    "change": -4.896731640287519,
+    "changePercent": -0.0654,
+    "changeOverTime": 0.3373967900576672
+  },
+  {
+    "date": "2020-01-28",
+    "close": 73,
+    "volume": 69075,
+    "change": 2.406557871656482,
+    "changePercent": 0.0357,
+    "changeOverTime": 0.3899452315143652
+  },
+  {
+    "date": "2020-01-29",
+    "close": 71.29,
+    "volume": 56193,
+    "change": -1.0352385103809572,
+    "changePercent": -0.0148,
+    "changeOverTime": 0.3793500953283689
+  },
+  {
+    "date": "2020-01-30",
+    "close": 69.63,
+    "volume": 56463,
+    "change": -0.5747420260028677,
+    "changePercent": -0.0084,
+    "changeOverTime": 0.3613720926277212
+  },
+  {
+    "date": "2020-01-31",
+    "close": 68.96,
+    "volume": 166245,
+    "change": -2.3467300550905996,
+    "changePercent": -0.0349,
+    "changeOverTime": 0.3133199247778147
+  },
+  {
+    "date": "2020-02-03",
+    "close": 69,
+    "volume": 57550,
+    "change": 1.9238488304131394,
+    "changePercent": 0.0292,
+    "changeOverTime": 0.3550140303732255
+  },
+  {
+    "date": "2020-02-04",
+    "close": 72.8,
+    "volume": 51362,
+    "change": 1.316338012507969,
+    "changePercent": 0.0186,
+    "changeOverTime": 0.3675515697943202
+  },
+  {
+    "date": "2020-02-05",
+    "close": 75.33,
+    "volume": 65940,
+    "change": 1.8548123362177193,
+    "changePercent": 0.0261,
+    "changeOverTime": 0.4116069007793456
+  },
+  {
+    "date": "2020-02-06",
+    "close": 74.52,
+    "volume": 84873,
+    "change": 0.7070105063329353,
+    "changePercent": 0.0098,
+    "changeOverTime": 0.4349689920436364
+  },
+  {
+    "date": "2020-02-07",
+    "close": 71.5,
+    "volume": 73480,
+    "change": -2.34,
+    "changePercent": -0.0323,
+    "changeOverTime": 0.3901265356173381
+  },
+  {
+    "date": "2020-02-10",
+    "close": 71.13,
+    "volume": 85614,
+    "change": -2.195877285606891,
+    "changePercent": -0.0315,
+    "changeOverTime": 0.3331659826901766
+  },
+  {
+    "date": "2020-02-11",
+    "close": 69.76,
+    "volume": 49216,
+    "change": -0.4042203271075295,
+    "changePercent": -0.0058,
+    "changeOverTime": 0.3256617481785906
+  },
+  {
+    "date": "2020-02-12",
+    "close": 70.72,
+    "volume": 56037,
+    "change": 0.184913965267408,
+    "changePercent": 0.0026,
+    "changeOverTime": 0.3389655890819308
+  },
+  {
+    "date": "2020-02-13",
+    "close": 78.56,
+    "volume": 239751,
+    "change": 7.118804818380354,
+    "changePercent": 0.102,
+    "changeOverTime": 0.4813565938434162
+  },
+  {
+    "date": "2020-02-14",
+    "close": 79.85,
+    "volume": 185671,
+    "change": 4.162285637533387,
+    "changePercent": 0.0552,
+    "changeOverTime": 0.5405320647815022
+  },
+  {
+    "date": "2020-02-18",
+    "close": 82.08,
+    "volume": 83784,
+    "change": -0.4873757148223934,
+    "changePercent": -0.0059,
+    "changeOverTime": 0.5422942869764523
+  },
+  {
+    "date": "2020-02-19",
+    "close": 78.9,
+    "volume": 114152,
+    "change": -2.4304460365742253,
+    "changePercent": -0.03,
+    "changeOverTime": 0.49067585096077615
+  },
+  {
+    "date": "2020-02-20",
+    "close": 78.63,
+    "volume": 97719,
+    "change": -1.0528222564611975,
+    "changePercent": -0.0141,
+    "changeOverTime": 0.48644663936963217
+  },
+  {
+    "date": "2020-02-21",
+    "close": 75.71,
+    "volume": 81221,
+    "change": -0.861391632988435,
+    "changePercent": -0.0114,
+    "changeOverTime": 0.4519613043804557
+  },
+  {
+    "date": "2020-02-24",
+    "close": 72.13,
+    "volume": 125693,
+    "change": -3.554794538880668,
+    "changePercent": -0.0483,
+    "changeOverTime": 0.3861565170448108
+  },
+  {
+    "date": "2020-02-25",
+    "close": 69.98,
+    "volume": 149051,
+    "change": -2.494091904465634,
+    "changePercent": -0.0353,
+    "changeOverTime": 0.3376770113361365
+  },
+  {
+    "date": "2020-02-26",
+    "close": 70.13,
+    "volume": 109573,
+    "change": -1.052598363155892,
+    "changePercent": -0.016,
+    "changeOverTime": 0.3182372118680188
+  },
+  {
+    "date": "2020-02-27",
+    "close": 65.63,
+    "volume": 121190,
+    "change": -2.529730808134388,
+    "changePercent": -0.0379,
+    "changeOverTime": 0.27475461112894256
+  },
+  {
+    "date": "2020-02-28",
+    "close": 64.81,
+    "volume": 179483,
+    "change": -2.363514145768894,
+    "changePercent": -0.0356,
+    "changeOverTime": 0.2265650728044755
+  },
+  {
+    "date": "2020-03-02",
+    "close": 67.76,
+    "volume": 196452,
+    "change": 5.222624365364878,
+    "changePercent": 0.0857,
+    "changeOverTime": 0.32027622486604035
+  },
+  {
+    "date": "2020-03-03",
+    "close": 67.24,
+    "volume": 153772,
+    "change": -2.568432455320939,
+    "changePercent": -0.0378,
+    "changeOverTime": 0.270047536344717
+  },
+  {
+    "date": "2020-03-04",
+    "close": 68.2,
+    "volume": 70966,
+    "change": 2.126421912053557,
+    "changePercent": 0.0316,
+    "changeOverTime": 0.3099933043903953
+  },
+  {
+    "date": "2020-03-05",
+    "close": 65.62,
+    "volume": 87516,
+    "change": -3.7439404379024213,
+    "changePercent": -0.055,
+    "changeOverTime": 0.2407247971918303
+  },
+  {
+    "date": "2020-03-06",
+    "close": 63.65,
+    "volume": 85957,
+    "change": -1.8954331522525056,
+    "changePercent": -0.03,
+    "changeOverTime": 0.2090734142789506
+  },
+  {
+    "date": "2020-03-09",
+    "close": 57.7,
+    "volume": 220784,
+    "change": -5.665090060716321,
+    "changePercent": -0.0891,
+    "changeOverTime": 0.10114211775849245
+  },
+  {
+    "date": "2020-03-10",
+    "close": 59.93,
+    "volume": 158475,
+    "change": 2.409661790746061,
+    "changePercent": 0.042,
+    "changeOverTime": 0.1456610278345745
+  },
+  {
+    "date": "2020-03-11",
+    "close": 55.5,
+    "volume": 151874,
+    "change": -5.276644719122807,
+    "changePercent": -0.0928,
+    "changeOverTime": 0.0426768956102848
+  },
+  {
+    "date": "2020-03-12",
+    "close": 46.51,
+    "volume": 191396,
+    "change": -8.041806211442859,
+    "changePercent": -0.1507,
+    "changeOverTime": -0.11526715484073782
+  },
+  {
+    "date": "2020-03-13",
+    "close": 53.05,
+    "volume": 179323,
+    "change": 5.238595023737521,
+    "changePercent": 0.1129,
+    "changeOverTime": -0.017379400523516237
+  },
+  {
+    "date": "2020-03-16",
+    "close": 43.38,
+    "volume": 156666,
+    "change": -9.513627516439781,
+    "changePercent": -0.1853,
+    "changeOverTime": -0.20264906677586816
+  },
+  {
+    "date": "2020-03-17",
+    "close": 37.77,
+    "volume": 161102,
+    "change": -4.240170140919806,
+    "changePercent": -0.1018,
+    "changeOverTime": -0.2830751566574262
+  },
+  {
+    "date": "2020-03-18",
+    "close": 24.79,
+    "volume": 369282,
+    "change": -13.1,
+    "changePercent": -0.358,
+    "changeOverTime": -0.5289975641659107
+  },
+  {
+    "date": "2020-03-19",
+    "close": 27.88,
+    "volume": 298028,
+    "change": 3.29,
+    "changePercent": 0.1337,
+    "changeOverTime": -0.4714566395259261
+  },
+  {
+    "date": "2020-03-20",
+    "close": 29.3,
+    "volume": 379196,
+    "change": 1.7285100093835415,
+    "changePercent": 0.063,
+    "changeOverTime": -0.4487544009005098
+  },
+  {
+    "date": "2020-03-23",
+    "close": 24.49,
+    "volume": 215717,
+    "change": -6.159031684351625,
+    "changePercent": -0.2091,
+    "changeOverTime": -0.5701050557904704
+  },
+  {
+    "date": "2020-03-24",
+    "close": 29.55,
+    "volume": 360010,
+    "change": 5.437267639625563,
+    "changePercent": 0.229,
+    "changeOverTime": -0.4471670853725663
+  },
+  {
+    "date": "2020-03-25",
+    "close": 37.57,
+    "volume": 372014,
+    "change": 8.49631131737646,
+    "changePercent": 0.2898,
+    "changeOverTime": -0.2965554445140069
+  },
+  {
+    "date": "2020-03-26",
+    "close": 38.15,
+    "volume": 277243,
+    "change": 1.288111946055812,
+    "changePercent": 0.0346,
+    "changeOverTime": -0.2706264351069363
+  },
+  {
+    "date": "2020-03-27",
+    "close": 33.59,
+    "volume": 261193,
+    "change": -5.073638861630515,
+    "changePercent": -0.1314,
+    "changeOverTime": -0.3549083837314996
+  },
+  {
+    "date": "2020-03-30",
+    "close": 33.34,
+    "volume": 78439,
+    "change": -0.18181773358163586,
+    "changePercent": -0.0054,
+    "changeOverTime": -0.37258995275940543
+  },
+  {
+    "date": "2020-03-31",
+    "close": 37.93,
+    "volume": 214626,
+    "change": 3.4029760687834503,
+    "changePercent": 0.1019,
+    "changeOverTime": -0.2960157068683331
+  },
+  {
+    "date": "2020-04-01",
+    "close": 33.66,
+    "volume": 150382,
+    "change": -4.057897294011865,
+    "changePercent": -0.1102,
+    "changeOverTime": -0.37512195975648854
+  },
+  {
+    "date": "2020-04-02",
+    "close": 34.07,
+    "volume": 162341,
+    "change": 0.519633781705507,
+    "changePercent": 0.0159,
+    "changeOverTime": -0.3694274703333422
+  },
+  {
+    "date": "2020-04-03",
+    "close": 30.55,
+    "volume": 139752,
+    "change": -3.03,
+    "changePercent": -0.0886,
+    "changeOverTime": -0.43389354626406734
+  },
+  {
+    "date": "2020-04-06",
+    "close": 32.12,
+    "volume": 157990,
+    "change": 1.7264636594204303,
+    "changePercent": 0.0573,
+    "changeOverTime": -0.3903010367296423
+  },
+  {
+    "date": "2020-04-07",
+    "close": 32.9,
+    "volume": 260725,
+    "change": 0.843646162846585,
+    "changePercent": 0.0261,
+    "changeOverTime": -0.3767746833567804
+  },
+  {
+    "date": "2020-04-08",
+    "close": 34.9,
+    "volume": 147801,
+    "change": 2.110542014839819,
+    "changePercent": 0.063,
+    "changeOverTime": -0.3329822257539106
+  },
+  {
+    "date": "2020-04-09",
+    "close": 40.8,
+    "volume": 274294,
+    "change": 5.288483359241884,
+    "changePercent": 0.1598,
+    "changeOverTime": -0.2252887044995289
+  },
+  {
+    "date": "2020-04-13",
+    "close": 41.04,
+    "volume": 197855,
+    "change": -0.8165141105674051,
+    "changePercent": -0.0206,
+    "changeOverTime": -0.24803640985360575
+  },
+  {
+    "date": "2020-04-14",
+    "close": 39.57,
+    "volume": 166766,
+    "change": -0.0627411394581478,
+    "changePercent": -0.0015,
+    "changeOverTime": -0.25008215709348874
+  },
+  {
+    "date": "2020-04-15",
+    "close": 39.33,
+    "volume": 132325,
+    "change": -1.0709211700187589,
+    "changePercent": -0.028,
+    "changeOverTime": -0.2672429606819628
+  },
+  {
+    "date": "2020-04-16",
+    "close": 38.35,
+    "volume": 97022,
+    "change": -1.15169315225635,
+    "changePercent": -0.03,
+    "changeOverTime": -0.288342616534822
+  },
+  {
+    "date": "2020-04-17",
+    "close": 38.29,
+    "volume": 117530,
+    "change": 0.5630123774808042,
+    "changePercent": 0.0159,
+    "changeOverTime": -0.27532417745714644
+  },
+  {
+    "date": "2020-04-20",
+    "close": 38.3,
+    "volume": 67075,
+    "change": 0.05010719496990521,
+    "changePercent": 0.0013,
+    "changeOverTime": -0.2712216799950921
+  },
+  {
+    "date": "2020-04-21",
+    "close": 37.13,
+    "volume": 60591,
+    "change": -0.78,
+    "changePercent": -0.02,
+    "changeOverTime": -0.2939563871058949
+  },
+  {
+    "date": "2020-04-22",
+    "close": 37.64,
+    "volume": 82158,
+    "change": -0.37058227363125057,
+    "changePercent": -0.0106,
+    "changeOverTime": -0.29711474846017677
+  },
+  {
+    "date": "2020-04-23",
+    "close": 36.55,
+    "volume": 110039,
+    "change": -0.1738024586035841,
+    "changePercent": -0.0048,
+    "changeOverTime": -0.3078606517310933
+  },
+  {
+    "date": "2020-04-24",
+    "close": 38.1,
+    "volume": 80380,
+    "change": 0.2955221934090652,
+    "changePercent": 0.008,
+    "changeOverTime": -0.2962662716700844
+  },
+  {
+    "date": "2020-04-27",
+    "close": 40.43,
+    "volume": 179390,
+    "change": 3.4407192583868595,
+    "changePercent": 0.0918,
+    "changeOverTime": -0.22471236413382226
+  },
+  {
+    "date": "2020-04-28",
+    "close": 41.23,
+    "volume": 167150,
+    "change": -0.11372373869141389,
+    "changePercent": -0.0029,
+    "changeOverTime": -0.2362037627232951
+  },
+  {
+    "date": "2020-04-29",
+    "close": 48.03,
+    "volume": 232393,
+    "change": 6.5,
+    "changePercent": 0.1623,
+    "changeOverTime": -0.10528983754573547
+  },
+  {
+    "date": "2020-04-30",
+    "close": 44.69,
+    "volume": 197197,
+    "change": -1.7411528187029002,
+    "changePercent": -0.038,
+    "changeOverTime": -0.1366198596507231
+  },
+  {
+    "date": "2020-05-01",
+    "close": 43.4,
+    "volume": 164390,
+    "change": -3.0939662591506005,
+    "changePercent": -0.0716,
+    "changeOverTime": -0.1978216220292198
+  },
+  {
+    "date": "2020-05-04",
+    "close": 40.87,
+    "volume": 101101,
+    "change": -2.1937118496902244,
+    "changePercent": -0.0531,
+    "changeOverTime": -0.2447682667752464
+  },
+  {
+    "date": "2020-05-05",
+    "close": 42.14,
+    "volume": 103493,
+    "change": 1.3011946555871257,
+    "changePercent": 0.0325,
+    "changeOverTime": -0.2161560924117441
+  },
+  {
+    "date": "2020-05-06",
+    "close": 39,
+    "volume": 118859,
+    "change": -1.509757449888215,
+    "changePercent": -0.0373,
+    "changeOverTime": -0.2438941270002364
+  },
+  {
+    "date": "2020-05-07",
+    "close": 51,
+    "volume": 625068,
+    "change": 10,
+    "changePercent": 0.265,
+    "changeOverTime": -0.048905617829036685
+  },
+  {
+    "date": "2020-05-08",
+    "close": 50,
+    "volume": 338601,
+    "change": -1,
+    "changePercent": -0.0207,
+    "changeOverTime": -0.06930018111668051
+  },
+  {
+    "date": "2020-05-11",
+    "close": 52.48,
+    "volume": 170571,
+    "change": 2.293229553715435,
+    "changePercent": 0.0498,
+    "changeOverTime": -0.0219247620346439
+  },
+  {
+    "date": "2020-05-12",
+    "close": 53.05,
+    "volume": 216851,
+    "change": 1.2430694634774224,
+    "changePercent": 0.0245,
+    "changeOverTime": 0.00224435298913359
+  },
+  {
+    "date": "2020-05-13",
+    "close": 48.87,
+    "volume": 208925,
+    "change": -4.15,
+    "changePercent": -0.081,
+    "changeOverTime": -0.0780262876954214
+  },
+  {
+    "date": "2020-05-14",
+    "close": 50.21,
+    "volume": 262167,
+    "change": 0.76,
+    "changePercent": 0.0163,
+    "changeOverTime": -0.063437872568717
+  },
+  {
+    "date": "2020-05-15",
+    "close": 47.7,
+    "volume": 149260,
+    "change": -1.7034405305135758,
+    "changePercent": -0.0366,
+    "changeOverTime": -0.09989979311028106
+  },
+  {
+    "date": "2020-05-19",
+    "close": 49.66,
+    "volume": 173896,
+    "change": 2.81,
+    "changePercent": 0.0605,
+    "changeOverTime": -0.04278325025355745
+  },
+  {
+    "date": "2020-05-20",
+    "close": 51.51,
+    "volume": 136380,
+    "change": 2.306781390892079,
+    "changePercent": 0.0451,
+    "changeOverTime": 0.0009961202140974644
+  },
+  {
+    "date": "2020-05-21",
+    "close": 51.36,
+    "volume": 113197,
+    "change": -0.2662944985765958,
+    "changePercent": -0.0053,
+    "changeOverTime": -0.004137491306179348
+  },
+  {
+    "date": "2020-05-22",
+    "close": 51.65,
+    "volume": 123191,
+    "change": -0.06176594483876441,
+    "changePercent": -0.0012,
+    "changeOverTime": -0.005454537872449029
+  },
+  {
+    "date": "2020-05-25",
+    "close": 51.4,
+    "volume": 97728,
+    "change": 0.07024292689891168,
+    "changePercent": 0.0014,
+    "changeOverTime": -0.004066695189687998
+  },
+  {
+    "date": "2020-05-26",
+    "close": 56.41,
+    "volume": 196049,
+    "change": 2.870055617232227,
+    "changePercent": 0.0542,
+    "changeOverTime": 0.05133231379930395
+  },
+  {
+    "date": "2020-05-27",
+    "close": 54.4,
+    "volume": 99122,
+    "change": 0.3255127126089816,
+    "changePercent": 0.0061,
+    "changeOverTime": 0.05798920139574536
+  },
+  {
+    "date": "2020-05-28",
+    "close": 55.46,
+    "volume": 157936,
+    "change": -0.5413474596676608,
+    "changePercent": -0.01,
+    "changeOverTime": 0.04570502843469413
+  },
+  {
+    "date": "2020-05-29",
+    "close": 54.02,
+    "volume": 91137,
+    "change": 0.245156765551174,
+    "changePercent": 0.0046,
+    "changeOverTime": 0.051841196464931676
+  },
+  {
+    "date": "2020-06-01",
+    "close": 53.19,
+    "volume": 105780,
+    "change": -1.056274480995146,
+    "changePercent": -0.0187,
+    "changeOverTime": 0.031324760001298226
+  },
+  {
+    "date": "2020-06-02",
+    "close": 55.04,
+    "volume": 117969,
+    "change": 1.2319483626728354,
+    "changePercent": 0.0232,
+    "changeOverTime": 0.05632355761665559
+  },
+  {
+    "date": "2020-06-03",
+    "close": 60.37,
+    "volume": 217195,
+    "change": 3.567864264654673,
+    "changePercent": 0.064,
+    "changeOverTime": 0.12355765900690434
+  },
+  {
+    "date": "2020-06-04",
+    "close": 58.21,
+    "volume": 152731,
+    "change": -1.200767817703244,
+    "changePercent": -0.0216,
+    "changeOverTime": 0.09721696366540557
+  },
+  {
+    "date": "2020-06-05",
+    "close": 58.64,
+    "volume": 108198,
+    "change": 0.4072049627580178,
+    "changePercent": 0.0072,
+    "changeOverTime": 0.10824762430724746
+  },
+  {
+    "date": "2020-06-08",
+    "close": 60.71,
+    "volume": 125282,
+    "change": 1.5238999206951584,
+    "changePercent": 0.0264,
+    "changeOverTime": 0.1333533939386435
+  },
+  {
+    "date": "2020-06-09",
+    "close": 59.3,
+    "volume": 115718,
+    "change": -0.54523688138358,
+    "changePercent": -0.0095,
+    "changeOverTime": 0.1237980194325055
+  },
+  {
+    "date": "2020-06-10",
+    "close": 58.2,
+    "volume": 126278,
+    "change": -0.8392850686634684,
+    "changePercent": -0.0145,
+    "changeOverTime": 0.1084443356984811
+  },
+  {
+    "date": "2020-06-11",
+    "close": 53.69,
+    "volume": 185384,
+    "change": -4.806382435044927,
+    "changePercent": -0.0838,
+    "changeOverTime": 0.01635675613029216
+  },
+  {
+    "date": "2020-06-12",
+    "close": 56.41,
+    "volume": 161767,
+    "change": 3.714717533903661,
+    "changePercent": 0.0689,
+    "changeOverTime": 0.08677405719671377
+  },
+  {
+    "date": "2020-06-15",
+    "close": 57.29,
+    "volume": 125562,
+    "change": -0.4161283073999325,
+    "changePercent": -0.0075,
+    "changeOverTime": 0.08034983980870863
+  },
+  {
+    "date": "2020-06-16",
+    "close": 57.82,
+    "volume": 153183,
+    "change": 0.6711388340157324,
+    "changePercent": 0.0124,
+    "changeOverTime": 0.09153421744292313
+  },
+  {
+    "date": "2020-06-17",
+    "close": 58.09,
+    "volume": 67933,
+    "change": 0.7543491089989052,
+    "changePercent": 0.0133,
+    "changeOverTime": 0.10845479012200893
+  },
+  {
+    "date": "2020-06-18",
+    "close": 59.56,
+    "volume": 55208,
+    "change": 0.030966817965195206,
+    "changePercent": 0.0005,
+    "changeOverTime": 0.105027584755658
+  },
+  {
+    "date": "2020-06-19",
+    "close": 59.82,
+    "volume": 70493,
+    "change": 0.5738330066338055,
+    "changePercent": 0.0099,
+    "changeOverTime": 0.11905428794880786
+  },
+  {
+    "date": "2020-06-22",
+    "close": 58.53,
+    "volume": 52792,
+    "change": -0.23201296515736847,
+    "changePercent": -0.004,
+    "changeOverTime": 0.11233682757888855
+  },
+  {
+    "date": "2020-06-23",
+    "close": 58.5,
+    "volume": 49610,
+    "change": 0.77,
+    "changePercent": 0.0136,
+    "changeOverTime": 0.1289803214048797
+  },
+  {
+    "date": "2020-06-24",
+    "close": 57.17,
+    "volume": 68399,
+    "change": -1.3734301762731744,
+    "changePercent": -0.023,
+    "changeOverTime": 0.1035047619365096
+  },
+  {
+    "date": "2020-06-25",
+    "close": 59.77,
+    "volume": 102805,
+    "change": 0.6239567389926433,
+    "changePercent": 0.011,
+    "changeOverTime": 0.11423789725539032
+  },
+  {
+    "date": "2020-06-26",
+    "close": 56.5,
+    "volume": 42189,
+    "change": -1.0368231415694176,
+    "changePercent": -0.018,
+    "changeOverTime": 0.09462094699806323
+  },
+  {
+    "date": "2020-06-29",
+    "close": 57.3,
+    "volume": 63100,
+    "change": -0.9245436673917643,
+    "changePercent": -0.016,
+    "changeOverTime": 0.07621990190192934
+  },
+  {
+    "date": "2020-06-30",
+    "close": 56.62,
+    "volume": 58175,
+    "change": -0.5270642076988898,
+    "changePercent": -0.0094,
+    "changeOverTime": 0.06599257171444071
+  },
+  {
+    "date": "2020-07-02",
+    "close": 57.1,
+    "volume": 61218,
+    "change": -0.18675145912040023,
+    "changePercent": -0.0034,
+    "changeOverTime": 0.06106652172543345
+  },
+  {
+    "date": "2020-07-03",
+    "close": 57.05,
+    "volume": 37759,
+    "change": -0.01006153444135089,
+    "changePercent": -0.0002,
+    "changeOverTime": 0.0621193063386059
+  },
+  {
+    "date": "2020-07-06",
+    "close": 55.4,
+    "volume": 159062,
+    "change": -1.3828451083858135,
+    "changePercent": -0.0257,
+    "changeOverTime": 0.03400824731532426
+  },
+  {
+    "date": "2020-07-07",
+    "close": 54.87,
+    "volume": 56872,
+    "change": -0.750092339018651,
+    "changePercent": -0.0142,
+    "changeOverTime": 0.0198439187693051
+  },
+  {
+    "date": "2020-07-08",
+    "close": 56.35,
+    "volume": 56747,
+    "change": 1.7935753666065455,
+    "changePercent": 0.035,
+    "changeOverTime": 0.05447445506367311
+  },
+  {
+    "date": "2020-07-09",
+    "close": 54.81,
+    "volume": 100271,
+    "change": -1.6325179874408817,
+    "changePercent": -0.0306,
+    "changeOverTime": 0.02335261828636344
+  },
+  {
+    "date": "2020-07-10",
+    "close": 53.11,
+    "volume": 48642,
+    "change": 0.28416244732808343,
+    "changePercent": 0.0055,
+    "changeOverTime": 0.029360060057643456
+  },
+  {
+    "date": "2020-07-13",
+    "close": 51.23,
+    "volume": 111585,
+    "change": -2,
+    "changePercent": -0.0393,
+    "changeOverTime": -0.01053878437644023
+  },
+  {
+    "date": "2020-07-14",
+    "close": 52.51,
+    "volume": 32153,
+    "change": 1.4083293724183836,
+    "changePercent": 0.0274,
+    "changeOverTime": 0.01686409226624373
+  },
+  {
+    "date": "2020-07-15",
+    "close": 56,
+    "volume": 138082,
+    "change": 2.3,
+    "changePercent": 0.0444,
+    "changeOverTime": 0.06289077463439088
+  },
+  {
+    "date": "2020-07-16",
+    "close": 55.79,
+    "volume": 104606,
+    "change": -0.7800012409649588,
+    "changePercent": -0.0147,
+    "changeOverTime": 0.04525989781452949
+  },
+  {
+    "date": "2020-07-17",
+    "close": 54.32,
+    "volume": 91627,
+    "change": -0.11536419124984781,
+    "changePercent": -0.002,
+    "changeOverTime": 0.04378863010763246
+  },
+  {
+    "date": "2020-07-20",
+    "close": 56.41,
+    "volume": 135759,
+    "change": 0.6554228987407374,
+    "changePercent": 0.0122,
+    "changeOverTime": 0.0554365159538952
+  },
+  {
+    "date": "2020-07-21",
+    "close": 54.6,
+    "volume": 95959,
+    "change": -0.5,
+    "changePercent": -0.0093,
+    "changeOverTime": 0.04585711880982532
+  },
+  {
+    "date": "2020-07-22",
+    "close": 55.67,
+    "volume": 83410,
+    "change": -0.491594970732137,
+    "changePercent": -0.0093,
+    "changeOverTime": 0.03617419292731792
+  },
+  {
+    "date": "2020-07-23",
+    "close": 55.14,
+    "volume": 78620,
+    "change": 0.5830662148768633,
+    "changePercent": 0.0105,
+    "changeOverTime": 0.04873176252375509
+  },
+  {
+    "date": "2020-07-24",
+    "close": 53.25,
+    "volume": 101934,
+    "change": -1.352570102970051,
+    "changePercent": -0.024,
+    "changeOverTime": 0.02221380419398807
+  },
+  {
+    "date": "2020-07-27",
+    "close": 54.07,
+    "volume": 56626,
+    "change": -0.11102865889928538,
+    "changePercent": -0.0022,
+    "changeOverTime": 0.0203029760564017
+  },
+  {
+    "date": "2020-07-28",
+    "close": 58.6,
+    "volume": 199185,
+    "change": 4.047430486254494,
+    "changePercent": 0.0792,
+    "changeOverTime": 0.0967054883372808
+  },
+  {
+    "date": "2020-07-29",
+    "close": 57.68,
+    "volume": 117254,
+    "change": -0.25,
+    "changePercent": -0.0044,
+    "changeOverTime": 0.09393023786231988
+  },
+  {
+    "date": "2020-07-30",
+    "close": 57.8,
+    "volume": 104790,
+    "change": 0.7108574604361301,
+    "changePercent": 0.0126,
+    "changeOverTime": 0.10612950865620979
+  },
+  {
+    "date": "2020-07-31",
+    "close": 58.55,
+    "volume": 35640,
+    "change": -0.6224345973639335,
+    "changePercent": -0.0112,
+    "changeOverTime": 0.09777861611929904
+  },
+  {
+    "date": "2020-08-04",
+    "close": 59.53,
+    "volume": 84431,
+    "change": 0.5654883481829752,
+    "changePercent": 0.0097,
+    "changeOverTime": 0.10855718868364148
+  },
+  {
+    "date": "2020-08-05",
+    "close": 61.33,
+    "volume": 137712,
+    "change": 2.802940036245864,
+    "changePercent": 0.0506,
+    "changeOverTime": 0.1629171670225726
+  },
+  {
+    "date": "2020-08-06",
+    "close": 59.76,
+    "volume": 79661,
+    "change": -0.3240546314233551,
+    "changePercent": -0.0056,
+    "changeOverTime": 0.15747606704542713
+  },
+  {
+    "date": "2020-08-07",
+    "close": 59.33,
+    "volume": 41073,
+    "change": 0.1657682846981871,
+    "changePercent": 0.0028,
+    "changeOverTime": 0.15832726905179056
+  },
+  {
+    "date": "2020-08-10",
+    "close": 61.64,
+    "volume": 138672,
+    "change": 2.1440598583667376,
+    "changePercent": 0.0363,
+    "changeOverTime": 0.19708847560153728
+  },
+  {
+    "date": "2020-08-11",
+    "close": 63.8,
+    "volume": 65446,
+    "change": 0.7083071540021537,
+    "changePercent": 0.0118,
+    "changeOverTime": 0.21082160036989728
+  },
+  {
+    "date": "2020-08-12",
+    "close": 65,
+    "volume": 75460,
+    "change": 1.066965832851571,
+    "changePercent": 0.0175,
+    "changeOverTime": 0.2392686427463807
+  },
+  {
+    "date": "2020-08-13",
+    "close": 72.29,
+    "volume": 350353,
+    "change": 5.900344353793394,
+    "changePercent": 0.0936,
+    "changeOverTime": 0.3523381399475725
+  },
+  {
+    "date": "2020-08-14",
+    "close": 71.67,
+    "volume": 158026,
+    "change": 0.5454036462830608,
+    "changePercent": 0.0079,
+    "changeOverTime": 0.3670321717379219
+  },
+  {
+    "date": "2020-08-17",
+    "close": 71.35,
+    "volume": 69679,
+    "change": 0.2880099488799631,
+    "changePercent": 0.004,
+    "changeOverTime": 0.3672333634366958
+  },
+  {
+    "date": "2020-08-18",
+    "close": 71.09,
+    "volume": 63799,
+    "change": -0.1555226950258621,
+    "changePercent": -0.0022,
+    "changeOverTime": 0.3722647427929059
+  },
+  {
+    "date": "2020-08-19",
+    "close": 70.52,
+    "volume": 49284,
+    "change": -1.6843820020101563,
+    "changePercent": -0.024,
+    "changeOverTime": 0.3286184441799773
+  },
+  {
+    "date": "2020-08-20",
+    "close": 67.67,
+    "volume": 109774,
+    "change": -1.2616850078033834,
+    "changePercent": -0.0183,
+    "changeOverTime": 0.3130687770998861
+  },
+  {
+    "date": "2020-08-21",
+    "close": 68.16,
+    "volume": 173520,
+    "change": -0.3029621140991795,
+    "changePercent": -0.0045,
+    "changeOverTime": 0.29730123267524705
+  },
+  {
+    "date": "2020-08-24",
+    "close": 68.32,
+    "volume": 38284,
+    "change": 0.05049914972376885,
+    "changePercent": 0.0008,
+    "changeOverTime": 0.3031241430883533
+  },
+  {
+    "date": "2020-08-25",
+    "close": 67.28,
+    "volume": 93330,
+    "change": -0.1613262997094882,
+    "changePercent": -0.0025,
+    "changeOverTime": 0.2995323851749543
+  },
+  {
+    "date": "2020-08-26",
+    "close": 67.24,
+    "volume": 57904,
+    "change": -0.30026836044541777,
+    "changePercent": -0.0045,
+    "changeOverTime": 0.28839226104308774
+  },
+  {
+    "date": "2020-08-27",
+    "close": 65.28,
+    "volume": 58411,
+    "change": -1.3436389531995658,
+    "changePercent": -0.0202,
+    "changeOverTime": 0.2732915385049875
+  },
+  {
+    "date": "2020-08-28",
+    "close": 66.07,
+    "volume": 48251,
+    "change": 0.9413925793707386,
+    "changePercent": 0.0145,
+    "changeOverTime": 0.287583126298077
+  },
+  {
+    "date": "2020-08-31",
+    "close": 66.33,
+    "volume": 62385,
+    "change": -0.8639524172816717,
+    "changePercent": -0.0131,
+    "changeOverTime": 0.2693914708999151
+  },
+  {
+    "date": "2020-09-01",
+    "close": 68.81,
+    "volume": 63039,
+    "change": 2.731363343928213,
+    "changePercent": 0.0435,
+    "changeOverTime": 0.3297900465161372
+  },
+  {
+    "date": "2020-09-02",
+    "close": 68.9,
+    "volume": 159541,
+    "change": -0.39227498269426675,
+    "changePercent": -0.0059,
+    "changeOverTime": 0.31323411162232784
+  },
+  {
+    "date": "2020-09-03",
+    "close": 66.25,
+    "volume": 176046,
+    "change": -2.292721224417676,
+    "changePercent": -0.0346,
+    "changeOverTime": 0.2673720609761753
+  },
+  {
+    "date": "2020-09-04",
+    "close": 66.96,
+    "volume": 54799,
+    "change": -1.061089526562456,
+    "changePercent": -0.0159,
+    "changeOverTime": 0.2479351769189002
+  },
+  {
+    "date": "2020-09-08",
+    "close": 66.25,
+    "volume": 23548,
+    "change": -0.1630824324606685,
+    "changePercent": -0.0026,
+    "changeOverTime": 0.2461236336797451
+  },
+  {
+    "date": "2020-09-09",
+    "close": 66.58,
+    "volume": 114876,
+    "change": 0.23275671148606566,
+    "changePercent": 0.0037,
+    "changeOverTime": 0.25044306783386044
+  },
+  {
+    "date": "2020-09-10",
+    "close": 65.41,
+    "volume": 43644,
+    "change": -0.21269388341355605,
+    "changePercent": -0.0034,
+    "changeOverTime": 0.2456582727752384
+  },
+  {
+    "date": "2020-09-11",
+    "close": 66.42,
+    "volume": 94602,
+    "change": 0.6065634089561598,
+    "changePercent": 0.0096,
+    "changeOverTime": 0.26276204476222437
+  },
+  {
+    "date": "2020-09-14",
+    "close": 65.59,
+    "volume": 77602,
+    "change": -0.5441577767144871,
+    "changePercent": -0.0087,
+    "changeOverTime": 0.2529643892986744
+  },
+  {
+    "date": "2020-09-15",
+    "close": 66.09,
+    "volume": 96032,
+    "change": -0.23006688244689155,
+    "changePercent": -0.0036,
+    "changeOverTime": 0.2394997525325493
+  },
+  {
+    "date": "2020-09-16",
+    "close": 66,
+    "volume": 194382,
+    "change": 1.3807008347689478,
+    "changePercent": 0.0216,
+    "changeOverTime": 0.275098597935952
+  },
+  {
+    "date": "2020-09-17",
+    "close": 69.59,
+    "volume": 80731,
+    "change": 1.5752633645321719,
+    "changePercent": 0.024,
+    "changeOverTime": 0.2998934700447108
+  },
+  {
+    "date": "2020-09-18",
+    "close": 68.89,
+    "volume": 81167,
+    "change": -0.6404041368482514,
+    "changePercent": -0.0098,
+    "changeOverTime": 0.2862094180294026
+  },
+  {
+    "date": "2020-09-21",
+    "close": 61.5,
+    "volume": 216993,
+    "change": -4.613144990771218,
+    "changePercent": -0.0692,
+    "changeOverTime": 0.2032537584034685
+  },
+  {
+    "date": "2020-09-22",
+    "close": 64.17,
+    "volume": 88376,
+    "change": 0.39440320642018256,
+    "changePercent": 0.0065,
+    "changeOverTime": 0.20563646162323473
+  },
+  {
+    "date": "2020-09-23",
+    "close": 62.81,
+    "volume": 77692,
+    "change": -2.077374874661986,
+    "changePercent": -0.0333,
+    "changeOverTime": 0.1675977364152755
+  },
+  {
+    "date": "2020-09-24",
+    "close": 62.69,
+    "volume": 136415,
+    "change": 1.2388723529885117,
+    "changePercent": 0.0198,
+    "changeOverTime": 0.1890939011964292
+  },
+  {
+    "date": "2020-09-25",
+    "close": 62.57,
+    "volume": 85228,
+    "change": 1.2411703682287933,
+    "changePercent": 0.0199,
+    "changeOverTime": 0.21448750053969715
+  },
+  {
+    "date": "2020-09-28",
+    "close": 64.05,
+    "volume": 97933,
+    "change": 1.2138375221957738,
+    "changePercent": 0.0194,
+    "changeOverTime": 0.2374401446677076
+  },
+  {
+    "date": "2020-09-29",
+    "close": 64.3,
+    "volume": 49000,
+    "change": 0.25,
+    "changePercent": 0.0041,
+    "changeOverTime": 0.2383619707885815
+  },
+  {
+    "date": "2020-09-30",
+    "close": 68.12,
+    "volume": 81098,
+    "change": 1.8375320260912364,
+    "changePercent": 0.0287,
+    "changeOverTime": 0.281734049155888
+  },
+  {
+    "date": "2020-10-01",
+    "close": 67.71,
+    "volume": 60765,
+    "change": 0.8503765004381367,
+    "changePercent": 0.0129,
+    "changeOverTime": 0.3025503736508276
+  },
+  {
+    "date": "2020-10-02",
+    "close": 70.29,
+    "volume": 77500,
+    "change": 1.3281873784542861,
+    "changePercent": 0.02,
+    "changeOverTime": 0.3255342819921289
+  },
+  {
+    "date": "2020-10-05",
+    "close": 71.97,
+    "volume": 80541,
+    "change": 1.3480087057488044,
+    "changePercent": 0.0206,
+    "changeOverTime": 0.3421649970963703
+  },
+  {
+    "date": "2020-10-06",
+    "close": 69.69,
+    "volume": 61829,
+    "change": -0.4259613524217142,
+    "changePercent": -0.0062,
+    "changeOverTime": 0.3438341044458325
+  },
+  {
+    "date": "2020-10-07",
+    "close": 71.1,
+    "volume": 61790,
+    "change": 1.4150123833024115,
+    "changePercent": 0.0206,
+    "changeOverTime": 0.3591158131325489
+  },
+  {
+    "date": "2020-10-08",
+    "close": 73.13,
+    "volume": 75871,
+    "change": 2.285716056971474,
+    "changePercent": 0.0327,
+    "changeOverTime": 0.4122660523546468
+  },
+  {
+    "date": "2020-10-09",
+    "close": 72.75,
+    "volume": 39533,
+    "change": -0.47576430536782055,
+    "changePercent": -0.0065,
+    "changeOverTime": 0.39448378604556134
+  },
+  {
+    "date": "2020-10-13",
+    "close": 75,
+    "volume": 88285,
+    "change": 0.0817794056380707,
+    "changePercent": 0.0011,
+    "changeOverTime": 0.3938450800321113
+  },
+  {
+    "date": "2020-10-14",
+    "close": 74,
+    "volume": 59783,
+    "change": -0.6024887295115361,
+    "changePercent": -0.0087,
+    "changeOverTime": 0.3914703247072492
+  },
+  {
+    "date": "2020-10-15",
+    "close": 72.57,
+    "volume": 44098,
+    "change": -0.5051532235562222,
+    "changePercent": -0.007,
+    "changeOverTime": 0.3843772884610152
+  },
+  {
+    "date": "2020-10-16",
+    "close": 72.3,
+    "volume": 42287,
+    "change": -0.3467330823281543,
+    "changePercent": -0.0049,
+    "changeOverTime": 0.370612169650708
+  },
+  {
+    "date": "2020-10-19",
+    "close": 73.17,
+    "volume": 49610,
+    "change": 1.2010428125823025,
+    "changePercent": 0.0178,
+    "changeOverTime": 0.394835644460767
+  },
+  {
+    "date": "2020-10-20",
+    "close": 73.2,
+    "volume": 49288,
+    "change": -0.8338031267735668,
+    "changePercent": -0.0117,
+    "changeOverTime": 0.3849616766033001
+  },
+  {
+    "date": "2020-10-21",
+    "close": 71.59,
+    "volume": 30525,
+    "change": 0.020010337400201497,
+    "changePercent": 0.0003,
+    "changeOverTime": 0.38456060825181515
+  },
+  {
+    "date": "2020-10-22",
+    "close": 73.8,
+    "volume": 24621,
+    "change": 1.541808791952413,
+    "changePercent": 0.0217,
+    "changeOverTime": 0.416323331172975
+  },
+  {
+    "date": "2020-10-23",
+    "close": 74.32,
+    "volume": 24956,
+    "change": -0.5028455926147253,
+    "changePercent": -0.0067,
+    "changeOverTime": 0.4040474022401488
+  },
+  {
+    "date": "2020-10-26",
+    "close": 70.39,
+    "volume": 42445,
+    "change": -1.5912587138743801,
+    "changePercent": -0.0225,
+    "changeOverTime": 0.366277317146303
+  },
+  {
+    "date": "2020-10-27",
+    "close": 73.37,
+    "volume": 31561,
+    "change": 0.278924653557148,
+    "changePercent": 0.004,
+    "changeOverTime": 0.3753000626049442
+  },
+  {
+    "date": "2020-10-28",
+    "close": 68.1,
+    "volume": 45382,
+    "change": -2.95460413293499,
+    "changePercent": -0.0409,
+    "changeOverTime": 0.3166914200236575
+  },
+  {
+    "date": "2020-10-29",
+    "close": 72,
+    "volume": 35925,
+    "change": 1.5,
+    "changePercent": 0.0225,
+    "changeOverTime": 0.35450757979196335
+  },
+  {
+    "date": "2020-10-30",
+    "close": 70,
+    "volume": 54463,
+    "change": 0,
+    "changePercent": 0,
+    "changeOverTime": 0.35326594907308917
+  },
+  {
+    "date": "2020-11-02",
+    "close": 72.2,
+    "volume": 58469,
+    "change": 1.7268151041978488,
+    "changePercent": 0.0253,
+    "changeOverTime": 0.3831426553231754
+  },
+  {
+    "date": "2020-11-03",
+    "close": 77.76,
+    "volume": 112536,
+    "change": 3.6170620365183,
+    "changePercent": 0.0523,
+    "changeOverTime": 0.4522782997790787
+  },
+  {
+    "date": "2020-11-04",
+    "close": 77.67,
+    "volume": 236812,
+    "change": 3.414920150552307,
+    "changePercent": 0.0451,
+    "changeOverTime": 0.5115449083008387
+  },
+  {
+    "date": "2020-11-05",
+    "close": 83.91,
+    "volume": 147977,
+    "change": 4.267423424902361,
+    "changePercent": 0.054,
+    "changeOverTime": 0.6056624445437373
+  },
+  {
+    "date": "2020-11-06",
+    "close": 81.36,
+    "volume": 86863,
+    "change": -2.9692839436863543,
+    "changePercent": -0.0364,
+    "changeOverTime": 0.5361791020880288
+  },
+  {
+    "date": "2020-11-09",
+    "close": 79.19,
+    "volume": 99550,
+    "change": 0.3104025024198502,
+    "changePercent": 0.004,
+    "changeOverTime": 0.5617165839032313
+  },
+  {
+    "date": "2020-11-10",
+    "close": 82.95,
+    "volume": 59054,
+    "change": 1.929050317879071,
+    "changePercent": 0.0249,
+    "changeOverTime": 0.6049038462181425
+  },
+  {
+    "date": "2020-11-11",
+    "close": 83.22,
+    "volume": 57972,
+    "change": -0.5517607143607467,
+    "changePercent": -0.007,
+    "changeOverTime": 0.5888104638496258
+  },
+  {
+    "date": "2020-11-12",
+    "close": 80.47,
+    "volume": 62236,
+    "change": -0.444533277816767,
+    "changePercent": -0.0056,
+    "changeOverTime": 0.5800757217725359
+  },
+  {
+    "date": "2020-11-13",
+    "close": 83.1,
+    "volume": 54213,
+    "change": 2.788706397763768,
+    "changePercent": 0.0356,
+    "changeOverTime": 0.6111044158497411
+  },
+  {
+    "date": "2020-11-16",
+    "close": 88.4,
+    "volume": 102659,
+    "change": 3.488934358132307,
+    "changePercent": 0.042,
+    "changeOverTime": 0.687518659251825
+  },
+  {
+    "date": "2020-11-17",
+    "close": 88.03,
+    "volume": 57756,
+    "change": 1.475948755682114,
+    "changePercent": 0.0166,
+    "changeOverTime": 0.7226408026819934
+  },
+  {
+    "date": "2020-11-18",
+    "close": 91.16,
+    "volume": 88917,
+    "change": 1.1227621241739671,
+    "changePercent": 0.0129,
+    "changeOverTime": 0.7447466919083013
+  },
+  {
+    "date": "2020-11-19",
+    "close": 91.71,
+    "volume": 81600,
+    "change": 0.3115225275399082,
+    "changePercent": 0.0037,
+    "changeOverTime": 0.7331345911973434
+  },
+  {
+    "date": "2020-11-20",
+    "close": 88.3,
+    "volume": 64224,
+    "change": -1.23373650445927,
+    "changePercent": -0.0139,
+    "changeOverTime": 0.716031320677934
+  },
+  {
+    "date": "2020-11-23",
+    "close": 90.43,
+    "volume": 68924,
+    "change": -0.48529392367780144,
+    "changePercent": -0.0055,
+    "changeOverTime": 0.7338541542539032
+  },
+  {
+    "date": "2020-11-24",
+    "close": 91.18,
+    "volume": 75128,
+    "change": 2.1956091315706394,
+    "changePercent": 0.025,
+    "changeOverTime": 0.7575034722356204
+  },
+  {
+    "date": "2020-11-25",
+    "close": 91.32,
+    "volume": 40479,
+    "change": -0.32083823877176604,
+    "changePercent": -0.0036,
+    "changeOverTime": 0.7713778188161088
+  },
+  {
+    "date": "2020-11-26",
+    "close": 91.1,
+    "volume": 18606,
+    "change": -0.3038242548802762,
+    "changePercent": -0.0035,
+    "changeOverTime": 0.7491691628231792
+  },
+  {
+    "date": "2020-11-27",
+    "close": 89.94,
+    "volume": 19571,
+    "change": -0.4612863870315261,
+    "changePercent": -0.005,
+    "changeOverTime": 0.7403112179568953
+  },
+  {
+    "date": "2020-11-30",
+    "close": 86.85,
+    "volume": 179720,
+    "change": -3.478927870787086,
+    "changePercent": -0.0408,
+    "changeOverTime": 0.6795794006755902
+  },
+  {
+    "date": "2020-12-01",
+    "close": 88.69,
+    "volume": 87406,
+    "change": 3.57807576709228,
+    "changePercent": 0.0412,
+    "changeOverTime": 0.7243359522804523
+  },
+  {
+    "date": "2020-12-02",
+    "close": 87.65,
+    "volume": 36441,
+    "change": -1.1106229126221192,
+    "changePercent": -0.0129,
+    "changeOverTime": 0.6998143337248788
+  },
+  {
+    "date": "2020-12-03",
+    "close": 88.98,
+    "volume": 36447,
+    "change": 0.7006006739930122,
+    "changePercent": 0.0081,
+    "changeOverTime": 0.7132893720426907
+  },
+  {
+    "date": "2020-12-04",
+    "close": 87.84,
+    "volume": 69767,
+    "change": -1.1055933908879474,
+    "changePercent": -0.013,
+    "changeOverTime": 0.709686962861887
+  },
+  {
+    "date": "2020-12-07",
+    "close": 87.84,
+    "volume": 48642,
+    "change": -0.5077767457884019,
+    "changePercent": -0.0057,
+    "changeOverTime": 0.7117276980410306
+  },
+  {
+    "date": "2020-12-08",
+    "close": 89.97,
+    "volume": 36592,
+    "change": 0.0805660888847261,
+    "changePercent": 0.0009,
+    "changeOverTime": 0.6900579571022623
+  },
+  {
+    "date": "2020-12-09",
+    "close": 90.53,
+    "volume": 79811,
+    "change": 2.4093370046626106,
+    "changePercent": 0.0283,
+    "changeOverTime": 0.7483415958622394
+  },
+  {
+    "date": "2020-12-10",
+    "close": 91.94,
+    "volume": 62160,
+    "change": 1.5415234437467422,
+    "changePercent": 0.0169,
+    "changeOverTime": 0.7846603731103424
+  },
+  {
+    "date": "2020-12-11",
+    "close": 94.62,
+    "volume": 87155,
+    "change": 0.9296654438095073,
+    "changePercent": 0.0104,
+    "changeOverTime": 0.7942117476542038
+  },
+  {
+    "date": "2020-12-14",
+    "close": 90.9,
+    "volume": 48480,
+    "change": -0.5613881163772544,
+    "changePercent": -0.0061,
+    "changeOverTime": 0.7757923082783548
+  },
+  {
+    "date": "2020-12-15",
+    "close": 97,
+    "volume": 73227,
+    "change": 4.437811855224679,
+    "changePercent": 0.0482,
+    "changeOverTime": 0.8556163970425026
+  },
+  {
+    "date": "2020-12-16",
+    "close": 101.09,
+    "volume": 149862,
+    "change": 4.617870435877246,
+    "changePercent": 0.0489,
+    "changeOverTime": 0.9830675090588833
+  },
+  {
+    "date": "2020-12-17",
+    "close": 99.75,
+    "volume": 133585,
+    "change": -0.2472350597764424,
+    "changePercent": -0.0025,
+    "changeOverTime": 0.9564026083409242
+  },
+  {
+    "date": "2020-12-18",
+    "close": 98.1,
+    "volume": 313200,
+    "change": -3.182279666578167,
+    "changePercent": -0.0329,
+    "changeOverTime": 0.8949546186208963
+  },
+  {
+    "date": "2020-12-21",
+    "close": 99.47,
+    "volume": 40549,
+    "change": -0.7618407997332194,
+    "changePercent": -0.0082,
+    "changeOverTime": 0.8630645510054217
+  },
+  {
+    "date": "2020-12-22",
+    "close": 98.15,
+    "volume": 23216,
+    "change": 1.772974253328877,
+    "changePercent": 0.018,
+    "changeOverTime": 0.9289988649974583
+  },
+  {
+    "date": "2020-12-23",
+    "close": 98.5,
+    "volume": 32521,
+    "change": -0.3534650718205283,
+    "changePercent": -0.0037,
+    "changeOverTime": 0.8847057548592618
+  },
+  {
+    "date": "2020-12-24",
+    "close": 100.68,
+    "volume": 10818,
+    "change": 0.04183941890435318,
+    "changePercent": 0.0004,
+    "changeOverTime": 0.899139582296063
+  },
+  {
+    "date": "2020-12-29",
+    "close": 101.16,
+    "volume": 39146,
+    "change": 1.1550332645182513,
+    "changePercent": 0.0121,
+    "changeOverTime": 0.9428238791504945
+  },
+  {
+    "date": "2020-12-30",
+    "close": 99.83,
+    "volume": 28844,
+    "change": 0.02078151327647254,
+    "changePercent": 0.0002,
+    "changeOverTime": 0.9088019525055827
+  },
+  {
+    "date": "2020-12-31",
+    "close": 97.07,
+    "volume": 18701,
+    "change": -1.3426527427244452,
+    "changePercent": -0.0141,
+    "changeOverTime": 0.9094941132079897
+  },
+  {
+    "date": "2021-01-04",
+    "close": 100.23,
+    "volume": 52963,
+    "change": -0.2215040977025699,
+    "changePercent": -0.0024,
+    "changeOverTime": 0.916795801328789
+  },
+  {
+    "date": "2021-01-05",
+    "close": 100.44,
+    "volume": 24359,
+    "change": -0.265243329587889,
+    "changePercent": -0.0028,
+    "changeOverTime": 0.8761863416274349
+  },
+  {
+    "date": "2021-01-06",
+    "close": 100.72,
+    "volume": 57600,
+    "change": 1.5,
+    "changePercent": 0.0163,
+    "changeOverTime": 0.906465123994951
+  },
+  {
+    "date": "2021-01-07",
+    "close": 101.6,
+    "volume": 52485,
+    "change": 2.122884099684603,
+    "changePercent": 0.0212,
+    "changeOverTime": 0.9591590301257978
+  },
+  {
+    "date": "2021-01-08",
+    "close": 98.2,
+    "volume": 70086,
+    "change": -2.691016385727851,
+    "changePercent": -0.0268,
+    "changeOverTime": 0.9240615526437246
+  },
+  {
+    "date": "2021-01-11",
+    "close": 95.72,
+    "volume": 39454,
+    "change": -1.9974347916904656,
+    "changePercent": -0.0202,
+    "changeOverTime": 0.8523415355424082
+  },
+  {
+    "date": "2021-01-12",
+    "close": 96.6,
+    "volume": 37272,
+    "change": 1.250342108246056,
+    "changePercent": 0.0127,
+    "changeOverTime": 0.9118389364661295
+  },
+  {
+    "date": "2021-01-13",
+    "close": 98.12,
+    "volume": 40644,
+    "change": -1.764968287341868,
+    "changePercent": -0.0178,
+    "changeOverTime": 0.8532149008239308
+  },
+  {
+    "date": "2021-01-14",
+    "close": 96.85,
+    "volume": 46038,
+    "change": 2.0489495432965454,
+    "changePercent": 0.0223,
+    "changeOverTime": 0.9200095331145397
+  },
+  {
+    "date": "2021-01-15",
+    "close": 109.8,
+    "volume": 128005,
+    "change": 8.386409284276812,
+    "changePercent": 0.084,
+    "changeOverTime": 1.0716309177015435
+  },
+  {
+    "date": "2021-01-18",
+    "close": 109.5,
+    "volume": 36415,
+    "change": -0.06297740721474855,
+    "changePercent": -0.0006,
+    "changeOverTime": 1.0438777157272106
+  },
+  {
+    "date": "2021-01-19",
+    "close": 103.23,
+    "volume": 77187,
+    "change": -3.998972787930374,
+    "changePercent": -0.0391,
+    "changeOverTime": 0.9637188434454764
+  },
+  {
+    "date": "2021-01-20",
+    "close": 105.36,
+    "volume": 34728,
+    "change": 0.99544667852061,
+    "changePercent": 0.0098,
+    "changeOverTime": 0.9841410223684897
+  },
+  {
+    "date": "2021-01-21",
+    "close": 103.68,
+    "volume": 49773,
+    "change": -2.677690538629983,
+    "changePercent": -0.027,
+    "changeOverTime": 0.954617849340717
+  },
+  {
+    "date": "2021-01-22",
+    "close": 99.71,
+    "volume": 65009,
+    "change": -1.5,
+    "changePercent": -0.0155,
+    "changeOverTime": 0.8996539909529092
+  },
+  {
+    "date": "2021-01-25",
+    "close": 101.52,
+    "volume": 84384,
+    "change": 2.308451357003816,
+    "changePercent": 0.0231,
+    "changeOverTime": 0.9424232046897331
+  },
+  {
+    "date": "2021-01-26",
+    "close": 96.53,
+    "volume": 70682,
+    "change": -3.419078534109206,
+    "changePercent": -0.0335,
+    "changeOverTime": 0.894927593582634
+  },
+  {
+    "date": "2021-01-27",
+    "close": 96.2,
+    "volume": 83064,
+    "change": -1.0366096253567634,
+    "changePercent": -0.0107,
+    "changeOverTime": 0.896341143464872
+  },
+  {
+    "date": "2021-01-28",
+    "close": 98.74,
+    "volume": 50927,
+    "change": 1.5608670487045317,
+    "changePercent": 0.017,
+    "changeOverTime": 0.91225467164844
+  },
+  {
+    "date": "2021-01-29",
+    "close": 95.34,
+    "volume": 88130,
+    "change": -3.610684115253675,
+    "changePercent": -0.0366,
+    "changeOverTime": 0.848257815307548
+  },
+  {
+    "date": "2021-02-01",
+    "close": 101.59,
+    "volume": 57784,
+    "change": 4.099607118264741,
+    "changePercent": 0.0442,
+    "changeOverTime": 0.9119075208649584
+  },
+  {
+    "date": "2021-02-02",
+    "close": 103.26,
+    "volume": 71662,
+    "change": 3.9435112364578417,
+    "changePercent": 0.0408,
+    "changeOverTime": 0.994871120390312
+  },
+  {
+    "date": "2021-02-03",
+    "close": 104.71,
+    "volume": 45905,
+    "change": -0.15681861637435923,
+    "changePercent": -0.0015,
+    "changeOverTime": 0.986667321727263
+  },
+  {
+    "date": "2021-02-04",
+    "close": 103.3,
+    "volume": 29198,
+    "change": 1.4163668565795107,
+    "changePercent": 0.0142,
+    "changeOverTime": 1.036536545840505
+  },
+  {
+    "date": "2021-02-05",
+    "close": 106,
+    "volume": 40927,
+    "change": 0.5490343661718428,
+    "changePercent": 0.0052,
+    "changeOverTime": 1.037249627598664
+  },
+  {
+    "date": "2021-02-08",
+    "close": 106.3,
+    "volume": 55071,
+    "change": 1.8874931570891735,
+    "changePercent": 0.0178,
+    "changeOverTime": 1.064297566537034
+  },
+  {
+    "date": "2021-02-09",
+    "close": 108.61,
+    "volume": 50989,
+    "change": 2.143195923615306,
+    "changePercent": 0.0201,
+    "changeOverTime": 1.10937669229703
+  },
+  {
+    "date": "2021-02-10",
+    "close": 113.59,
+    "volume": 64265,
+    "change": 2.593801285700478,
+    "changePercent": 0.0235,
+    "changeOverTime": 1.1812763550987389
+  },
+  {
+    "date": "2021-02-11",
+    "close": 115.6,
+    "volume": 94489,
+    "change": 2.338000199709733,
+    "changePercent": 0.0214,
+    "changeOverTime": 1.2206172819349939
+  },
+  {
+    "date": "2021-02-12",
+    "close": 118,
+    "volume": 60015,
+    "change": 3.5227444913381785,
+    "changePercent": 0.0316,
+    "changeOverTime": 1.2623031532860638
+  },
+  {
+    "date": "2021-02-16",
+    "close": 119.54,
+    "volume": 91153,
+    "change": 3.099257759037113,
+    "changePercent": 0.0266,
+    "changeOverTime": 1.330060752405214
+  },
+  {
+    "date": "2021-02-17",
+    "close": 118.05,
+    "volume": 104171,
+    "change": -0.02044043339426084,
+    "changePercent": -0.0002,
+    "changeOverTime": 1.3232328013926669
+  },
+  {
+    "date": "2021-02-18",
+    "close": 128.26,
+    "volume": 190236,
+    "change": 6.502086688536854,
+    "changePercent": 0.0542,
+    "changeOverTime": 1.4383347569093896
+  },
+  {
+    "date": "2021-02-19",
+    "close": 127.95,
+    "volume": 85259,
+    "change": 1.3887172331948123,
+    "changePercent": 0.0114,
+    "changeOverTime": 1.452061238217323
+  },
+  {
+    "date": "2021-02-22",
+    "close": 131.9,
+    "volume": 95220,
+    "change": 2.788213713069667,
+    "changePercent": 0.023,
+    "changeOverTime": 1.4998625952527844
+  },
+  {
+    "date": "2021-02-23",
+    "close": 132.3,
+    "volume": 168963,
+    "change": -0.8152074383355247,
+    "changePercent": -0.0063,
+    "changeOverTime": 1.5035753010754578
+  },
+  {
+    "date": "2021-02-24",
+    "close": 136.21,
+    "volume": 63414,
+    "change": 2.752297194424737,
+    "changePercent": 0.0216,
+    "changeOverTime": 1.568490261309836
+  },
+  {
+    "date": "2021-02-25",
+    "close": 130.39,
+    "volume": 95274,
+    "change": -5.74006883435796,
+    "changePercent": -0.0443,
+    "changeOverTime": 1.437419930626367
+  },
+  {
+    "date": "2021-02-26",
+    "close": 125.73,
+    "volume": 93618,
+    "change": -0.5,
+    "changePercent": -0.004,
+    "changeOverTime": 1.4767440219331505
+  },
+  {
+    "date": "2021-03-01",
+    "close": 131.8,
+    "volume": 51607,
+    "change": 7.197818822365543,
+    "changePercent": 0.0573,
+    "changeOverTime": 1.5971106213310984
+  },
+  {
+    "date": "2021-03-02",
+    "close": 130.69,
+    "volume": 45803,
+    "change": -4.076735724197775,
+    "changePercent": -0.0316,
+    "changeOverTime": 1.493324646489458
+  },
+  {
+    "date": "2021-03-03",
+    "close": 127.51,
+    "volume": 37355,
+    "change": 0.010025829541268436,
+    "changePercent": 0.0001,
+    "changeOverTime": 1.4814052055993518
+  },
+  {
+    "date": "2021-03-04",
+    "close": 128.46,
+    "volume": 89403,
+    "change": -2.306869713306678,
+    "changePercent": -0.018,
+    "changeOverTime": 1.4612115632221985
+  },
+  {
+    "date": "2021-03-05",
+    "close": 123.39,
+    "volume": 111936,
+    "change": -3.162606212293318,
+    "changePercent": -0.0263,
+    "changeOverTime": 1.377380180560018
+  },
+  {
+    "date": "2021-03-08",
+    "close": 124.14,
+    "volume": 75338,
+    "change": -0.1552499040752733,
+    "changePercent": -0.0012,
+    "changeOverTime": 1.384212750336631
+  },
+  {
+    "date": "2021-03-09",
+    "close": 128.34,
+    "volume": 29050,
+    "change": 3.3386250051896815,
+    "changePercent": 0.0283,
+    "changeOverTime": 1.4566628183007924
+  },
+  {
+    "date": "2021-03-10",
+    "close": 130.38,
+    "volume": 37512,
+    "change": 0.11276655493890189,
+    "changePercent": 0.0009,
+    "changeOverTime": 1.4627602923392926
+  },
+  {
+    "date": "2021-03-11",
+    "close": 131.2,
+    "volume": 43080,
+    "change": 3.7923489894403235,
+    "changePercent": 0.0303,
+    "changeOverTime": 1.5501724063099014
+  },
+  {
+    "date": "2021-03-12",
+    "close": 135.41,
+    "volume": 54418,
+    "change": 2.646653345171689,
+    "changePercent": 0.0211,
+    "changeOverTime": 1.6104772786047132
+  },
+  {
+    "date": "2021-03-15",
+    "close": 135.33,
+    "volume": 89779,
+    "change": -0.030950324148375938,
+    "changePercent": -0.0002,
+    "changeOverTime": 1.623130510622969
+  },
+  {
+    "date": "2021-03-16",
+    "close": 134.68,
+    "volume": 60255,
+    "change": 0.24273837840388207,
+    "changePercent": 0.0018,
+    "changeOverTime": 1.5795773464539486
+  },
+  {
+    "date": "2021-03-17",
+    "close": 135.48,
+    "volume": 61098,
+    "change": -0.15172402727303302,
+    "changePercent": -0.0012,
+    "changeOverTime": 1.609746734107319
+  },
+  {
+    "date": "2021-03-18",
+    "close": 130,
+    "volume": 70851,
+    "change": -3.252282880710414,
+    "changePercent": -0.0259,
+    "changeOverTime": 1.55658397240538
+  },
+  {
+    "date": "2021-03-19",
+    "close": 126.38,
+    "volume": 497186,
+    "change": -4.105392128401339,
+    "changePercent": -0.032,
+    "changeOverTime": 1.4599507342060198
+  },
+  {
+    "date": "2021-03-22",
+    "close": 123.51,
+    "volume": 42480,
+    "change": -1.353152237895519,
+    "changePercent": -0.0105,
+    "changeOverTime": 1.4009842070489706
+  },
+  {
+    "date": "2021-03-23",
+    "close": 124.11,
+    "volume": 46744,
+    "change": -2.816365429666178,
+    "changePercent": -0.022,
+    "changeOverTime": 1.3950774123942973
+  },
+  {
+    "date": "2021-03-24",
+    "close": 122.3,
+    "volume": 76242,
+    "change": 0.9196230005794281,
+    "changePercent": 0.0075,
+    "changeOverTime": 1.3732397537094798
+  },
+  {
+    "date": "2021-03-25",
+    "close": 122.85,
+    "volume": 77255,
+    "change": 0.4604364780576724,
+    "changePercent": 0.0037,
+    "changeOverTime": 1.4220906326319203
+  },
+  {
+    "date": "2021-03-26",
+    "close": 129.09,
+    "volume": 66493,
+    "change": 3.405705525763261,
+    "changePercent": 0.0284,
+    "changeOverTime": 1.4616436720140351
+  },
+  {
+    "date": "2021-03-29",
+    "close": 124.78,
+    "volume": 37870,
+    "change": -4,
+    "changePercent": -0.0323,
+    "changeOverTime": 1.362528154269919
+  },
+  {
+    "date": "2021-03-30",
+    "close": 123.9,
+    "volume": 25041,
+    "change": 2.1954495452193257,
+    "changePercent": 0.0182,
+    "changeOverTime": 1.39620666683105
+  },
+  {
+    "date": "2021-03-31",
+    "close": 130.5,
+    "volume": 31596,
+    "change": 2.323240114247133,
+    "changePercent": 0.0193,
+    "changeOverTime": 1.4418627711043894
+  },
+  {
+    "date": "2021-04-01",
+    "close": 130.31,
+    "volume": 30072,
+    "change": 3.080264859636862,
+    "changePercent": 0.0248,
+    "changeOverTime": 1.4946737088884012
+  },
+  {
+    "date": "2021-04-05",
+    "close": 132.89,
+    "volume": 66316,
+    "change": 2.528578023963895,
+    "changePercent": 0.0202,
+    "changeOverTime": 1.585899221413797
+  },
+  {
+    "date": "2021-04-06",
+    "close": 135.21,
+    "volume": 28222,
+    "change": -0.24145816338065829,
+    "changePercent": -0.0018,
+    "changeOverTime": 1.5924953378493196
+  },
+  {
+    "date": "2021-04-07",
+    "close": 130.63,
+    "volume": 24339,
+    "change": -0.7307920364628367,
+    "changePercent": -0.0058,
+    "changeOverTime": 1.594112382221133
+  },
+  {
+    "date": "2021-04-08",
+    "close": 131.02,
+    "volume": 19477,
+    "change": -0.8416438403106119,
+    "changePercent": -0.0068,
+    "changeOverTime": 1.5191719930610783
+  },
+  {
+    "date": "2021-04-09",
+    "close": 128.07,
+    "volume": 23035,
+    "change": -1.486031778117434,
+    "changePercent": -0.0117,
+    "changeOverTime": 1.482348062701696
+  },
+  {
+    "date": "2021-04-12",
+    "close": 133,
+    "volume": 30025,
+    "change": 0.629125769419249,
+    "changePercent": 0.0049,
+    "changeOverTime": 1.514907048549882
+  },
+  {
+    "date": "2021-04-13",
+    "close": 142.9,
+    "volume": 308861,
+    "change": 12.428492877810775,
+    "changePercent": 0.0968,
+    "changeOverTime": 1.77268349326938
+  },
+  {
+    "date": "2021-04-14",
+    "close": 142.12,
+    "volume": 160284,
+    "change": -2.106670326846227,
+    "changePercent": -0.0149,
+    "changeOverTime": 1.7555841984557548
+  },
+  {
+    "date": "2021-04-15",
+    "close": 137.97,
+    "volume": 133935,
+    "change": -0.6902328220363829,
+    "changePercent": -0.005,
+    "changeOverTime": 1.6847974619919923
+  },
+  {
+    "date": "2021-04-16",
+    "close": 151.69,
+    "volume": 285766,
+    "change": 12.382854388603375,
+    "changePercent": 0.088,
+    "changeOverTime": 1.9921823836772985
+  },
+  {
+    "date": "2021-04-19",
+    "close": 153.85,
+    "volume": 120427,
+    "change": -1.7743447713602611,
+    "changePercent": -0.0121,
+    "changeOverTime": 1.888642582152492
+  },
+  {
+    "date": "2021-04-20",
+    "close": 142.44,
+    "volume": 167794,
+    "change": -8.20959040352641,
+    "changePercent": -0.0546,
+    "changeOverTime": 1.7951939384840954
+  },
+  {
+    "date": "2021-04-21",
+    "close": 139.21,
+    "volume": 47503,
+    "change": -1.0413540927049445,
+    "changePercent": -0.0075,
+    "changeOverTime": 1.711972927165983
+  },
+  {
+    "date": "2021-04-22",
+    "close": 151.65,
+    "volume": 134605,
+    "change": 6.275807525006186,
+    "changePercent": 0.0454,
+    "changeOverTime": 1.8383824115764709
+  },
+  {
+    "date": "2021-04-23",
+    "close": 148.64,
+    "volume": 52989,
+    "change": -1.4261135831282075,
+    "changePercent": -0.0097,
+    "changeOverTime": 1.8745873911027988
+  },
+  {
+    "date": "2021-04-26",
+    "close": 143.15,
+    "volume": 28477,
+    "change": -1.3684238748442958,
+    "changePercent": -0.0096,
+    "changeOverTime": 1.8449947616417899
+  },
+  {
+    "date": "2021-04-27",
+    "close": 150.37,
+    "volume": 43338,
+    "change": 1.810325129105276,
+    "changePercent": 0.0127,
+    "changeOverTime": 1.8334366908929525
+  },
+  {
+    "date": "2021-04-28",
+    "close": 150.93,
+    "volume": 46927,
+    "change": 1.780849769503004,
+    "changePercent": 0.0122,
+    "changeOverTime": 1.8504123711693896
+  },
+  {
+    "date": "2021-04-29",
+    "close": 151.54,
+    "volume": 46735,
+    "change": -0.803056748654239,
+    "changePercent": -0.0056,
+    "changeOverTime": 1.8917129898818392
+  },
+  {
+    "date": "2021-04-30",
+    "close": 149.83,
+    "volume": 51735,
+    "change": 0.3342703282882667,
+    "changePercent": 0.0023,
+    "changeOverTime": 1.8440828295522915
+  },
+  {
+    "date": "2021-05-03",
+    "close": 151.34,
+    "volume": 53298,
+    "change": 2.733183883067511,
+    "changePercent": 0.0195,
+    "changeOverTime": 1.93585896178471
+  },
+  {
+    "date": "2021-05-04",
+    "close": 150.56,
+    "volume": 78635,
+    "change": -0.8858658845501304,
+    "changePercent": -0.0058,
+    "changeOverTime": 1.9082711517589213
+  },
+  {
+    "date": "2021-05-05",
+    "close": 152.07,
+    "volume": 102097,
+    "change": 4.838714622547024,
+    "changePercent": 0.033,
+    "changeOverTime": 1.9842929422702562
+  }
+]

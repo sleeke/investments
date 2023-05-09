@@ -1,0 +1,1022 @@
+{
+  "symbols": [
+    {
+      "symbol": "YFI.V",
+      "momentumAnalysis": {
+        "greenDays": 7,
+        "streakDays": 1,
+        "magnitude": {
+          "min": 0.07,
+          "max": 0.18,
+          "percentChange": 157.14,
+          "dailyPercentChange": 157.14
+        }
+      },
+      "currentStatus": {
+        "price": 0.185,
+        "dayPositionPercent": 100,
+        "changePercent": 184.615
+      },
+      "ratios": {
+        "percent52w": 82.22
+      },
+      "category": "DUD"
+    },
+    {
+      "symbol": "YFI.V",
+      "momentumAnalysis": {
+        "greenDays": 7,
+        "streakDays": 1,
+        "magnitude": {
+          "min": 0.07,
+          "max": 0.18,
+          "percentChange": 157.14,
+          "dailyPercentChange": 157.14
+        }
+      },
+      "currentStatus": {
+        "price": 0.185,
+        "dayPositionPercent": 100,
+        "changePercent": 184.615
+      },
+      "ratios": {
+        "percent52w": 82.22
+      },
+      "category": "DUD"
+    },
+    {
+      "symbol": "BAC.CN",
+      "momentumAnalysis": {
+        "greenDays": 19,
+        "streakDays": 3,
+        "magnitude": {
+          "min": 0.05,
+          "max": 0.14,
+          "percentChange": 180,
+          "dailyPercentChange": 60
+        }
+      },
+      "currentStatus": {
+        "price": 0.135,
+        "dayPositionPercent": 100,
+        "changePercent": 92.857
+      },
+      "ratios": {
+        "percent52w": 93.1
+      },
+      "category": "ROCKET"
+    },
+    {
+      "symbol": "BCA.CN",
+      "momentumAnalysis": {
+        "greenDays": 3
+      },
+      "currentStatus": {
+        "price": 0.115,
+        "dayPositionPercent": 92.85714285714288,
+        "changePercent": 91.667
+      },
+      "ratios": {
+        "percent52w": 82.14
+      },
+      "category": "DUD"
+    },
+    {
+      "symbol": "UP.CN",
+      "momentumAnalysis": {
+        "greenDays": 19,
+        "streakDays": 1,
+        "magnitude": {
+          "min": 0.03,
+          "max": 0.04,
+          "percentChange": 33.33,
+          "dailyPercentChange": 33.33
+        }
+      },
+      "currentStatus": {
+        "price": 0.04,
+        "dayPositionPercent": 100,
+        "changePercent": 60
+      },
+      "ratios": {
+        "percent52w": 88.89
+      },
+      "category": "DUD"
+    },
+    {
+      "symbol": "EWS.V",
+      "momentumAnalysis": {
+        "greenDays": 18,
+        "streakDays": 3,
+        "magnitude": {
+          "min": 0.19,
+          "max": 0.32,
+          "percentChange": 68.42,
+          "dailyPercentChange": 22.81
+        }
+      },
+      "currentStatus": {
+        "price": 0.315,
+        "dayPositionPercent": 100,
+        "changePercent": 36.957
+      },
+      "ratios": {
+        "percent52w": 98.44
+      },
+      "category": "ROCKET"
+    },
+    {
+      "symbol": "",
+      "error": "Error getting daily data for '', please check symbol is valid"
+    },
+    {
+      "symbol": "RKT",
+      "momentumAnalysis": {
+        "greenDays": 2,
+        "streakDays": 3,
+        "magnitude": {
+          "min": 19.71,
+          "max": 41.6,
+          "percentChange": 111.06,
+          "dailyPercentChange": 37.02
+        }
+      },
+      "currentStatus": {
+        "price": 41.6,
+        "dayPositionPercent": 91.3846153846154,
+        "changePercent": 71.193
+      },
+      "ratios": {
+        "percent52w": 96.74
+      },
+      "category": "ROCKET"
+    },
+    {
+      "symbol": "NNVC",
+      "momentumAnalysis": {
+        "greenDays": 0,
+        "streakDays": 3,
+        "magnitude": {
+          "min": 4.13,
+          "max": 6.65,
+          "percentChange": 61.02,
+          "dailyPercentChange": 20.34
+        }
+      },
+      "currentStatus": {
+        "price": 6.65,
+        "dayPositionPercent": 5.936073059360763,
+        "changePercent": 57.583
+      },
+      "ratios": {
+        "percent52w": 52.16
+      },
+      "category": "DUD"
+    },
+    {
+      "symbol": "JCS",
+      "momentumAnalysis": {
+        "greenDays": 0,
+        "streakDays": 2,
+        "magnitude": {
+          "min": 5.3,
+          "max": 7.24,
+          "percentChange": 36.6,
+          "dailyPercentChange": 18.3
+        }
+      },
+      "currentStatus": {
+        "price": 7.24,
+        "dayPositionPercent": 2.5462962962963043,
+        "changePercent": 35.327
+      },
+      "ratios": {
+        "percent52w": 63.23
+      },
+      "category": "DUD"
+    },
+    {
+      "symbol": "AMRS",
+      "momentumAnalysis": {
+        "greenDays": 2,
+        "streakDays": 2,
+        "magnitude": {
+          "min": 13.37,
+          "max": 19.95,
+          "percentChange": 49.21,
+          "dailyPercentChange": 24.61
+        }
+      },
+      "currentStatus": {
+        "price": 19.95,
+        "dayPositionPercent": 56.289769946157584,
+        "changePercent": 27.395000000000003
+      },
+      "ratios": {
+        "percent52w": 88.16
+      },
+      "category": "ROCKET"
+    },
+    {
+      "symbol": "FBIO",
+      "momentumAnalysis": {
+        "greenDays": 3,
+        "streakDays": 3,
+        "magnitude": {
+          "min": 3.69,
+          "max": 4.89,
+          "percentChange": 32.52,
+          "dailyPercentChange": 10.84
+        }
+      },
+      "currentStatus": {
+        "price": 4.89,
+        "dayPositionPercent": 79.12087912087908,
+        "changePercent": 26.031
+      },
+      "ratios": {
+        "percent52w": 96.26
+      },
+      "category": "ROCKET"
+    },
+    {
+      "symbol": "PERI",
+      "momentumAnalysis": {
+        "greenDays": 3,
+        "streakDays": 3,
+        "magnitude": {
+          "min": 19.57,
+          "max": 25.69,
+          "percentChange": 31.27,
+          "dailyPercentChange": 10.42
+        }
+      },
+      "currentStatus": {
+        "price": 25.69,
+        "dayPositionPercent": 34.413965087281845,
+        "changePercent": 18.990000000000002
+      },
+      "ratios": {
+        "percent52w": 90.71
+      },
+      "category": "ROCKET"
+    },
+    {
+      "symbol": "CHFS",
+      "momentumAnalysis": {
+        "greenDays": 0,
+        "streakDays": 2,
+        "magnitude": {
+          "min": 7.28,
+          "max": 8.97,
+          "percentChange": 23.21,
+          "dailyPercentChange": 11.61
+        }
+      },
+      "currentStatus": {
+        "price": 8.97,
+        "dayPositionPercent": 13.013523858127071,
+        "changePercent": 18.026
+      },
+      "ratios": {
+        "percent52w": 23.92
+      },
+      "category": "DUD"
+    },
+    {
+      "symbol": "AMTX",
+      "momentumAnalysis": {
+        "greenDays": 8,
+        "streakDays": 2,
+        "magnitude": {
+          "min": 8.59,
+          "max": 16.97,
+          "percentChange": 97.56,
+          "dailyPercentChange": 48.78
+        }
+      },
+      "currentStatus": {
+        "price": 16.97,
+        "dayPositionPercent": 53.549382716049365,
+        "changePercent": 13.664000000000001
+      },
+      "ratios": {
+        "percent52w": 84.93
+      },
+      "category": "ROCKET"
+    },
+    {
+      "symbol": "FOXA",
+      "momentumAnalysis": {
+        "greenDays": 3,
+        "streakDays": 3,
+        "magnitude": {
+          "min": 32.86,
+          "max": 37.95,
+          "percentChange": 15.49,
+          "dailyPercentChange": 5.16
+        }
+      },
+      "currentStatus": {
+        "price": 37.95,
+        "dayPositionPercent": 80.09259259259261,
+        "changePercent": 9.083
+      },
+      "ratios": {
+        "percent52w": 93.17
+      },
+      "category": "RISER"
+    },
+    {
+      "symbol": "CCJ",
+      "momentumAnalysis": {
+        "greenDays": 1,
+        "streakDays": 2,
+        "magnitude": {
+          "min": 15.45,
+          "max": 17.27,
+          "percentChange": 11.78,
+          "dailyPercentChange": 5.89
+        }
+      },
+      "currentStatus": {
+        "price": 17.27,
+        "dayPositionPercent": 80.24691358024688,
+        "changePercent": 7.870000000000001
+      },
+      "ratios": {
+        "percent52w": 98.18
+      },
+      "category": "BREAKOUT"
+    },
+    {
+      "symbol": "NLSN",
+      "momentumAnalysis": {
+        "greenDays": 2,
+        "streakDays": 2,
+        "magnitude": {
+          "min": 22.05,
+          "max": 24.89,
+          "percentChange": 12.88,
+          "dailyPercentChange": 6.44
+        }
+      },
+      "currentStatus": {
+        "price": 24.89,
+        "dayPositionPercent": 86.08695652173914,
+        "changePercent": 7.563000000000001
+      },
+      "ratios": {
+        "percent52w": 99.36
+      },
+      "category": "RISER"
+    },
+    {
+      "symbol": "EMAN",
+      "momentumAnalysis": {
+        "greenDays": 2,
+        "streakDays": 2,
+        "magnitude": {
+          "min": 3.67,
+          "max": 4.84,
+          "percentChange": 31.88,
+          "dailyPercentChange": 15.94
+        }
+      },
+      "currentStatus": {
+        "price": 4.84,
+        "dayPositionPercent": 21.621621621621635,
+        "changePercent": 7.08
+      },
+      "ratios": {
+        "percent52w": 89.3
+      },
+      "category": "ROCKET"
+    },
+    {
+      "symbol": "MP",
+      "momentumAnalysis": {
+        "greenDays": 0,
+        "streakDays": 2,
+        "magnitude": {
+          "min": 41.17,
+          "max": 49.44,
+          "percentChange": 20.09,
+          "dailyPercentChange": 10.04
+        }
+      },
+      "currentStatus": {
+        "price": 49.44,
+        "dayPositionPercent": 42.32673267326728,
+        "changePercent": 7.013
+      },
+      "ratios": {
+        "percent52w": 95.5
+      },
+      "category": "BREAKOUT"
+    },
+    {
+      "symbol": "MIK",
+      "momentumAnalysis": {
+        "greenDays": 6,
+        "streakDays": 5,
+        "magnitude": {
+          "min": 13.45,
+          "max": 18.02,
+          "percentChange": 33.98,
+          "dailyPercentChange": 6.8
+        }
+      },
+      "currentStatus": {
+        "price": 18.02,
+        "dayPositionPercent": 50.2564102564103,
+        "changePercent": 6.944
+      },
+      "ratios": {
+        "percent52w": 94.89
+      },
+      "category": "RISER"
+    },
+    {
+      "symbol": "TRIP",
+      "momentumAnalysis": {
+        "greenDays": 1,
+        "streakDays": 1,
+        "magnitude": {
+          "min": 48.52,
+          "max": 52.64,
+          "percentChange": 8.49,
+          "dailyPercentChange": 8.49
+        }
+      },
+      "currentStatus": {
+        "price": 52.64,
+        "dayPositionPercent": 40.95238095238095,
+        "changePercent": 6.666999999999999
+      },
+      "ratios": {
+        "percent52w": 96.59
+      },
+      "category": "BREAKOUT"
+    },
+    {
+      "symbol": "AA",
+      "momentumAnalysis": {
+        "greenDays": 3,
+        "streakDays": 2,
+        "magnitude": {
+          "min": 23.64,
+          "max": 27.5,
+          "percentChange": 16.33,
+          "dailyPercentChange": 8.16
+        }
+      },
+      "currentStatus": {
+        "price": 27.5,
+        "dayPositionPercent": 78.44311377245509,
+        "changePercent": 5.81
+      },
+      "ratios": {
+        "percent52w": 98.71
+      },
+      "category": "RISER"
+    },
+    {
+      "symbol": "F",
+      "momentumAnalysis": {
+        "greenDays": 2,
+        "streakDays": 2,
+        "magnitude": {
+          "min": 11.54,
+          "max": 12.55,
+          "percentChange": 8.75,
+          "dailyPercentChange": 4.38
+        }
+      },
+      "currentStatus": {
+        "price": 12.55,
+        "dayPositionPercent": 70.93023255813958,
+        "changePercent": 4.758
+      },
+      "ratios": {
+        "percent52w": 98.05
+      },
+      "category": "RISER"
+    }
+  ],
+  "categories": {
+    "DUD": [
+      {
+        "symbol": "YFI.V",
+        "momentumAnalysis": {
+          "greenDays": 7,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 0.07,
+            "max": 0.18,
+            "percentChange": 157.14,
+            "dailyPercentChange": 157.14
+          }
+        },
+        "currentStatus": {
+          "price": 0.185,
+          "dayPositionPercent": 100,
+          "changePercent": 184.615
+        },
+        "ratios": {
+          "percent52w": 82.22
+        },
+        "category": "DUD"
+      },
+      {
+        "symbol": "YFI.V",
+        "momentumAnalysis": {
+          "greenDays": 7,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 0.07,
+            "max": 0.18,
+            "percentChange": 157.14,
+            "dailyPercentChange": 157.14
+          }
+        },
+        "currentStatus": {
+          "price": 0.185,
+          "dayPositionPercent": 100,
+          "changePercent": 184.615
+        },
+        "ratios": {
+          "percent52w": 82.22
+        },
+        "category": "DUD"
+      },
+      {
+        "symbol": "BCA.CN",
+        "momentumAnalysis": {
+          "greenDays": 3
+        },
+        "currentStatus": {
+          "price": 0.115,
+          "dayPositionPercent": 92.85714285714288,
+          "changePercent": 91.667
+        },
+        "ratios": {
+          "percent52w": 82.14
+        },
+        "category": "DUD"
+      },
+      {
+        "symbol": "UP.CN",
+        "momentumAnalysis": {
+          "greenDays": 19,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 0.03,
+            "max": 0.04,
+            "percentChange": 33.33,
+            "dailyPercentChange": 33.33
+          }
+        },
+        "currentStatus": {
+          "price": 0.04,
+          "dayPositionPercent": 100,
+          "changePercent": 60
+        },
+        "ratios": {
+          "percent52w": 88.89
+        },
+        "category": "DUD"
+      },
+      {
+        "symbol": "NNVC",
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 3,
+          "magnitude": {
+            "min": 4.13,
+            "max": 6.65,
+            "percentChange": 61.02,
+            "dailyPercentChange": 20.34
+          }
+        },
+        "currentStatus": {
+          "price": 6.65,
+          "dayPositionPercent": 5.936073059360763,
+          "changePercent": 57.583
+        },
+        "ratios": {
+          "percent52w": 52.16
+        },
+        "category": "DUD"
+      },
+      {
+        "symbol": "JCS",
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 2,
+          "magnitude": {
+            "min": 5.3,
+            "max": 7.24,
+            "percentChange": 36.6,
+            "dailyPercentChange": 18.3
+          }
+        },
+        "currentStatus": {
+          "price": 7.24,
+          "dayPositionPercent": 2.5462962962963043,
+          "changePercent": 35.327
+        },
+        "ratios": {
+          "percent52w": 63.23
+        },
+        "category": "DUD"
+      },
+      {
+        "symbol": "CHFS",
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 2,
+          "magnitude": {
+            "min": 7.28,
+            "max": 8.97,
+            "percentChange": 23.21,
+            "dailyPercentChange": 11.61
+          }
+        },
+        "currentStatus": {
+          "price": 8.97,
+          "dayPositionPercent": 13.013523858127071,
+          "changePercent": 18.026
+        },
+        "ratios": {
+          "percent52w": 23.92
+        },
+        "category": "DUD"
+      }
+    ],
+    "ROCKET": [
+      {
+        "symbol": "BAC.CN",
+        "momentumAnalysis": {
+          "greenDays": 19,
+          "streakDays": 3,
+          "magnitude": {
+            "min": 0.05,
+            "max": 0.14,
+            "percentChange": 180,
+            "dailyPercentChange": 60
+          }
+        },
+        "currentStatus": {
+          "price": 0.135,
+          "dayPositionPercent": 100,
+          "changePercent": 92.857
+        },
+        "ratios": {
+          "percent52w": 93.1
+        },
+        "category": "ROCKET"
+      },
+      {
+        "symbol": "EWS.V",
+        "momentumAnalysis": {
+          "greenDays": 18,
+          "streakDays": 3,
+          "magnitude": {
+            "min": 0.19,
+            "max": 0.32,
+            "percentChange": 68.42,
+            "dailyPercentChange": 22.81
+          }
+        },
+        "currentStatus": {
+          "price": 0.315,
+          "dayPositionPercent": 100,
+          "changePercent": 36.957
+        },
+        "ratios": {
+          "percent52w": 98.44
+        },
+        "category": "ROCKET"
+      },
+      {
+        "symbol": "RKT",
+        "momentumAnalysis": {
+          "greenDays": 2,
+          "streakDays": 3,
+          "magnitude": {
+            "min": 19.71,
+            "max": 41.6,
+            "percentChange": 111.06,
+            "dailyPercentChange": 37.02
+          }
+        },
+        "currentStatus": {
+          "price": 41.6,
+          "dayPositionPercent": 91.3846153846154,
+          "changePercent": 71.193
+        },
+        "ratios": {
+          "percent52w": 96.74
+        },
+        "category": "ROCKET"
+      },
+      {
+        "symbol": "AMRS",
+        "momentumAnalysis": {
+          "greenDays": 2,
+          "streakDays": 2,
+          "magnitude": {
+            "min": 13.37,
+            "max": 19.95,
+            "percentChange": 49.21,
+            "dailyPercentChange": 24.61
+          }
+        },
+        "currentStatus": {
+          "price": 19.95,
+          "dayPositionPercent": 56.289769946157584,
+          "changePercent": 27.395000000000003
+        },
+        "ratios": {
+          "percent52w": 88.16
+        },
+        "category": "ROCKET"
+      },
+      {
+        "symbol": "FBIO",
+        "momentumAnalysis": {
+          "greenDays": 3,
+          "streakDays": 3,
+          "magnitude": {
+            "min": 3.69,
+            "max": 4.89,
+            "percentChange": 32.52,
+            "dailyPercentChange": 10.84
+          }
+        },
+        "currentStatus": {
+          "price": 4.89,
+          "dayPositionPercent": 79.12087912087908,
+          "changePercent": 26.031
+        },
+        "ratios": {
+          "percent52w": 96.26
+        },
+        "category": "ROCKET"
+      },
+      {
+        "symbol": "PERI",
+        "momentumAnalysis": {
+          "greenDays": 3,
+          "streakDays": 3,
+          "magnitude": {
+            "min": 19.57,
+            "max": 25.69,
+            "percentChange": 31.27,
+            "dailyPercentChange": 10.42
+          }
+        },
+        "currentStatus": {
+          "price": 25.69,
+          "dayPositionPercent": 34.413965087281845,
+          "changePercent": 18.990000000000002
+        },
+        "ratios": {
+          "percent52w": 90.71
+        },
+        "category": "ROCKET"
+      },
+      {
+        "symbol": "AMTX",
+        "momentumAnalysis": {
+          "greenDays": 8,
+          "streakDays": 2,
+          "magnitude": {
+            "min": 8.59,
+            "max": 16.97,
+            "percentChange": 97.56,
+            "dailyPercentChange": 48.78
+          }
+        },
+        "currentStatus": {
+          "price": 16.97,
+          "dayPositionPercent": 53.549382716049365,
+          "changePercent": 13.664000000000001
+        },
+        "ratios": {
+          "percent52w": 84.93
+        },
+        "category": "ROCKET"
+      },
+      {
+        "symbol": "EMAN",
+        "momentumAnalysis": {
+          "greenDays": 2,
+          "streakDays": 2,
+          "magnitude": {
+            "min": 3.67,
+            "max": 4.84,
+            "percentChange": 31.88,
+            "dailyPercentChange": 15.94
+          }
+        },
+        "currentStatus": {
+          "price": 4.84,
+          "dayPositionPercent": 21.621621621621635,
+          "changePercent": 7.08
+        },
+        "ratios": {
+          "percent52w": 89.3
+        },
+        "category": "ROCKET"
+      }
+    ],
+    "undefined": [
+      {
+        "symbol": "",
+        "error": "Error getting daily data for '', please check symbol is valid"
+      }
+    ],
+    "RISER": [
+      {
+        "symbol": "FOXA",
+        "momentumAnalysis": {
+          "greenDays": 3,
+          "streakDays": 3,
+          "magnitude": {
+            "min": 32.86,
+            "max": 37.95,
+            "percentChange": 15.49,
+            "dailyPercentChange": 5.16
+          }
+        },
+        "currentStatus": {
+          "price": 37.95,
+          "dayPositionPercent": 80.09259259259261,
+          "changePercent": 9.083
+        },
+        "ratios": {
+          "percent52w": 93.17
+        },
+        "category": "RISER"
+      },
+      {
+        "symbol": "NLSN",
+        "momentumAnalysis": {
+          "greenDays": 2,
+          "streakDays": 2,
+          "magnitude": {
+            "min": 22.05,
+            "max": 24.89,
+            "percentChange": 12.88,
+            "dailyPercentChange": 6.44
+          }
+        },
+        "currentStatus": {
+          "price": 24.89,
+          "dayPositionPercent": 86.08695652173914,
+          "changePercent": 7.563000000000001
+        },
+        "ratios": {
+          "percent52w": 99.36
+        },
+        "category": "RISER"
+      },
+      {
+        "symbol": "MIK",
+        "momentumAnalysis": {
+          "greenDays": 6,
+          "streakDays": 5,
+          "magnitude": {
+            "min": 13.45,
+            "max": 18.02,
+            "percentChange": 33.98,
+            "dailyPercentChange": 6.8
+          }
+        },
+        "currentStatus": {
+          "price": 18.02,
+          "dayPositionPercent": 50.2564102564103,
+          "changePercent": 6.944
+        },
+        "ratios": {
+          "percent52w": 94.89
+        },
+        "category": "RISER"
+      },
+      {
+        "symbol": "AA",
+        "momentumAnalysis": {
+          "greenDays": 3,
+          "streakDays": 2,
+          "magnitude": {
+            "min": 23.64,
+            "max": 27.5,
+            "percentChange": 16.33,
+            "dailyPercentChange": 8.16
+          }
+        },
+        "currentStatus": {
+          "price": 27.5,
+          "dayPositionPercent": 78.44311377245509,
+          "changePercent": 5.81
+        },
+        "ratios": {
+          "percent52w": 98.71
+        },
+        "category": "RISER"
+      },
+      {
+        "symbol": "F",
+        "momentumAnalysis": {
+          "greenDays": 2,
+          "streakDays": 2,
+          "magnitude": {
+            "min": 11.54,
+            "max": 12.55,
+            "percentChange": 8.75,
+            "dailyPercentChange": 4.38
+          }
+        },
+        "currentStatus": {
+          "price": 12.55,
+          "dayPositionPercent": 70.93023255813958,
+          "changePercent": 4.758
+        },
+        "ratios": {
+          "percent52w": 98.05
+        },
+        "category": "RISER"
+      }
+    ],
+    "BREAKOUT": [
+      {
+        "symbol": "CCJ",
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 2,
+          "magnitude": {
+            "min": 15.45,
+            "max": 17.27,
+            "percentChange": 11.78,
+            "dailyPercentChange": 5.89
+          }
+        },
+        "currentStatus": {
+          "price": 17.27,
+          "dayPositionPercent": 80.24691358024688,
+          "changePercent": 7.870000000000001
+        },
+        "ratios": {
+          "percent52w": 98.18
+        },
+        "category": "BREAKOUT"
+      },
+      {
+        "symbol": "MP",
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 2,
+          "magnitude": {
+            "min": 41.17,
+            "max": 49.44,
+            "percentChange": 20.09,
+            "dailyPercentChange": 10.04
+          }
+        },
+        "currentStatus": {
+          "price": 49.44,
+          "dayPositionPercent": 42.32673267326728,
+          "changePercent": 7.013
+        },
+        "ratios": {
+          "percent52w": 95.5
+        },
+        "category": "BREAKOUT"
+      },
+      {
+        "symbol": "TRIP",
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 48.52,
+            "max": 52.64,
+            "percentChange": 8.49,
+            "dailyPercentChange": 8.49
+          }
+        },
+        "currentStatus": {
+          "price": 52.64,
+          "dayPositionPercent": 40.95238095238095,
+          "changePercent": 6.666999999999999
+        },
+        "ratios": {
+          "percent52w": 96.59
+        },
+        "category": "BREAKOUT"
+      }
+    ]
+  }
+}

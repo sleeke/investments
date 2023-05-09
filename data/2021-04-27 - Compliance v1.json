@@ -1,0 +1,137 @@
+{
+  "symbols": [
+    {
+      "symbol": "SPY",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/SPY",
+        "barChart": "https://www.barchart.com/stocks/SPY"
+      },
+      "movingAverageCompliance": {
+        "ma20": 0.7261904761904762,
+        "ma50": 0.6746031746031746
+      }
+    },
+    {
+      "symbol": "BNS.TO",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/BNS.TO",
+        "barChart": "https://www.barchart.com/stocks/BNS.TO"
+      },
+      "movingAverageCompliance": {
+        "ma20": 0.5968379446640316,
+        "ma50": 0.616600790513834
+      }
+    },
+    {
+      "symbol": "MAXR.TO",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/MAXR.TO",
+        "barChart": "https://www.barchart.com/stocks/MAXR.TO"
+      },
+      "movingAverageCompliance": {
+        "ma20": 0.5418326693227091,
+        "ma50": 0.6772908366533864
+      }
+    },
+    {
+      "symbol": "TAN",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/TAN",
+        "barChart": "https://www.barchart.com/stocks/TAN"
+      },
+      "movingAverageCompliance": {
+        "ma20": 0.7023809523809523,
+        "ma50": 0.7341269841269841
+      }
+    },
+    {
+      "symbol": "BOTZ",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/BOTZ",
+        "barChart": "https://www.barchart.com/stocks/BOTZ"
+      },
+      "movingAverageCompliance": {
+        "ma20": 0.7142857142857143,
+        "ma50": 0.623015873015873
+      }
+    },
+    {
+      "symbol": "KBA",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/KBA",
+        "barChart": "https://www.barchart.com/stocks/KBA"
+      },
+      "movingAverageCompliance": {
+        "ma20": 0.6150793650793651,
+        "ma50": 0.6071428571428571
+      }
+    },
+    {
+      "symbol": "GDX",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/GDX",
+        "barChart": "https://www.barchart.com/stocks/GDX"
+      },
+      "movingAverageCompliance": {
+        "ma20": 0.6309523809523809,
+        "ma50": 0.6547619047619048
+      }
+    },
+    {
+      "symbol": "IPAY",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/IPAY",
+        "barChart": "https://www.barchart.com/stocks/IPAY"
+      },
+      "movingAverageCompliance": {
+        "ma20": 0.7420634920634921,
+        "ma50": 0.6428571428571429
+      }
+    },
+    {
+      "symbol": "SQ",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/SQ",
+        "barChart": "https://www.barchart.com/stocks/SQ"
+      },
+      "movingAverageCompliance": {
+        "ma20": 0.7103174603174603,
+        "ma50": 0.6587301587301587
+      }
+    },
+    {
+      "symbol": "IGV",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/IGV",
+        "barChart": "https://www.barchart.com/stocks/IGV"
+      },
+      "movingAverageCompliance": {
+        "ma20": 0.6349206349206349,
+        "ma50": 0.623015873015873
+      }
+    },
+    {
+      "symbol": "LIT",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/LIT",
+        "barChart": "https://www.barchart.com/stocks/LIT"
+      },
+      "movingAverageCompliance": {
+        "ma20": 0.7142857142857143,
+        "ma50": 0.6349206349206349
+      }
+    },
+    {
+      "symbol": "EA",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/EA",
+        "barChart": "https://www.barchart.com/stocks/EA"
+      },
+      "movingAverageCompliance": {
+        "ma20": 0.6944444444444444,
+        "ma50": 0.6507936507936508
+      }
+    }
+  ],
+  "categories": {}
+}

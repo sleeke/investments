@@ -1,0 +1,41 @@
+{
+  "symbols": [
+    {
+      "symbol": "RIOT",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/RIOT",
+        "barChart": "https://www.barchart.com/stocks/RIOT"
+      },
+      "movingAverageCompliance": {
+        "version": "0.2",
+        "ma20": 0.7238307349665924,
+        "ma50": 0.7262180974477959
+      }
+    },
+    {
+      "symbol": "GLXY.TO",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/GLXY.TO",
+        "barChart": "https://www.barchart.com/stocks/GLXY.TO"
+      },
+      "movingAverageCompliance": {
+        "version": "0.2",
+        "ma20": 0.7364341085271318,
+        "ma50": 0.7647058823529411
+      }
+    },
+    {
+      "symbol": "BITF.V",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/BITF.V",
+        "barChart": "https://www.barchart.com/stocks/BITF.V"
+      },
+      "movingAverageCompliance": {
+        "version": "0.2",
+        "ma20": 0.6621004566210046,
+        "ma50": 0.6626506024096386
+      }
+    }
+  ],
+  "categories": {}
+}

@@ -1,0 +1,1859 @@
+{
+  "symbols": [
+    {
+      "symbol": "SID",
+      "momentumAnalysis": {
+        "greenDays": 4,
+        "streakDays": 4,
+        "magnitude": {
+          "min": 6.38,
+          "max": 7.33,
+          "percentChange": 14.89,
+          "dailyPercentChange": 3.72
+        }
+      },
+      "volatility": {
+        "5day": 2.3707865168539426
+      },
+      "currentStatus": {
+        "price": 7.58,
+        "dayPositionPercent": 92.68292682926823,
+        "changePercent": 3.411
+      },
+      "ratios": {
+        "percent52w": 102.85
+      },
+      "indicators": {
+        "rsi": 61.22937190582304
+      },
+      "categories": [
+        "RISER",
+        "BREAKOUT",
+        "STEADY"
+      ],
+      "fundamentals": {
+        "lastQuarter": {
+          "debtToCash": 2.538861013024043,
+          "currentRatio": 1.5881214714740817,
+          "asOfDate": "2020-12-31"
+        }
+      },
+      "incomeHistory": {
+        "annual": [
+          {
+            "profit": "10939119000",
+            "revenue": "30064020000",
+            "expenses": "None"
+          },
+          {
+            "profit": "8173153000",
+            "revenue": "25436417000",
+            "expenses": "3798358000"
+          },
+          {
+            "profit": "6863228000",
+            "revenue": "22968885000",
+            "expenses": "18319916000"
+          },
+          {
+            "profit": "4928460000",
+            "revenue": "18524601000",
+            "expenses": "1902150000"
+          }
+        ],
+        "quarterly": [
+          {
+            "profit": "4198098000",
+            "revenue": "9794101000",
+            "expenses": "None"
+          },
+          {
+            "profit": "3581457000",
+            "revenue": "8714583000",
+            "expenses": "878899000"
+          },
+          {
+            "profit": "1842618000",
+            "revenue": "6220683000",
+            "expenses": "5174364000"
+          },
+          {
+            "profit": "3581457000",
+            "revenue": "8714583000",
+            "expenses": "4804457000"
+          }
+        ]
+      }
+    },
+    {
+      "symbol": "SNAP",
+      "momentumAnalysis": {
+        "greenDays": 3,
+        "streakDays": 3,
+        "magnitude": {
+          "min": 52.69,
+          "max": 63.2,
+          "percentChange": 19.95,
+          "dailyPercentChange": 6.65
+        }
+      },
+      "volatility": {
+        "5day": 5.551090700344438
+      },
+      "currentStatus": {
+        "price": 63.27,
+        "dayPositionPercent": 58.333333333333734,
+        "changePercent": 0.11100000000000002
+      },
+      "ratios": {
+        "percent52w": 85.98
+      },
+      "indicators": {
+        "rsi": 58.231347803747326
+      },
+      "categories": [
+        "RISER",
+        "STEADY"
+      ],
+      "fundamentals": {
+        "lastQuarter": {
+          "debtToCash": 1.2230663211257693,
+          "currentRatio": 5.0020080110650404,
+          "asOfDate": "2020-12-31"
+        }
+      },
+      "incomeHistory": {
+        "annual": [
+          {
+            "profit": "1229708000",
+            "revenue": "2412213000",
+            "expenses": "2219693000"
+          },
+          {
+            "profit": "839301000",
+            "revenue": "1735139000",
+            "expenses": "1916541000"
+          },
+          {
+            "profit": "377687000",
+            "revenue": "1176552000",
+            "expenses": "1725664000"
+          },
+          {
+            "profit": "-720918000",
+            "revenue": "821493000",
+            "expenses": "3624563000"
+          }
+        ],
+        "quarterly": [
+          {
+            "profit": "497125000",
+            "revenue": "882671000",
+            "expenses": "632712000"
+          },
+          {
+            "profit": "1274752000",
+            "revenue": "651211000",
+            "expenses": "561837000"
+          },
+          {
+            "profit": "-274388000",
+            "revenue": "430224000",
+            "expenses": "521712000"
+          },
+          {
+            "profit": "-267781000",
+            "revenue": "448107000",
+            "expenses": "503432000"
+          }
+        ]
+      }
+    },
+    {
+      "symbol": "SQ",
+      "momentumAnalysis": {
+        "greenDays": 3,
+        "streakDays": 7,
+        "magnitude": {
+          "min": 202.93,
+          "max": 258.37,
+          "percentChange": 27.32,
+          "dailyPercentChange": 3.9
+        }
+      },
+      "volatility": {
+        "5day": 6.008316008316006
+      },
+      "currentStatus": {
+        "price": 261.65,
+        "dayPositionPercent": 68.58864027538698,
+        "changePercent": 1.269
+      },
+      "ratios": {
+        "percent52w": 92.39
+      },
+      "indicators": {
+        "rsi": 60.11717240492169
+      },
+      "categories": [
+        "RISER",
+        "STEADY"
+      ],
+      "fundamentals": {
+        "lastQuarter": {
+          "debtToCash": 1.3065320522928965,
+          "currentRatio": 1.8811035785816355,
+          "asOfDate": "2020-12-31"
+        }
+      },
+      "error": "\u001b[31mError getting income history for 'SQ', please check symbol is valid\u001b[0m"
+    },
+    {
+      "symbol": "TIGR",
+      "momentumAnalysis": {
+        "greenDays": 1,
+        "streakDays": 1,
+        "magnitude": {
+          "min": 16.65,
+          "max": 19.2,
+          "percentChange": 15.32,
+          "dailyPercentChange": 15.32
+        }
+      },
+      "volatility": {
+        "5day": 11.543209876543198
+      },
+      "currentStatus": {
+        "price": 19.96,
+        "dayPositionPercent": 86.51162790697677,
+        "changePercent": 3.9579999999999997
+      },
+      "ratios": {
+        "percent52w": 51.84
+      },
+      "indicators": {
+        "rsi": 41.45674298983588
+      },
+      "categories": [],
+      "error": "\u001b[31mError getting fundamentals data for 'TIGR', please check symbol is valid\u001b[0m"
+    },
+    {
+      "symbol": "BGCP",
+      "momentumAnalysis": {
+        "greenDays": 1,
+        "streakDays": 1,
+        "magnitude": {
+          "min": 5.3,
+          "max": 5.38,
+          "percentChange": 1.51,
+          "dailyPercentChange": 1.51
+        }
+      },
+      "volatility": {
+        "5day": 5.602941176470592
+      },
+      "currentStatus": {
+        "price": 5.69,
+        "dayPositionPercent": 92.95774647887339,
+        "changePercent": 5.762
+      },
+      "ratios": {
+        "percent52w": 100.53
+      },
+      "indicators": {
+        "rsi": 67.0575651098443
+      },
+      "categories": [
+        "BREAKOUT",
+        "STEADY"
+      ],
+      "error": "\u001b[31mError getting fundamentals data for 'BGCP', please check symbol is valid\u001b[0m"
+    },
+    {
+      "symbol": "ROKU",
+      "momentumAnalysis": {
+        "greenDays": 3,
+        "streakDays": 3,
+        "magnitude": {
+          "min": 322.58,
+          "max": 372.68,
+          "percentChange": 15.53,
+          "dailyPercentChange": 5.18
+        }
+      },
+      "volatility": {
+        "5day": 4.129965669445802
+      },
+      "currentStatus": {
+        "price": 373.66,
+        "dayPositionPercent": 81.88218727998145,
+        "changePercent": 0.263
+      },
+      "ratios": {
+        "percent52w": 76.77
+      },
+      "indicators": {
+        "rsi": 55.129288532339004
+      },
+      "categories": [
+        "RISER",
+        "STEADY"
+      ],
+      "error": "\u001b[31mError getting fundamentals data for 'ROKU', please check symbol is valid\u001b[0m"
+    },
+    {
+      "symbol": "COMM",
+      "momentumAnalysis": {
+        "greenDays": 1,
+        "streakDays": 1,
+        "magnitude": {
+          "min": 15.23,
+          "max": 16.35,
+          "percentChange": 7.35,
+          "dailyPercentChange": 7.35
+        }
+      },
+      "volatility": {
+        "5day": 10.705128205128192
+      },
+      "currentStatus": {
+        "price": 17.5,
+        "dayPositionPercent": 68.24324324324334,
+        "changePercent": 7.034
+      },
+      "ratios": {
+        "percent52w": 102.46
+      },
+      "indicators": {
+        "rsi": 51.73668303846032
+      },
+      "categories": [
+        "BREAKOUT"
+      ],
+      "error": "\u001b[31mError getting fundamentals data for 'COMM', please check symbol is valid\u001b[0m"
+    },
+    {
+      "symbol": "ANF",
+      "momentumAnalysis": {
+        "greenDays": 0,
+        "streakDays": 0,
+        "magnitude": {
+          "min": 36.33,
+          "max": 37.31,
+          "percentChange": 2.7
+        }
+      },
+      "volatility": {
+        "5day": 6.140350877192983
+      },
+      "currentStatus": {
+        "price": 38.7,
+        "dayPositionPercent": 52.41379310344841,
+        "changePercent": 3.726
+      },
+      "ratios": {
+        "percent52w": 101.87
+      },
+      "indicators": {
+        "rsi": 62.68671525368649
+      },
+      "categories": [
+        "BREAKOUT",
+        "STEADY"
+      ],
+      "error": "\u001b[31mError getting fundamentals data for 'ANF', please check symbol is valid\u001b[0m"
+    },
+    {
+      "symbol": "ADT",
+      "momentumAnalysis": {
+        "greenDays": 1,
+        "streakDays": 1,
+        "magnitude": {
+          "min": 8.85,
+          "max": 9.21,
+          "percentChange": 4.07,
+          "dailyPercentChange": 4.07
+        }
+      },
+      "volatility": {
+        "5day": 3.399999999999999
+      },
+      "currentStatus": {
+        "price": 9.5,
+        "dayPositionPercent": 100,
+        "changePercent": 3.1489999999999996
+      },
+      "ratios": {
+        "percent52w": 55.88
+      },
+      "indicators": {
+        "rsi": 63.975477741498665
+      },
+      "categories": [
+        "STEADY"
+      ],
+      "error": "\u001b[31mError getting fundamentals data for 'ADT', please check symbol is valid\u001b[0m"
+    },
+    {
+      "symbol": "AEO",
+      "momentumAnalysis": {
+        "greenDays": 4,
+        "streakDays": 4,
+        "magnitude": {
+          "min": 28.72,
+          "max": 31.49,
+          "percentChange": 9.64,
+          "dailyPercentChange": 2.41
+        }
+      },
+      "volatility": {
+        "5day": 2.330578512396697
+      },
+      "currentStatus": {
+        "price": 32.58,
+        "dayPositionPercent": 95.8762886597939,
+        "changePercent": 3.4610000000000003
+      },
+      "ratios": {
+        "percent52w": 103
+      },
+      "indicators": {
+        "rsi": 59.761783049112495
+      },
+      "categories": [
+        "RISER",
+        "BREAKOUT",
+        "STEADY"
+      ],
+      "error": "\u001b[31mError getting fundamentals data for 'AEO', please check symbol is valid\u001b[0m"
+    },
+    {
+      "symbol": "FIRE.TO",
+      "momentumAnalysis": {
+        "greenDays": 1,
+        "streakDays": 2,
+        "magnitude": {
+          "min": 0.26,
+          "max": 0.4,
+          "percentChange": 53.85,
+          "dailyPercentChange": 26.93
+        }
+      },
+      "volatility": {
+        "5day": 6.814814814814814
+      },
+      "currentStatus": {
+        "price": 0.4,
+        "dayPositionPercent": 100,
+        "changePercent": 1.266
+      },
+      "ratios": {
+        "percent52w": 66.67
+      },
+      "indicators": {
+        "rsi": 78.9042564414809
+      },
+      "categories": [
+        "STEADY"
+      ],
+      "error": "\u001b[31mError getting fundamentals data for 'FIRE.TO', please check symbol is valid\u001b[0m"
+    },
+    {
+      "symbol": "NDA.V",
+      "momentumAnalysis": {
+        "greenDays": 2,
+        "streakDays": 2,
+        "magnitude": {
+          "min": 0.64,
+          "max": 1.05,
+          "percentChange": 64.06,
+          "dailyPercentChange": 32.03
+        }
+      },
+      "volatility": {
+        "5day": 9.814814814814817
+      },
+      "currentStatus": {
+        "price": 1.05,
+        "dayPositionPercent": 100,
+        "changePercent": 10.526
+      },
+      "ratios": {
+        "percent52w": 82.03
+      },
+      "indicators": {
+        "rsi": 70.29514007473378
+      },
+      "categories": [
+        "ROCKET",
+        "STEADY"
+      ],
+      "error": "\u001b[31mError getting fundamentals data for 'NDA.V', please check symbol is valid\u001b[0m"
+    },
+    {
+      "symbol": "MTRX.V",
+      "momentumAnalysis": {
+        "greenDays": 4,
+        "streakDays": 4,
+        "magnitude": {
+          "min": 1.38,
+          "max": 1.73,
+          "percentChange": 25.36,
+          "dailyPercentChange": 6.34
+        }
+      },
+      "volatility": {
+        "5day": 5.2352941176470615
+      },
+      "currentStatus": {
+        "price": 1.73,
+        "dayPositionPercent": 100,
+        "changePercent": 2.367
+      },
+      "ratios": {
+        "percent52w": 58.05
+      },
+      "indicators": {
+        "rsi": 71.82659020139297
+      },
+      "categories": [
+        "RISER",
+        "STEADY"
+      ],
+      "error": "\u001b[31mError getting fundamentals data for 'MTRX.V', please check symbol is valid\u001b[0m"
+    },
+    {
+      "symbol": "QYOU.V",
+      "momentumAnalysis": {
+        "greenDays": 0,
+        "streakDays": 2,
+        "magnitude": {
+          "min": 0.27,
+          "max": 0.3,
+          "percentChange": 11.11,
+          "dailyPercentChange": 5.55
+        }
+      },
+      "volatility": {
+        "5day": 12.000000000000002
+      },
+      "currentStatus": {
+        "price": 0.305,
+        "dayPositionPercent": 100,
+        "changePercent": 8.929
+      },
+      "ratios": {
+        "percent52w": 59.8
+      },
+      "indicators": {
+        "rsi": 56.503000800643086
+      },
+      "categories": [],
+      "error": "\u001b[31mError getting fundamentals data for 'QYOU.V', please check symbol is valid\u001b[0m"
+    },
+    {
+      "symbol": "CMC.CN",
+      "momentumAnalysis": {
+        "greenDays": 22,
+        "streakDays": 3,
+        "magnitude": {
+          "min": 0.82,
+          "max": 0.96,
+          "percentChange": 17.07,
+          "dailyPercentChange": 5.69
+        }
+      },
+      "volatility": {
+        "5day": 6.2499999999999964
+      },
+      "currentStatus": {
+        "price": 0.96,
+        "dayPositionPercent": 100,
+        "changePercent": 5.495
+      },
+      "ratios": {
+        "percent52w": 59.26
+      },
+      "indicators": {
+        "rsi": 40.08634885663637
+      },
+      "categories": [
+        "RISER",
+        "STEADY"
+      ],
+      "error": "\u001b[31mError getting fundamentals data for 'CMC.CN', please check symbol is valid\u001b[0m"
+    },
+    {
+      "symbol": "CJR-B.TO",
+      "momentumAnalysis": {
+        "greenDays": 1,
+        "streakDays": 2,
+        "magnitude": {
+          "min": 5.8,
+          "max": 6.26,
+          "percentChange": 7.93,
+          "dailyPercentChange": 3.96
+        }
+      },
+      "volatility": {
+        "5day": 7.395833333333339
+      },
+      "currentStatus": {
+        "price": 6.26,
+        "dayPositionPercent": 100,
+        "changePercent": 7.009
+      },
+      "ratios": {
+        "percent52w": 96.31
+      },
+      "indicators": {
+        "rsi": 64.2206932397585
+      },
+      "categories": [
+        "BREAKOUT",
+        "STEADY"
+      ],
+      "error": "\u001b[31mError getting fundamentals data for 'CJR-B.TO', please check symbol is valid\u001b[0m"
+    },
+    {
+      "symbol": "FAF.TO",
+      "momentumAnalysis": {
+        "greenDays": 1,
+        "streakDays": 2,
+        "magnitude": {
+          "min": 1.1,
+          "max": 1.24,
+          "percentChange": 12.73,
+          "dailyPercentChange": 6.37
+        }
+      },
+      "volatility": {
+        "5day": 13.499999999999982
+      },
+      "currentStatus": {
+        "price": 1.24,
+        "dayPositionPercent": 100,
+        "changePercent": 10.714
+      },
+      "ratios": {
+        "percent52w": 82.67
+      },
+      "indicators": {
+        "rsi": 51.905594335832895
+      },
+      "categories": [],
+      "error": "\u001b[31mError getting fundamentals data for 'FAF.TO', please check symbol is valid\u001b[0m"
+    },
+    {
+      "symbol": "LABS.TO",
+      "momentumAnalysis": {
+        "greenDays": 1,
+        "streakDays": 1,
+        "magnitude": {
+          "min": 0.47,
+          "max": 0.52,
+          "percentChange": 10.64,
+          "dailyPercentChange": 10.64
+        }
+      },
+      "volatility": {
+        "5day": 7.999999999999998
+      },
+      "currentStatus": {
+        "price": 0.52,
+        "dayPositionPercent": 100,
+        "changePercent": 9.474
+      },
+      "ratios": {
+        "percent52w": 23.11
+      },
+      "indicators": {
+        "rsi": 60.83023814084303
+      },
+      "categories": [
+        "STEADY"
+      ],
+      "error": "\u001b[31mError getting fundamentals data for 'LABS.TO', please check symbol is valid\u001b[0m"
+    }
+  ],
+  "categories": {
+    "RISER": [
+      {
+        "symbol": "SID",
+        "momentumAnalysis": {
+          "greenDays": 4,
+          "streakDays": 4,
+          "magnitude": {
+            "min": 6.38,
+            "max": 7.33,
+            "percentChange": 14.89,
+            "dailyPercentChange": 3.72
+          }
+        },
+        "volatility": {
+          "5day": 2.3707865168539426
+        },
+        "currentStatus": {
+          "price": 7.58,
+          "dayPositionPercent": 92.68292682926823,
+          "changePercent": 3.411
+        },
+        "ratios": {
+          "percent52w": 102.85
+        },
+        "indicators": {
+          "rsi": 61.22937190582304
+        },
+        "categories": [
+          "RISER",
+          "BREAKOUT",
+          "STEADY"
+        ],
+        "fundamentals": {
+          "lastQuarter": {
+            "debtToCash": 2.538861013024043,
+            "currentRatio": 1.5881214714740817,
+            "asOfDate": "2020-12-31"
+          }
+        },
+        "incomeHistory": {
+          "annual": [
+            {
+              "profit": "10939119000",
+              "revenue": "30064020000",
+              "expenses": "None"
+            },
+            {
+              "profit": "8173153000",
+              "revenue": "25436417000",
+              "expenses": "3798358000"
+            },
+            {
+              "profit": "6863228000",
+              "revenue": "22968885000",
+              "expenses": "18319916000"
+            },
+            {
+              "profit": "4928460000",
+              "revenue": "18524601000",
+              "expenses": "1902150000"
+            }
+          ],
+          "quarterly": [
+            {
+              "profit": "4198098000",
+              "revenue": "9794101000",
+              "expenses": "None"
+            },
+            {
+              "profit": "3581457000",
+              "revenue": "8714583000",
+              "expenses": "878899000"
+            },
+            {
+              "profit": "1842618000",
+              "revenue": "6220683000",
+              "expenses": "5174364000"
+            },
+            {
+              "profit": "3581457000",
+              "revenue": "8714583000",
+              "expenses": "4804457000"
+            }
+          ]
+        }
+      },
+      {
+        "symbol": "SNAP",
+        "momentumAnalysis": {
+          "greenDays": 3,
+          "streakDays": 3,
+          "magnitude": {
+            "min": 52.69,
+            "max": 63.2,
+            "percentChange": 19.95,
+            "dailyPercentChange": 6.65
+          }
+        },
+        "volatility": {
+          "5day": 5.551090700344438
+        },
+        "currentStatus": {
+          "price": 63.27,
+          "dayPositionPercent": 58.333333333333734,
+          "changePercent": 0.11100000000000002
+        },
+        "ratios": {
+          "percent52w": 85.98
+        },
+        "indicators": {
+          "rsi": 58.231347803747326
+        },
+        "categories": [
+          "RISER",
+          "STEADY"
+        ],
+        "fundamentals": {
+          "lastQuarter": {
+            "debtToCash": 1.2230663211257693,
+            "currentRatio": 5.0020080110650404,
+            "asOfDate": "2020-12-31"
+          }
+        },
+        "incomeHistory": {
+          "annual": [
+            {
+              "profit": "1229708000",
+              "revenue": "2412213000",
+              "expenses": "2219693000"
+            },
+            {
+              "profit": "839301000",
+              "revenue": "1735139000",
+              "expenses": "1916541000"
+            },
+            {
+              "profit": "377687000",
+              "revenue": "1176552000",
+              "expenses": "1725664000"
+            },
+            {
+              "profit": "-720918000",
+              "revenue": "821493000",
+              "expenses": "3624563000"
+            }
+          ],
+          "quarterly": [
+            {
+              "profit": "497125000",
+              "revenue": "882671000",
+              "expenses": "632712000"
+            },
+            {
+              "profit": "1274752000",
+              "revenue": "651211000",
+              "expenses": "561837000"
+            },
+            {
+              "profit": "-274388000",
+              "revenue": "430224000",
+              "expenses": "521712000"
+            },
+            {
+              "profit": "-267781000",
+              "revenue": "448107000",
+              "expenses": "503432000"
+            }
+          ]
+        }
+      },
+      {
+        "symbol": "SQ",
+        "momentumAnalysis": {
+          "greenDays": 3,
+          "streakDays": 7,
+          "magnitude": {
+            "min": 202.93,
+            "max": 258.37,
+            "percentChange": 27.32,
+            "dailyPercentChange": 3.9
+          }
+        },
+        "volatility": {
+          "5day": 6.008316008316006
+        },
+        "currentStatus": {
+          "price": 261.65,
+          "dayPositionPercent": 68.58864027538698,
+          "changePercent": 1.269
+        },
+        "ratios": {
+          "percent52w": 92.39
+        },
+        "indicators": {
+          "rsi": 60.11717240492169
+        },
+        "categories": [
+          "RISER",
+          "STEADY"
+        ],
+        "fundamentals": {
+          "lastQuarter": {
+            "debtToCash": 1.3065320522928965,
+            "currentRatio": 1.8811035785816355,
+            "asOfDate": "2020-12-31"
+          }
+        },
+        "error": "\u001b[31mError getting income history for 'SQ', please check symbol is valid\u001b[0m"
+      },
+      {
+        "symbol": "ROKU",
+        "momentumAnalysis": {
+          "greenDays": 3,
+          "streakDays": 3,
+          "magnitude": {
+            "min": 322.58,
+            "max": 372.68,
+            "percentChange": 15.53,
+            "dailyPercentChange": 5.18
+          }
+        },
+        "volatility": {
+          "5day": 4.129965669445802
+        },
+        "currentStatus": {
+          "price": 373.66,
+          "dayPositionPercent": 81.88218727998145,
+          "changePercent": 0.263
+        },
+        "ratios": {
+          "percent52w": 76.77
+        },
+        "indicators": {
+          "rsi": 55.129288532339004
+        },
+        "categories": [
+          "RISER",
+          "STEADY"
+        ],
+        "error": "\u001b[31mError getting fundamentals data for 'ROKU', please check symbol is valid\u001b[0m"
+      },
+      {
+        "symbol": "AEO",
+        "momentumAnalysis": {
+          "greenDays": 4,
+          "streakDays": 4,
+          "magnitude": {
+            "min": 28.72,
+            "max": 31.49,
+            "percentChange": 9.64,
+            "dailyPercentChange": 2.41
+          }
+        },
+        "volatility": {
+          "5day": 2.330578512396697
+        },
+        "currentStatus": {
+          "price": 32.58,
+          "dayPositionPercent": 95.8762886597939,
+          "changePercent": 3.4610000000000003
+        },
+        "ratios": {
+          "percent52w": 103
+        },
+        "indicators": {
+          "rsi": 59.761783049112495
+        },
+        "categories": [
+          "RISER",
+          "BREAKOUT",
+          "STEADY"
+        ],
+        "error": "\u001b[31mError getting fundamentals data for 'AEO', please check symbol is valid\u001b[0m"
+      },
+      {
+        "symbol": "MTRX.V",
+        "momentumAnalysis": {
+          "greenDays": 4,
+          "streakDays": 4,
+          "magnitude": {
+            "min": 1.38,
+            "max": 1.73,
+            "percentChange": 25.36,
+            "dailyPercentChange": 6.34
+          }
+        },
+        "volatility": {
+          "5day": 5.2352941176470615
+        },
+        "currentStatus": {
+          "price": 1.73,
+          "dayPositionPercent": 100,
+          "changePercent": 2.367
+        },
+        "ratios": {
+          "percent52w": 58.05
+        },
+        "indicators": {
+          "rsi": 71.82659020139297
+        },
+        "categories": [
+          "RISER",
+          "STEADY"
+        ],
+        "error": "\u001b[31mError getting fundamentals data for 'MTRX.V', please check symbol is valid\u001b[0m"
+      },
+      {
+        "symbol": "CMC.CN",
+        "momentumAnalysis": {
+          "greenDays": 22,
+          "streakDays": 3,
+          "magnitude": {
+            "min": 0.82,
+            "max": 0.96,
+            "percentChange": 17.07,
+            "dailyPercentChange": 5.69
+          }
+        },
+        "volatility": {
+          "5day": 6.2499999999999964
+        },
+        "currentStatus": {
+          "price": 0.96,
+          "dayPositionPercent": 100,
+          "changePercent": 5.495
+        },
+        "ratios": {
+          "percent52w": 59.26
+        },
+        "indicators": {
+          "rsi": 40.08634885663637
+        },
+        "categories": [
+          "RISER",
+          "STEADY"
+        ],
+        "error": "\u001b[31mError getting fundamentals data for 'CMC.CN', please check symbol is valid\u001b[0m"
+      }
+    ],
+    "BREAKOUT": [
+      {
+        "symbol": "SID",
+        "momentumAnalysis": {
+          "greenDays": 4,
+          "streakDays": 4,
+          "magnitude": {
+            "min": 6.38,
+            "max": 7.33,
+            "percentChange": 14.89,
+            "dailyPercentChange": 3.72
+          }
+        },
+        "volatility": {
+          "5day": 2.3707865168539426
+        },
+        "currentStatus": {
+          "price": 7.58,
+          "dayPositionPercent": 92.68292682926823,
+          "changePercent": 3.411
+        },
+        "ratios": {
+          "percent52w": 102.85
+        },
+        "indicators": {
+          "rsi": 61.22937190582304
+        },
+        "categories": [
+          "RISER",
+          "BREAKOUT",
+          "STEADY"
+        ],
+        "fundamentals": {
+          "lastQuarter": {
+            "debtToCash": 2.538861013024043,
+            "currentRatio": 1.5881214714740817,
+            "asOfDate": "2020-12-31"
+          }
+        },
+        "incomeHistory": {
+          "annual": [
+            {
+              "profit": "10939119000",
+              "revenue": "30064020000",
+              "expenses": "None"
+            },
+            {
+              "profit": "8173153000",
+              "revenue": "25436417000",
+              "expenses": "3798358000"
+            },
+            {
+              "profit": "6863228000",
+              "revenue": "22968885000",
+              "expenses": "18319916000"
+            },
+            {
+              "profit": "4928460000",
+              "revenue": "18524601000",
+              "expenses": "1902150000"
+            }
+          ],
+          "quarterly": [
+            {
+              "profit": "4198098000",
+              "revenue": "9794101000",
+              "expenses": "None"
+            },
+            {
+              "profit": "3581457000",
+              "revenue": "8714583000",
+              "expenses": "878899000"
+            },
+            {
+              "profit": "1842618000",
+              "revenue": "6220683000",
+              "expenses": "5174364000"
+            },
+            {
+              "profit": "3581457000",
+              "revenue": "8714583000",
+              "expenses": "4804457000"
+            }
+          ]
+        }
+      },
+      {
+        "symbol": "BGCP",
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 5.3,
+            "max": 5.38,
+            "percentChange": 1.51,
+            "dailyPercentChange": 1.51
+          }
+        },
+        "volatility": {
+          "5day": 5.602941176470592
+        },
+        "currentStatus": {
+          "price": 5.69,
+          "dayPositionPercent": 92.95774647887339,
+          "changePercent": 5.762
+        },
+        "ratios": {
+          "percent52w": 100.53
+        },
+        "indicators": {
+          "rsi": 67.0575651098443
+        },
+        "categories": [
+          "BREAKOUT",
+          "STEADY"
+        ],
+        "error": "\u001b[31mError getting fundamentals data for 'BGCP', please check symbol is valid\u001b[0m"
+      },
+      {
+        "symbol": "COMM",
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 15.23,
+            "max": 16.35,
+            "percentChange": 7.35,
+            "dailyPercentChange": 7.35
+          }
+        },
+        "volatility": {
+          "5day": 10.705128205128192
+        },
+        "currentStatus": {
+          "price": 17.5,
+          "dayPositionPercent": 68.24324324324334,
+          "changePercent": 7.034
+        },
+        "ratios": {
+          "percent52w": 102.46
+        },
+        "indicators": {
+          "rsi": 51.73668303846032
+        },
+        "categories": [
+          "BREAKOUT"
+        ],
+        "error": "\u001b[31mError getting fundamentals data for 'COMM', please check symbol is valid\u001b[0m"
+      },
+      {
+        "symbol": "ANF",
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 36.33,
+            "max": 37.31,
+            "percentChange": 2.7
+          }
+        },
+        "volatility": {
+          "5day": 6.140350877192983
+        },
+        "currentStatus": {
+          "price": 38.7,
+          "dayPositionPercent": 52.41379310344841,
+          "changePercent": 3.726
+        },
+        "ratios": {
+          "percent52w": 101.87
+        },
+        "indicators": {
+          "rsi": 62.68671525368649
+        },
+        "categories": [
+          "BREAKOUT",
+          "STEADY"
+        ],
+        "error": "\u001b[31mError getting fundamentals data for 'ANF', please check symbol is valid\u001b[0m"
+      },
+      {
+        "symbol": "AEO",
+        "momentumAnalysis": {
+          "greenDays": 4,
+          "streakDays": 4,
+          "magnitude": {
+            "min": 28.72,
+            "max": 31.49,
+            "percentChange": 9.64,
+            "dailyPercentChange": 2.41
+          }
+        },
+        "volatility": {
+          "5day": 2.330578512396697
+        },
+        "currentStatus": {
+          "price": 32.58,
+          "dayPositionPercent": 95.8762886597939,
+          "changePercent": 3.4610000000000003
+        },
+        "ratios": {
+          "percent52w": 103
+        },
+        "indicators": {
+          "rsi": 59.761783049112495
+        },
+        "categories": [
+          "RISER",
+          "BREAKOUT",
+          "STEADY"
+        ],
+        "error": "\u001b[31mError getting fundamentals data for 'AEO', please check symbol is valid\u001b[0m"
+      },
+      {
+        "symbol": "CJR-B.TO",
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 2,
+          "magnitude": {
+            "min": 5.8,
+            "max": 6.26,
+            "percentChange": 7.93,
+            "dailyPercentChange": 3.96
+          }
+        },
+        "volatility": {
+          "5day": 7.395833333333339
+        },
+        "currentStatus": {
+          "price": 6.26,
+          "dayPositionPercent": 100,
+          "changePercent": 7.009
+        },
+        "ratios": {
+          "percent52w": 96.31
+        },
+        "indicators": {
+          "rsi": 64.2206932397585
+        },
+        "categories": [
+          "BREAKOUT",
+          "STEADY"
+        ],
+        "error": "\u001b[31mError getting fundamentals data for 'CJR-B.TO', please check symbol is valid\u001b[0m"
+      }
+    ],
+    "STEADY": [
+      {
+        "symbol": "SID",
+        "momentumAnalysis": {
+          "greenDays": 4,
+          "streakDays": 4,
+          "magnitude": {
+            "min": 6.38,
+            "max": 7.33,
+            "percentChange": 14.89,
+            "dailyPercentChange": 3.72
+          }
+        },
+        "volatility": {
+          "5day": 2.3707865168539426
+        },
+        "currentStatus": {
+          "price": 7.58,
+          "dayPositionPercent": 92.68292682926823,
+          "changePercent": 3.411
+        },
+        "ratios": {
+          "percent52w": 102.85
+        },
+        "indicators": {
+          "rsi": 61.22937190582304
+        },
+        "categories": [
+          "RISER",
+          "BREAKOUT",
+          "STEADY"
+        ],
+        "fundamentals": {
+          "lastQuarter": {
+            "debtToCash": 2.538861013024043,
+            "currentRatio": 1.5881214714740817,
+            "asOfDate": "2020-12-31"
+          }
+        },
+        "incomeHistory": {
+          "annual": [
+            {
+              "profit": "10939119000",
+              "revenue": "30064020000",
+              "expenses": "None"
+            },
+            {
+              "profit": "8173153000",
+              "revenue": "25436417000",
+              "expenses": "3798358000"
+            },
+            {
+              "profit": "6863228000",
+              "revenue": "22968885000",
+              "expenses": "18319916000"
+            },
+            {
+              "profit": "4928460000",
+              "revenue": "18524601000",
+              "expenses": "1902150000"
+            }
+          ],
+          "quarterly": [
+            {
+              "profit": "4198098000",
+              "revenue": "9794101000",
+              "expenses": "None"
+            },
+            {
+              "profit": "3581457000",
+              "revenue": "8714583000",
+              "expenses": "878899000"
+            },
+            {
+              "profit": "1842618000",
+              "revenue": "6220683000",
+              "expenses": "5174364000"
+            },
+            {
+              "profit": "3581457000",
+              "revenue": "8714583000",
+              "expenses": "4804457000"
+            }
+          ]
+        }
+      },
+      {
+        "symbol": "SNAP",
+        "momentumAnalysis": {
+          "greenDays": 3,
+          "streakDays": 3,
+          "magnitude": {
+            "min": 52.69,
+            "max": 63.2,
+            "percentChange": 19.95,
+            "dailyPercentChange": 6.65
+          }
+        },
+        "volatility": {
+          "5day": 5.551090700344438
+        },
+        "currentStatus": {
+          "price": 63.27,
+          "dayPositionPercent": 58.333333333333734,
+          "changePercent": 0.11100000000000002
+        },
+        "ratios": {
+          "percent52w": 85.98
+        },
+        "indicators": {
+          "rsi": 58.231347803747326
+        },
+        "categories": [
+          "RISER",
+          "STEADY"
+        ],
+        "fundamentals": {
+          "lastQuarter": {
+            "debtToCash": 1.2230663211257693,
+            "currentRatio": 5.0020080110650404,
+            "asOfDate": "2020-12-31"
+          }
+        },
+        "incomeHistory": {
+          "annual": [
+            {
+              "profit": "1229708000",
+              "revenue": "2412213000",
+              "expenses": "2219693000"
+            },
+            {
+              "profit": "839301000",
+              "revenue": "1735139000",
+              "expenses": "1916541000"
+            },
+            {
+              "profit": "377687000",
+              "revenue": "1176552000",
+              "expenses": "1725664000"
+            },
+            {
+              "profit": "-720918000",
+              "revenue": "821493000",
+              "expenses": "3624563000"
+            }
+          ],
+          "quarterly": [
+            {
+              "profit": "497125000",
+              "revenue": "882671000",
+              "expenses": "632712000"
+            },
+            {
+              "profit": "1274752000",
+              "revenue": "651211000",
+              "expenses": "561837000"
+            },
+            {
+              "profit": "-274388000",
+              "revenue": "430224000",
+              "expenses": "521712000"
+            },
+            {
+              "profit": "-267781000",
+              "revenue": "448107000",
+              "expenses": "503432000"
+            }
+          ]
+        }
+      },
+      {
+        "symbol": "SQ",
+        "momentumAnalysis": {
+          "greenDays": 3,
+          "streakDays": 7,
+          "magnitude": {
+            "min": 202.93,
+            "max": 258.37,
+            "percentChange": 27.32,
+            "dailyPercentChange": 3.9
+          }
+        },
+        "volatility": {
+          "5day": 6.008316008316006
+        },
+        "currentStatus": {
+          "price": 261.65,
+          "dayPositionPercent": 68.58864027538698,
+          "changePercent": 1.269
+        },
+        "ratios": {
+          "percent52w": 92.39
+        },
+        "indicators": {
+          "rsi": 60.11717240492169
+        },
+        "categories": [
+          "RISER",
+          "STEADY"
+        ],
+        "fundamentals": {
+          "lastQuarter": {
+            "debtToCash": 1.3065320522928965,
+            "currentRatio": 1.8811035785816355,
+            "asOfDate": "2020-12-31"
+          }
+        },
+        "error": "\u001b[31mError getting income history for 'SQ', please check symbol is valid\u001b[0m"
+      },
+      {
+        "symbol": "BGCP",
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 5.3,
+            "max": 5.38,
+            "percentChange": 1.51,
+            "dailyPercentChange": 1.51
+          }
+        },
+        "volatility": {
+          "5day": 5.602941176470592
+        },
+        "currentStatus": {
+          "price": 5.69,
+          "dayPositionPercent": 92.95774647887339,
+          "changePercent": 5.762
+        },
+        "ratios": {
+          "percent52w": 100.53
+        },
+        "indicators": {
+          "rsi": 67.0575651098443
+        },
+        "categories": [
+          "BREAKOUT",
+          "STEADY"
+        ],
+        "error": "\u001b[31mError getting fundamentals data for 'BGCP', please check symbol is valid\u001b[0m"
+      },
+      {
+        "symbol": "ROKU",
+        "momentumAnalysis": {
+          "greenDays": 3,
+          "streakDays": 3,
+          "magnitude": {
+            "min": 322.58,
+            "max": 372.68,
+            "percentChange": 15.53,
+            "dailyPercentChange": 5.18
+          }
+        },
+        "volatility": {
+          "5day": 4.129965669445802
+        },
+        "currentStatus": {
+          "price": 373.66,
+          "dayPositionPercent": 81.88218727998145,
+          "changePercent": 0.263
+        },
+        "ratios": {
+          "percent52w": 76.77
+        },
+        "indicators": {
+          "rsi": 55.129288532339004
+        },
+        "categories": [
+          "RISER",
+          "STEADY"
+        ],
+        "error": "\u001b[31mError getting fundamentals data for 'ROKU', please check symbol is valid\u001b[0m"
+      },
+      {
+        "symbol": "ANF",
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 36.33,
+            "max": 37.31,
+            "percentChange": 2.7
+          }
+        },
+        "volatility": {
+          "5day": 6.140350877192983
+        },
+        "currentStatus": {
+          "price": 38.7,
+          "dayPositionPercent": 52.41379310344841,
+          "changePercent": 3.726
+        },
+        "ratios": {
+          "percent52w": 101.87
+        },
+        "indicators": {
+          "rsi": 62.68671525368649
+        },
+        "categories": [
+          "BREAKOUT",
+          "STEADY"
+        ],
+        "error": "\u001b[31mError getting fundamentals data for 'ANF', please check symbol is valid\u001b[0m"
+      },
+      {
+        "symbol": "ADT",
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 8.85,
+            "max": 9.21,
+            "percentChange": 4.07,
+            "dailyPercentChange": 4.07
+          }
+        },
+        "volatility": {
+          "5day": 3.399999999999999
+        },
+        "currentStatus": {
+          "price": 9.5,
+          "dayPositionPercent": 100,
+          "changePercent": 3.1489999999999996
+        },
+        "ratios": {
+          "percent52w": 55.88
+        },
+        "indicators": {
+          "rsi": 63.975477741498665
+        },
+        "categories": [
+          "STEADY"
+        ],
+        "error": "\u001b[31mError getting fundamentals data for 'ADT', please check symbol is valid\u001b[0m"
+      },
+      {
+        "symbol": "AEO",
+        "momentumAnalysis": {
+          "greenDays": 4,
+          "streakDays": 4,
+          "magnitude": {
+            "min": 28.72,
+            "max": 31.49,
+            "percentChange": 9.64,
+            "dailyPercentChange": 2.41
+          }
+        },
+        "volatility": {
+          "5day": 2.330578512396697
+        },
+        "currentStatus": {
+          "price": 32.58,
+          "dayPositionPercent": 95.8762886597939,
+          "changePercent": 3.4610000000000003
+        },
+        "ratios": {
+          "percent52w": 103
+        },
+        "indicators": {
+          "rsi": 59.761783049112495
+        },
+        "categories": [
+          "RISER",
+          "BREAKOUT",
+          "STEADY"
+        ],
+        "error": "\u001b[31mError getting fundamentals data for 'AEO', please check symbol is valid\u001b[0m"
+      },
+      {
+        "symbol": "FIRE.TO",
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 2,
+          "magnitude": {
+            "min": 0.26,
+            "max": 0.4,
+            "percentChange": 53.85,
+            "dailyPercentChange": 26.93
+          }
+        },
+        "volatility": {
+          "5day": 6.814814814814814
+        },
+        "currentStatus": {
+          "price": 0.4,
+          "dayPositionPercent": 100,
+          "changePercent": 1.266
+        },
+        "ratios": {
+          "percent52w": 66.67
+        },
+        "indicators": {
+          "rsi": 78.9042564414809
+        },
+        "categories": [
+          "STEADY"
+        ],
+        "error": "\u001b[31mError getting fundamentals data for 'FIRE.TO', please check symbol is valid\u001b[0m"
+      },
+      {
+        "symbol": "NDA.V",
+        "momentumAnalysis": {
+          "greenDays": 2,
+          "streakDays": 2,
+          "magnitude": {
+            "min": 0.64,
+            "max": 1.05,
+            "percentChange": 64.06,
+            "dailyPercentChange": 32.03
+          }
+        },
+        "volatility": {
+          "5day": 9.814814814814817
+        },
+        "currentStatus": {
+          "price": 1.05,
+          "dayPositionPercent": 100,
+          "changePercent": 10.526
+        },
+        "ratios": {
+          "percent52w": 82.03
+        },
+        "indicators": {
+          "rsi": 70.29514007473378
+        },
+        "categories": [
+          "ROCKET",
+          "STEADY"
+        ],
+        "error": "\u001b[31mError getting fundamentals data for 'NDA.V', please check symbol is valid\u001b[0m"
+      },
+      {
+        "symbol": "MTRX.V",
+        "momentumAnalysis": {
+          "greenDays": 4,
+          "streakDays": 4,
+          "magnitude": {
+            "min": 1.38,
+            "max": 1.73,
+            "percentChange": 25.36,
+            "dailyPercentChange": 6.34
+          }
+        },
+        "volatility": {
+          "5day": 5.2352941176470615
+        },
+        "currentStatus": {
+          "price": 1.73,
+          "dayPositionPercent": 100,
+          "changePercent": 2.367
+        },
+        "ratios": {
+          "percent52w": 58.05
+        },
+        "indicators": {
+          "rsi": 71.82659020139297
+        },
+        "categories": [
+          "RISER",
+          "STEADY"
+        ],
+        "error": "\u001b[31mError getting fundamentals data for 'MTRX.V', please check symbol is valid\u001b[0m"
+      },
+      {
+        "symbol": "CMC.CN",
+        "momentumAnalysis": {
+          "greenDays": 22,
+          "streakDays": 3,
+          "magnitude": {
+            "min": 0.82,
+            "max": 0.96,
+            "percentChange": 17.07,
+            "dailyPercentChange": 5.69
+          }
+        },
+        "volatility": {
+          "5day": 6.2499999999999964
+        },
+        "currentStatus": {
+          "price": 0.96,
+          "dayPositionPercent": 100,
+          "changePercent": 5.495
+        },
+        "ratios": {
+          "percent52w": 59.26
+        },
+        "indicators": {
+          "rsi": 40.08634885663637
+        },
+        "categories": [
+          "RISER",
+          "STEADY"
+        ],
+        "error": "\u001b[31mError getting fundamentals data for 'CMC.CN', please check symbol is valid\u001b[0m"
+      },
+      {
+        "symbol": "CJR-B.TO",
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 2,
+          "magnitude": {
+            "min": 5.8,
+            "max": 6.26,
+            "percentChange": 7.93,
+            "dailyPercentChange": 3.96
+          }
+        },
+        "volatility": {
+          "5day": 7.395833333333339
+        },
+        "currentStatus": {
+          "price": 6.26,
+          "dayPositionPercent": 100,
+          "changePercent": 7.009
+        },
+        "ratios": {
+          "percent52w": 96.31
+        },
+        "indicators": {
+          "rsi": 64.2206932397585
+        },
+        "categories": [
+          "BREAKOUT",
+          "STEADY"
+        ],
+        "error": "\u001b[31mError getting fundamentals data for 'CJR-B.TO', please check symbol is valid\u001b[0m"
+      },
+      {
+        "symbol": "LABS.TO",
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 0.47,
+            "max": 0.52,
+            "percentChange": 10.64,
+            "dailyPercentChange": 10.64
+          }
+        },
+        "volatility": {
+          "5day": 7.999999999999998
+        },
+        "currentStatus": {
+          "price": 0.52,
+          "dayPositionPercent": 100,
+          "changePercent": 9.474
+        },
+        "ratios": {
+          "percent52w": 23.11
+        },
+        "indicators": {
+          "rsi": 60.83023814084303
+        },
+        "categories": [
+          "STEADY"
+        ],
+        "error": "\u001b[31mError getting fundamentals data for 'LABS.TO', please check symbol is valid\u001b[0m"
+      }
+    ],
+    "ROCKET": [
+      {
+        "symbol": "NDA.V",
+        "momentumAnalysis": {
+          "greenDays": 2,
+          "streakDays": 2,
+          "magnitude": {
+            "min": 0.64,
+            "max": 1.05,
+            "percentChange": 64.06,
+            "dailyPercentChange": 32.03
+          }
+        },
+        "volatility": {
+          "5day": 9.814814814814817
+        },
+        "currentStatus": {
+          "price": 1.05,
+          "dayPositionPercent": 100,
+          "changePercent": 10.526
+        },
+        "ratios": {
+          "percent52w": 82.03
+        },
+        "indicators": {
+          "rsi": 70.29514007473378
+        },
+        "categories": [
+          "ROCKET",
+          "STEADY"
+        ],
+        "error": "\u001b[31mError getting fundamentals data for 'NDA.V', please check symbol is valid\u001b[0m"
+      }
+    ]
+  }
+}

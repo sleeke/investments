@@ -1,0 +1,166 @@
+[
+  {
+    "ticker": "SNC.TO",
+    "account": "RRSP",
+    "offsetPercent": -1,
+    "links": {
+      "yahooChart": "https://finance.yahoo.com/chart/SNC.TO",
+      "barChart": "https://www.barchart.com/stocks/SNC.TO"
+    },
+    "goodDayPercent": 1.6,
+    "ma": 33.88,
+    "newStop": 33.54,
+    "newLimit": 33.2
+  },
+  {
+    "ticker": "TFII.TO",
+    "account": "RRSP",
+    "offsetPercent": -1.5,
+    "links": {
+      "yahooChart": "https://finance.yahoo.com/chart/TFII.TO",
+      "barChart": "https://www.barchart.com/stocks/TFII.TO"
+    },
+    "goodDayPercent": 1.99,
+    "ma": 140.05,
+    "newStop": 137.94,
+    "newLimit": 136.56
+  },
+  {
+    "ticker": "TRI.TO",
+    "account": "RRSP",
+    "offsetPercent": -0.5,
+    "links": {
+      "yahooChart": "https://finance.yahoo.com/chart/TRI.TO",
+      "barChart": "https://www.barchart.com/stocks/TRI.TO"
+    },
+    "goodDayPercent": 1.01,
+    "ma": 143.31,
+    "newStop": 142.59,
+    "newLimit": 141.16
+  },
+  {
+    "ticker": "BAM-A.TO",
+    "account": "TFSA",
+    "offsetPercent": -2,
+    "links": {
+      "yahooChart": "https://finance.yahoo.com/chart/BAM-A.TO",
+      "barChart": "https://www.barchart.com/stocks/BAM-A.TO"
+    },
+    "goodDayPercent": 1.29,
+    "ma": 70.85,
+    "newStop": 69.43,
+    "newLimit": 68.73
+  },
+  {
+    "ticker": "HOLX",
+    "account": "RRSP",
+    "offsetPercent": -0.5,
+    "links": {
+      "yahooChart": "https://finance.yahoo.com/chart/HOLX",
+      "barChart": "https://www.barchart.com/stocks/HOLX"
+    },
+    "goodDayPercent": 1.33,
+    "ma": 77.2,
+    "newStop": 76.81
+  },
+  {
+    "ticker": "LIT",
+    "account": "TFSA",
+    "offsetPercent": -2,
+    "links": {
+      "yahooChart": "https://finance.yahoo.com/chart/LIT",
+      "barChart": "https://www.barchart.com/stocks/LIT"
+    },
+    "goodDayPercent": 0.99,
+    "ma": 84.43,
+    "newStop": 82.74
+  },
+  {
+    "ticker": "XIT.TO",
+    "account": "TFSA",
+    "offsetPercent": -0.5,
+    "links": {
+      "yahooChart": "https://finance.yahoo.com/chart/XIT.TO",
+      "barChart": "https://www.barchart.com/stocks/XIT.TO"
+    },
+    "goodDayPercent": 1.03,
+    "ma": 55.91,
+    "newStop": 55.63,
+    "newLimit": 55.07
+  },
+  {
+    "ticker": "EXR",
+    "account": "RRSP",
+    "offsetPercent": -1.5,
+    "links": {
+      "yahooChart": "https://finance.yahoo.com/chart/EXR",
+      "barChart": "https://www.barchart.com/stocks/EXR"
+    },
+    "goodDayPercent": 1.16,
+    "ma": 177.65,
+    "newStop": 174.98
+  },
+  {
+    "ticker": "XLK",
+    "account": "RRSP",
+    "offsetPercent": -2,
+    "links": {
+      "yahooChart": "https://finance.yahoo.com/chart/XLK",
+      "barChart": "https://www.barchart.com/stocks/XLK"
+    },
+    "goodDayPercent": 0.83,
+    "ma": 155.59,
+    "newStop": 152.47
+  },
+  {
+    "ticker": "OSAT",
+    "account": "RRSP",
+    "offsetPercent": -5.5,
+    "links": {
+      "yahooChart": "https://finance.yahoo.com/chart/OSAT",
+      "barChart": "https://www.barchart.com/stocks/OSAT"
+    },
+    "goodDayPercent": 4.6,
+    "ma": 5.75,
+    "newStop": 5.43
+  },
+  {
+    "ticker": "HP.CN",
+    "account": "WHOKNOWS",
+    "offsetPercent": -5,
+    "links": {
+      "yahooChart": "https://finance.yahoo.com/chart/HP.CN",
+      "barChart": "https://www.barchart.com/stocks/HP.CN"
+    },
+    "goodDayPercent": null,
+    "ma": 0.63,
+    "newStop": 0.59,
+    "newLimit": 0.58
+  },
+  {
+    "ticker": "PNPN.V",
+    "account": "WHOKNOWS",
+    "offsetPercent": -5,
+    "links": {
+      "yahooChart": "https://finance.yahoo.com/chart/PNPN.V",
+      "barChart": "https://www.barchart.com/stocks/PNPN.V"
+    },
+    "goodDayPercent": 9.93,
+    "ma": 0.14,
+    "newStop": 0.13,
+    "newLimit": 0.12
+  },
+  {
+    "ticker": "MAXR.TO",
+    "account": "BOTH",
+    "offsetPercent": -1,
+    "links": {
+      "yahooChart": "https://finance.yahoo.com/chart/MAXR.TO",
+      "barChart": "https://www.barchart.com/stocks/MAXR.TO"
+    },
+    "goodDayPercent": 2.07,
+    "ma": 38.49,
+    "newLimit": 37.71,
+    "newStop": 38.1
+  }
+]

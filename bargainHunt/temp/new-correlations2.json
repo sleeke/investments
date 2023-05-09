@@ -1,0 +1,17 @@
+{
+  "symbols": [
+    {
+      "symbol": "BBD.B.TO",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/BBD.B.TO",
+        "barChart": "https://www.barchart.com/stocks/BBD.B.TO"
+      },
+      "movingAverageCompliance": {
+        "version": "0.2",
+        "ma20": 0.8041958041958042,
+        "ma50": 0.8434782608695652
+      }
+    }
+  ],
+  "categories": {}
+}

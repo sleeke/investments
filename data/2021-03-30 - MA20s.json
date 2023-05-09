@@ -1,0 +1,5967 @@
+{
+  "symbols": [
+    {
+      "symbol": "IFP.TO",
+      "momentumAnalysis": {
+        "greenDays": 1,
+        "streakDays": 1,
+        "magnitude": {
+          "min": 25.85,
+          "max": 27.78,
+          "percentChange": 7.47,
+          "dailyPercentChange": 7.47
+        }
+      },
+      "volatility": {
+        "5day": 3.0400000000000014
+      },
+      "currentStatus": {
+        "price": 27.78,
+        "dayPositionPercent": 78.6795048143054,
+        "changePercent": 6.845999999999999
+      },
+      "ratios": {
+        "percent52w": 90.17
+      },
+      "indicators": {
+        "rsi": 52.2452097652058
+      },
+      "categories": [
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "SRC.V",
+      "momentumAnalysis": {
+        "greenDays": 1,
+        "streakDays": 1,
+        "magnitude": {
+          "min": 0.48,
+          "max": 0.48,
+          "percentChange": 0,
+          "dailyPercentChange": 0
+        }
+      },
+      "volatility": {
+        "5day": -154.49999999999983
+      },
+      "currentStatus": {
+        "price": 0.47,
+        "dayPositionPercent": 36.84210526315788,
+        "changePercent": 17.5
+      },
+      "ratios": {
+        "percent52w": 78.33
+      },
+      "indicators": {
+        "rsi": 50.93516509405315
+      },
+      "categories": [
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "CNR.TO",
+      "momentumAnalysis": {
+        "greenDays": 0,
+        "streakDays": 0,
+        "magnitude": {
+          "min": 145.79,
+          "max": 146.53,
+          "percentChange": 0.51
+        }
+      },
+      "volatility": {
+        "5day": 25.620689655174036
+      },
+      "currentStatus": {
+        "price": 146.53,
+        "dayPositionPercent": 92.64705882352943,
+        "changePercent": -0.381
+      },
+      "ratios": {
+        "percent52w": 98.41
+      },
+      "indicators": {
+        "rsi": 59.22108297366909
+      },
+      "categories": [
+        "BREAKOUT"
+      ]
+    },
+    {
+      "symbol": "CFP.TO",
+      "momentumAnalysis": {
+        "greenDays": 1,
+        "streakDays": 1,
+        "magnitude": {
+          "min": 24.44,
+          "max": 26,
+          "percentChange": 6.38,
+          "dailyPercentChange": 6.38
+        }
+      },
+      "volatility": {
+        "5day": 2.795918367346939
+      },
+      "currentStatus": {
+        "price": 26,
+        "dayPositionPercent": 68.88489208633092,
+        "changePercent": 4.585999999999999
+      },
+      "ratios": {
+        "percent52w": 89.66
+      },
+      "indicators": {
+        "rsi": 51.82349895277232
+      },
+      "categories": [
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "NOA.TO",
+      "momentumAnalysis": {
+        "greenDays": 1,
+        "streakDays": 1,
+        "magnitude": {
+          "min": 13.36,
+          "max": 13.55,
+          "percentChange": 1.42,
+          "dailyPercentChange": 1.42
+        }
+      },
+      "volatility": {
+        "5day": -7.555555555555584
+      },
+      "currentStatus": {
+        "price": 13.55,
+        "dayPositionPercent": 41.3566739606127,
+        "changePercent": 0.074
+      },
+      "ratios": {
+        "percent52w": 82.37
+      },
+      "indicators": {
+        "rsi": 28.239551782571443
+      },
+      "categories": [
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "MRU.TO",
+      "momentumAnalysis": {
+        "greenDays": 4,
+        "streakDays": 4,
+        "magnitude": {
+          "min": 56.69,
+          "max": 57.99,
+          "percentChange": 2.29,
+          "dailyPercentChange": 0.57
+        }
+      },
+      "volatility": {
+        "5day": 2.7589285714285623
+      },
+      "currentStatus": {
+        "price": 57.99,
+        "dayPositionPercent": 94.85294117647058,
+        "changePercent": 0.207
+      },
+      "ratios": {
+        "percent52w": 87.93
+      },
+      "indicators": {
+        "rsi": 84.92491790714398
+      },
+      "categories": [
+        "RISER",
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "GIB-A.TO",
+      "momentumAnalysis": {
+        "greenDays": 0,
+        "streakDays": 0,
+        "magnitude": {
+          "min": 103.18,
+          "max": 104.03,
+          "percentChange": 0.82
+        }
+      },
+      "volatility": {
+        "5day": 5.634146341463476
+      },
+      "currentStatus": {
+        "price": 104.03,
+        "dayPositionPercent": 90.57171514543633,
+        "changePercent": -0.895
+      },
+      "ratios": {
+        "percent52w": 99.03
+      },
+      "indicators": {
+        "rsi": 64.079521847282
+      },
+      "categories": [
+        "BREAKOUT",
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "KL.TO",
+      "momentumAnalysis": {
+        "greenDays": 0,
+        "streakDays": 0,
+        "magnitude": {
+          "min": 40.07,
+          "max": 40.3,
+          "percentChange": 0.57
+        }
+      },
+      "volatility": {
+        "5day": -14.02255639097741
+      },
+      "currentStatus": {
+        "price": 40.3,
+        "dayPositionPercent": 0,
+        "changePercent": -4.713
+      },
+      "ratios": {
+        "percent52w": 53.4
+      },
+      "indicators": {
+        "rsi": 43.39018583315275
+      },
+      "categories": [
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "JWEL.TO",
+      "momentumAnalysis": {
+        "greenDays": 3,
+        "streakDays": 0,
+        "magnitude": {
+          "min": 36.89,
+          "max": 37.24,
+          "percentChange": 0.95
+        }
+      },
+      "volatility": {
+        "5day": 13.6315789473678
+      },
+      "currentStatus": {
+        "price": 37.24,
+        "dayPositionPercent": 70.33805888767722,
+        "changePercent": -0.134
+      },
+      "ratios": {
+        "percent52w": 81.52
+      },
+      "indicators": {
+        "rsi": 65.81412430255324
+      },
+      "categories": []
+    },
+    {
+      "symbol": "DCBO.TO",
+      "momentumAnalysis": {
+        "greenDays": 4,
+        "streakDays": 0,
+        "magnitude": {
+          "min": 51.19,
+          "max": 52.49,
+          "percentChange": 2.54
+        }
+      },
+      "volatility": {
+        "5day": 5.83512544802869
+      },
+      "currentStatus": {
+        "price": 52.49,
+        "dayPositionPercent": 11.539902585237938,
+        "changePercent": -0.11399999999999999
+      },
+      "ratios": {
+        "percent52w": 60.58
+      },
+      "indicators": {
+        "rsi": 41.47741353433663
+      },
+      "categories": [
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "TFII.TO",
+      "momentumAnalysis": {
+        "greenDays": 1,
+        "streakDays": 1,
+        "magnitude": {
+          "min": 90.53,
+          "max": 92.7,
+          "percentChange": 2.4,
+          "dailyPercentChange": 2.4
+        }
+      },
+      "volatility": {
+        "5day": 4.498525073746316
+      },
+      "currentStatus": {
+        "price": 92.7,
+        "dayPositionPercent": 75.47840349917988,
+        "changePercent": 2.194
+      },
+      "ratios": {
+        "percent52w": 90.04
+      },
+      "indicators": {
+        "rsi": 53.53049253820774
+      },
+      "categories": [
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "WELL.TO",
+      "momentumAnalysis": {
+        "greenDays": 1,
+        "streakDays": 0,
+        "magnitude": {
+          "min": 6.97,
+          "max": 7.15,
+          "percentChange": 2.58
+        }
+      },
+      "volatility": {
+        "5day": -8.904761904761871
+      },
+      "currentStatus": {
+        "price": 7.15,
+        "dayPositionPercent": 0,
+        "changePercent": 0
+      },
+      "ratios": {
+        "percent52w": 72.66
+      },
+      "indicators": {
+        "rsi": 26.999524993857104
+      },
+      "categories": [
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "AEM.TO",
+      "momentumAnalysis": {
+        "greenDays": 0,
+        "streakDays": 0,
+        "magnitude": {
+          "min": 71.4,
+          "max": 71.67,
+          "percentChange": 0.38
+        }
+      },
+      "volatility": {
+        "5day": -9.701834862385363
+      },
+      "currentStatus": {
+        "price": 71.67,
+        "dayPositionPercent": 7.095636844424854,
+        "changePercent": -3.514
+      },
+      "ratios": {
+        "percent52w": 61.77
+      },
+      "indicators": {
+        "rsi": 49.473376468013846
+      },
+      "categories": [
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "SHOP.TO",
+      "momentumAnalysis": {
+        "greenDays": 1,
+        "streakDays": 1,
+        "magnitude": {
+          "min": 1295.81,
+          "max": 1324.56,
+          "percentChange": 2.22,
+          "dailyPercentChange": 2.22
+        }
+      },
+      "volatility": {
+        "5day": -6.61760242792108
+      },
+      "currentStatus": {
+        "price": 1324.56,
+        "dayPositionPercent": 3.151722009404314,
+        "changePercent": 1.328
+      },
+      "ratios": {
+        "percent52w": 69.69
+      },
+      "indicators": {
+        "rsi": 29.90297563208924
+      },
+      "categories": [
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "SIS.TO",
+      "momentumAnalysis": {
+        "greenDays": 0,
+        "streakDays": 0,
+        "magnitude": {
+          "min": 17.39,
+          "max": 17.46,
+          "percentChange": 0.4
+        }
+      },
+      "volatility": {
+        "5day": -2.1623376623376624
+      },
+      "currentStatus": {
+        "price": 17.46,
+        "dayPositionPercent": 60.613810741688,
+        "changePercent": -0.852
+      },
+      "ratios": {
+        "percent52w": 91.94
+      },
+      "indicators": {
+        "rsi": 40.265309602209435
+      },
+      "categories": [
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "RNW.TO",
+      "momentumAnalysis": {
+        "greenDays": 1,
+        "streakDays": 1,
+        "magnitude": {
+          "min": 20.12,
+          "max": 20.29,
+          "percentChange": 0.84,
+          "dailyPercentChange": 0.84
+        }
+      },
+      "volatility": {
+        "5day": 4.009708737864082
+      },
+      "currentStatus": {
+        "price": 20.29,
+        "dayPositionPercent": 35.80786026200873,
+        "changePercent": 0.346
+      },
+      "ratios": {
+        "percent52w": 84.16
+      },
+      "indicators": {
+        "rsi": 51.27478060180531
+      },
+      "categories": [
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "CJT.TO",
+      "momentumAnalysis": {
+        "greenDays": 0,
+        "streakDays": 0,
+        "magnitude": {
+          "min": 162.25,
+          "max": 162.38,
+          "percentChange": 0.08
+        }
+      },
+      "volatility": {
+        "5day": -21.514084507042107
+      },
+      "currentStatus": {
+        "price": 162.38,
+        "dayPositionPercent": 0,
+        "changePercent": -0.909
+      },
+      "ratios": {
+        "percent52w": 65.12
+      },
+      "indicators": {
+        "rsi": 36.370707920222515
+      },
+      "categories": [
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "SVR.TO",
+      "momentumAnalysis": {
+        "greenDays": 0,
+        "streakDays": 0,
+        "magnitude": {
+          "min": 12.26,
+          "max": 12.31,
+          "percentChange": 0.41
+        }
+      },
+      "volatility": {
+        "5day": -9.326923076923077
+      },
+      "currentStatus": {
+        "price": 12.31,
+        "dayPositionPercent": 0,
+        "changePercent": -1.9120000000000001
+      },
+      "ratios": {
+        "percent52w": 76.99
+      },
+      "indicators": {
+        "rsi": 28.785609093417126
+      },
+      "categories": [
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "IWM",
+      "momentumAnalysis": {
+        "greenDays": 1,
+        "streakDays": 1,
+        "magnitude": {
+          "min": 214.08,
+          "max": 218.01,
+          "percentChange": 1.84,
+          "dailyPercentChange": 1.84
+        }
+      },
+      "volatility": {
+        "5day": 9.070351758794033
+      },
+      "currentStatus": {
+        "price": 218.01,
+        "dayPositionPercent": 87.90613718411528,
+        "changePercent": 1.6840000000000002
+      },
+      "ratios": {
+        "percent52w": 93.13
+      },
+      "indicators": {
+        "rsi": 45.52451463938347
+      },
+      "categories": [
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "BLK",
+      "momentumAnalysis": {
+        "greenDays": 0,
+        "streakDays": 0,
+        "magnitude": {
+          "min": 746.96,
+          "max": 749.26,
+          "percentChange": 0.31
+        }
+      },
+      "volatility": {
+        "5day": 8.167106752168996
+      },
+      "currentStatus": {
+        "price": 749.26,
+        "dayPositionPercent": 13.973268529768927,
+        "changePercent": -1.135
+      },
+      "ratios": {
+        "percent52w": 95.65
+      },
+      "indicators": {
+        "rsi": 59.122439520322956
+      },
+      "categories": [
+        "BREAKOUT",
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "CRWD",
+      "momentumAnalysis": {
+        "greenDays": 1,
+        "streakDays": 1,
+        "magnitude": {
+          "min": 171.2,
+          "max": 175.28,
+          "percentChange": 2.38,
+          "dailyPercentChange": 2.38
+        }
+      },
+      "volatility": {
+        "5day": -3.2982594936708773
+      },
+      "currentStatus": {
+        "price": 175.28,
+        "dayPositionPercent": 87.16577540106944,
+        "changePercent": 0.823
+      },
+      "ratios": {
+        "percent52w": 69.75
+      },
+      "indicators": {
+        "rsi": 32.86440100032016
+      },
+      "categories": [
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "OKTA",
+      "momentumAnalysis": {
+        "greenDays": 2,
+        "streakDays": 0,
+        "magnitude": {
+          "min": 208.9,
+          "max": 213.55,
+          "percentChange": 2.23
+        }
+      },
+      "volatility": {
+        "5day": -6.371031746031778
+      },
+      "currentStatus": {
+        "price": 213.55,
+        "dayPositionPercent": 74.04458598726123,
+        "changePercent": -1.052
+      },
+      "ratios": {
+        "percent52w": 72.64
+      },
+      "indicators": {
+        "rsi": 32.610812585582025
+      },
+      "categories": [
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "TAN",
+      "momentumAnalysis": {
+        "greenDays": 1,
+        "streakDays": 1,
+        "magnitude": {
+          "min": 83.15,
+          "max": 89.27,
+          "percentChange": 7.36,
+          "dailyPercentChange": 7.36
+        }
+      },
+      "volatility": {
+        "5day": 7.249475890985331
+      },
+      "currentStatus": {
+        "price": 89.27,
+        "dayPositionPercent": 96.63551401869147,
+        "changePercent": 5.984
+      },
+      "ratios": {
+        "percent52w": 70.86
+      },
+      "indicators": {
+        "rsi": 40.95894664973992
+      },
+      "categories": [
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "ZM",
+      "momentumAnalysis": {
+        "greenDays": 1,
+        "streakDays": 1,
+        "magnitude": {
+          "min": 305.78,
+          "max": 313.19,
+          "percentChange": 2.42,
+          "dailyPercentChange": 2.42
+        }
+      },
+      "volatility": {
+        "5day": -34.344632768361905
+      },
+      "currentStatus": {
+        "price": 313.19,
+        "dayPositionPercent": 86.54458598726117,
+        "changePercent": 1.5559999999999998
+      },
+      "ratios": {
+        "percent52w": 53.19
+      },
+      "indicators": {
+        "rsi": 32.912938840742115
+      },
+      "categories": [
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "SPLK",
+      "momentumAnalysis": {
+        "greenDays": 0,
+        "streakDays": 0,
+        "magnitude": {
+          "min": 130.55,
+          "max": 131.95,
+          "percentChange": 1.07
+        }
+      },
+      "volatility": {
+        "5day": -9.92976588628758
+      },
+      "currentStatus": {
+        "price": 131.95,
+        "dayPositionPercent": 46.97986577181148,
+        "changePercent": -2.281
+      },
+      "ratios": {
+        "percent52w": 58.41
+      },
+      "indicators": {
+        "rsi": 33.97233865744925
+      },
+      "categories": [
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "TSM",
+      "momentumAnalysis": {
+        "greenDays": 0,
+        "streakDays": 1,
+        "magnitude": {
+          "min": 112.39,
+          "max": 115.07,
+          "percentChange": 2.38,
+          "dailyPercentChange": 2.38
+        }
+      },
+      "volatility": {
+        "5day": 5.44353518821605
+      },
+      "currentStatus": {
+        "price": 115.07,
+        "dayPositionPercent": 43.381535038931716,
+        "changePercent": 0.594
+      },
+      "ratios": {
+        "percent52w": 81.23
+      },
+      "indicators": {
+        "rsi": 41.327902530830336
+      },
+      "categories": [
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "SWKS",
+      "momentumAnalysis": {
+        "greenDays": 1,
+        "streakDays": 0,
+        "magnitude": {
+          "min": 176.11,
+          "max": 178.51,
+          "percentChange": 1.36
+        }
+      },
+      "volatility": {
+        "5day": 8.418032786885218
+      },
+      "currentStatus": {
+        "price": 178.51,
+        "dayPositionPercent": 78.17589576547175,
+        "changePercent": -0.45199999999999996
+      },
+      "ratios": {
+        "percent52w": 91.16
+      },
+      "indicators": {
+        "rsi": 47.13853817073047
+      },
+      "categories": [
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "ETSY",
+      "momentumAnalysis": {
+        "greenDays": 1,
+        "streakDays": 1,
+        "magnitude": {
+          "min": 195.16,
+          "max": 198.87,
+          "percentChange": 1.9,
+          "dailyPercentChange": 1.9
+        }
+      },
+      "volatility": {
+        "5day": -142.99999999999963
+      },
+      "currentStatus": {
+        "price": 198.87,
+        "dayPositionPercent": 62.11523283346497,
+        "changePercent": 1.304
+      },
+      "ratios": {
+        "percent52w": 78.96
+      },
+      "indicators": {
+        "rsi": 35.5919124848554
+      },
+      "categories": [
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "NIO",
+      "momentumAnalysis": {
+        "greenDays": 4,
+        "streakDays": 1,
+        "magnitude": {
+          "min": 34.5,
+          "max": 37.55,
+          "percentChange": 8.84,
+          "dailyPercentChange": 8.84
+        }
+      },
+      "volatility": {
+        "5day": 33.627118644067956
+      },
+      "currentStatus": {
+        "price": 37.55,
+        "dayPositionPercent": 87.76119402985064,
+        "changePercent": 5.745
+      },
+      "ratios": {
+        "percent52w": 56.05
+      },
+      "indicators": {
+        "rsi": 36.939974131102225
+      },
+      "categories": []
+    },
+    {
+      "symbol": "AAPL",
+      "momentumAnalysis": {
+        "greenDays": 0,
+        "streakDays": 0,
+        "magnitude": {
+          "min": 118.86,
+          "max": 119.9,
+          "percentChange": 0.87
+        }
+      },
+      "volatility": {
+        "5day": -86.84210526316008
+      },
+      "currentStatus": {
+        "price": 119.9,
+        "dayPositionPercent": 67.40116655865211,
+        "changePercent": -1.2269999999999999
+      },
+      "ratios": {
+        "percent52w": 82.76
+      },
+      "indicators": {
+        "rsi": 40.16736957995615
+      },
+      "categories": [
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "SEDG",
+      "momentumAnalysis": {
+        "greenDays": 1,
+        "streakDays": 1,
+        "magnitude": {
+          "min": 254.1,
+          "max": 271.17,
+          "percentChange": 6.72,
+          "dailyPercentChange": 6.72
+        }
+      },
+      "volatility": {
+        "5day": 25.349162011172915
+      },
+      "currentStatus": {
+        "price": 271.17,
+        "dayPositionPercent": 96.29139072847681,
+        "changePercent": 4.279999999999999
+      },
+      "ratios": {
+        "percent52w": 71.93
+      },
+      "indicators": {
+        "rsi": 42.79625112827021
+      },
+      "categories": []
+    },
+    {
+      "symbol": "ENPH",
+      "momentumAnalysis": {
+        "greenDays": 1,
+        "streakDays": 1,
+        "magnitude": {
+          "min": 139.69,
+          "max": 150.6,
+          "percentChange": 7.81,
+          "dailyPercentChange": 7.81
+        }
+      },
+      "volatility": {
+        "5day": 21.996183206106924
+      },
+      "currentStatus": {
+        "price": 150.6,
+        "dayPositionPercent": 97.7396726422448,
+        "changePercent": 5.952
+      },
+      "ratios": {
+        "percent52w": 65.75
+      },
+      "indicators": {
+        "rsi": 40.371709789471566
+      },
+      "categories": []
+    },
+    {
+      "symbol": "MKC",
+      "momentumAnalysis": {
+        "greenDays": 0,
+        "streakDays": 0,
+        "magnitude": {
+          "min": 89.57,
+          "max": 89.9,
+          "percentChange": 0.37
+        }
+      },
+      "volatility": {
+        "5day": 5.607594936708829
+      },
+      "currentStatus": {
+        "price": 89.9,
+        "dayPositionPercent": 5.221518987341963,
+        "changePercent": -0.255
+      },
+      "ratios": {
+        "percent52w": 86.08
+      },
+      "indicators": {
+        "rsi": 71.19563772121826
+      },
+      "categories": [
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "FAN",
+      "momentumAnalysis": {
+        "greenDays": 4,
+        "streakDays": 4,
+        "magnitude": {
+          "min": 21.21,
+          "max": 22.11,
+          "percentChange": 4.24,
+          "dailyPercentChange": 1.06
+        }
+      },
+      "volatility": {
+        "5day": 3.413793103448285
+      },
+      "currentStatus": {
+        "price": 22.11,
+        "dayPositionPercent": 100,
+        "changePercent": 0.45399999999999996
+      },
+      "ratios": {
+        "percent52w": 84.78
+      },
+      "indicators": {
+        "rsi": 50.57464076634918
+      },
+      "categories": [
+        "RISER",
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "IPO",
+      "momentumAnalysis": {
+        "greenDays": 1,
+        "streakDays": 1,
+        "magnitude": {
+          "min": 59.32,
+          "max": 60.17,
+          "percentChange": 1.43,
+          "dailyPercentChange": 1.43
+        }
+      },
+      "volatility": {
+        "5day": 61.66666666666287
+      },
+      "currentStatus": {
+        "price": 60.17,
+        "dayPositionPercent": 91.66666666666663,
+        "changePercent": 0.77
+      },
+      "ratios": {
+        "percent52w": 78.09
+      },
+      "indicators": {
+        "rsi": 34.88068505775038
+      },
+      "categories": []
+    },
+    {
+      "symbol": "COST",
+      "momentumAnalysis": {
+        "greenDays": 0,
+        "streakDays": 0,
+        "magnitude": {
+          "min": 348.84,
+          "max": 349.75,
+          "percentChange": 0.26
+        }
+      },
+      "volatility": {
+        "5day": 9.245943637916318
+      },
+      "currentStatus": {
+        "price": 349.75,
+        "dayPositionPercent": 15.34569983136634,
+        "changePercent": -1.797
+      },
+      "ratios": {
+        "percent52w": 90.3
+      },
+      "indicators": {
+        "rsi": 60.03864039388529
+      },
+      "categories": [
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "BBBY",
+      "momentumAnalysis": {
+        "greenDays": 1,
+        "streakDays": 1,
+        "magnitude": {
+          "min": 28.22,
+          "max": 29.52,
+          "percentChange": 4.61,
+          "dailyPercentChange": 4.61
+        }
+      },
+      "volatility": {
+        "5day": 5.388601036269432
+      },
+      "currentStatus": {
+        "price": 29.52,
+        "dayPositionPercent": 78.9473684210525,
+        "changePercent": 3.9440000000000004
+      },
+      "ratios": {
+        "percent52w": 54.77
+      },
+      "indicators": {
+        "rsi": 53.245421675795455
+      },
+      "categories": [
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "FDX",
+      "momentumAnalysis": {
+        "greenDays": 4,
+        "streakDays": 1,
+        "magnitude": {
+          "min": 276.64,
+          "max": 285.92,
+          "percentChange": 3.35,
+          "dailyPercentChange": 3.35
+        }
+      },
+      "volatility": {
+        "5day": 2.93079977311401
+      },
+      "currentStatus": {
+        "price": 285.92,
+        "dayPositionPercent": 77.36098403984977,
+        "changePercent": 2.4
+      },
+      "ratios": {
+        "percent52w": 94
+      },
+      "indicators": {
+        "rsi": 62.44422134882104
+      },
+      "categories": [
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "TECK",
+      "momentumAnalysis": {
+        "greenDays": 3,
+        "streakDays": 3,
+        "magnitude": {
+          "min": 17.3,
+          "max": 19.32,
+          "percentChange": 11.68,
+          "dailyPercentChange": 3.89
+        }
+      },
+      "volatility": {
+        "5day": 6.202380952380958
+      },
+      "currentStatus": {
+        "price": 19.32,
+        "dayPositionPercent": 75.65217391304336,
+        "changePercent": 0.993
+      },
+      "ratios": {
+        "percent52w": 80.87
+      },
+      "indicators": {
+        "rsi": 43.374922633654755
+      },
+      "categories": [
+        "RISER",
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "W",
+      "momentumAnalysis": {
+        "greenDays": 0,
+        "streakDays": 0,
+        "magnitude": {
+          "min": 315.12,
+          "max": 317.02,
+          "percentChange": 0.6
+        }
+      },
+      "volatility": {
+        "5day": -23.105590062111776
+      },
+      "currentStatus": {
+        "price": 317.02,
+        "dayPositionPercent": 13.12335958005233,
+        "changePercent": -4.696
+      },
+      "ratios": {
+        "percent52w": 85.91
+      },
+      "indicators": {
+        "rsi": 43.59313083010944
+      },
+      "categories": [
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "UNH",
+      "momentumAnalysis": {
+        "greenDays": 0,
+        "streakDays": 0,
+        "magnitude": {
+          "min": 371.8,
+          "max": 373.56,
+          "percentChange": 0.47
+        }
+      },
+      "volatility": {
+        "5day": 19.395270270270753
+      },
+      "currentStatus": {
+        "price": 373.56,
+        "dayPositionPercent": 21.782178217821713,
+        "changePercent": -1.451
+      },
+      "ratios": {
+        "percent52w": 98.18
+      },
+      "indicators": {
+        "rsi": 76.37018788248973
+      },
+      "categories": [
+        "BREAKOUT"
+      ]
+    },
+    {
+      "symbol": "NKE",
+      "momentumAnalysis": {
+        "greenDays": 4,
+        "streakDays": 0,
+        "magnitude": {
+          "min": 131.22,
+          "max": 132.95,
+          "percentChange": 1.32
+        }
+      },
+      "volatility": {
+        "5day": -119.52380952380707
+      },
+      "currentStatus": {
+        "price": 132.95,
+        "dayPositionPercent": 81.220657276995,
+        "changePercent": -0.40499999999999997
+      },
+      "ratios": {
+        "percent52w": 90.04
+      },
+      "indicators": {
+        "rsi": 44.37846216436625
+      },
+      "categories": [
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "MCD",
+      "momentumAnalysis": {
+        "greenDays": 0,
+        "streakDays": 0,
+        "magnitude": {
+          "min": 224.22,
+          "max": 224.98,
+          "percentChange": 0.34
+        }
+      },
+      "volatility": {
+        "5day": 19.17204301075268
+      },
+      "currentStatus": {
+        "price": 224.98,
+        "dayPositionPercent": 27.14285714285671,
+        "changePercent": -1.042
+      },
+      "ratios": {
+        "percent52w": 98.19
+      },
+      "indicators": {
+        "rsi": 69.11975982742233
+      },
+      "categories": [
+        "BREAKOUT"
+      ]
+    },
+    {
+      "symbol": "AMGN",
+      "momentumAnalysis": {
+        "greenDays": 0,
+        "streakDays": 0,
+        "magnitude": {
+          "min": 248.83,
+          "max": 249.75,
+          "percentChange": 0.37
+        }
+      },
+      "volatility": {
+        "5day": 14.808411214953226
+      },
+      "currentStatus": {
+        "price": 249.75,
+        "dayPositionPercent": 17.770909793316378,
+        "changePercent": -2.043
+      },
+      "ratios": {
+        "percent52w": 90.93
+      },
+      "indicators": {
+        "rsi": 68.31990875088837
+      },
+      "categories": []
+    },
+    {
+      "symbol": "EA",
+      "momentumAnalysis": {
+        "greenDays": 4,
+        "streakDays": 0,
+        "magnitude": {
+          "min": 132.44,
+          "max": 134.43,
+          "percentChange": 1.5
+        }
+      },
+      "volatility": {
+        "5day": 4.62850971922244
+      },
+      "currentStatus": {
+        "price": 134.43,
+        "dayPositionPercent": 96.13526570048386,
+        "changePercent": -0.4
+      },
+      "ratios": {
+        "percent52w": 89.55
+      },
+      "indicators": {
+        "rsi": 48.832970925145496
+      },
+      "categories": [
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "DE",
+      "momentumAnalysis": {
+        "greenDays": 1,
+        "streakDays": 1,
+        "magnitude": {
+          "min": 367.5,
+          "max": 373.92,
+          "percentChange": 1.75,
+          "dailyPercentChange": 1.75
+        }
+      },
+      "volatility": {
+        "5day": 3.9239046887009916
+      },
+      "currentStatus": {
+        "price": 373.92,
+        "dayPositionPercent": 84.45190156599568,
+        "changePercent": 1.8659999999999999
+      },
+      "ratios": {
+        "percent52w": 95.52
+      },
+      "indicators": {
+        "rsi": 57.33924111654329
+      },
+      "categories": [
+        "BREAKOUT",
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "APPS",
+      "momentumAnalysis": {
+        "greenDays": 1,
+        "streakDays": 1,
+        "magnitude": {
+          "min": 70.62,
+          "max": 74.51,
+          "percentChange": 5.51,
+          "dailyPercentChange": 5.51
+        }
+      },
+      "volatility": {
+        "5day": 32.550000000000104
+      },
+      "currentStatus": {
+        "price": 74.51,
+        "dayPositionPercent": 84.65306122448983,
+        "changePercent": 4.458
+      },
+      "ratios": {
+        "percent52w": 72.65
+      },
+      "indicators": {
+        "rsi": 40.703175801858876
+      },
+      "categories": []
+    },
+    {
+      "symbol": "ODFL",
+      "momentumAnalysis": {
+        "greenDays": 1,
+        "streakDays": 1,
+        "magnitude": {
+          "min": 233.19,
+          "max": 240.61,
+          "percentChange": 3.18,
+          "dailyPercentChange": 3.18
+        }
+      },
+      "volatility": {
+        "5day": 9.600000000000025
+      },
+      "currentStatus": {
+        "price": 240.61,
+        "dayPositionPercent": 81.47590361445802,
+        "changePercent": 2.239
+      },
+      "ratios": {
+        "percent52w": 100.93
+      },
+      "indicators": {
+        "rsi": 70.0518036181028
+      },
+      "categories": [
+        "BREAKOUT",
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "TSCO",
+      "momentumAnalysis": {
+        "greenDays": 1,
+        "streakDays": 1,
+        "magnitude": {
+          "min": 175.02,
+          "max": 177.05,
+          "percentChange": 1.16,
+          "dailyPercentChange": 1.16
+        }
+      },
+      "volatility": {
+        "5day": 4.158948685857265
+      },
+      "currentStatus": {
+        "price": 177.05,
+        "dayPositionPercent": 32.72171253822686,
+        "changePercent": 0.774
+      },
+      "ratios": {
+        "percent52w": 99.14
+      },
+      "indicators": {
+        "rsi": 63.05565440024448
+      },
+      "categories": [
+        "BREAKOUT",
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "ABMD",
+      "momentumAnalysis": {
+        "greenDays": 3,
+        "streakDays": 3,
+        "magnitude": {
+          "min": 284.59,
+          "max": 309.88,
+          "percentChange": 8.89,
+          "dailyPercentChange": 2.96
+        }
+      },
+      "volatility": {
+        "5day": 4.039566049776651
+      },
+      "currentStatus": {
+        "price": 309.88,
+        "dayPositionPercent": 96.12676056338032,
+        "changePercent": 1.344
+      },
+      "ratios": {
+        "percent52w": 79.99
+      },
+      "indicators": {
+        "rsi": 47.10346891473339
+      },
+      "categories": [
+        "RISER",
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "ASML",
+      "momentumAnalysis": {
+        "greenDays": 1,
+        "streakDays": 0,
+        "magnitude": {
+          "min": 595.52,
+          "max": 601.29,
+          "percentChange": 0.97
+        }
+      },
+      "volatility": {
+        "5day": 11.65169528841925
+      },
+      "currentStatus": {
+        "price": 601.29,
+        "dayPositionPercent": 53.72439478584708,
+        "changePercent": -1.1039999999999999
+      },
+      "ratios": {
+        "percent52w": 95.85
+      },
+      "indicators": {
+        "rsi": 53.29534400519734
+      },
+      "categories": [
+        "BREAKOUT"
+      ]
+    },
+    {
+      "symbol": "MSFT",
+      "momentumAnalysis": {
+        "greenDays": 0,
+        "streakDays": 0,
+        "magnitude": {
+          "min": 231.1,
+          "max": 231.85,
+          "percentChange": 0.32
+        }
+      },
+      "volatility": {
+        "5day": -11.429362880886375
+      },
+      "currentStatus": {
+        "price": 231.85,
+        "dayPositionPercent": 27.27272727272727,
+        "changePercent": -1.4409999999999998
+      },
+      "ratios": {
+        "percent52w": 94.42
+      },
+      "indicators": {
+        "rsi": 45.08448499722048
+      },
+      "categories": [
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "TMUS",
+      "momentumAnalysis": {
+        "greenDays": 2,
+        "streakDays": 2,
+        "magnitude": {
+          "min": 121.02,
+          "max": 124.64,
+          "percentChange": 2.99,
+          "dailyPercentChange": 1.5
+        }
+      },
+      "volatility": {
+        "5day": 4.662280701754405
+      },
+      "currentStatus": {
+        "price": 124.64,
+        "dayPositionPercent": 75.99097647437955,
+        "changePercent": 0.9560000000000001
+      },
+      "ratios": {
+        "percent52w": 91.96
+      },
+      "indicators": {
+        "rsi": 52.28284931532903
+      },
+      "categories": [
+        "RISER",
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "MA",
+      "momentumAnalysis": {
+        "greenDays": 0,
+        "streakDays": 0,
+        "magnitude": {
+          "min": 357.1,
+          "max": 358.2,
+          "percentChange": 0.31
+        }
+      },
+      "volatility": {
+        "5day": -44.06896551724209
+      },
+      "currentStatus": {
+        "price": 358.2,
+        "dayPositionPercent": 14.725568942436015,
+        "changePercent": -1.298
+      },
+      "ratios": {
+        "percent52w": 91.96
+      },
+      "indicators": {
+        "rsi": 47.40966046339879
+      },
+      "categories": [
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "ADBE",
+      "momentumAnalysis": {
+        "greenDays": 4,
+        "streakDays": 0,
+        "magnitude": {
+          "min": 461.5,
+          "max": 465.46,
+          "percentChange": 0.86
+        }
+      },
+      "volatility": {
+        "5day": 8.870967741935543
+      },
+      "currentStatus": {
+        "price": 465.46,
+        "dayPositionPercent": 51.56249999999969,
+        "changePercent": -0.822
+      },
+      "ratios": {
+        "percent52w": 86.7
+      },
+      "indicators": {
+        "rsi": 50.3497883050669
+      },
+      "categories": [
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "CDNS",
+      "momentumAnalysis": {
+        "greenDays": 0,
+        "streakDays": 0,
+        "magnitude": {
+          "min": 128.37,
+          "max": 130.87,
+          "percentChange": 1.95
+        }
+      },
+      "volatility": {
+        "5day": 12.269230769230765
+      },
+      "currentStatus": {
+        "price": 130.87,
+        "dayPositionPercent": 61.576354679802925,
+        "changePercent": -1.4160000000000001
+      },
+      "ratios": {
+        "percent52w": 87.79
+      },
+      "indicators": {
+        "rsi": 39.69629626524637
+      },
+      "categories": []
+    },
+    {
+      "symbol": "MELI",
+      "momentumAnalysis": {
+        "greenDays": 1,
+        "streakDays": 1,
+        "magnitude": {
+          "min": 1368.44,
+          "max": 1428.03,
+          "percentChange": 4.35,
+          "dailyPercentChange": 4.35
+        }
+      },
+      "volatility": {
+        "5day": 5.72971627675455
+      },
+      "currentStatus": {
+        "price": 1428.03,
+        "dayPositionPercent": 68.88230682115156,
+        "changePercent": 1.754
+      },
+      "ratios": {
+        "percent52w": 70.69
+      },
+      "indicators": {
+        "rsi": 37.066473711395915
+      },
+      "categories": [
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "UBER",
+      "momentumAnalysis": {
+        "greenDays": 1,
+        "streakDays": 1,
+        "magnitude": {
+          "min": 52.85,
+          "max": 53.46,
+          "percentChange": 1.15,
+          "dailyPercentChange": 1.15
+        }
+      },
+      "volatility": {
+        "5day": 15.820224719101109
+      },
+      "currentStatus": {
+        "price": 53.46,
+        "dayPositionPercent": 55.40540540540554,
+        "changePercent": 0.20600000000000002
+      },
+      "ratios": {
+        "percent52w": 83.47
+      },
+      "indicators": {
+        "rsi": 47.75644075453439
+      },
+      "categories": []
+    },
+    {
+      "symbol": "PINS",
+      "momentumAnalysis": {
+        "greenDays": 4,
+        "streakDays": 0,
+        "magnitude": {
+          "min": 68.32,
+          "max": 69.31,
+          "percentChange": 1.45
+        }
+      },
+      "volatility": {
+        "5day": -29.31034482758714
+      },
+      "currentStatus": {
+        "price": 69.31,
+        "dayPositionPercent": 40.909090909091255,
+        "changePercent": -0.101
+      },
+      "ratios": {
+        "percent52w": 77.1
+      },
+      "indicators": {
+        "rsi": 35.528338274238806
+      },
+      "categories": [
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "DOCU",
+      "momentumAnalysis": {
+        "greenDays": 1,
+        "streakDays": 0,
+        "magnitude": {
+          "min": 192.02,
+          "max": 196.94,
+          "percentChange": 2.56
+        }
+      },
+      "volatility": {
+        "5day": -24.046052631578824
+      },
+      "currentStatus": {
+        "price": 196.94,
+        "dayPositionPercent": 82.13689482470791,
+        "changePercent": -0.233
+      },
+      "ratios": {
+        "percent52w": 67.86
+      },
+      "indicators": {
+        "rsi": 35.05901080349962
+      },
+      "categories": [
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "FSLY",
+      "momentumAnalysis": {
+        "greenDays": 1,
+        "streakDays": 1,
+        "magnitude": {
+          "min": 62.92,
+          "max": 65.26,
+          "percentChange": 3.72,
+          "dailyPercentChange": 3.72
+        }
+      },
+      "volatility": {
+        "5day": 19.67105263157877
+      },
+      "currentStatus": {
+        "price": 65.26,
+        "dayPositionPercent": 88.28828828828829,
+        "changePercent": 1.794
+      },
+      "ratios": {
+        "percent52w": 47.81
+      },
+      "indicators": {
+        "rsi": 38.12849996677974
+      },
+      "categories": []
+    },
+    {
+      "symbol": "AMD",
+      "momentumAnalysis": {
+        "greenDays": 0,
+        "streakDays": 0,
+        "magnitude": {
+          "min": 74.85,
+          "max": 76,
+          "percentChange": 1.54
+        }
+      },
+      "volatility": {
+        "5day": -25.27083333333317
+      },
+      "currentStatus": {
+        "price": 76,
+        "dayPositionPercent": 67.25146198830411,
+        "changePercent": -1.478
+      },
+      "ratios": {
+        "percent52w": 76.59
+      },
+      "indicators": {
+        "rsi": 35.92531843604067
+      },
+      "categories": [
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "NVDA",
+      "momentumAnalysis": {
+        "greenDays": 4,
+        "streakDays": 0,
+        "magnitude": {
+          "min": 508.2,
+          "max": 514.87,
+          "percentChange": 1.31
+        }
+      },
+      "volatility": {
+        "5day": 9.316939890710398
+      },
+      "currentStatus": {
+        "price": 514.87,
+        "dayPositionPercent": 61.7021276595746,
+        "changePercent": -0.5910000000000001
+      },
+      "ratios": {
+        "percent52w": 83.76
+      },
+      "indicators": {
+        "rsi": 43.34666363515274
+      },
+      "categories": [
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "BABA",
+      "momentumAnalysis": {
+        "greenDays": 0,
+        "streakDays": 0,
+        "magnitude": {
+          "min": 226.64,
+          "max": 229.25,
+          "percentChange": 1.15
+        }
+      },
+      "volatility": {
+        "5day": -168.67647058823914
+      },
+      "currentStatus": {
+        "price": 229.25,
+        "dayPositionPercent": 68.50393700787434,
+        "changePercent": -1.126
+      },
+      "ratios": {
+        "percent52w": 71.79
+      },
+      "indicators": {
+        "rsi": 43.86757554493123
+      },
+      "categories": [
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "TWTR",
+      "momentumAnalysis": {
+        "greenDays": 2,
+        "streakDays": 3,
+        "magnitude": {
+          "min": 59.57,
+          "max": 62.99,
+          "percentChange": 5.74,
+          "dailyPercentChange": 1.91
+        }
+      },
+      "volatility": {
+        "5day": 15.65591397849453
+      },
+      "currentStatus": {
+        "price": 62.99,
+        "dayPositionPercent": 49.545454545454795,
+        "changePercent": 0.079
+      },
+      "ratios": {
+        "percent52w": 78.01
+      },
+      "indicators": {
+        "rsi": 32.606411712908084
+      },
+      "categories": [
+        "RISER"
+      ]
+    },
+    {
+      "symbol": "ADSK",
+      "momentumAnalysis": {
+        "greenDays": 3,
+        "streakDays": 0,
+        "magnitude": {
+          "min": 264.47,
+          "max": 268.43,
+          "percentChange": 1.5
+        }
+      },
+      "volatility": {
+        "5day": 9.733333333333286
+      },
+      "currentStatus": {
+        "price": 268.43,
+        "dayPositionPercent": 53.29744279946173,
+        "changePercent": -0.868
+      },
+      "ratios": {
+        "percent52w": 83.59
+      },
+      "indicators": {
+        "rsi": 43.876378069272256
+      },
+      "categories": [
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "SQ",
+      "momentumAnalysis": {
+        "greenDays": 1,
+        "streakDays": 1,
+        "magnitude": {
+          "min": 202.93,
+          "max": 212.83,
+          "percentChange": 4.88,
+          "dailyPercentChange": 4.88
+        }
+      },
+      "volatility": {
+        "5day": -82.2647058823562
+      },
+      "currentStatus": {
+        "price": 212.83,
+        "dayPositionPercent": 87.1839581517001,
+        "changePercent": 2.727
+      },
+      "ratios": {
+        "percent52w": 75.15
+      },
+      "indicators": {
+        "rsi": 42.27845476697481
+      },
+      "categories": [
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "CRM",
+      "momentumAnalysis": {
+        "greenDays": 3,
+        "streakDays": 0,
+        "magnitude": {
+          "min": 207.35,
+          "max": 210,
+          "percentChange": 1.28
+        }
+      },
+      "volatility": {
+        "5day": 63.382978723404996
+      },
+      "currentStatus": {
+        "price": 210,
+        "dayPositionPercent": 67.21728081321497,
+        "changePercent": -0.365
+      },
+      "ratios": {
+        "percent52w": 73.81
+      },
+      "indicators": {
+        "rsi": 44.037585760959296
+      },
+      "categories": []
+    },
+    {
+      "symbol": "TSLA",
+      "momentumAnalysis": {
+        "greenDays": 1,
+        "streakDays": 1,
+        "magnitude": {
+          "min": 596.02,
+          "max": 635.62,
+          "percentChange": 6.64,
+          "dailyPercentChange": 6.64
+        }
+      },
+      "volatility": {
+        "5day": 43.99999999999942
+      },
+      "currentStatus": {
+        "price": 635.62,
+        "dayPositionPercent": 95.62700964630233,
+        "changePercent": 3.9800000000000004
+      },
+      "ratios": {
+        "percent52w": 70.59
+      },
+      "indicators": {
+        "rsi": 42.84994169110224
+      },
+      "categories": []
+    },
+    {
+      "symbol": "VOX",
+      "momentumAnalysis": {
+        "greenDays": 2,
+        "streakDays": 2,
+        "magnitude": {
+          "min": 126.22,
+          "max": 129.12,
+          "percentChange": 2.3,
+          "dailyPercentChange": 1.15
+        }
+      },
+      "volatility": {
+        "5day": -12.08474576271196
+      },
+      "currentStatus": {
+        "price": 129.12,
+        "dayPositionPercent": 70.8846584546483,
+        "changePercent": 0.124
+      },
+      "ratios": {
+        "percent52w": 95.14
+      },
+      "indicators": {
+        "rsi": 43.32838930108896
+      },
+      "categories": [
+        "RISER",
+        "BREAKOUT",
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "EEM",
+      "momentumAnalysis": {
+        "greenDays": 4,
+        "streakDays": 1,
+        "magnitude": {
+          "min": 52.64,
+          "max": 53.07,
+          "percentChange": 0.82,
+          "dailyPercentChange": 0.82
+        }
+      },
+      "volatility": {
+        "5day": 5.244604316546744
+      },
+      "currentStatus": {
+        "price": 53.07,
+        "dayPositionPercent": 75.82417582417585,
+        "changePercent": 0.321
+      },
+      "ratios": {
+        "percent52w": 91.04
+      },
+      "indicators": {
+        "rsi": 43.85008532392406
+      },
+      "categories": [
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "XLNX",
+      "momentumAnalysis": {
+        "greenDays": 0,
+        "streakDays": 0,
+        "magnitude": {
+          "min": 118.41,
+          "max": 120.3,
+          "percentChange": 1.6
+        }
+      },
+      "volatility": {
+        "5day": 75.11764705882413
+      },
+      "currentStatus": {
+        "price": 120.3,
+        "dayPositionPercent": 66.54929577464783,
+        "changePercent": -1.5789999999999997
+      },
+      "ratios": {
+        "percent52w": 77.65
+      },
+      "indicators": {
+        "rsi": 40.12949986736993
+      },
+      "categories": []
+    },
+    {
+      "symbol": "GDX",
+      "momentumAnalysis": {
+        "greenDays": 0,
+        "streakDays": 0,
+        "magnitude": {
+          "min": 31.65,
+          "max": 31.83,
+          "percentChange": 0.57
+        }
+      },
+      "volatility": {
+        "5day": -20.319148936170308
+      },
+      "currentStatus": {
+        "price": 31.83,
+        "dayPositionPercent": 30.74324324324289,
+        "changePercent": -3.1350000000000002
+      },
+      "ratios": {
+        "percent52w": 69.89
+      },
+      "indicators": {
+        "rsi": 51.118485050695405
+      },
+      "categories": [
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "CPER",
+      "momentumAnalysis": {
+        "greenDays": 0,
+        "streakDays": 0,
+        "magnitude": {
+          "min": 24.47,
+          "max": 24.55,
+          "percentChange": 0.33
+        }
+      },
+      "volatility": {
+        "5day": -14.750000000000135
+      },
+      "currentStatus": {
+        "price": 24.55,
+        "dayPositionPercent": 34.042553191490235,
+        "changePercent": -1.4449999999999998
+      },
+      "ratios": {
+        "percent52w": 91.43
+      },
+      "indicators": {
+        "rsi": 43.588862847305485
+      },
+      "categories": [
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "ZROZ",
+      "momentumAnalysis": {
+        "greenDays": 1,
+        "streakDays": 1,
+        "magnitude": {
+          "min": 131.19,
+          "max": 132.92,
+          "percentChange": 1.32,
+          "dailyPercentChange": 1.32
+        }
+      },
+      "volatility": {
+        "5day": -6.427480916030439
+      },
+      "currentStatus": {
+        "price": 132.92,
+        "dayPositionPercent": 71.52810032512764,
+        "changePercent": 0.9950000000000001
+      },
+      "ratios": {
+        "percent52w": 71.25
+      },
+      "indicators": {
+        "rsi": 41.121492463457656
+      },
+      "categories": [
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "BLV",
+      "momentumAnalysis": {
+        "greenDays": 1,
+        "streakDays": 1,
+        "magnitude": {
+          "min": 97.11,
+          "max": 98.02,
+          "percentChange": 0.94,
+          "dailyPercentChange": 0.94
+        }
+      },
+      "volatility": {
+        "5day": -10.23529411764702
+      },
+      "currentStatus": {
+        "price": 98.02,
+        "dayPositionPercent": 92.98245614035065,
+        "changePercent": 0.647
+      },
+      "ratios": {
+        "percent52w": 86.68
+      },
+      "indicators": {
+        "rsi": 41.4654523806636
+      },
+      "categories": [
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "EDV",
+      "momentumAnalysis": {
+        "greenDays": 1,
+        "streakDays": 1,
+        "magnitude": {
+          "min": 124.39,
+          "max": 125.93,
+          "percentChange": 1.24,
+          "dailyPercentChange": 1.24
+        }
+      },
+      "volatility": {
+        "5day": -5.5351562500000755
+      },
+      "currentStatus": {
+        "price": 125.93,
+        "dayPositionPercent": 81.2834224598934,
+        "changePercent": 0.76
+      },
+      "ratios": {
+        "percent52w": 74.08
+      },
+      "indicators": {
+        "rsi": 40.29181567422662
+      },
+      "categories": [
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "PAAS",
+      "momentumAnalysis": {
+        "greenDays": 1,
+        "streakDays": 0,
+        "magnitude": {
+          "min": 28.71,
+          "max": 29.34,
+          "percentChange": 2.19
+        }
+      },
+      "volatility": {
+        "5day": -10.937499999999998
+      },
+      "currentStatus": {
+        "price": 29.34,
+        "dayPositionPercent": 64.94845360824739,
+        "changePercent": -3.2960000000000003
+      },
+      "ratios": {
+        "percent52w": 73.55
+      },
+      "indicators": {
+        "rsi": 38.751267236313765
+      },
+      "categories": [
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "FDN",
+      "momentumAnalysis": {
+        "greenDays": 1,
+        "streakDays": 0,
+        "magnitude": {
+          "min": 211.67,
+          "max": 213.67,
+          "percentChange": 0.94
+        }
+      },
+      "volatility": {
+        "5day": 50.878048780488484
+      },
+      "currentStatus": {
+        "price": 213.67,
+        "dayPositionPercent": 75.75757575757534,
+        "changePercent": -0.406
+      },
+      "ratios": {
+        "percent52w": 86.91
+      },
+      "indicators": {
+        "rsi": 38.83992156815958
+      },
+      "categories": []
+    },
+    {
+      "symbol": "VSGX",
+      "momentumAnalysis": {
+        "greenDays": 4,
+        "streakDays": 0,
+        "magnitude": {
+          "min": 61.02,
+          "max": 61.34,
+          "percentChange": 0.52
+        }
+      },
+      "volatility": {
+        "5day": 6.691489361702063
+      },
+      "currentStatus": {
+        "price": 61.34,
+        "dayPositionPercent": 81.8181818181835,
+        "changePercent": -0.11399999999999999
+      },
+      "ratios": {
+        "percent52w": 95.87
+      },
+      "indicators": {
+        "rsi": 47.2648854602667
+      },
+      "categories": [
+        "BREAKOUT",
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "IGV",
+      "momentumAnalysis": {
+        "greenDays": 4,
+        "streakDays": 0,
+        "magnitude": {
+          "min": 329.52,
+          "max": 333.83,
+          "percentChange": 1.31
+        }
+      },
+      "volatility": {
+        "5day": 44.97959183673612
+      },
+      "currentStatus": {
+        "price": 333.83,
+        "dayPositionPercent": 81.01503759398511,
+        "changePercent": -0.519
+      },
+      "ratios": {
+        "percent52w": 85.72
+      },
+      "indicators": {
+        "rsi": 37.257662141242555
+      },
+      "categories": []
+    },
+    {
+      "symbol": "THD",
+      "momentumAnalysis": {
+        "greenDays": 0,
+        "streakDays": 0,
+        "magnitude": {
+          "min": 81.23,
+          "max": 81.38,
+          "percentChange": 0.18
+        }
+      },
+      "volatility": {
+        "5day": 24.543859649123227
+      },
+      "currentStatus": {
+        "price": 81.38,
+        "dayPositionPercent": 24.999999999998813,
+        "changePercent": -1.058
+      },
+      "ratios": {
+        "percent52w": 97.4
+      },
+      "indicators": {
+        "rsi": 52.25215824410636
+      },
+      "categories": [
+        "BREAKOUT"
+      ]
+    },
+    {
+      "symbol": "DGS",
+      "momentumAnalysis": {
+        "greenDays": 1,
+        "streakDays": 1,
+        "magnitude": {
+          "min": 50.53,
+          "max": 50.96,
+          "percentChange": 0.85,
+          "dailyPercentChange": 0.85
+        }
+      },
+      "volatility": {
+        "5day": 4.4000000000000465
+      },
+      "currentStatus": {
+        "price": 50.96,
+        "dayPositionPercent": 99.31034482758538,
+        "changePercent": 0.592
+      },
+      "ratios": {
+        "percent52w": 99.26
+      },
+      "indicators": {
+        "rsi": 53.68255626611694
+      },
+      "categories": [
+        "BREAKOUT",
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "GOLD",
+      "momentumAnalysis": {
+        "greenDays": 0,
+        "streakDays": 0,
+        "magnitude": {
+          "min": 19.44,
+          "max": 19.51,
+          "percentChange": 0.36
+        }
+      },
+      "volatility": {
+        "5day": -8.076923076923093
+      },
+      "currentStatus": {
+        "price": 19.51,
+        "dayPositionPercent": 22.95081967213126,
+        "changePercent": -3.2239999999999998
+      },
+      "ratios": {
+        "percent52w": 62.96
+      },
+      "indicators": {
+        "rsi": 50.36859524566065
+      },
+      "categories": [
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "CHIQ",
+      "momentumAnalysis": {
+        "greenDays": 1,
+        "streakDays": 1,
+        "magnitude": {
+          "min": 32.13,
+          "max": 33.14,
+          "percentChange": 3.14,
+          "dailyPercentChange": 3.14
+        }
+      },
+      "volatility": {
+        "5day": 7.904109589041027
+      },
+      "currentStatus": {
+        "price": 33.14,
+        "dayPositionPercent": 86.66666666666649,
+        "changePercent": 2.442
+      },
+      "ratios": {
+        "percent52w": 75.49
+      },
+      "indicators": {
+        "rsi": 36.09283437122664
+      },
+      "categories": [
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "KBA",
+      "momentumAnalysis": {
+        "greenDays": 1,
+        "streakDays": 1,
+        "magnitude": {
+          "min": 43.83,
+          "max": 44.23,
+          "percentChange": 0.91,
+          "dailyPercentChange": 0.91
+        }
+      },
+      "volatility": {
+        "5day": 5.311475409836077
+      },
+      "currentStatus": {
+        "price": 44.23,
+        "dayPositionPercent": 92.30769230769104,
+        "changePercent": 0.614
+      },
+      "ratios": {
+        "percent52w": 82.95
+      },
+      "indicators": {
+        "rsi": 37.28836440507029
+      },
+      "categories": [
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "OEF",
+      "momentumAnalysis": {
+        "greenDays": 0,
+        "streakDays": 0,
+        "magnitude": {
+          "min": 178.3,
+          "max": 178.93,
+          "percentChange": 0.35
+        }
+      },
+      "volatility": {
+        "5day": 8.867298578199009
+      },
+      "currentStatus": {
+        "price": 178.93,
+        "dayPositionPercent": 62.999999999999545,
+        "changePercent": -0.44
+      },
+      "ratios": {
+        "percent52w": 99.16
+      },
+      "indicators": {
+        "rsi": 53.27523321611781
+      },
+      "categories": [
+        "BREAKOUT",
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "SMH",
+      "momentumAnalysis": {
+        "greenDays": 1,
+        "streakDays": 0,
+        "magnitude": {
+          "min": 234.53,
+          "max": 236.75,
+          "percentChange": 0.95
+        }
+      },
+      "volatility": {
+        "5day": 9.384512683578107
+      },
+      "currentStatus": {
+        "price": 236.75,
+        "dayPositionPercent": 69.8113207547168,
+        "changePercent": -0.42900000000000005
+      },
+      "ratios": {
+        "percent52w": 91.55
+      },
+      "indicators": {
+        "rsi": 46.33901098474345
+      },
+      "categories": [
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "PBW",
+      "momentumAnalysis": {
+        "greenDays": 1,
+        "streakDays": 1,
+        "magnitude": {
+          "min": 88.38,
+          "max": 94.25,
+          "percentChange": 6.64,
+          "dailyPercentChange": 6.64
+        }
+      },
+      "volatility": {
+        "5day": 8.266666666666646
+      },
+      "currentStatus": {
+        "price": 94.25,
+        "dayPositionPercent": 95.61688311688317,
+        "changePercent": 5.827999999999999
+      },
+      "ratios": {
+        "percent52w": 68.1
+      },
+      "indicators": {
+        "rsi": 38.95090924574418
+      },
+      "categories": [
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "EMQQ",
+      "momentumAnalysis": {
+        "greenDays": 1,
+        "streakDays": 1,
+        "magnitude": {
+          "min": 61.54,
+          "max": 63.13,
+          "percentChange": 2.58,
+          "dailyPercentChange": 2.58
+        }
+      },
+      "volatility": {
+        "5day": 9.263157894736818
+      },
+      "currentStatus": {
+        "price": 63.13,
+        "dayPositionPercent": 85.66552901023888,
+        "changePercent": 1.839
+      },
+      "ratios": {
+        "percent52w": 77.24
+      },
+      "indicators": {
+        "rsi": 36.66458623051
+      },
+      "categories": [
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "LULU",
+      "momentumAnalysis": {
+        "greenDays": 1,
+        "streakDays": 3,
+        "magnitude": {
+          "min": 298.54,
+          "max": 317.09,
+          "percentChange": 6.21,
+          "dailyPercentChange": 2.07
+        }
+      },
+      "volatility": {
+        "5day": 4.507157464212762
+      },
+      "currentStatus": {
+        "price": 317.09,
+        "dayPositionPercent": 61.8161925601749,
+        "changePercent": 0.294
+      },
+      "ratios": {
+        "percent52w": 79.29
+      },
+      "indicators": {
+        "rsi": 52.19509842810039
+      },
+      "categories": [
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "XLC",
+      "momentumAnalysis": {
+        "greenDays": 2,
+        "streakDays": 0,
+        "magnitude": {
+          "min": 72.71,
+          "max": 73.03,
+          "percentChange": 0.44
+        }
+      },
+      "volatility": {
+        "5day": -15.095238095238138
+      },
+      "currentStatus": {
+        "price": 73.03,
+        "dayPositionPercent": 66.66666666666765,
+        "changePercent": 0
+      },
+      "ratios": {
+        "percent52w": 95.5
+      },
+      "indicators": {
+        "rsi": 47.11555007781143
+      },
+      "categories": [
+        "BREAKOUT",
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "IPAY",
+      "momentumAnalysis": {
+        "greenDays": 1,
+        "streakDays": 1,
+        "magnitude": {
+          "min": 65.6,
+          "max": 66.13,
+          "percentChange": 0.81,
+          "dailyPercentChange": 0.81
+        }
+      },
+      "volatility": {
+        "5day": -48.874999999997065
+      },
+      "currentStatus": {
+        "price": 66.13,
+        "dayPositionPercent": 70.51282051282004,
+        "changePercent": 0.045
+      },
+      "ratios": {
+        "percent52w": 91.37
+      },
+      "indicators": {
+        "rsi": 37.790190678959824
+      },
+      "categories": [
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "SPY",
+      "momentumAnalysis": {
+        "greenDays": 4,
+        "streakDays": 0,
+        "magnitude": {
+          "min": 393.02,
+          "max": 394.73,
+          "percentChange": 0.44
+        }
+      },
+      "volatility": {
+        "5day": 6.083217753120522
+      },
+      "currentStatus": {
+        "price": 394.73,
+        "dayPositionPercent": 70.37037037037167,
+        "changePercent": -0.265
+      },
+      "ratios": {
+        "percent52w": 99.47
+      },
+      "indicators": {
+        "rsi": 55.13694625949016
+      },
+      "categories": [
+        "BREAKOUT",
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "XBI",
+      "momentumAnalysis": {
+        "greenDays": 1,
+        "streakDays": 1,
+        "magnitude": {
+          "min": 128.96,
+          "max": 130.11,
+          "percentChange": 0.89,
+          "dailyPercentChange": 0.89
+        }
+      },
+      "volatility": {
+        "5day": -30.587786259542558
+      },
+      "currentStatus": {
+        "price": 130.11,
+        "dayPositionPercent": 69.12028725314188,
+        "changePercent": 0.58
+      },
+      "ratios": {
+        "percent52w": 74.46
+      },
+      "indicators": {
+        "rsi": 35.63044930586996
+      },
+      "categories": [
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "BOTZ",
+      "momentumAnalysis": {
+        "greenDays": 1,
+        "streakDays": 1,
+        "magnitude": {
+          "min": 32.72,
+          "max": 32.86,
+          "percentChange": 0.43,
+          "dailyPercentChange": 0.43
+        }
+      },
+      "volatility": {
+        "5day": 5.978494623655926
+      },
+      "currentStatus": {
+        "price": 32.86,
+        "dayPositionPercent": 82.97872340425563,
+        "changePercent": 0.336
+      },
+      "ratios": {
+        "percent52w": 89.15
+      },
+      "indicators": {
+        "rsi": 43.44864398126925
+      },
+      "categories": [
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "LIT",
+      "momentumAnalysis": {
+        "greenDays": 1,
+        "streakDays": 1,
+        "magnitude": {
+          "min": 56.94,
+          "max": 57.87,
+          "percentChange": 1.63,
+          "dailyPercentChange": 1.63
+        }
+      },
+      "volatility": {
+        "5day": 4.779411764705861
+      },
+      "currentStatus": {
+        "price": 57.87,
+        "dayPositionPercent": 76.7676767676764,
+        "changePercent": 1.331
+      },
+      "ratios": {
+        "percent52w": 77.34
+      },
+      "indicators": {
+        "rsi": 42.38523759414223
+      },
+      "categories": [
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "CNRG",
+      "momentumAnalysis": {
+        "greenDays": 1,
+        "streakDays": 1,
+        "magnitude": {
+          "min": 104.71,
+          "max": 110.14,
+          "percentChange": 5.19,
+          "dailyPercentChange": 5.19
+        }
+      },
+      "volatility": {
+        "5day": 7.172043010752669
+      },
+      "currentStatus": {
+        "price": 110.14,
+        "dayPositionPercent": 92.99145299145304,
+        "changePercent": 5.055
+      },
+      "ratios": {
+        "percent52w": 73.55
+      },
+      "indicators": {
+        "rsi": 42.16333329340328
+      },
+      "categories": [
+        "STEADY"
+      ]
+    },
+    {
+      "symbol": "QQQ",
+      "momentumAnalysis": {
+        "greenDays": 4,
+        "streakDays": 0,
+        "magnitude": {
+          "min": 311.54,
+          "max": 314.32,
+          "percentChange": 0.89
+        }
+      },
+      "volatility": {
+        "5day": 13.775510204081824
+      },
+      "currentStatus": {
+        "price": 314.32,
+        "dayPositionPercent": 82.49258160237297,
+        "changePercent": -0.503
+      },
+      "ratios": {
+        "percent52w": 93.06
+      },
+      "indicators": {
+        "rsi": 45.04588104291638
+      },
+      "categories": []
+    },
+    {
+      "symbol": "PTON",
+      "momentumAnalysis": {
+        "greenDays": 1,
+        "streakDays": 1,
+        "magnitude": {
+          "min": 103.9,
+          "max": 107.17,
+          "percentChange": 3.15,
+          "dailyPercentChange": 3.15
+        }
+      },
+      "volatility": {
+        "5day": 3.962825278810406
+      },
+      "currentStatus": {
+        "price": 107.17,
+        "dayPositionPercent": 94.53166343270414,
+        "changePercent": 2.0469999999999997
+      },
+      "ratios": {
+        "percent52w": 62.64
+      },
+      "indicators": {
+        "rsi": 42.230610474582484
+      },
+      "categories": [
+        "STEADY"
+      ]
+    }
+  ],
+  "categories": {
+    "STEADY": [
+      {
+        "symbol": "IFP.TO",
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 25.85,
+            "max": 27.78,
+            "percentChange": 7.47,
+            "dailyPercentChange": 7.47
+          }
+        },
+        "volatility": {
+          "5day": 3.0400000000000014
+        },
+        "currentStatus": {
+          "price": 27.78,
+          "dayPositionPercent": 78.6795048143054,
+          "changePercent": 6.845999999999999
+        },
+        "ratios": {
+          "percent52w": 90.17
+        },
+        "indicators": {
+          "rsi": 52.2452097652058
+        },
+        "categories": [
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "SRC.V",
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 0.48,
+            "max": 0.48,
+            "percentChange": 0,
+            "dailyPercentChange": 0
+          }
+        },
+        "volatility": {
+          "5day": -154.49999999999983
+        },
+        "currentStatus": {
+          "price": 0.47,
+          "dayPositionPercent": 36.84210526315788,
+          "changePercent": 17.5
+        },
+        "ratios": {
+          "percent52w": 78.33
+        },
+        "indicators": {
+          "rsi": 50.93516509405315
+        },
+        "categories": [
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "CFP.TO",
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 24.44,
+            "max": 26,
+            "percentChange": 6.38,
+            "dailyPercentChange": 6.38
+          }
+        },
+        "volatility": {
+          "5day": 2.795918367346939
+        },
+        "currentStatus": {
+          "price": 26,
+          "dayPositionPercent": 68.88489208633092,
+          "changePercent": 4.585999999999999
+        },
+        "ratios": {
+          "percent52w": 89.66
+        },
+        "indicators": {
+          "rsi": 51.82349895277232
+        },
+        "categories": [
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "NOA.TO",
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 13.36,
+            "max": 13.55,
+            "percentChange": 1.42,
+            "dailyPercentChange": 1.42
+          }
+        },
+        "volatility": {
+          "5day": -7.555555555555584
+        },
+        "currentStatus": {
+          "price": 13.55,
+          "dayPositionPercent": 41.3566739606127,
+          "changePercent": 0.074
+        },
+        "ratios": {
+          "percent52w": 82.37
+        },
+        "indicators": {
+          "rsi": 28.239551782571443
+        },
+        "categories": [
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "MRU.TO",
+        "momentumAnalysis": {
+          "greenDays": 4,
+          "streakDays": 4,
+          "magnitude": {
+            "min": 56.69,
+            "max": 57.99,
+            "percentChange": 2.29,
+            "dailyPercentChange": 0.57
+          }
+        },
+        "volatility": {
+          "5day": 2.7589285714285623
+        },
+        "currentStatus": {
+          "price": 57.99,
+          "dayPositionPercent": 94.85294117647058,
+          "changePercent": 0.207
+        },
+        "ratios": {
+          "percent52w": 87.93
+        },
+        "indicators": {
+          "rsi": 84.92491790714398
+        },
+        "categories": [
+          "RISER",
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "GIB-A.TO",
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 103.18,
+            "max": 104.03,
+            "percentChange": 0.82
+          }
+        },
+        "volatility": {
+          "5day": 5.634146341463476
+        },
+        "currentStatus": {
+          "price": 104.03,
+          "dayPositionPercent": 90.57171514543633,
+          "changePercent": -0.895
+        },
+        "ratios": {
+          "percent52w": 99.03
+        },
+        "indicators": {
+          "rsi": 64.079521847282
+        },
+        "categories": [
+          "BREAKOUT",
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "KL.TO",
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 40.07,
+            "max": 40.3,
+            "percentChange": 0.57
+          }
+        },
+        "volatility": {
+          "5day": -14.02255639097741
+        },
+        "currentStatus": {
+          "price": 40.3,
+          "dayPositionPercent": 0,
+          "changePercent": -4.713
+        },
+        "ratios": {
+          "percent52w": 53.4
+        },
+        "indicators": {
+          "rsi": 43.39018583315275
+        },
+        "categories": [
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "DCBO.TO",
+        "momentumAnalysis": {
+          "greenDays": 4,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 51.19,
+            "max": 52.49,
+            "percentChange": 2.54
+          }
+        },
+        "volatility": {
+          "5day": 5.83512544802869
+        },
+        "currentStatus": {
+          "price": 52.49,
+          "dayPositionPercent": 11.539902585237938,
+          "changePercent": -0.11399999999999999
+        },
+        "ratios": {
+          "percent52w": 60.58
+        },
+        "indicators": {
+          "rsi": 41.47741353433663
+        },
+        "categories": [
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "TFII.TO",
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 90.53,
+            "max": 92.7,
+            "percentChange": 2.4,
+            "dailyPercentChange": 2.4
+          }
+        },
+        "volatility": {
+          "5day": 4.498525073746316
+        },
+        "currentStatus": {
+          "price": 92.7,
+          "dayPositionPercent": 75.47840349917988,
+          "changePercent": 2.194
+        },
+        "ratios": {
+          "percent52w": 90.04
+        },
+        "indicators": {
+          "rsi": 53.53049253820774
+        },
+        "categories": [
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "WELL.TO",
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 6.97,
+            "max": 7.15,
+            "percentChange": 2.58
+          }
+        },
+        "volatility": {
+          "5day": -8.904761904761871
+        },
+        "currentStatus": {
+          "price": 7.15,
+          "dayPositionPercent": 0,
+          "changePercent": 0
+        },
+        "ratios": {
+          "percent52w": 72.66
+        },
+        "indicators": {
+          "rsi": 26.999524993857104
+        },
+        "categories": [
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "AEM.TO",
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 71.4,
+            "max": 71.67,
+            "percentChange": 0.38
+          }
+        },
+        "volatility": {
+          "5day": -9.701834862385363
+        },
+        "currentStatus": {
+          "price": 71.67,
+          "dayPositionPercent": 7.095636844424854,
+          "changePercent": -3.514
+        },
+        "ratios": {
+          "percent52w": 61.77
+        },
+        "indicators": {
+          "rsi": 49.473376468013846
+        },
+        "categories": [
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "SHOP.TO",
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 1295.81,
+            "max": 1324.56,
+            "percentChange": 2.22,
+            "dailyPercentChange": 2.22
+          }
+        },
+        "volatility": {
+          "5day": -6.61760242792108
+        },
+        "currentStatus": {
+          "price": 1324.56,
+          "dayPositionPercent": 3.151722009404314,
+          "changePercent": 1.328
+        },
+        "ratios": {
+          "percent52w": 69.69
+        },
+        "indicators": {
+          "rsi": 29.90297563208924
+        },
+        "categories": [
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "SIS.TO",
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 17.39,
+            "max": 17.46,
+            "percentChange": 0.4
+          }
+        },
+        "volatility": {
+          "5day": -2.1623376623376624
+        },
+        "currentStatus": {
+          "price": 17.46,
+          "dayPositionPercent": 60.613810741688,
+          "changePercent": -0.852
+        },
+        "ratios": {
+          "percent52w": 91.94
+        },
+        "indicators": {
+          "rsi": 40.265309602209435
+        },
+        "categories": [
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "RNW.TO",
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 20.12,
+            "max": 20.29,
+            "percentChange": 0.84,
+            "dailyPercentChange": 0.84
+          }
+        },
+        "volatility": {
+          "5day": 4.009708737864082
+        },
+        "currentStatus": {
+          "price": 20.29,
+          "dayPositionPercent": 35.80786026200873,
+          "changePercent": 0.346
+        },
+        "ratios": {
+          "percent52w": 84.16
+        },
+        "indicators": {
+          "rsi": 51.27478060180531
+        },
+        "categories": [
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "CJT.TO",
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 162.25,
+            "max": 162.38,
+            "percentChange": 0.08
+          }
+        },
+        "volatility": {
+          "5day": -21.514084507042107
+        },
+        "currentStatus": {
+          "price": 162.38,
+          "dayPositionPercent": 0,
+          "changePercent": -0.909
+        },
+        "ratios": {
+          "percent52w": 65.12
+        },
+        "indicators": {
+          "rsi": 36.370707920222515
+        },
+        "categories": [
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "SVR.TO",
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 12.26,
+            "max": 12.31,
+            "percentChange": 0.41
+          }
+        },
+        "volatility": {
+          "5day": -9.326923076923077
+        },
+        "currentStatus": {
+          "price": 12.31,
+          "dayPositionPercent": 0,
+          "changePercent": -1.9120000000000001
+        },
+        "ratios": {
+          "percent52w": 76.99
+        },
+        "indicators": {
+          "rsi": 28.785609093417126
+        },
+        "categories": [
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "IWM",
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 214.08,
+            "max": 218.01,
+            "percentChange": 1.84,
+            "dailyPercentChange": 1.84
+          }
+        },
+        "volatility": {
+          "5day": 9.070351758794033
+        },
+        "currentStatus": {
+          "price": 218.01,
+          "dayPositionPercent": 87.90613718411528,
+          "changePercent": 1.6840000000000002
+        },
+        "ratios": {
+          "percent52w": 93.13
+        },
+        "indicators": {
+          "rsi": 45.52451463938347
+        },
+        "categories": [
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "BLK",
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 746.96,
+            "max": 749.26,
+            "percentChange": 0.31
+          }
+        },
+        "volatility": {
+          "5day": 8.167106752168996
+        },
+        "currentStatus": {
+          "price": 749.26,
+          "dayPositionPercent": 13.973268529768927,
+          "changePercent": -1.135
+        },
+        "ratios": {
+          "percent52w": 95.65
+        },
+        "indicators": {
+          "rsi": 59.122439520322956
+        },
+        "categories": [
+          "BREAKOUT",
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "CRWD",
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 171.2,
+            "max": 175.28,
+            "percentChange": 2.38,
+            "dailyPercentChange": 2.38
+          }
+        },
+        "volatility": {
+          "5day": -3.2982594936708773
+        },
+        "currentStatus": {
+          "price": 175.28,
+          "dayPositionPercent": 87.16577540106944,
+          "changePercent": 0.823
+        },
+        "ratios": {
+          "percent52w": 69.75
+        },
+        "indicators": {
+          "rsi": 32.86440100032016
+        },
+        "categories": [
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "OKTA",
+        "momentumAnalysis": {
+          "greenDays": 2,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 208.9,
+            "max": 213.55,
+            "percentChange": 2.23
+          }
+        },
+        "volatility": {
+          "5day": -6.371031746031778
+        },
+        "currentStatus": {
+          "price": 213.55,
+          "dayPositionPercent": 74.04458598726123,
+          "changePercent": -1.052
+        },
+        "ratios": {
+          "percent52w": 72.64
+        },
+        "indicators": {
+          "rsi": 32.610812585582025
+        },
+        "categories": [
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "TAN",
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 83.15,
+            "max": 89.27,
+            "percentChange": 7.36,
+            "dailyPercentChange": 7.36
+          }
+        },
+        "volatility": {
+          "5day": 7.249475890985331
+        },
+        "currentStatus": {
+          "price": 89.27,
+          "dayPositionPercent": 96.63551401869147,
+          "changePercent": 5.984
+        },
+        "ratios": {
+          "percent52w": 70.86
+        },
+        "indicators": {
+          "rsi": 40.95894664973992
+        },
+        "categories": [
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "ZM",
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 305.78,
+            "max": 313.19,
+            "percentChange": 2.42,
+            "dailyPercentChange": 2.42
+          }
+        },
+        "volatility": {
+          "5day": -34.344632768361905
+        },
+        "currentStatus": {
+          "price": 313.19,
+          "dayPositionPercent": 86.54458598726117,
+          "changePercent": 1.5559999999999998
+        },
+        "ratios": {
+          "percent52w": 53.19
+        },
+        "indicators": {
+          "rsi": 32.912938840742115
+        },
+        "categories": [
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "SPLK",
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 130.55,
+            "max": 131.95,
+            "percentChange": 1.07
+          }
+        },
+        "volatility": {
+          "5day": -9.92976588628758
+        },
+        "currentStatus": {
+          "price": 131.95,
+          "dayPositionPercent": 46.97986577181148,
+          "changePercent": -2.281
+        },
+        "ratios": {
+          "percent52w": 58.41
+        },
+        "indicators": {
+          "rsi": 33.97233865744925
+        },
+        "categories": [
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "TSM",
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 112.39,
+            "max": 115.07,
+            "percentChange": 2.38,
+            "dailyPercentChange": 2.38
+          }
+        },
+        "volatility": {
+          "5day": 5.44353518821605
+        },
+        "currentStatus": {
+          "price": 115.07,
+          "dayPositionPercent": 43.381535038931716,
+          "changePercent": 0.594
+        },
+        "ratios": {
+          "percent52w": 81.23
+        },
+        "indicators": {
+          "rsi": 41.327902530830336
+        },
+        "categories": [
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "SWKS",
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 176.11,
+            "max": 178.51,
+            "percentChange": 1.36
+          }
+        },
+        "volatility": {
+          "5day": 8.418032786885218
+        },
+        "currentStatus": {
+          "price": 178.51,
+          "dayPositionPercent": 78.17589576547175,
+          "changePercent": -0.45199999999999996
+        },
+        "ratios": {
+          "percent52w": 91.16
+        },
+        "indicators": {
+          "rsi": 47.13853817073047
+        },
+        "categories": [
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "ETSY",
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 195.16,
+            "max": 198.87,
+            "percentChange": 1.9,
+            "dailyPercentChange": 1.9
+          }
+        },
+        "volatility": {
+          "5day": -142.99999999999963
+        },
+        "currentStatus": {
+          "price": 198.87,
+          "dayPositionPercent": 62.11523283346497,
+          "changePercent": 1.304
+        },
+        "ratios": {
+          "percent52w": 78.96
+        },
+        "indicators": {
+          "rsi": 35.5919124848554
+        },
+        "categories": [
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "AAPL",
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 118.86,
+            "max": 119.9,
+            "percentChange": 0.87
+          }
+        },
+        "volatility": {
+          "5day": -86.84210526316008
+        },
+        "currentStatus": {
+          "price": 119.9,
+          "dayPositionPercent": 67.40116655865211,
+          "changePercent": -1.2269999999999999
+        },
+        "ratios": {
+          "percent52w": 82.76
+        },
+        "indicators": {
+          "rsi": 40.16736957995615
+        },
+        "categories": [
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "MKC",
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 89.57,
+            "max": 89.9,
+            "percentChange": 0.37
+          }
+        },
+        "volatility": {
+          "5day": 5.607594936708829
+        },
+        "currentStatus": {
+          "price": 89.9,
+          "dayPositionPercent": 5.221518987341963,
+          "changePercent": -0.255
+        },
+        "ratios": {
+          "percent52w": 86.08
+        },
+        "indicators": {
+          "rsi": 71.19563772121826
+        },
+        "categories": [
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "FAN",
+        "momentumAnalysis": {
+          "greenDays": 4,
+          "streakDays": 4,
+          "magnitude": {
+            "min": 21.21,
+            "max": 22.11,
+            "percentChange": 4.24,
+            "dailyPercentChange": 1.06
+          }
+        },
+        "volatility": {
+          "5day": 3.413793103448285
+        },
+        "currentStatus": {
+          "price": 22.11,
+          "dayPositionPercent": 100,
+          "changePercent": 0.45399999999999996
+        },
+        "ratios": {
+          "percent52w": 84.78
+        },
+        "indicators": {
+          "rsi": 50.57464076634918
+        },
+        "categories": [
+          "RISER",
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "COST",
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 348.84,
+            "max": 349.75,
+            "percentChange": 0.26
+          }
+        },
+        "volatility": {
+          "5day": 9.245943637916318
+        },
+        "currentStatus": {
+          "price": 349.75,
+          "dayPositionPercent": 15.34569983136634,
+          "changePercent": -1.797
+        },
+        "ratios": {
+          "percent52w": 90.3
+        },
+        "indicators": {
+          "rsi": 60.03864039388529
+        },
+        "categories": [
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "BBBY",
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 28.22,
+            "max": 29.52,
+            "percentChange": 4.61,
+            "dailyPercentChange": 4.61
+          }
+        },
+        "volatility": {
+          "5day": 5.388601036269432
+        },
+        "currentStatus": {
+          "price": 29.52,
+          "dayPositionPercent": 78.9473684210525,
+          "changePercent": 3.9440000000000004
+        },
+        "ratios": {
+          "percent52w": 54.77
+        },
+        "indicators": {
+          "rsi": 53.245421675795455
+        },
+        "categories": [
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "FDX",
+        "momentumAnalysis": {
+          "greenDays": 4,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 276.64,
+            "max": 285.92,
+            "percentChange": 3.35,
+            "dailyPercentChange": 3.35
+          }
+        },
+        "volatility": {
+          "5day": 2.93079977311401
+        },
+        "currentStatus": {
+          "price": 285.92,
+          "dayPositionPercent": 77.36098403984977,
+          "changePercent": 2.4
+        },
+        "ratios": {
+          "percent52w": 94
+        },
+        "indicators": {
+          "rsi": 62.44422134882104
+        },
+        "categories": [
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "TECK",
+        "momentumAnalysis": {
+          "greenDays": 3,
+          "streakDays": 3,
+          "magnitude": {
+            "min": 17.3,
+            "max": 19.32,
+            "percentChange": 11.68,
+            "dailyPercentChange": 3.89
+          }
+        },
+        "volatility": {
+          "5day": 6.202380952380958
+        },
+        "currentStatus": {
+          "price": 19.32,
+          "dayPositionPercent": 75.65217391304336,
+          "changePercent": 0.993
+        },
+        "ratios": {
+          "percent52w": 80.87
+        },
+        "indicators": {
+          "rsi": 43.374922633654755
+        },
+        "categories": [
+          "RISER",
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "W",
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 315.12,
+            "max": 317.02,
+            "percentChange": 0.6
+          }
+        },
+        "volatility": {
+          "5day": -23.105590062111776
+        },
+        "currentStatus": {
+          "price": 317.02,
+          "dayPositionPercent": 13.12335958005233,
+          "changePercent": -4.696
+        },
+        "ratios": {
+          "percent52w": 85.91
+        },
+        "indicators": {
+          "rsi": 43.59313083010944
+        },
+        "categories": [
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "NKE",
+        "momentumAnalysis": {
+          "greenDays": 4,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 131.22,
+            "max": 132.95,
+            "percentChange": 1.32
+          }
+        },
+        "volatility": {
+          "5day": -119.52380952380707
+        },
+        "currentStatus": {
+          "price": 132.95,
+          "dayPositionPercent": 81.220657276995,
+          "changePercent": -0.40499999999999997
+        },
+        "ratios": {
+          "percent52w": 90.04
+        },
+        "indicators": {
+          "rsi": 44.37846216436625
+        },
+        "categories": [
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "EA",
+        "momentumAnalysis": {
+          "greenDays": 4,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 132.44,
+            "max": 134.43,
+            "percentChange": 1.5
+          }
+        },
+        "volatility": {
+          "5day": 4.62850971922244
+        },
+        "currentStatus": {
+          "price": 134.43,
+          "dayPositionPercent": 96.13526570048386,
+          "changePercent": -0.4
+        },
+        "ratios": {
+          "percent52w": 89.55
+        },
+        "indicators": {
+          "rsi": 48.832970925145496
+        },
+        "categories": [
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "DE",
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 367.5,
+            "max": 373.92,
+            "percentChange": 1.75,
+            "dailyPercentChange": 1.75
+          }
+        },
+        "volatility": {
+          "5day": 3.9239046887009916
+        },
+        "currentStatus": {
+          "price": 373.92,
+          "dayPositionPercent": 84.45190156599568,
+          "changePercent": 1.8659999999999999
+        },
+        "ratios": {
+          "percent52w": 95.52
+        },
+        "indicators": {
+          "rsi": 57.33924111654329
+        },
+        "categories": [
+          "BREAKOUT",
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "ODFL",
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 233.19,
+            "max": 240.61,
+            "percentChange": 3.18,
+            "dailyPercentChange": 3.18
+          }
+        },
+        "volatility": {
+          "5day": 9.600000000000025
+        },
+        "currentStatus": {
+          "price": 240.61,
+          "dayPositionPercent": 81.47590361445802,
+          "changePercent": 2.239
+        },
+        "ratios": {
+          "percent52w": 100.93
+        },
+        "indicators": {
+          "rsi": 70.0518036181028
+        },
+        "categories": [
+          "BREAKOUT",
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "TSCO",
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 175.02,
+            "max": 177.05,
+            "percentChange": 1.16,
+            "dailyPercentChange": 1.16
+          }
+        },
+        "volatility": {
+          "5day": 4.158948685857265
+        },
+        "currentStatus": {
+          "price": 177.05,
+          "dayPositionPercent": 32.72171253822686,
+          "changePercent": 0.774
+        },
+        "ratios": {
+          "percent52w": 99.14
+        },
+        "indicators": {
+          "rsi": 63.05565440024448
+        },
+        "categories": [
+          "BREAKOUT",
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "ABMD",
+        "momentumAnalysis": {
+          "greenDays": 3,
+          "streakDays": 3,
+          "magnitude": {
+            "min": 284.59,
+            "max": 309.88,
+            "percentChange": 8.89,
+            "dailyPercentChange": 2.96
+          }
+        },
+        "volatility": {
+          "5day": 4.039566049776651
+        },
+        "currentStatus": {
+          "price": 309.88,
+          "dayPositionPercent": 96.12676056338032,
+          "changePercent": 1.344
+        },
+        "ratios": {
+          "percent52w": 79.99
+        },
+        "indicators": {
+          "rsi": 47.10346891473339
+        },
+        "categories": [
+          "RISER",
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "MSFT",
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 231.1,
+            "max": 231.85,
+            "percentChange": 0.32
+          }
+        },
+        "volatility": {
+          "5day": -11.429362880886375
+        },
+        "currentStatus": {
+          "price": 231.85,
+          "dayPositionPercent": 27.27272727272727,
+          "changePercent": -1.4409999999999998
+        },
+        "ratios": {
+          "percent52w": 94.42
+        },
+        "indicators": {
+          "rsi": 45.08448499722048
+        },
+        "categories": [
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "TMUS",
+        "momentumAnalysis": {
+          "greenDays": 2,
+          "streakDays": 2,
+          "magnitude": {
+            "min": 121.02,
+            "max": 124.64,
+            "percentChange": 2.99,
+            "dailyPercentChange": 1.5
+          }
+        },
+        "volatility": {
+          "5day": 4.662280701754405
+        },
+        "currentStatus": {
+          "price": 124.64,
+          "dayPositionPercent": 75.99097647437955,
+          "changePercent": 0.9560000000000001
+        },
+        "ratios": {
+          "percent52w": 91.96
+        },
+        "indicators": {
+          "rsi": 52.28284931532903
+        },
+        "categories": [
+          "RISER",
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "MA",
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 357.1,
+            "max": 358.2,
+            "percentChange": 0.31
+          }
+        },
+        "volatility": {
+          "5day": -44.06896551724209
+        },
+        "currentStatus": {
+          "price": 358.2,
+          "dayPositionPercent": 14.725568942436015,
+          "changePercent": -1.298
+        },
+        "ratios": {
+          "percent52w": 91.96
+        },
+        "indicators": {
+          "rsi": 47.40966046339879
+        },
+        "categories": [
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "ADBE",
+        "momentumAnalysis": {
+          "greenDays": 4,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 461.5,
+            "max": 465.46,
+            "percentChange": 0.86
+          }
+        },
+        "volatility": {
+          "5day": 8.870967741935543
+        },
+        "currentStatus": {
+          "price": 465.46,
+          "dayPositionPercent": 51.56249999999969,
+          "changePercent": -0.822
+        },
+        "ratios": {
+          "percent52w": 86.7
+        },
+        "indicators": {
+          "rsi": 50.3497883050669
+        },
+        "categories": [
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "MELI",
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 1368.44,
+            "max": 1428.03,
+            "percentChange": 4.35,
+            "dailyPercentChange": 4.35
+          }
+        },
+        "volatility": {
+          "5day": 5.72971627675455
+        },
+        "currentStatus": {
+          "price": 1428.03,
+          "dayPositionPercent": 68.88230682115156,
+          "changePercent": 1.754
+        },
+        "ratios": {
+          "percent52w": 70.69
+        },
+        "indicators": {
+          "rsi": 37.066473711395915
+        },
+        "categories": [
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "PINS",
+        "momentumAnalysis": {
+          "greenDays": 4,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 68.32,
+            "max": 69.31,
+            "percentChange": 1.45
+          }
+        },
+        "volatility": {
+          "5day": -29.31034482758714
+        },
+        "currentStatus": {
+          "price": 69.31,
+          "dayPositionPercent": 40.909090909091255,
+          "changePercent": -0.101
+        },
+        "ratios": {
+          "percent52w": 77.1
+        },
+        "indicators": {
+          "rsi": 35.528338274238806
+        },
+        "categories": [
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "DOCU",
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 192.02,
+            "max": 196.94,
+            "percentChange": 2.56
+          }
+        },
+        "volatility": {
+          "5day": -24.046052631578824
+        },
+        "currentStatus": {
+          "price": 196.94,
+          "dayPositionPercent": 82.13689482470791,
+          "changePercent": -0.233
+        },
+        "ratios": {
+          "percent52w": 67.86
+        },
+        "indicators": {
+          "rsi": 35.05901080349962
+        },
+        "categories": [
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "AMD",
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 74.85,
+            "max": 76,
+            "percentChange": 1.54
+          }
+        },
+        "volatility": {
+          "5day": -25.27083333333317
+        },
+        "currentStatus": {
+          "price": 76,
+          "dayPositionPercent": 67.25146198830411,
+          "changePercent": -1.478
+        },
+        "ratios": {
+          "percent52w": 76.59
+        },
+        "indicators": {
+          "rsi": 35.92531843604067
+        },
+        "categories": [
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "NVDA",
+        "momentumAnalysis": {
+          "greenDays": 4,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 508.2,
+            "max": 514.87,
+            "percentChange": 1.31
+          }
+        },
+        "volatility": {
+          "5day": 9.316939890710398
+        },
+        "currentStatus": {
+          "price": 514.87,
+          "dayPositionPercent": 61.7021276595746,
+          "changePercent": -0.5910000000000001
+        },
+        "ratios": {
+          "percent52w": 83.76
+        },
+        "indicators": {
+          "rsi": 43.34666363515274
+        },
+        "categories": [
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "BABA",
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 226.64,
+            "max": 229.25,
+            "percentChange": 1.15
+          }
+        },
+        "volatility": {
+          "5day": -168.67647058823914
+        },
+        "currentStatus": {
+          "price": 229.25,
+          "dayPositionPercent": 68.50393700787434,
+          "changePercent": -1.126
+        },
+        "ratios": {
+          "percent52w": 71.79
+        },
+        "indicators": {
+          "rsi": 43.86757554493123
+        },
+        "categories": [
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "ADSK",
+        "momentumAnalysis": {
+          "greenDays": 3,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 264.47,
+            "max": 268.43,
+            "percentChange": 1.5
+          }
+        },
+        "volatility": {
+          "5day": 9.733333333333286
+        },
+        "currentStatus": {
+          "price": 268.43,
+          "dayPositionPercent": 53.29744279946173,
+          "changePercent": -0.868
+        },
+        "ratios": {
+          "percent52w": 83.59
+        },
+        "indicators": {
+          "rsi": 43.876378069272256
+        },
+        "categories": [
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "SQ",
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 202.93,
+            "max": 212.83,
+            "percentChange": 4.88,
+            "dailyPercentChange": 4.88
+          }
+        },
+        "volatility": {
+          "5day": -82.2647058823562
+        },
+        "currentStatus": {
+          "price": 212.83,
+          "dayPositionPercent": 87.1839581517001,
+          "changePercent": 2.727
+        },
+        "ratios": {
+          "percent52w": 75.15
+        },
+        "indicators": {
+          "rsi": 42.27845476697481
+        },
+        "categories": [
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "VOX",
+        "momentumAnalysis": {
+          "greenDays": 2,
+          "streakDays": 2,
+          "magnitude": {
+            "min": 126.22,
+            "max": 129.12,
+            "percentChange": 2.3,
+            "dailyPercentChange": 1.15
+          }
+        },
+        "volatility": {
+          "5day": -12.08474576271196
+        },
+        "currentStatus": {
+          "price": 129.12,
+          "dayPositionPercent": 70.8846584546483,
+          "changePercent": 0.124
+        },
+        "ratios": {
+          "percent52w": 95.14
+        },
+        "indicators": {
+          "rsi": 43.32838930108896
+        },
+        "categories": [
+          "RISER",
+          "BREAKOUT",
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "EEM",
+        "momentumAnalysis": {
+          "greenDays": 4,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 52.64,
+            "max": 53.07,
+            "percentChange": 0.82,
+            "dailyPercentChange": 0.82
+          }
+        },
+        "volatility": {
+          "5day": 5.244604316546744
+        },
+        "currentStatus": {
+          "price": 53.07,
+          "dayPositionPercent": 75.82417582417585,
+          "changePercent": 0.321
+        },
+        "ratios": {
+          "percent52w": 91.04
+        },
+        "indicators": {
+          "rsi": 43.85008532392406
+        },
+        "categories": [
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "GDX",
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 31.65,
+            "max": 31.83,
+            "percentChange": 0.57
+          }
+        },
+        "volatility": {
+          "5day": -20.319148936170308
+        },
+        "currentStatus": {
+          "price": 31.83,
+          "dayPositionPercent": 30.74324324324289,
+          "changePercent": -3.1350000000000002
+        },
+        "ratios": {
+          "percent52w": 69.89
+        },
+        "indicators": {
+          "rsi": 51.118485050695405
+        },
+        "categories": [
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "CPER",
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 24.47,
+            "max": 24.55,
+            "percentChange": 0.33
+          }
+        },
+        "volatility": {
+          "5day": -14.750000000000135
+        },
+        "currentStatus": {
+          "price": 24.55,
+          "dayPositionPercent": 34.042553191490235,
+          "changePercent": -1.4449999999999998
+        },
+        "ratios": {
+          "percent52w": 91.43
+        },
+        "indicators": {
+          "rsi": 43.588862847305485
+        },
+        "categories": [
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "ZROZ",
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 131.19,
+            "max": 132.92,
+            "percentChange": 1.32,
+            "dailyPercentChange": 1.32
+          }
+        },
+        "volatility": {
+          "5day": -6.427480916030439
+        },
+        "currentStatus": {
+          "price": 132.92,
+          "dayPositionPercent": 71.52810032512764,
+          "changePercent": 0.9950000000000001
+        },
+        "ratios": {
+          "percent52w": 71.25
+        },
+        "indicators": {
+          "rsi": 41.121492463457656
+        },
+        "categories": [
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "BLV",
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 97.11,
+            "max": 98.02,
+            "percentChange": 0.94,
+            "dailyPercentChange": 0.94
+          }
+        },
+        "volatility": {
+          "5day": -10.23529411764702
+        },
+        "currentStatus": {
+          "price": 98.02,
+          "dayPositionPercent": 92.98245614035065,
+          "changePercent": 0.647
+        },
+        "ratios": {
+          "percent52w": 86.68
+        },
+        "indicators": {
+          "rsi": 41.4654523806636
+        },
+        "categories": [
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "EDV",
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 124.39,
+            "max": 125.93,
+            "percentChange": 1.24,
+            "dailyPercentChange": 1.24
+          }
+        },
+        "volatility": {
+          "5day": -5.5351562500000755
+        },
+        "currentStatus": {
+          "price": 125.93,
+          "dayPositionPercent": 81.2834224598934,
+          "changePercent": 0.76
+        },
+        "ratios": {
+          "percent52w": 74.08
+        },
+        "indicators": {
+          "rsi": 40.29181567422662
+        },
+        "categories": [
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "PAAS",
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 28.71,
+            "max": 29.34,
+            "percentChange": 2.19
+          }
+        },
+        "volatility": {
+          "5day": -10.937499999999998
+        },
+        "currentStatus": {
+          "price": 29.34,
+          "dayPositionPercent": 64.94845360824739,
+          "changePercent": -3.2960000000000003
+        },
+        "ratios": {
+          "percent52w": 73.55
+        },
+        "indicators": {
+          "rsi": 38.751267236313765
+        },
+        "categories": [
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "VSGX",
+        "momentumAnalysis": {
+          "greenDays": 4,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 61.02,
+            "max": 61.34,
+            "percentChange": 0.52
+          }
+        },
+        "volatility": {
+          "5day": 6.691489361702063
+        },
+        "currentStatus": {
+          "price": 61.34,
+          "dayPositionPercent": 81.8181818181835,
+          "changePercent": -0.11399999999999999
+        },
+        "ratios": {
+          "percent52w": 95.87
+        },
+        "indicators": {
+          "rsi": 47.2648854602667
+        },
+        "categories": [
+          "BREAKOUT",
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "DGS",
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 50.53,
+            "max": 50.96,
+            "percentChange": 0.85,
+            "dailyPercentChange": 0.85
+          }
+        },
+        "volatility": {
+          "5day": 4.4000000000000465
+        },
+        "currentStatus": {
+          "price": 50.96,
+          "dayPositionPercent": 99.31034482758538,
+          "changePercent": 0.592
+        },
+        "ratios": {
+          "percent52w": 99.26
+        },
+        "indicators": {
+          "rsi": 53.68255626611694
+        },
+        "categories": [
+          "BREAKOUT",
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "GOLD",
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 19.44,
+            "max": 19.51,
+            "percentChange": 0.36
+          }
+        },
+        "volatility": {
+          "5day": -8.076923076923093
+        },
+        "currentStatus": {
+          "price": 19.51,
+          "dayPositionPercent": 22.95081967213126,
+          "changePercent": -3.2239999999999998
+        },
+        "ratios": {
+          "percent52w": 62.96
+        },
+        "indicators": {
+          "rsi": 50.36859524566065
+        },
+        "categories": [
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "CHIQ",
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 32.13,
+            "max": 33.14,
+            "percentChange": 3.14,
+            "dailyPercentChange": 3.14
+          }
+        },
+        "volatility": {
+          "5day": 7.904109589041027
+        },
+        "currentStatus": {
+          "price": 33.14,
+          "dayPositionPercent": 86.66666666666649,
+          "changePercent": 2.442
+        },
+        "ratios": {
+          "percent52w": 75.49
+        },
+        "indicators": {
+          "rsi": 36.09283437122664
+        },
+        "categories": [
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "KBA",
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 43.83,
+            "max": 44.23,
+            "percentChange": 0.91,
+            "dailyPercentChange": 0.91
+          }
+        },
+        "volatility": {
+          "5day": 5.311475409836077
+        },
+        "currentStatus": {
+          "price": 44.23,
+          "dayPositionPercent": 92.30769230769104,
+          "changePercent": 0.614
+        },
+        "ratios": {
+          "percent52w": 82.95
+        },
+        "indicators": {
+          "rsi": 37.28836440507029
+        },
+        "categories": [
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "OEF",
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 178.3,
+            "max": 178.93,
+            "percentChange": 0.35
+          }
+        },
+        "volatility": {
+          "5day": 8.867298578199009
+        },
+        "currentStatus": {
+          "price": 178.93,
+          "dayPositionPercent": 62.999999999999545,
+          "changePercent": -0.44
+        },
+        "ratios": {
+          "percent52w": 99.16
+        },
+        "indicators": {
+          "rsi": 53.27523321611781
+        },
+        "categories": [
+          "BREAKOUT",
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "SMH",
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 234.53,
+            "max": 236.75,
+            "percentChange": 0.95
+          }
+        },
+        "volatility": {
+          "5day": 9.384512683578107
+        },
+        "currentStatus": {
+          "price": 236.75,
+          "dayPositionPercent": 69.8113207547168,
+          "changePercent": -0.42900000000000005
+        },
+        "ratios": {
+          "percent52w": 91.55
+        },
+        "indicators": {
+          "rsi": 46.33901098474345
+        },
+        "categories": [
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "PBW",
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 88.38,
+            "max": 94.25,
+            "percentChange": 6.64,
+            "dailyPercentChange": 6.64
+          }
+        },
+        "volatility": {
+          "5day": 8.266666666666646
+        },
+        "currentStatus": {
+          "price": 94.25,
+          "dayPositionPercent": 95.61688311688317,
+          "changePercent": 5.827999999999999
+        },
+        "ratios": {
+          "percent52w": 68.1
+        },
+        "indicators": {
+          "rsi": 38.95090924574418
+        },
+        "categories": [
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "EMQQ",
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 61.54,
+            "max": 63.13,
+            "percentChange": 2.58,
+            "dailyPercentChange": 2.58
+          }
+        },
+        "volatility": {
+          "5day": 9.263157894736818
+        },
+        "currentStatus": {
+          "price": 63.13,
+          "dayPositionPercent": 85.66552901023888,
+          "changePercent": 1.839
+        },
+        "ratios": {
+          "percent52w": 77.24
+        },
+        "indicators": {
+          "rsi": 36.66458623051
+        },
+        "categories": [
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "LULU",
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 3,
+          "magnitude": {
+            "min": 298.54,
+            "max": 317.09,
+            "percentChange": 6.21,
+            "dailyPercentChange": 2.07
+          }
+        },
+        "volatility": {
+          "5day": 4.507157464212762
+        },
+        "currentStatus": {
+          "price": 317.09,
+          "dayPositionPercent": 61.8161925601749,
+          "changePercent": 0.294
+        },
+        "ratios": {
+          "percent52w": 79.29
+        },
+        "indicators": {
+          "rsi": 52.19509842810039
+        },
+        "categories": [
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "XLC",
+        "momentumAnalysis": {
+          "greenDays": 2,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 72.71,
+            "max": 73.03,
+            "percentChange": 0.44
+          }
+        },
+        "volatility": {
+          "5day": -15.095238095238138
+        },
+        "currentStatus": {
+          "price": 73.03,
+          "dayPositionPercent": 66.66666666666765,
+          "changePercent": 0
+        },
+        "ratios": {
+          "percent52w": 95.5
+        },
+        "indicators": {
+          "rsi": 47.11555007781143
+        },
+        "categories": [
+          "BREAKOUT",
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "IPAY",
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 65.6,
+            "max": 66.13,
+            "percentChange": 0.81,
+            "dailyPercentChange": 0.81
+          }
+        },
+        "volatility": {
+          "5day": -48.874999999997065
+        },
+        "currentStatus": {
+          "price": 66.13,
+          "dayPositionPercent": 70.51282051282004,
+          "changePercent": 0.045
+        },
+        "ratios": {
+          "percent52w": 91.37
+        },
+        "indicators": {
+          "rsi": 37.790190678959824
+        },
+        "categories": [
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "SPY",
+        "momentumAnalysis": {
+          "greenDays": 4,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 393.02,
+            "max": 394.73,
+            "percentChange": 0.44
+          }
+        },
+        "volatility": {
+          "5day": 6.083217753120522
+        },
+        "currentStatus": {
+          "price": 394.73,
+          "dayPositionPercent": 70.37037037037167,
+          "changePercent": -0.265
+        },
+        "ratios": {
+          "percent52w": 99.47
+        },
+        "indicators": {
+          "rsi": 55.13694625949016
+        },
+        "categories": [
+          "BREAKOUT",
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "XBI",
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 128.96,
+            "max": 130.11,
+            "percentChange": 0.89,
+            "dailyPercentChange": 0.89
+          }
+        },
+        "volatility": {
+          "5day": -30.587786259542558
+        },
+        "currentStatus": {
+          "price": 130.11,
+          "dayPositionPercent": 69.12028725314188,
+          "changePercent": 0.58
+        },
+        "ratios": {
+          "percent52w": 74.46
+        },
+        "indicators": {
+          "rsi": 35.63044930586996
+        },
+        "categories": [
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "BOTZ",
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 32.72,
+            "max": 32.86,
+            "percentChange": 0.43,
+            "dailyPercentChange": 0.43
+          }
+        },
+        "volatility": {
+          "5day": 5.978494623655926
+        },
+        "currentStatus": {
+          "price": 32.86,
+          "dayPositionPercent": 82.97872340425563,
+          "changePercent": 0.336
+        },
+        "ratios": {
+          "percent52w": 89.15
+        },
+        "indicators": {
+          "rsi": 43.44864398126925
+        },
+        "categories": [
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "LIT",
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 56.94,
+            "max": 57.87,
+            "percentChange": 1.63,
+            "dailyPercentChange": 1.63
+          }
+        },
+        "volatility": {
+          "5day": 4.779411764705861
+        },
+        "currentStatus": {
+          "price": 57.87,
+          "dayPositionPercent": 76.7676767676764,
+          "changePercent": 1.331
+        },
+        "ratios": {
+          "percent52w": 77.34
+        },
+        "indicators": {
+          "rsi": 42.38523759414223
+        },
+        "categories": [
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "CNRG",
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 104.71,
+            "max": 110.14,
+            "percentChange": 5.19,
+            "dailyPercentChange": 5.19
+          }
+        },
+        "volatility": {
+          "5day": 7.172043010752669
+        },
+        "currentStatus": {
+          "price": 110.14,
+          "dayPositionPercent": 92.99145299145304,
+          "changePercent": 5.055
+        },
+        "ratios": {
+          "percent52w": 73.55
+        },
+        "indicators": {
+          "rsi": 42.16333329340328
+        },
+        "categories": [
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "PTON",
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 103.9,
+            "max": 107.17,
+            "percentChange": 3.15,
+            "dailyPercentChange": 3.15
+          }
+        },
+        "volatility": {
+          "5day": 3.962825278810406
+        },
+        "currentStatus": {
+          "price": 107.17,
+          "dayPositionPercent": 94.53166343270414,
+          "changePercent": 2.0469999999999997
+        },
+        "ratios": {
+          "percent52w": 62.64
+        },
+        "indicators": {
+          "rsi": 42.230610474582484
+        },
+        "categories": [
+          "STEADY"
+        ]
+      }
+    ],
+    "BREAKOUT": [
+      {
+        "symbol": "CNR.TO",
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 145.79,
+            "max": 146.53,
+            "percentChange": 0.51
+          }
+        },
+        "volatility": {
+          "5day": 25.620689655174036
+        },
+        "currentStatus": {
+          "price": 146.53,
+          "dayPositionPercent": 92.64705882352943,
+          "changePercent": -0.381
+        },
+        "ratios": {
+          "percent52w": 98.41
+        },
+        "indicators": {
+          "rsi": 59.22108297366909
+        },
+        "categories": [
+          "BREAKOUT"
+        ]
+      },
+      {
+        "symbol": "GIB-A.TO",
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 103.18,
+            "max": 104.03,
+            "percentChange": 0.82
+          }
+        },
+        "volatility": {
+          "5day": 5.634146341463476
+        },
+        "currentStatus": {
+          "price": 104.03,
+          "dayPositionPercent": 90.57171514543633,
+          "changePercent": -0.895
+        },
+        "ratios": {
+          "percent52w": 99.03
+        },
+        "indicators": {
+          "rsi": 64.079521847282
+        },
+        "categories": [
+          "BREAKOUT",
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "BLK",
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 746.96,
+            "max": 749.26,
+            "percentChange": 0.31
+          }
+        },
+        "volatility": {
+          "5day": 8.167106752168996
+        },
+        "currentStatus": {
+          "price": 749.26,
+          "dayPositionPercent": 13.973268529768927,
+          "changePercent": -1.135
+        },
+        "ratios": {
+          "percent52w": 95.65
+        },
+        "indicators": {
+          "rsi": 59.122439520322956
+        },
+        "categories": [
+          "BREAKOUT",
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "UNH",
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 371.8,
+            "max": 373.56,
+            "percentChange": 0.47
+          }
+        },
+        "volatility": {
+          "5day": 19.395270270270753
+        },
+        "currentStatus": {
+          "price": 373.56,
+          "dayPositionPercent": 21.782178217821713,
+          "changePercent": -1.451
+        },
+        "ratios": {
+          "percent52w": 98.18
+        },
+        "indicators": {
+          "rsi": 76.37018788248973
+        },
+        "categories": [
+          "BREAKOUT"
+        ]
+      },
+      {
+        "symbol": "MCD",
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 224.22,
+            "max": 224.98,
+            "percentChange": 0.34
+          }
+        },
+        "volatility": {
+          "5day": 19.17204301075268
+        },
+        "currentStatus": {
+          "price": 224.98,
+          "dayPositionPercent": 27.14285714285671,
+          "changePercent": -1.042
+        },
+        "ratios": {
+          "percent52w": 98.19
+        },
+        "indicators": {
+          "rsi": 69.11975982742233
+        },
+        "categories": [
+          "BREAKOUT"
+        ]
+      },
+      {
+        "symbol": "DE",
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 367.5,
+            "max": 373.92,
+            "percentChange": 1.75,
+            "dailyPercentChange": 1.75
+          }
+        },
+        "volatility": {
+          "5day": 3.9239046887009916
+        },
+        "currentStatus": {
+          "price": 373.92,
+          "dayPositionPercent": 84.45190156599568,
+          "changePercent": 1.8659999999999999
+        },
+        "ratios": {
+          "percent52w": 95.52
+        },
+        "indicators": {
+          "rsi": 57.33924111654329
+        },
+        "categories": [
+          "BREAKOUT",
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "ODFL",
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 233.19,
+            "max": 240.61,
+            "percentChange": 3.18,
+            "dailyPercentChange": 3.18
+          }
+        },
+        "volatility": {
+          "5day": 9.600000000000025
+        },
+        "currentStatus": {
+          "price": 240.61,
+          "dayPositionPercent": 81.47590361445802,
+          "changePercent": 2.239
+        },
+        "ratios": {
+          "percent52w": 100.93
+        },
+        "indicators": {
+          "rsi": 70.0518036181028
+        },
+        "categories": [
+          "BREAKOUT",
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "TSCO",
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 175.02,
+            "max": 177.05,
+            "percentChange": 1.16,
+            "dailyPercentChange": 1.16
+          }
+        },
+        "volatility": {
+          "5day": 4.158948685857265
+        },
+        "currentStatus": {
+          "price": 177.05,
+          "dayPositionPercent": 32.72171253822686,
+          "changePercent": 0.774
+        },
+        "ratios": {
+          "percent52w": 99.14
+        },
+        "indicators": {
+          "rsi": 63.05565440024448
+        },
+        "categories": [
+          "BREAKOUT",
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "ASML",
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 595.52,
+            "max": 601.29,
+            "percentChange": 0.97
+          }
+        },
+        "volatility": {
+          "5day": 11.65169528841925
+        },
+        "currentStatus": {
+          "price": 601.29,
+          "dayPositionPercent": 53.72439478584708,
+          "changePercent": -1.1039999999999999
+        },
+        "ratios": {
+          "percent52w": 95.85
+        },
+        "indicators": {
+          "rsi": 53.29534400519734
+        },
+        "categories": [
+          "BREAKOUT"
+        ]
+      },
+      {
+        "symbol": "VOX",
+        "momentumAnalysis": {
+          "greenDays": 2,
+          "streakDays": 2,
+          "magnitude": {
+            "min": 126.22,
+            "max": 129.12,
+            "percentChange": 2.3,
+            "dailyPercentChange": 1.15
+          }
+        },
+        "volatility": {
+          "5day": -12.08474576271196
+        },
+        "currentStatus": {
+          "price": 129.12,
+          "dayPositionPercent": 70.8846584546483,
+          "changePercent": 0.124
+        },
+        "ratios": {
+          "percent52w": 95.14
+        },
+        "indicators": {
+          "rsi": 43.32838930108896
+        },
+        "categories": [
+          "RISER",
+          "BREAKOUT",
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "VSGX",
+        "momentumAnalysis": {
+          "greenDays": 4,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 61.02,
+            "max": 61.34,
+            "percentChange": 0.52
+          }
+        },
+        "volatility": {
+          "5day": 6.691489361702063
+        },
+        "currentStatus": {
+          "price": 61.34,
+          "dayPositionPercent": 81.8181818181835,
+          "changePercent": -0.11399999999999999
+        },
+        "ratios": {
+          "percent52w": 95.87
+        },
+        "indicators": {
+          "rsi": 47.2648854602667
+        },
+        "categories": [
+          "BREAKOUT",
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "THD",
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 81.23,
+            "max": 81.38,
+            "percentChange": 0.18
+          }
+        },
+        "volatility": {
+          "5day": 24.543859649123227
+        },
+        "currentStatus": {
+          "price": 81.38,
+          "dayPositionPercent": 24.999999999998813,
+          "changePercent": -1.058
+        },
+        "ratios": {
+          "percent52w": 97.4
+        },
+        "indicators": {
+          "rsi": 52.25215824410636
+        },
+        "categories": [
+          "BREAKOUT"
+        ]
+      },
+      {
+        "symbol": "DGS",
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 50.53,
+            "max": 50.96,
+            "percentChange": 0.85,
+            "dailyPercentChange": 0.85
+          }
+        },
+        "volatility": {
+          "5day": 4.4000000000000465
+        },
+        "currentStatus": {
+          "price": 50.96,
+          "dayPositionPercent": 99.31034482758538,
+          "changePercent": 0.592
+        },
+        "ratios": {
+          "percent52w": 99.26
+        },
+        "indicators": {
+          "rsi": 53.68255626611694
+        },
+        "categories": [
+          "BREAKOUT",
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "OEF",
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 178.3,
+            "max": 178.93,
+            "percentChange": 0.35
+          }
+        },
+        "volatility": {
+          "5day": 8.867298578199009
+        },
+        "currentStatus": {
+          "price": 178.93,
+          "dayPositionPercent": 62.999999999999545,
+          "changePercent": -0.44
+        },
+        "ratios": {
+          "percent52w": 99.16
+        },
+        "indicators": {
+          "rsi": 53.27523321611781
+        },
+        "categories": [
+          "BREAKOUT",
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "XLC",
+        "momentumAnalysis": {
+          "greenDays": 2,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 72.71,
+            "max": 73.03,
+            "percentChange": 0.44
+          }
+        },
+        "volatility": {
+          "5day": -15.095238095238138
+        },
+        "currentStatus": {
+          "price": 73.03,
+          "dayPositionPercent": 66.66666666666765,
+          "changePercent": 0
+        },
+        "ratios": {
+          "percent52w": 95.5
+        },
+        "indicators": {
+          "rsi": 47.11555007781143
+        },
+        "categories": [
+          "BREAKOUT",
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "SPY",
+        "momentumAnalysis": {
+          "greenDays": 4,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 393.02,
+            "max": 394.73,
+            "percentChange": 0.44
+          }
+        },
+        "volatility": {
+          "5day": 6.083217753120522
+        },
+        "currentStatus": {
+          "price": 394.73,
+          "dayPositionPercent": 70.37037037037167,
+          "changePercent": -0.265
+        },
+        "ratios": {
+          "percent52w": 99.47
+        },
+        "indicators": {
+          "rsi": 55.13694625949016
+        },
+        "categories": [
+          "BREAKOUT",
+          "STEADY"
+        ]
+      }
+    ],
+    "RISER": [
+      {
+        "symbol": "MRU.TO",
+        "momentumAnalysis": {
+          "greenDays": 4,
+          "streakDays": 4,
+          "magnitude": {
+            "min": 56.69,
+            "max": 57.99,
+            "percentChange": 2.29,
+            "dailyPercentChange": 0.57
+          }
+        },
+        "volatility": {
+          "5day": 2.7589285714285623
+        },
+        "currentStatus": {
+          "price": 57.99,
+          "dayPositionPercent": 94.85294117647058,
+          "changePercent": 0.207
+        },
+        "ratios": {
+          "percent52w": 87.93
+        },
+        "indicators": {
+          "rsi": 84.92491790714398
+        },
+        "categories": [
+          "RISER",
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "FAN",
+        "momentumAnalysis": {
+          "greenDays": 4,
+          "streakDays": 4,
+          "magnitude": {
+            "min": 21.21,
+            "max": 22.11,
+            "percentChange": 4.24,
+            "dailyPercentChange": 1.06
+          }
+        },
+        "volatility": {
+          "5day": 3.413793103448285
+        },
+        "currentStatus": {
+          "price": 22.11,
+          "dayPositionPercent": 100,
+          "changePercent": 0.45399999999999996
+        },
+        "ratios": {
+          "percent52w": 84.78
+        },
+        "indicators": {
+          "rsi": 50.57464076634918
+        },
+        "categories": [
+          "RISER",
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "TECK",
+        "momentumAnalysis": {
+          "greenDays": 3,
+          "streakDays": 3,
+          "magnitude": {
+            "min": 17.3,
+            "max": 19.32,
+            "percentChange": 11.68,
+            "dailyPercentChange": 3.89
+          }
+        },
+        "volatility": {
+          "5day": 6.202380952380958
+        },
+        "currentStatus": {
+          "price": 19.32,
+          "dayPositionPercent": 75.65217391304336,
+          "changePercent": 0.993
+        },
+        "ratios": {
+          "percent52w": 80.87
+        },
+        "indicators": {
+          "rsi": 43.374922633654755
+        },
+        "categories": [
+          "RISER",
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "ABMD",
+        "momentumAnalysis": {
+          "greenDays": 3,
+          "streakDays": 3,
+          "magnitude": {
+            "min": 284.59,
+            "max": 309.88,
+            "percentChange": 8.89,
+            "dailyPercentChange": 2.96
+          }
+        },
+        "volatility": {
+          "5day": 4.039566049776651
+        },
+        "currentStatus": {
+          "price": 309.88,
+          "dayPositionPercent": 96.12676056338032,
+          "changePercent": 1.344
+        },
+        "ratios": {
+          "percent52w": 79.99
+        },
+        "indicators": {
+          "rsi": 47.10346891473339
+        },
+        "categories": [
+          "RISER",
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "TMUS",
+        "momentumAnalysis": {
+          "greenDays": 2,
+          "streakDays": 2,
+          "magnitude": {
+            "min": 121.02,
+            "max": 124.64,
+            "percentChange": 2.99,
+            "dailyPercentChange": 1.5
+          }
+        },
+        "volatility": {
+          "5day": 4.662280701754405
+        },
+        "currentStatus": {
+          "price": 124.64,
+          "dayPositionPercent": 75.99097647437955,
+          "changePercent": 0.9560000000000001
+        },
+        "ratios": {
+          "percent52w": 91.96
+        },
+        "indicators": {
+          "rsi": 52.28284931532903
+        },
+        "categories": [
+          "RISER",
+          "STEADY"
+        ]
+      },
+      {
+        "symbol": "TWTR",
+        "momentumAnalysis": {
+          "greenDays": 2,
+          "streakDays": 3,
+          "magnitude": {
+            "min": 59.57,
+            "max": 62.99,
+            "percentChange": 5.74,
+            "dailyPercentChange": 1.91
+          }
+        },
+        "volatility": {
+          "5day": 15.65591397849453
+        },
+        "currentStatus": {
+          "price": 62.99,
+          "dayPositionPercent": 49.545454545454795,
+          "changePercent": 0.079
+        },
+        "ratios": {
+          "percent52w": 78.01
+        },
+        "indicators": {
+          "rsi": 32.606411712908084
+        },
+        "categories": [
+          "RISER"
+        ]
+      },
+      {
+        "symbol": "VOX",
+        "momentumAnalysis": {
+          "greenDays": 2,
+          "streakDays": 2,
+          "magnitude": {
+            "min": 126.22,
+            "max": 129.12,
+            "percentChange": 2.3,
+            "dailyPercentChange": 1.15
+          }
+        },
+        "volatility": {
+          "5day": -12.08474576271196
+        },
+        "currentStatus": {
+          "price": 129.12,
+          "dayPositionPercent": 70.8846584546483,
+          "changePercent": 0.124
+        },
+        "ratios": {
+          "percent52w": 95.14
+        },
+        "indicators": {
+          "rsi": 43.32838930108896
+        },
+        "categories": [
+          "RISER",
+          "BREAKOUT",
+          "STEADY"
+        ]
+      }
+    ]
+  }
+}

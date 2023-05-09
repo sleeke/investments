@@ -1,0 +1,17 @@
+{
+  "symbols": [
+    {
+      "symbol": "SNC.TO",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/SNC.TO",
+        "barChart": "https://www.barchart.com/stocks/SNC.TO"
+      },
+      "movingAverageCompliance": {
+        "version": "0.2",
+        "ma20": 0.7340425531914894,
+        "ma50": 0.7471264367816092
+      }
+    }
+  ],
+  "categories": {}
+}

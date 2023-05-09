@@ -1,0 +1,17 @@
+{
+  "symbols": [
+    {
+      "symbol": "PTON",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/PTON",
+        "barChart": "https://www.barchart.com/stocks/PTON"
+      },
+      "movingAverageCompliance": {
+        "version": "0.2",
+        "ma20": 0.8064516129032258,
+        "ma50": 0.7913043478260869
+      }
+    }
+  ],
+  "categories": {}
+}

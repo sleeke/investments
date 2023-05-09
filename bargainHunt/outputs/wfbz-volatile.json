@@ -1,0 +1,289 @@
+{
+  "symbols": [],
+  "categories": {
+    "STEADY": [
+      {
+        "symbol": "NAPA",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/NAPA",
+          "barChart": "https://www.barchart.com/stocks/NAPA"
+        },
+        "summary": {
+          "ma20Trend": "STRONG",
+          "ma50Trend": "STRONG",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 22.29,
+            "max": 22.69,
+            "percentChange": 1.79
+          }
+        },
+        "buyZoneApproach": {
+          "percentFromAverage": 1.51,
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -5.950413223140509
+        },
+        "categories": []
+      },
+      {
+        "symbol": "WISH",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/WISH",
+          "barChart": "https://www.barchart.com/stocks/WISH"
+        },
+        "summary": {
+          "ma20Trend": "NEGATIVE",
+          "ma50Trend": "STRONG",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 10.07,
+            "max": 10.3,
+            "percentChange": 2.28
+          }
+        },
+        "buyZoneApproach": {
+          "percentFromAverage": 4.75,
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": true,
+          "positiveMa20Trend": false
+        },
+        "volatility": {
+          "5day": 5.318840579710134
+        },
+        "categories": []
+      },
+      {
+        "symbol": "BXR.VN",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/BXR.VN",
+          "barChart": "https://www.barchart.com/stocks/BXR.VN"
+        },
+        "summary": {
+          "ma20Trend": "STRONG",
+          "ma50Trend": "STRONG",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 20,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 0.02,
+            "max": 0.02,
+            "percentChange": 0
+          }
+        },
+        "buyZoneApproach": {
+          "percentFromAverage": 6.67,
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 7.000000000000002
+        },
+        "categories": []
+      },
+      {
+        "symbol": "UTI",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/UTI",
+          "barChart": "https://www.barchart.com/stocks/UTI"
+        },
+        "summary": {
+          "ma20Trend": "STRONG",
+          "ma50Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 6.73,
+            "max": 6.83,
+            "percentChange": 1.49
+          }
+        },
+        "buyZoneApproach": {
+          "percentFromAverage": 11.2,
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": false,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -12.69230769230773
+        },
+        "categories": []
+      }
+    ],
+    "APPROACHING BUY ZONE": [
+      {
+        "symbol": "NAPA",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/NAPA",
+          "barChart": "https://www.barchart.com/stocks/NAPA"
+        },
+        "summary": {
+          "ma20Trend": "STRONG",
+          "ma50Trend": "STRONG",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 22.29,
+            "max": 22.69,
+            "percentChange": 1.79
+          }
+        },
+        "buyZoneApproach": {
+          "percentFromAverage": 1.51,
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -5.950413223140509
+        },
+        "categories": []
+      },
+      {
+        "symbol": "WISH",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/WISH",
+          "barChart": "https://www.barchart.com/stocks/WISH"
+        },
+        "summary": {
+          "ma20Trend": "NEGATIVE",
+          "ma50Trend": "STRONG",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 10.07,
+            "max": 10.3,
+            "percentChange": 2.28
+          }
+        },
+        "buyZoneApproach": {
+          "percentFromAverage": 4.75,
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": true,
+          "positiveMa20Trend": false
+        },
+        "volatility": {
+          "5day": 5.318840579710134
+        },
+        "categories": []
+      },
+      {
+        "symbol": "BXR.VN",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/BXR.VN",
+          "barChart": "https://www.barchart.com/stocks/BXR.VN"
+        },
+        "summary": {
+          "ma20Trend": "STRONG",
+          "ma50Trend": "STRONG",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 20,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 0.02,
+            "max": 0.02,
+            "percentChange": 0
+          }
+        },
+        "buyZoneApproach": {
+          "percentFromAverage": 6.67,
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 7.000000000000002
+        },
+        "categories": []
+      },
+      {
+        "symbol": "UTI",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/UTI",
+          "barChart": "https://www.barchart.com/stocks/UTI"
+        },
+        "summary": {
+          "ma20Trend": "STRONG",
+          "ma50Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 6.73,
+            "max": 6.83,
+            "percentChange": 1.49
+          }
+        },
+        "buyZoneApproach": {
+          "percentFromAverage": 11.2,
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": false,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -12.69230769230773
+        },
+        "categories": []
+      }
+    ]
+  }
+}

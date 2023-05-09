@@ -1,0 +1,7067 @@
+{
+  "symbols": [],
+  "categories": {
+    "STEADY": [
+      {
+        "symbol": "L.TO",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/L.TO",
+          "barChart": "https://www.barchart.com/stocks/L.TO"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 73.91,
+            "max": 74.17,
+            "percentChange": 0.35
+          },
+          "ma20Trend": {
+            "value": 0.0034522113292076995,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 6.136612021857921
+        },
+        "categories": []
+      },
+      {
+        "symbol": "MMC",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/MMC",
+          "barChart": "https://www.barchart.com/stocks/MMC"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "RISER",
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 3,
+          "streakDays": 3,
+          "magnitude": {
+            "min": 133.42,
+            "max": 136.18,
+            "percentChange": 2.07,
+            "dailyPercentChange": 0.69
+          },
+          "ma20Trend": {
+            "value": 0.0031643216229884086,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 9.20118343195272
+        },
+        "categories": []
+      },
+      {
+        "symbol": "WN.TO",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/WN.TO",
+          "barChart": "https://www.barchart.com/stocks/WN.TO"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 117.25,
+            "max": 117.5,
+            "percentChange": 0.21
+          },
+          "ma20Trend": {
+            "value": 0.002494320965658492,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 8.626016260162652
+        },
+        "categories": []
+      },
+      {
+        "symbol": "PSX",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/PSX",
+          "barChart": "https://www.barchart.com/stocks/PSX"
+        },
+        "summary": {
+          "ma20Trend": "STRONG",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 84.23,
+            "max": 84.29,
+            "percentChange": 0.07
+          },
+          "ma20Trend": {
+            "value": 0.004671413941176095,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -1.6485260770975205
+        },
+        "categories": []
+      },
+      {
+        "symbol": "GPC",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/GPC",
+          "barChart": "https://www.barchart.com/stocks/GPC"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "RISER",
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 3,
+          "streakDays": 2,
+          "magnitude": {
+            "min": 128.44,
+            "max": 131.43,
+            "percentChange": 2.33,
+            "dailyPercentChange": 1.17
+          },
+          "ma20Trend": {
+            "value": 0.003530826834283962,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -21.4565217391308
+        },
+        "categories": []
+      },
+      {
+        "symbol": "ALL",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/ALL",
+          "barChart": "https://www.barchart.com/stocks/ALL"
+        },
+        "summary": {
+          "ma20Trend": "STRONG",
+          "categories": [
+            "RISER",
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 2,
+          "streakDays": 2,
+          "magnitude": {
+            "min": 133.25,
+            "max": 137.43,
+            "percentChange": 3.14,
+            "dailyPercentChange": 1.57
+          },
+          "ma20Trend": {
+            "value": 0.004706168578151537,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -17.628930817610197
+        },
+        "categories": []
+      },
+      {
+        "symbol": "IAU",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/IAU",
+          "barChart": "https://www.barchart.com/stocks/IAU"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 7,
+          "magnitude": {
+            "min": 17.32,
+            "max": 17.92,
+            "percentChange": 3.46,
+            "dailyPercentChange": 0.49
+          },
+          "ma20Trend": {
+            "value": 0.002919412648861419,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 4.142857142857083
+        },
+        "categories": []
+      },
+      {
+        "symbol": "GLD",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/GLD",
+          "barChart": "https://www.barchart.com/stocks/GLD"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 7,
+          "magnitude": {
+            "min": 170.34,
+            "max": 176.04,
+            "percentChange": 3.35,
+            "dailyPercentChange": 0.48
+          },
+          "ma20Trend": {
+            "value": 0.0028343604459706295,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 3.716417910447783
+        },
+        "categories": []
+      },
+      {
+        "symbol": "LLY",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/LLY",
+          "barChart": "https://www.barchart.com/stocks/LLY"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 3,
+          "magnitude": {
+            "min": 193.58,
+            "max": 199.88,
+            "percentChange": 3.25,
+            "dailyPercentChange": 1.08
+          },
+          "ma20Trend": {
+            "value": 0.002921488912216441,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 6.505747126436798
+        },
+        "categories": []
+      },
+      {
+        "symbol": "AVY",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/AVY",
+          "barChart": "https://www.barchart.com/stocks/AVY"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 216.12,
+            "max": 216.62,
+            "percentChange": 0.23
+          },
+          "ma20Trend": {
+            "value": 0.003364277238780078,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -7.910138248847968
+        },
+        "categories": []
+      },
+      {
+        "symbol": "ACTL",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/ACTL",
+          "barChart": "https://www.barchart.com/stocks/ACTL"
+        },
+        "summary": {
+          "ma20Trend": "STRONG",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 3,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 0,
+            "max": 0,
+            "percentChange": null,
+            "dailyPercentChange": null
+          },
+          "ma20Trend": {
+            "value": 0.00952380952380949,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -14.50000000000001
+        },
+        "categories": []
+      },
+      {
+        "symbol": "ADM",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/ADM",
+          "barChart": "https://www.barchart.com/stocks/ADM"
+        },
+        "summary": {
+          "ma20Trend": "STRONG",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 66,
+            "max": 66.98,
+            "percentChange": 1.48,
+            "dailyPercentChange": 1.48
+          },
+          "ma20Trend": {
+            "value": 0.00580655058679147,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -17.151515151515124
+        },
+        "categories": []
+      },
+      {
+        "symbol": "NA.TO",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/NA.TO",
+          "barChart": "https://www.barchart.com/stocks/NA.TO"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "RISER",
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 2,
+          "streakDays": 2,
+          "magnitude": {
+            "min": 91.84,
+            "max": 93.67,
+            "percentChange": 1.99,
+            "dailyPercentChange": 0.99
+          },
+          "ma20Trend": {
+            "value": 0.0031122511028314204,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 9.806818181818198
+        },
+        "categories": []
+      },
+      {
+        "symbol": "ABBV",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/ABBV",
+          "barChart": "https://www.barchart.com/stocks/ABBV"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 116.06,
+            "max": 116.12,
+            "percentChange": 0.05
+          },
+          "ma20Trend": {
+            "value": 0.002069073893001816,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -14.259740259740358
+        },
+        "categories": []
+      },
+      {
+        "symbol": "BX",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/BX",
+          "barChart": "https://www.barchart.com/stocks/BX"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "RISER",
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 3,
+          "streakDays": 2,
+          "magnitude": {
+            "min": 85.74,
+            "max": 90.74,
+            "percentChange": 5.83,
+            "dailyPercentChange": 2.92
+          },
+          "ma20Trend": {
+            "value": 0.0020007047937340428,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 7.533783783783764
+        },
+        "categories": []
+      },
+      {
+        "symbol": "TD.TO",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/TD.TO",
+          "barChart": "https://www.barchart.com/stocks/TD.TO"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "RISER",
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 2,
+          "streakDays": 2,
+          "magnitude": {
+            "min": 87.16,
+            "max": 88.11,
+            "percentChange": 1.09,
+            "dailyPercentChange": 0.55
+          },
+          "ma20Trend": {
+            "value": 0.002271562368948432,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -19.692307692307025
+        },
+        "categories": []
+      },
+      {
+        "symbol": "DD",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/DD",
+          "barChart": "https://www.barchart.com/stocks/DD"
+        },
+        "summary": {
+          "ma20Trend": "STRONG",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 83.51,
+            "max": 84.12,
+            "percentChange": 0.73,
+            "dailyPercentChange": 0.73
+          },
+          "ma20Trend": {
+            "value": 0.004528390717728259,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -4.855932203389902
+        },
+        "categories": []
+      },
+      {
+        "symbol": "BRK.B",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/BRK.B",
+          "barChart": "https://www.barchart.com/stocks/BRK.B"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 2,
+          "magnitude": {
+            "min": 282.57,
+            "max": 287.74,
+            "percentChange": 1.83,
+            "dailyPercentChange": 0.92
+          },
+          "ma20Trend": {
+            "value": 0.002787880503233753,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -16.054054054053815
+        },
+        "categories": []
+      },
+      {
+        "symbol": "FRC",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/FRC",
+          "barChart": "https://www.barchart.com/stocks/FRC"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "RISER",
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 2,
+          "streakDays": 2,
+          "magnitude": {
+            "min": 182.33,
+            "max": 189.67,
+            "percentChange": 4.03,
+            "dailyPercentChange": 2.02
+          },
+          "ma20Trend": {
+            "value": 0.00284742652020209,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -126.25000000000084
+        },
+        "categories": []
+      },
+      {
+        "symbol": "NOC",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/NOC",
+          "barChart": "https://www.barchart.com/stocks/NOC"
+        },
+        "summary": {
+          "ma20Trend": "STRONG",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 369.24,
+            "max": 370.46,
+            "percentChange": 0.33
+          },
+          "ma20Trend": {
+            "value": 0.00392606509366189,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -11.016597510373341
+        },
+        "categories": []
+      },
+      {
+        "symbol": "ABX.TO",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/ABX.TO",
+          "barChart": "https://www.barchart.com/stocks/ABX.TO"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 29.57,
+            "max": 29.79,
+            "percentChange": 0.74
+          },
+          "ma20Trend": {
+            "value": 0.0036797877045555705,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": false,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -3.571428571428602
+        },
+        "categories": []
+      },
+      {
+        "symbol": "WM",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/WM",
+          "barChart": "https://www.barchart.com/stocks/WM"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 2,
+          "magnitude": {
+            "min": 137.62,
+            "max": 140.97,
+            "percentChange": 2.43,
+            "dailyPercentChange": 1.22
+          },
+          "ma20Trend": {
+            "value": 0.0019611709660647403,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -33.481481481481254
+        },
+        "categories": []
+      },
+      {
+        "symbol": "GOLD",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/GOLD",
+          "barChart": "https://www.barchart.com/stocks/GOLD"
+        },
+        "summary": {
+          "ma20Trend": "STRONG",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 24.49,
+            "max": 24.7,
+            "percentChange": 0.86
+          },
+          "ma20Trend": {
+            "value": 0.005376576265330835,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": false,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -4.596491228070146
+        },
+        "categories": []
+      },
+      {
+        "symbol": "GILD",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/GILD",
+          "barChart": "https://www.barchart.com/stocks/GILD"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 68.71,
+            "max": 68.75,
+            "percentChange": 0.06
+          },
+          "ma20Trend": {
+            "value": 0.002451182489412007,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -16.718750000000195
+        },
+        "categories": []
+      },
+      {
+        "symbol": "SJM",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/SJM",
+          "barChart": "https://www.barchart.com/stocks/SJM"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 4,
+          "magnitude": {
+            "min": 132.86,
+            "max": 135.51,
+            "percentChange": 1.99,
+            "dailyPercentChange": 0.5
+          },
+          "ma20Trend": {
+            "value": 0.002145497632103366,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 4.249999999999877
+        },
+        "categories": []
+      },
+      {
+        "symbol": "TTWO",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/TTWO",
+          "barChart": "https://www.barchart.com/stocks/TTWO"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 184.17,
+            "max": 184.36,
+            "percentChange": 0.1
+          },
+          "ma20Trend": {
+            "value": 0.0023829802128054745,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": false,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 4.8351920693927966
+        },
+        "categories": []
+      },
+      {
+        "symbol": "MDLZ",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/MDLZ",
+          "barChart": "https://www.barchart.com/stocks/MDLZ"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "RISER",
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 3,
+          "streakDays": 3,
+          "magnitude": {
+            "min": 62.07,
+            "max": 63.36,
+            "percentChange": 2.08,
+            "dailyPercentChange": 0.69
+          },
+          "ma20Trend": {
+            "value": 0.0031379900562396035,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 8.764044943820185
+        },
+        "categories": []
+      },
+      {
+        "symbol": "NEM",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/NEM",
+          "barChart": "https://www.barchart.com/stocks/NEM"
+        },
+        "summary": {
+          "ma20Trend": "STRONG",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 73.13,
+            "max": 73.53,
+            "percentChange": 0.55
+          },
+          "ma20Trend": {
+            "value": 0.005775687388146489,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": false,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -10.063829787233946
+        },
+        "categories": []
+      },
+      {
+        "symbol": "ABEV",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/ABEV",
+          "barChart": "https://www.barchart.com/stocks/ABEV"
+        },
+        "summary": {
+          "ma20Trend": "STRONG",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 3.25,
+            "max": 3.3,
+            "percentChange": 1.54
+          },
+          "ma20Trend": {
+            "value": 0.0062061081169362264,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": false,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -11.249999999999988
+        },
+        "categories": []
+      },
+      {
+        "symbol": "SNA",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/SNA",
+          "barChart": "https://www.barchart.com/stocks/SNA"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 246.01,
+            "max": 249.98,
+            "percentChange": 1.61,
+            "dailyPercentChange": 1.61
+          },
+          "ma20Trend": {
+            "value": 0.002295429269671523,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -10.9067524115755
+        },
+        "categories": []
+      },
+      {
+        "symbol": "INTU",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/INTU",
+          "barChart": "https://www.barchart.com/stocks/INTU"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 431.76,
+            "max": 433.43,
+            "percentChange": 0.39
+          },
+          "ma20Trend": {
+            "value": 0.002259778026558301,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": false,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 7.731620271234832
+        },
+        "categories": []
+      },
+      {
+        "symbol": "SVR.TO",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/SVR.TO",
+          "barChart": "https://www.barchart.com/stocks/SVR.TO"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 13.97,
+            "max": 14.14,
+            "percentChange": 1.22
+          },
+          "ma20Trend": {
+            "value": 0.0029695082204679313,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -5.161290322580649
+        },
+        "categories": []
+      },
+      {
+        "symbol": "IPG",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/IPG",
+          "barChart": "https://www.barchart.com/stocks/IPG"
+        },
+        "summary": {
+          "ma20Trend": "STRONG",
+          "categories": [
+            "RISER",
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 3,
+          "streakDays": 3,
+          "magnitude": {
+            "min": 32.47,
+            "max": 33.22,
+            "percentChange": 2.31,
+            "dailyPercentChange": 0.77
+          },
+          "ma20Trend": {
+            "value": 0.0054676393857495675,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 6.9230769230768825
+        },
+        "categories": []
+      },
+      {
+        "symbol": "DPZ",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/DPZ",
+          "barChart": "https://www.barchart.com/stocks/DPZ"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 425.74,
+            "max": 427.65,
+            "percentChange": 0.45
+          },
+          "ma20Trend": {
+            "value": 0.0035397016435847473,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -5.36468330134357
+        },
+        "categories": []
+      },
+      {
+        "symbol": "RTX",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/RTX",
+          "barChart": "https://www.barchart.com/stocks/RTX"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 2,
+          "magnitude": {
+            "min": 83.58,
+            "max": 85.81,
+            "percentChange": 2.67,
+            "dailyPercentChange": 1.33
+          },
+          "ma20Trend": {
+            "value": 0.0031372035431944667,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -17.59210526315821
+        },
+        "categories": []
+      },
+      {
+        "symbol": "PNC",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/PNC",
+          "barChart": "https://www.barchart.com/stocks/PNC"
+        },
+        "summary": {
+          "ma20Trend": "STRONG",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 189.87,
+            "max": 193.48,
+            "percentChange": 1.9,
+            "dailyPercentChange": 1.9
+          },
+          "ma20Trend": {
+            "value": 0.004029585088447085,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -9.333333333333288
+        },
+        "categories": []
+      },
+      {
+        "symbol": "WMB",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/WMB",
+          "barChart": "https://www.barchart.com/stocks/WMB"
+        },
+        "summary": {
+          "ma20Trend": "STRONG",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 2,
+          "magnitude": {
+            "min": 25.63,
+            "max": 26.39,
+            "percentChange": 2.97,
+            "dailyPercentChange": 1.49
+          },
+          "ma20Trend": {
+            "value": 0.005533549632755319,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -23.78571428571391
+        },
+        "categories": []
+      },
+      {
+        "symbol": "SGEN",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/SGEN",
+          "barChart": "https://www.barchart.com/stocks/SGEN"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 152.96,
+            "max": 153.34,
+            "percentChange": 0.25
+          },
+          "ma20Trend": {
+            "value": 0.002130619902291242,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": false,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 7.970149253731353
+        },
+        "categories": []
+      },
+      {
+        "symbol": "RY.TO",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/RY.TO",
+          "barChart": "https://www.barchart.com/stocks/RY.TO"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "RISER",
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 8,
+          "streakDays": 2,
+          "magnitude": {
+            "min": 121.8,
+            "max": 123.47,
+            "percentChange": 1.37,
+            "dailyPercentChange": 0.69
+          },
+          "ma20Trend": {
+            "value": 0.0028882767729880854,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 4.389830508474519
+        },
+        "categories": []
+      },
+      {
+        "symbol": "JPM",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/JPM",
+          "barChart": "https://www.barchart.com/stocks/JPM"
+        },
+        "summary": {
+          "ma20Trend": "STRONG",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 3,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 159.52,
+            "max": 162.66,
+            "percentChange": 1.97,
+            "dailyPercentChange": 1.97
+          },
+          "ma20Trend": {
+            "value": 0.00395471267284031,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -16.17910447761189
+        },
+        "categories": []
+      },
+      {
+        "symbol": "ORCL",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/ORCL",
+          "barChart": "https://www.barchart.com/stocks/ORCL"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 78.68,
+            "max": 79.03,
+            "percentChange": 0.44,
+            "dailyPercentChange": 0.44
+          },
+          "ma20Trend": {
+            "value": 0.002614025599423364,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -100.99999999999754
+        },
+        "categories": []
+      },
+      {
+        "symbol": "IRM",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/IRM",
+          "barChart": "https://www.barchart.com/stocks/IRM"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 2,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 42.7,
+            "max": 42.99,
+            "percentChange": 0.68
+          },
+          "ma20Trend": {
+            "value": 0.0032478985974428998,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -18.428571428571566
+        },
+        "categories": []
+      },
+      {
+        "symbol": "BEN",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/BEN",
+          "barChart": "https://www.barchart.com/stocks/BEN"
+        },
+        "summary": {
+          "ma20Trend": "STRONG",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 33.02,
+            "max": 33.54,
+            "percentChange": 1.57,
+            "dailyPercentChange": 1.57
+          },
+          "ma20Trend": {
+            "value": 0.006352926663788505,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -8.60377358490568
+        },
+        "categories": []
+      },
+      {
+        "symbol": "GWO.TO",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/GWO.TO",
+          "barChart": "https://www.barchart.com/stocks/GWO.TO"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 36.92,
+            "max": 37.31,
+            "percentChange": 1.06,
+            "dailyPercentChange": 1.06
+          },
+          "ma20Trend": {
+            "value": 0.0028600641096494517,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 5.842105263157918
+        },
+        "categories": []
+      },
+      {
+        "symbol": "CM.TO",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/CM.TO",
+          "barChart": "https://www.barchart.com/stocks/CM.TO"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "RISER",
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 3,
+          "streakDays": 7,
+          "magnitude": {
+            "min": 129.74,
+            "max": 135.35,
+            "percentChange": 4.32,
+            "dailyPercentChange": 0.62
+          },
+          "ma20Trend": {
+            "value": 0.003395461694346791,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 5.928571428571505
+        },
+        "categories": []
+      },
+      {
+        "symbol": "MPC",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/MPC",
+          "barChart": "https://www.barchart.com/stocks/MPC"
+        },
+        "summary": {
+          "ma20Trend": "STRONG",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 59.45,
+            "max": 59.59,
+            "percentChange": 0.24
+          },
+          "ma20Trend": {
+            "value": 0.005691190313749539,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -4.979274611398987
+        },
+        "categories": []
+      },
+      {
+        "symbol": "BAC",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/BAC",
+          "barChart": "https://www.barchart.com/stocks/BAC"
+        },
+        "summary": {
+          "ma20Trend": "STRONG",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 41.46,
+            "max": 42.4,
+            "percentChange": 2.27,
+            "dailyPercentChange": 2.27
+          },
+          "ma20Trend": {
+            "value": 0.003902935686407538,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -24.647058823529267
+        },
+        "categories": []
+      },
+      {
+        "symbol": "HSY",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/HSY",
+          "barChart": "https://www.barchart.com/stocks/HSY"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "RISER",
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 5,
+          "streakDays": 2,
+          "magnitude": {
+            "min": 171.12,
+            "max": 173.76,
+            "percentChange": 1.54,
+            "dailyPercentChange": 0.77
+          },
+          "ma20Trend": {
+            "value": 0.00368514018775401,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 7.28346456692925
+        },
+        "categories": []
+      },
+      {
+        "symbol": "TAP",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/TAP",
+          "barChart": "https://www.barchart.com/stocks/TAP"
+        },
+        "summary": {
+          "ma20Trend": "STRONG",
+          "categories": [
+            "RISER",
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 3,
+          "streakDays": 3,
+          "magnitude": {
+            "min": 55.42,
+            "max": 57.15,
+            "percentChange": 3.12,
+            "dailyPercentChange": 1.04
+          },
+          "ma20Trend": {
+            "value": 0.004335118904849278,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -32.064102564102654
+        },
+        "categories": []
+      },
+      {
+        "symbol": "CI",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/CI",
+          "barChart": "https://www.barchart.com/stocks/CI"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 259.49,
+            "max": 262.24,
+            "percentChange": 1.06,
+            "dailyPercentChange": 1.06
+          },
+          "ma20Trend": {
+            "value": 0.002026763371493878,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -7.947580645161224
+        },
+        "categories": []
+      },
+      {
+        "symbol": "BDT.TO",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/BDT.TO",
+          "barChart": "https://www.barchart.com/stocks/BDT.TO"
+        },
+        "summary": {
+          "ma20Trend": "STRONG",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 9.58,
+            "max": 9.78,
+            "percentChange": 2.09,
+            "dailyPercentChange": 2.09
+          },
+          "ma20Trend": {
+            "value": 0.005213597914560664,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -10.437499999999972
+        },
+        "categories": []
+      },
+      {
+        "symbol": "SAND",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/SAND",
+          "barChart": "https://www.barchart.com/stocks/SAND"
+        },
+        "summary": {
+          "ma20Trend": "STRONG",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 2,
+          "magnitude": {
+            "min": 8.26,
+            "max": 8.4,
+            "percentChange": 1.69,
+            "dailyPercentChange": 0.84
+          },
+          "ma20Trend": {
+            "value": 0.004758922980588665,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -6.242424242424304
+        },
+        "categories": []
+      },
+      {
+        "symbol": "XGD.TO",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/XGD.TO",
+          "barChart": "https://www.barchart.com/stocks/XGD.TO"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 20.75,
+            "max": 20.89,
+            "percentChange": 0.67
+          },
+          "ma20Trend": {
+            "value": 0.003298487770222458,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": false,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -6.05128205128199
+        },
+        "categories": []
+      },
+      {
+        "symbol": "CE",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/CE",
+          "barChart": "https://www.barchart.com/stocks/CE"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 164.08,
+            "max": 164.15,
+            "percentChange": 0.04
+          },
+          "ma20Trend": {
+            "value": 0.002095666406620511,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -3.6700819672131413
+        },
+        "categories": []
+      },
+      {
+        "symbol": "SIS.TO",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/SIS.TO",
+          "barChart": "https://www.barchart.com/stocks/SIS.TO"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 18.54,
+            "max": 19.16,
+            "percentChange": 3.34,
+            "dailyPercentChange": 3.34
+          },
+          "ma20Trend": {
+            "value": 0.00339148601351158,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 5.30864197530861
+        },
+        "categories": []
+      },
+      {
+        "symbol": "GWW",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/GWW",
+          "barChart": "https://www.barchart.com/stocks/GWW"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 453.88,
+            "max": 456.43,
+            "percentChange": 0.56,
+            "dailyPercentChange": 0.56
+          },
+          "ma20Trend": {
+            "value": 0.003654731804728417,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -8.677631578947391
+        },
+        "categories": []
+      },
+      {
+        "symbol": "CZR",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/CZR",
+          "barChart": "https://www.barchart.com/stocks/CZR"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 99.78,
+            "max": 100.21,
+            "percentChange": 0.43
+          },
+          "ma20Trend": {
+            "value": 0.0022504833252778855,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -134.6874999999936
+        },
+        "categories": []
+      },
+      {
+        "symbol": "PPL.TO",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/PPL.TO",
+          "barChart": "https://www.barchart.com/stocks/PPL.TO"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 38.51,
+            "max": 38.61,
+            "percentChange": 0.26
+          },
+          "ma20Trend": {
+            "value": 0.0022212059841901777,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -3.1641791044776015
+        },
+        "categories": []
+      },
+      {
+        "symbol": "AEM.TO",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/AEM.TO",
+          "barChart": "https://www.barchart.com/stocks/AEM.TO"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 86.52,
+            "max": 86.98,
+            "percentChange": 0.53
+          },
+          "ma20Trend": {
+            "value": 0.002712635105468042,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -7.455882352941221
+        },
+        "categories": []
+      },
+      {
+        "symbol": "BK",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/BK",
+          "barChart": "https://www.barchart.com/stocks/BK"
+        },
+        "summary": {
+          "ma20Trend": "STRONG",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 50.41,
+            "max": 51.56,
+            "percentChange": 2.28,
+            "dailyPercentChange": 2.28
+          },
+          "ma20Trend": {
+            "value": 0.003913275490641688,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -30.20754716981139
+        },
+        "categories": []
+      },
+      {
+        "symbol": "DVA",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/DVA",
+          "barChart": "https://www.barchart.com/stocks/DVA"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 122.25,
+            "max": 122.54,
+            "percentChange": 0.24
+          },
+          "ma20Trend": {
+            "value": 0.003694214876033053,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -8.444444444444482
+        },
+        "categories": []
+      },
+      {
+        "symbol": "TUR",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/TUR",
+          "barChart": "https://www.barchart.com/stocks/TUR"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 23.55,
+            "max": 23.61,
+            "percentChange": 0.25
+          },
+          "ma20Trend": {
+            "value": 0.003026234469236888,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -5.093750000000014
+        },
+        "categories": []
+      },
+      {
+        "symbol": "GDX",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/GDX",
+          "barChart": "https://www.barchart.com/stocks/GDX"
+        },
+        "summary": {
+          "ma20Trend": "STRONG",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 38.91,
+            "max": 39.29,
+            "percentChange": 0.98
+          },
+          "ma20Trend": {
+            "value": 0.004381383866198352,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": false,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -9.38461538461537
+        },
+        "categories": []
+      },
+      {
+        "symbol": "ALXN",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/ALXN",
+          "barChart": "https://www.barchart.com/stocks/ALXN"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 176.76,
+            "max": 177.72,
+            "percentChange": 0.54
+          },
+          "ma20Trend": {
+            "value": 0.003161213086251502,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 6.663299663299727
+        },
+        "categories": []
+      },
+      {
+        "symbol": "UPS",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/UPS",
+          "barChart": "https://www.barchart.com/stocks/UPS"
+        },
+        "summary": {
+          "ma20Trend": "STRONG",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 211.78,
+            "max": 211.87,
+            "percentChange": 0.04
+          },
+          "ma20Trend": {
+            "value": 0.007911171795747185,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -3.748868778280547
+        },
+        "categories": []
+      },
+      {
+        "symbol": "RF",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/RF",
+          "barChart": "https://www.barchart.com/stocks/RF"
+        },
+        "summary": {
+          "ma20Trend": "STRONG",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 22.31,
+            "max": 22.76,
+            "percentChange": 2.02,
+            "dailyPercentChange": 2.02
+          },
+          "ma20Trend": {
+            "value": 0.004791146501113452,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -8.64062500000004
+        },
+        "categories": []
+      },
+      {
+        "symbol": "AIG",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/AIG",
+          "barChart": "https://www.barchart.com/stocks/AIG"
+        },
+        "summary": {
+          "ma20Trend": "STRONG",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 50.03,
+            "max": 51.31,
+            "percentChange": 2.56,
+            "dailyPercentChange": 2.56
+          },
+          "ma20Trend": {
+            "value": 0.003987545198874898,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -38.153846153846935
+        },
+        "categories": []
+      },
+      {
+        "symbol": "ZION",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/ZION",
+          "barChart": "https://www.barchart.com/stocks/ZION"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 2,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 56.09,
+            "max": 58.1,
+            "percentChange": 3.58,
+            "dailyPercentChange": 3.58
+          },
+          "ma20Trend": {
+            "value": 0.0033356993864228635,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -10.66359447004608
+        },
+        "categories": []
+      },
+      {
+        "symbol": "PFG",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/PFG",
+          "barChart": "https://www.barchart.com/stocks/PFG"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 64.46,
+            "max": 65.66,
+            "percentChange": 1.86,
+            "dailyPercentChange": 1.86
+          },
+          "ma20Trend": {
+            "value": 0.0022735154714652595,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -12.206611570247832
+        },
+        "categories": []
+      },
+      {
+        "symbol": "OKE",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/OKE",
+          "barChart": "https://www.barchart.com/stocks/OKE"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 53.21,
+            "max": 53.26,
+            "percentChange": 0.09
+          },
+          "ma20Trend": {
+            "value": 0.002517246926782235,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -5.314285714285705
+        },
+        "categories": []
+      },
+      {
+        "symbol": "NLSN",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/NLSN",
+          "barChart": "https://www.barchart.com/stocks/NLSN"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 2,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 26.65,
+            "max": 27.15,
+            "percentChange": 1.88
+          },
+          "ma20Trend": {
+            "value": 0.002898442320997896,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -4.842105263157894
+        },
+        "categories": []
+      },
+      {
+        "symbol": "USB",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/USB",
+          "barChart": "https://www.barchart.com/stocks/USB"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 59.11,
+            "max": 60.37,
+            "percentChange": 2.13,
+            "dailyPercentChange": 2.13
+          },
+          "ma20Trend": {
+            "value": 0.0026135521836478937,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -8.521739130434764
+        },
+        "categories": []
+      }
+    ],
+    "APPROACHING BUY ZONE": [
+      {
+        "symbol": "L.TO",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/L.TO",
+          "barChart": "https://www.barchart.com/stocks/L.TO"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 73.91,
+            "max": 74.17,
+            "percentChange": 0.35
+          },
+          "ma20Trend": {
+            "value": 0.0034522113292076995,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 6.136612021857921
+        },
+        "categories": []
+      },
+      {
+        "symbol": "MMC",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/MMC",
+          "barChart": "https://www.barchart.com/stocks/MMC"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "RISER",
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 3,
+          "streakDays": 3,
+          "magnitude": {
+            "min": 133.42,
+            "max": 136.18,
+            "percentChange": 2.07,
+            "dailyPercentChange": 0.69
+          },
+          "ma20Trend": {
+            "value": 0.0031643216229884086,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 9.20118343195272
+        },
+        "categories": []
+      },
+      {
+        "symbol": "WN.TO",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/WN.TO",
+          "barChart": "https://www.barchart.com/stocks/WN.TO"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 117.25,
+            "max": 117.5,
+            "percentChange": 0.21
+          },
+          "ma20Trend": {
+            "value": 0.002494320965658492,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 8.626016260162652
+        },
+        "categories": []
+      },
+      {
+        "symbol": "PSX",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/PSX",
+          "barChart": "https://www.barchart.com/stocks/PSX"
+        },
+        "summary": {
+          "ma20Trend": "STRONG",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 84.23,
+            "max": 84.29,
+            "percentChange": 0.07
+          },
+          "ma20Trend": {
+            "value": 0.004671413941176095,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -1.6485260770975205
+        },
+        "categories": []
+      },
+      {
+        "symbol": "GPC",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/GPC",
+          "barChart": "https://www.barchart.com/stocks/GPC"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "RISER",
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 3,
+          "streakDays": 2,
+          "magnitude": {
+            "min": 128.44,
+            "max": 131.43,
+            "percentChange": 2.33,
+            "dailyPercentChange": 1.17
+          },
+          "ma20Trend": {
+            "value": 0.003530826834283962,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -21.4565217391308
+        },
+        "categories": []
+      },
+      {
+        "symbol": "ALL",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/ALL",
+          "barChart": "https://www.barchart.com/stocks/ALL"
+        },
+        "summary": {
+          "ma20Trend": "STRONG",
+          "categories": [
+            "RISER",
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 2,
+          "streakDays": 2,
+          "magnitude": {
+            "min": 133.25,
+            "max": 137.43,
+            "percentChange": 3.14,
+            "dailyPercentChange": 1.57
+          },
+          "ma20Trend": {
+            "value": 0.004706168578151537,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -17.628930817610197
+        },
+        "categories": []
+      },
+      {
+        "symbol": "IAU",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/IAU",
+          "barChart": "https://www.barchart.com/stocks/IAU"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 7,
+          "magnitude": {
+            "min": 17.32,
+            "max": 17.92,
+            "percentChange": 3.46,
+            "dailyPercentChange": 0.49
+          },
+          "ma20Trend": {
+            "value": 0.002919412648861419,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 4.142857142857083
+        },
+        "categories": []
+      },
+      {
+        "symbol": "GLD",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/GLD",
+          "barChart": "https://www.barchart.com/stocks/GLD"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 7,
+          "magnitude": {
+            "min": 170.34,
+            "max": 176.04,
+            "percentChange": 3.35,
+            "dailyPercentChange": 0.48
+          },
+          "ma20Trend": {
+            "value": 0.0028343604459706295,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 3.716417910447783
+        },
+        "categories": []
+      },
+      {
+        "symbol": "CL",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/CL",
+          "barChart": "https://www.barchart.com/stocks/CL"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 3,
+          "magnitude": {
+            "min": 82.76,
+            "max": 84.23,
+            "percentChange": 1.78,
+            "dailyPercentChange": 0.59
+          },
+          "ma20Trend": {
+            "value": 0.0027180899908172407,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 11.764705882352942
+        },
+        "categories": []
+      },
+      {
+        "symbol": "LLY",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/LLY",
+          "barChart": "https://www.barchart.com/stocks/LLY"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 3,
+          "magnitude": {
+            "min": 193.58,
+            "max": 199.88,
+            "percentChange": 3.25,
+            "dailyPercentChange": 1.08
+          },
+          "ma20Trend": {
+            "value": 0.002921488912216441,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 6.505747126436798
+        },
+        "categories": []
+      },
+      {
+        "symbol": "AVY",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/AVY",
+          "barChart": "https://www.barchart.com/stocks/AVY"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 216.12,
+            "max": 216.62,
+            "percentChange": 0.23
+          },
+          "ma20Trend": {
+            "value": 0.003364277238780078,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -7.910138248847968
+        },
+        "categories": []
+      },
+      {
+        "symbol": "ACTL",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/ACTL",
+          "barChart": "https://www.barchart.com/stocks/ACTL"
+        },
+        "summary": {
+          "ma20Trend": "STRONG",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 3,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 0,
+            "max": 0,
+            "percentChange": null,
+            "dailyPercentChange": null
+          },
+          "ma20Trend": {
+            "value": 0.00952380952380949,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -14.50000000000001
+        },
+        "categories": []
+      },
+      {
+        "symbol": "ADM",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/ADM",
+          "barChart": "https://www.barchart.com/stocks/ADM"
+        },
+        "summary": {
+          "ma20Trend": "STRONG",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 66,
+            "max": 66.98,
+            "percentChange": 1.48,
+            "dailyPercentChange": 1.48
+          },
+          "ma20Trend": {
+            "value": 0.00580655058679147,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -17.151515151515124
+        },
+        "categories": []
+      },
+      {
+        "symbol": "BLK",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/BLK",
+          "barChart": "https://www.barchart.com/stocks/BLK"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "RISER",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 3,
+          "streakDays": 2,
+          "magnitude": {
+            "min": 821.02,
+            "max": 860.77,
+            "percentChange": 4.84,
+            "dailyPercentChange": 2.42
+          },
+          "ma20Trend": {
+            "value": 0.002839621065693132,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 20.981432360742893
+        },
+        "categories": []
+      },
+      {
+        "symbol": "NA.TO",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/NA.TO",
+          "barChart": "https://www.barchart.com/stocks/NA.TO"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "RISER",
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 2,
+          "streakDays": 2,
+          "magnitude": {
+            "min": 91.84,
+            "max": 93.67,
+            "percentChange": 1.99,
+            "dailyPercentChange": 0.99
+          },
+          "ma20Trend": {
+            "value": 0.0031122511028314204,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 9.806818181818198
+        },
+        "categories": []
+      },
+      {
+        "symbol": "VRSN",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/VRSN",
+          "barChart": "https://www.barchart.com/stocks/VRSN"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 220.16,
+            "max": 221.39,
+            "percentChange": 0.56
+          },
+          "ma20Trend": {
+            "value": 0.002259506097477715,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 21.277456647398594
+        },
+        "categories": []
+      },
+      {
+        "symbol": "ABBV",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/ABBV",
+          "barChart": "https://www.barchart.com/stocks/ABBV"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 116.06,
+            "max": 116.12,
+            "percentChange": 0.05
+          },
+          "ma20Trend": {
+            "value": 0.002069073893001816,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -14.259740259740358
+        },
+        "categories": []
+      },
+      {
+        "symbol": "BX",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/BX",
+          "barChart": "https://www.barchart.com/stocks/BX"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "RISER",
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 3,
+          "streakDays": 2,
+          "magnitude": {
+            "min": 85.74,
+            "max": 90.74,
+            "percentChange": 5.83,
+            "dailyPercentChange": 2.92
+          },
+          "ma20Trend": {
+            "value": 0.0020007047937340428,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 7.533783783783764
+        },
+        "categories": []
+      },
+      {
+        "symbol": "TD.TO",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/TD.TO",
+          "barChart": "https://www.barchart.com/stocks/TD.TO"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "RISER",
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 2,
+          "streakDays": 2,
+          "magnitude": {
+            "min": 87.16,
+            "max": 88.11,
+            "percentChange": 1.09,
+            "dailyPercentChange": 0.55
+          },
+          "ma20Trend": {
+            "value": 0.002271562368948432,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -19.692307692307025
+        },
+        "categories": []
+      },
+      {
+        "symbol": "DD",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/DD",
+          "barChart": "https://www.barchart.com/stocks/DD"
+        },
+        "summary": {
+          "ma20Trend": "STRONG",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 83.51,
+            "max": 84.12,
+            "percentChange": 0.73,
+            "dailyPercentChange": 0.73
+          },
+          "ma20Trend": {
+            "value": 0.004528390717728259,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -4.855932203389902
+        },
+        "categories": []
+      },
+      {
+        "symbol": "LAMR",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/LAMR",
+          "barChart": "https://www.barchart.com/stocks/LAMR"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "RISER",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 2,
+          "streakDays": 2,
+          "magnitude": {
+            "min": 99.44,
+            "max": 103.16,
+            "percentChange": 3.74,
+            "dailyPercentChange": 1.87
+          },
+          "ma20Trend": {
+            "value": 0.0021891763963395316,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 31.224489795918203
+        },
+        "categories": []
+      },
+      {
+        "symbol": "BRK.B",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/BRK.B",
+          "barChart": "https://www.barchart.com/stocks/BRK.B"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 2,
+          "magnitude": {
+            "min": 282.57,
+            "max": 287.74,
+            "percentChange": 1.83,
+            "dailyPercentChange": 0.92
+          },
+          "ma20Trend": {
+            "value": 0.002787880503233753,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -16.054054054053815
+        },
+        "categories": []
+      },
+      {
+        "symbol": "K",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/K",
+          "barChart": "https://www.barchart.com/stocks/K"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "RISER",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 3,
+          "streakDays": 2,
+          "magnitude": {
+            "min": 65.39,
+            "max": 66.5,
+            "percentChange": 1.7,
+            "dailyPercentChange": 0.85
+          },
+          "ma20Trend": {
+            "value": 0.002479383388131362,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 25.5555555555536
+        },
+        "categories": []
+      },
+      {
+        "symbol": "FRC",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/FRC",
+          "barChart": "https://www.barchart.com/stocks/FRC"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "RISER",
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 2,
+          "streakDays": 2,
+          "magnitude": {
+            "min": 182.33,
+            "max": 189.67,
+            "percentChange": 4.03,
+            "dailyPercentChange": 2.02
+          },
+          "ma20Trend": {
+            "value": 0.00284742652020209,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -126.25000000000084
+        },
+        "categories": []
+      },
+      {
+        "symbol": "NOC",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/NOC",
+          "barChart": "https://www.barchart.com/stocks/NOC"
+        },
+        "summary": {
+          "ma20Trend": "STRONG",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 369.24,
+            "max": 370.46,
+            "percentChange": 0.33
+          },
+          "ma20Trend": {
+            "value": 0.00392606509366189,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -11.016597510373341
+        },
+        "categories": []
+      },
+      {
+        "symbol": "FB",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/FB",
+          "barChart": "https://www.barchart.com/stocks/FB"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 315.81,
+            "max": 316.23,
+            "percentChange": 0.13
+          },
+          "ma20Trend": {
+            "value": 0.0024127726752694034,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 70.31168831168786
+        },
+        "categories": []
+      },
+      {
+        "symbol": "ABX.TO",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/ABX.TO",
+          "barChart": "https://www.barchart.com/stocks/ABX.TO"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 29.57,
+            "max": 29.79,
+            "percentChange": 0.74
+          },
+          "ma20Trend": {
+            "value": 0.0036797877045555705,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": false,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -3.571428571428602
+        },
+        "categories": []
+      },
+      {
+        "symbol": "WM",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/WM",
+          "barChart": "https://www.barchart.com/stocks/WM"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 2,
+          "magnitude": {
+            "min": 137.62,
+            "max": 140.97,
+            "percentChange": 2.43,
+            "dailyPercentChange": 1.22
+          },
+          "ma20Trend": {
+            "value": 0.0019611709660647403,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -33.481481481481254
+        },
+        "categories": []
+      },
+      {
+        "symbol": "CHTR",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/CHTR",
+          "barChart": "https://www.barchart.com/stocks/CHTR"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 4,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 688.16,
+            "max": 692.52,
+            "percentChange": 0.63
+          },
+          "ma20Trend": {
+            "value": 0.0025800779334006485,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 15.932980599647307
+        },
+        "categories": []
+      },
+      {
+        "symbol": "GOLD",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/GOLD",
+          "barChart": "https://www.barchart.com/stocks/GOLD"
+        },
+        "summary": {
+          "ma20Trend": "STRONG",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 24.49,
+            "max": 24.7,
+            "percentChange": 0.86
+          },
+          "ma20Trend": {
+            "value": 0.005376576265330835,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": false,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -4.596491228070146
+        },
+        "categories": []
+      },
+      {
+        "symbol": "GILD",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/GILD",
+          "barChart": "https://www.barchart.com/stocks/GILD"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 68.71,
+            "max": 68.75,
+            "percentChange": 0.06
+          },
+          "ma20Trend": {
+            "value": 0.002451182489412007,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -16.718750000000195
+        },
+        "categories": []
+      },
+      {
+        "symbol": "SJM",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/SJM",
+          "barChart": "https://www.barchart.com/stocks/SJM"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 4,
+          "magnitude": {
+            "min": 132.86,
+            "max": 135.51,
+            "percentChange": 1.99,
+            "dailyPercentChange": 0.5
+          },
+          "ma20Trend": {
+            "value": 0.002145497632103366,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 4.249999999999877
+        },
+        "categories": []
+      },
+      {
+        "symbol": "EWK",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/EWK",
+          "barChart": "https://www.barchart.com/stocks/EWK"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 22.48,
+            "max": 22.51,
+            "percentChange": 0.13
+          },
+          "ma20Trend": {
+            "value": 0.00202058912205616,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 191.99999999998875
+        },
+        "categories": []
+      },
+      {
+        "symbol": "TTWO",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/TTWO",
+          "barChart": "https://www.barchart.com/stocks/TTWO"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 184.17,
+            "max": 184.36,
+            "percentChange": 0.1
+          },
+          "ma20Trend": {
+            "value": 0.0023829802128054745,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": false,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 4.8351920693927966
+        },
+        "categories": []
+      },
+      {
+        "symbol": "HWM",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/HWM",
+          "barChart": "https://www.barchart.com/stocks/HWM"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 33.68,
+            "max": 33.76,
+            "percentChange": 0.24
+          },
+          "ma20Trend": {
+            "value": 0.002760524499654915,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 21
+        },
+        "categories": []
+      },
+      {
+        "symbol": "MS",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/MS",
+          "barChart": "https://www.barchart.com/stocks/MS"
+        },
+        "summary": {
+          "ma20Trend": "STRONG",
+          "categories": [
+            "RISER",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 3,
+          "streakDays": 2,
+          "magnitude": {
+            "min": 84.32,
+            "max": 88.34,
+            "percentChange": 4.77,
+            "dailyPercentChange": 2.38
+          },
+          "ma20Trend": {
+            "value": 0.004366709014092862,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 105.59999999999883
+        },
+        "categories": []
+      },
+      {
+        "symbol": "MDLZ",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/MDLZ",
+          "barChart": "https://www.barchart.com/stocks/MDLZ"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "RISER",
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 3,
+          "streakDays": 3,
+          "magnitude": {
+            "min": 62.07,
+            "max": 63.36,
+            "percentChange": 2.08,
+            "dailyPercentChange": 0.69
+          },
+          "ma20Trend": {
+            "value": 0.0031379900562396035,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 8.764044943820185
+        },
+        "categories": []
+      },
+      {
+        "symbol": "AXP",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/AXP",
+          "barChart": "https://www.barchart.com/stocks/AXP"
+        },
+        "summary": {
+          "ma20Trend": "STRONG",
+          "categories": [
+            "RISER",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 3,
+          "streakDays": 2,
+          "magnitude": {
+            "min": 151.72,
+            "max": 156.87,
+            "percentChange": 3.39,
+            "dailyPercentChange": 1.7
+          },
+          "ma20Trend": {
+            "value": 0.0040636706547241275,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 2675.000000001228
+        },
+        "categories": []
+      },
+      {
+        "symbol": "NEM",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/NEM",
+          "barChart": "https://www.barchart.com/stocks/NEM"
+        },
+        "summary": {
+          "ma20Trend": "STRONG",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 73.13,
+            "max": 73.53,
+            "percentChange": 0.55
+          },
+          "ma20Trend": {
+            "value": 0.005775687388146489,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": false,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -10.063829787233946
+        },
+        "categories": []
+      },
+      {
+        "symbol": "ABEV",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/ABEV",
+          "barChart": "https://www.barchart.com/stocks/ABEV"
+        },
+        "summary": {
+          "ma20Trend": "STRONG",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 3.25,
+            "max": 3.3,
+            "percentChange": 1.54
+          },
+          "ma20Trend": {
+            "value": 0.0062061081169362264,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": false,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -11.249999999999988
+        },
+        "categories": []
+      },
+      {
+        "symbol": "PNR",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/PNR",
+          "barChart": "https://www.barchart.com/stocks/PNR"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "RISER",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 3,
+          "streakDays": 2,
+          "magnitude": {
+            "min": 65.72,
+            "max": 68,
+            "percentChange": 3.47,
+            "dailyPercentChange": 1.74
+          },
+          "ma20Trend": {
+            "value": 0.0027759806207967586,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": null
+        },
+        "categories": []
+      },
+      {
+        "symbol": "SNA",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/SNA",
+          "barChart": "https://www.barchart.com/stocks/SNA"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 246.01,
+            "max": 249.98,
+            "percentChange": 1.61,
+            "dailyPercentChange": 1.61
+          },
+          "ma20Trend": {
+            "value": 0.002295429269671523,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -10.9067524115755
+        },
+        "categories": []
+      },
+      {
+        "symbol": "INTU",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/INTU",
+          "barChart": "https://www.barchart.com/stocks/INTU"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 431.76,
+            "max": 433.43,
+            "percentChange": 0.39
+          },
+          "ma20Trend": {
+            "value": 0.002259778026558301,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": false,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 7.731620271234832
+        },
+        "categories": []
+      },
+      {
+        "symbol": "TROW",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/TROW",
+          "barChart": "https://www.barchart.com/stocks/TROW"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "RISER",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 3,
+          "streakDays": 2,
+          "magnitude": {
+            "min": 182.9,
+            "max": 192.17,
+            "percentChange": 5.07,
+            "dailyPercentChange": 2.54
+          },
+          "ma20Trend": {
+            "value": 0.00367659969906442,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 67.49999999999923
+        },
+        "categories": []
+      },
+      {
+        "symbol": "SVR.TO",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/SVR.TO",
+          "barChart": "https://www.barchart.com/stocks/SVR.TO"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 13.97,
+            "max": 14.14,
+            "percentChange": 1.22
+          },
+          "ma20Trend": {
+            "value": 0.0029695082204679313,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -5.161290322580649
+        },
+        "categories": []
+      },
+      {
+        "symbol": "IPG",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/IPG",
+          "barChart": "https://www.barchart.com/stocks/IPG"
+        },
+        "summary": {
+          "ma20Trend": "STRONG",
+          "categories": [
+            "RISER",
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 3,
+          "streakDays": 3,
+          "magnitude": {
+            "min": 32.47,
+            "max": 33.22,
+            "percentChange": 2.31,
+            "dailyPercentChange": 0.77
+          },
+          "ma20Trend": {
+            "value": 0.0054676393857495675,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 6.9230769230768825
+        },
+        "categories": []
+      },
+      {
+        "symbol": "DPZ",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/DPZ",
+          "barChart": "https://www.barchart.com/stocks/DPZ"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 425.74,
+            "max": 427.65,
+            "percentChange": 0.45
+          },
+          "ma20Trend": {
+            "value": 0.0035397016435847473,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -5.36468330134357
+        },
+        "categories": []
+      },
+      {
+        "symbol": "RTX",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/RTX",
+          "barChart": "https://www.barchart.com/stocks/RTX"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 2,
+          "magnitude": {
+            "min": 83.58,
+            "max": 85.81,
+            "percentChange": 2.67,
+            "dailyPercentChange": 1.33
+          },
+          "ma20Trend": {
+            "value": 0.0031372035431944667,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -17.59210526315821
+        },
+        "categories": []
+      },
+      {
+        "symbol": "BAM.A.TO",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/BAM.A.TO",
+          "barChart": "https://www.barchart.com/stocks/BAM.A.TO"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 58.57,
+            "max": 58.97,
+            "percentChange": 0.68
+          },
+          "ma20Trend": {
+            "value": 0.0021096487743734738,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 31.230769230771084
+        },
+        "categories": []
+      },
+      {
+        "symbol": "TFII.TO",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/TFII.TO",
+          "barChart": "https://www.barchart.com/stocks/TFII.TO"
+        },
+        "summary": {
+          "ma20Trend": "STRONG",
+          "categories": [
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 111.16,
+            "max": 111.21,
+            "percentChange": 0.04
+          },
+          "ma20Trend": {
+            "value": 0.005791759287918197,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 10.812499999999925
+        },
+        "categories": []
+      },
+      {
+        "symbol": "PNC",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/PNC",
+          "barChart": "https://www.barchart.com/stocks/PNC"
+        },
+        "summary": {
+          "ma20Trend": "STRONG",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 189.87,
+            "max": 193.48,
+            "percentChange": 1.9,
+            "dailyPercentChange": 1.9
+          },
+          "ma20Trend": {
+            "value": 0.004029585088447085,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -9.333333333333288
+        },
+        "categories": []
+      },
+      {
+        "symbol": "WMB",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/WMB",
+          "barChart": "https://www.barchart.com/stocks/WMB"
+        },
+        "summary": {
+          "ma20Trend": "STRONG",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 2,
+          "magnitude": {
+            "min": 25.63,
+            "max": 26.39,
+            "percentChange": 2.97,
+            "dailyPercentChange": 1.49
+          },
+          "ma20Trend": {
+            "value": 0.005533549632755319,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -23.78571428571391
+        },
+        "categories": []
+      },
+      {
+        "symbol": "SGEN",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/SGEN",
+          "barChart": "https://www.barchart.com/stocks/SGEN"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 152.96,
+            "max": 153.34,
+            "percentChange": 0.25
+          },
+          "ma20Trend": {
+            "value": 0.002130619902291242,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": false,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 7.970149253731353
+        },
+        "categories": []
+      },
+      {
+        "symbol": "RY.TO",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/RY.TO",
+          "barChart": "https://www.barchart.com/stocks/RY.TO"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "RISER",
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 8,
+          "streakDays": 2,
+          "magnitude": {
+            "min": 121.8,
+            "max": 123.47,
+            "percentChange": 1.37,
+            "dailyPercentChange": 0.69
+          },
+          "ma20Trend": {
+            "value": 0.0028882767729880854,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 4.389830508474519
+        },
+        "categories": []
+      },
+      {
+        "symbol": "JPM",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/JPM",
+          "barChart": "https://www.barchart.com/stocks/JPM"
+        },
+        "summary": {
+          "ma20Trend": "STRONG",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 3,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 159.52,
+            "max": 162.66,
+            "percentChange": 1.97,
+            "dailyPercentChange": 1.97
+          },
+          "ma20Trend": {
+            "value": 0.00395471267284031,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -16.17910447761189
+        },
+        "categories": []
+      },
+      {
+        "symbol": "ORCL",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/ORCL",
+          "barChart": "https://www.barchart.com/stocks/ORCL"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 78.68,
+            "max": 79.03,
+            "percentChange": 0.44,
+            "dailyPercentChange": 0.44
+          },
+          "ma20Trend": {
+            "value": 0.002614025599423364,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -100.99999999999754
+        },
+        "categories": []
+      },
+      {
+        "symbol": "PKI",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/PKI",
+          "barChart": "https://www.barchart.com/stocks/PKI"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 144.57,
+            "max": 144.77,
+            "percentChange": 0.14
+          },
+          "ma20Trend": {
+            "value": 0.0035637011582028144,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 22.74675324675307
+        },
+        "categories": []
+      },
+      {
+        "symbol": "IRM",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/IRM",
+          "barChart": "https://www.barchart.com/stocks/IRM"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 2,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 42.7,
+            "max": 42.99,
+            "percentChange": 0.68
+          },
+          "ma20Trend": {
+            "value": 0.0032478985974428998,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -18.428571428571566
+        },
+        "categories": []
+      },
+      {
+        "symbol": "FDX",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/FDX",
+          "barChart": "https://www.barchart.com/stocks/FDX"
+        },
+        "summary": {
+          "ma20Trend": "STRONG",
+          "categories": [
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 3,
+          "magnitude": {
+            "min": 306.05,
+            "max": 309.6,
+            "percentChange": 1.16,
+            "dailyPercentChange": 0.39
+          },
+          "ma20Trend": {
+            "value": 0.005299559867061987,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 79.85294117646755
+        },
+        "categories": []
+      },
+      {
+        "symbol": "BEN",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/BEN",
+          "barChart": "https://www.barchart.com/stocks/BEN"
+        },
+        "summary": {
+          "ma20Trend": "STRONG",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 33.02,
+            "max": 33.54,
+            "percentChange": 1.57,
+            "dailyPercentChange": 1.57
+          },
+          "ma20Trend": {
+            "value": 0.006352926663788505,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -8.60377358490568
+        },
+        "categories": []
+      },
+      {
+        "symbol": "GWO.TO",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/GWO.TO",
+          "barChart": "https://www.barchart.com/stocks/GWO.TO"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 36.92,
+            "max": 37.31,
+            "percentChange": 1.06,
+            "dailyPercentChange": 1.06
+          },
+          "ma20Trend": {
+            "value": 0.0028600641096494517,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 5.842105263157918
+        },
+        "categories": []
+      },
+      {
+        "symbol": "CM.TO",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/CM.TO",
+          "barChart": "https://www.barchart.com/stocks/CM.TO"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "RISER",
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 3,
+          "streakDays": 7,
+          "magnitude": {
+            "min": 129.74,
+            "max": 135.35,
+            "percentChange": 4.32,
+            "dailyPercentChange": 0.62
+          },
+          "ma20Trend": {
+            "value": 0.003395461694346791,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 5.928571428571505
+        },
+        "categories": []
+      },
+      {
+        "symbol": "MPC",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/MPC",
+          "barChart": "https://www.barchart.com/stocks/MPC"
+        },
+        "summary": {
+          "ma20Trend": "STRONG",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 59.45,
+            "max": 59.59,
+            "percentChange": 0.24
+          },
+          "ma20Trend": {
+            "value": 0.005691190313749539,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -4.979274611398987
+        },
+        "categories": []
+      },
+      {
+        "symbol": "BAC",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/BAC",
+          "barChart": "https://www.barchart.com/stocks/BAC"
+        },
+        "summary": {
+          "ma20Trend": "STRONG",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 41.46,
+            "max": 42.4,
+            "percentChange": 2.27,
+            "dailyPercentChange": 2.27
+          },
+          "ma20Trend": {
+            "value": 0.003902935686407538,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -24.647058823529267
+        },
+        "categories": []
+      },
+      {
+        "symbol": "C",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/C",
+          "barChart": "https://www.barchart.com/stocks/C"
+        },
+        "summary": {
+          "ma20Trend": "STRONG",
+          "categories": [
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 3,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 75.36,
+            "max": 77.65,
+            "percentChange": 3.04,
+            "dailyPercentChange": 3.04
+          },
+          "ma20Trend": {
+            "value": 0.00422236438937329,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 74.78260869565328
+        },
+        "categories": []
+      },
+      {
+        "symbol": "HSY",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/HSY",
+          "barChart": "https://www.barchart.com/stocks/HSY"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "RISER",
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 5,
+          "streakDays": 2,
+          "magnitude": {
+            "min": 171.12,
+            "max": 173.76,
+            "percentChange": 1.54,
+            "dailyPercentChange": 0.77
+          },
+          "ma20Trend": {
+            "value": 0.00368514018775401,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 7.28346456692925
+        },
+        "categories": []
+      },
+      {
+        "symbol": "TAP",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/TAP",
+          "barChart": "https://www.barchart.com/stocks/TAP"
+        },
+        "summary": {
+          "ma20Trend": "STRONG",
+          "categories": [
+            "RISER",
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 3,
+          "streakDays": 3,
+          "magnitude": {
+            "min": 55.42,
+            "max": 57.15,
+            "percentChange": 3.12,
+            "dailyPercentChange": 1.04
+          },
+          "ma20Trend": {
+            "value": 0.004335118904849278,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -32.064102564102654
+        },
+        "categories": []
+      },
+      {
+        "symbol": "MSI",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/MSI",
+          "barChart": "https://www.barchart.com/stocks/MSI"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 201.42,
+            "max": 202.12,
+            "percentChange": 0.35
+          },
+          "ma20Trend": {
+            "value": 0.003127382890588004,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 21.999999999999925
+        },
+        "categories": []
+      },
+      {
+        "symbol": "CBRE",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/CBRE",
+          "barChart": "https://www.barchart.com/stocks/CBRE"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 87.11,
+            "max": 87.18,
+            "percentChange": 0.08
+          },
+          "ma20Trend": {
+            "value": 0.0025091307737856727,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 40.999999999999346
+        },
+        "categories": []
+      },
+      {
+        "symbol": "CI",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/CI",
+          "barChart": "https://www.barchart.com/stocks/CI"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 259.49,
+            "max": 262.24,
+            "percentChange": 1.06,
+            "dailyPercentChange": 1.06
+          },
+          "ma20Trend": {
+            "value": 0.002026763371493878,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -7.947580645161224
+        },
+        "categories": []
+      },
+      {
+        "symbol": "BDT.TO",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/BDT.TO",
+          "barChart": "https://www.barchart.com/stocks/BDT.TO"
+        },
+        "summary": {
+          "ma20Trend": "STRONG",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 9.58,
+            "max": 9.78,
+            "percentChange": 2.09,
+            "dailyPercentChange": 2.09
+          },
+          "ma20Trend": {
+            "value": 0.005213597914560664,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -10.437499999999972
+        },
+        "categories": []
+      },
+      {
+        "symbol": "SAND",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/SAND",
+          "barChart": "https://www.barchart.com/stocks/SAND"
+        },
+        "summary": {
+          "ma20Trend": "STRONG",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 2,
+          "magnitude": {
+            "min": 8.26,
+            "max": 8.4,
+            "percentChange": 1.69,
+            "dailyPercentChange": 0.84
+          },
+          "ma20Trend": {
+            "value": 0.004758922980588665,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -6.242424242424304
+        },
+        "categories": []
+      },
+      {
+        "symbol": "XGD.TO",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/XGD.TO",
+          "barChart": "https://www.barchart.com/stocks/XGD.TO"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 20.75,
+            "max": 20.89,
+            "percentChange": 0.67
+          },
+          "ma20Trend": {
+            "value": 0.003298487770222458,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": false,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -6.05128205128199
+        },
+        "categories": []
+      },
+      {
+        "symbol": "CE",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/CE",
+          "barChart": "https://www.barchart.com/stocks/CE"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 164.08,
+            "max": 164.15,
+            "percentChange": 0.04
+          },
+          "ma20Trend": {
+            "value": 0.002095666406620511,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -3.6700819672131413
+        },
+        "categories": []
+      },
+      {
+        "symbol": "SIS.TO",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/SIS.TO",
+          "barChart": "https://www.barchart.com/stocks/SIS.TO"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 18.54,
+            "max": 19.16,
+            "percentChange": 3.34,
+            "dailyPercentChange": 3.34
+          },
+          "ma20Trend": {
+            "value": 0.00339148601351158,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 5.30864197530861
+        },
+        "categories": []
+      },
+      {
+        "symbol": "GWW",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/GWW",
+          "barChart": "https://www.barchart.com/stocks/GWW"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 453.88,
+            "max": 456.43,
+            "percentChange": 0.56,
+            "dailyPercentChange": 0.56
+          },
+          "ma20Trend": {
+            "value": 0.003654731804728417,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -8.677631578947391
+        },
+        "categories": []
+      },
+      {
+        "symbol": "CZR",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/CZR",
+          "barChart": "https://www.barchart.com/stocks/CZR"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 99.78,
+            "max": 100.21,
+            "percentChange": 0.43
+          },
+          "ma20Trend": {
+            "value": 0.0022504833252778855,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -134.6874999999936
+        },
+        "categories": []
+      },
+      {
+        "symbol": "PPL.TO",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/PPL.TO",
+          "barChart": "https://www.barchart.com/stocks/PPL.TO"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 38.51,
+            "max": 38.61,
+            "percentChange": 0.26
+          },
+          "ma20Trend": {
+            "value": 0.0022212059841901777,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -3.1641791044776015
+        },
+        "categories": []
+      },
+      {
+        "symbol": "ANET",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/ANET",
+          "barChart": "https://www.barchart.com/stocks/ANET"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 327.64,
+            "max": 332.13,
+            "percentChange": 1.37
+          },
+          "ma20Trend": {
+            "value": 0.0020967130254214705,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 11.83438485804427
+        },
+        "categories": []
+      },
+      {
+        "symbol": "AEM.TO",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/AEM.TO",
+          "barChart": "https://www.barchart.com/stocks/AEM.TO"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 86.52,
+            "max": 86.98,
+            "percentChange": 0.53
+          },
+          "ma20Trend": {
+            "value": 0.002712635105468042,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -7.455882352941221
+        },
+        "categories": []
+      },
+      {
+        "symbol": "BK",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/BK",
+          "barChart": "https://www.barchart.com/stocks/BK"
+        },
+        "summary": {
+          "ma20Trend": "STRONG",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 50.41,
+            "max": 51.56,
+            "percentChange": 2.28,
+            "dailyPercentChange": 2.28
+          },
+          "ma20Trend": {
+            "value": 0.003913275490641688,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -30.20754716981139
+        },
+        "categories": []
+      },
+      {
+        "symbol": "DVA",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/DVA",
+          "barChart": "https://www.barchart.com/stocks/DVA"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 122.25,
+            "max": 122.54,
+            "percentChange": 0.24
+          },
+          "ma20Trend": {
+            "value": 0.003694214876033053,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -8.444444444444482
+        },
+        "categories": []
+      },
+      {
+        "symbol": "TUR",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/TUR",
+          "barChart": "https://www.barchart.com/stocks/TUR"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 23.55,
+            "max": 23.61,
+            "percentChange": 0.25
+          },
+          "ma20Trend": {
+            "value": 0.003026234469236888,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -5.093750000000014
+        },
+        "categories": []
+      },
+      {
+        "symbol": "GDX",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/GDX",
+          "barChart": "https://www.barchart.com/stocks/GDX"
+        },
+        "summary": {
+          "ma20Trend": "STRONG",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 38.91,
+            "max": 39.29,
+            "percentChange": 0.98
+          },
+          "ma20Trend": {
+            "value": 0.004381383866198352,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": false,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -9.38461538461537
+        },
+        "categories": []
+      },
+      {
+        "symbol": "ALXN",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/ALXN",
+          "barChart": "https://www.barchart.com/stocks/ALXN"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 176.76,
+            "max": 177.72,
+            "percentChange": 0.54
+          },
+          "ma20Trend": {
+            "value": 0.003161213086251502,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 6.663299663299727
+        },
+        "categories": []
+      },
+      {
+        "symbol": "UPS",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/UPS",
+          "barChart": "https://www.barchart.com/stocks/UPS"
+        },
+        "summary": {
+          "ma20Trend": "STRONG",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 211.78,
+            "max": 211.87,
+            "percentChange": 0.04
+          },
+          "ma20Trend": {
+            "value": 0.007911171795747185,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -3.748868778280547
+        },
+        "categories": []
+      },
+      {
+        "symbol": "RF",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/RF",
+          "barChart": "https://www.barchart.com/stocks/RF"
+        },
+        "summary": {
+          "ma20Trend": "STRONG",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 22.31,
+            "max": 22.76,
+            "percentChange": 2.02,
+            "dailyPercentChange": 2.02
+          },
+          "ma20Trend": {
+            "value": 0.004791146501113452,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -8.64062500000004
+        },
+        "categories": []
+      },
+      {
+        "symbol": "AIG",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/AIG",
+          "barChart": "https://www.barchart.com/stocks/AIG"
+        },
+        "summary": {
+          "ma20Trend": "STRONG",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 50.03,
+            "max": 51.31,
+            "percentChange": 2.56,
+            "dailyPercentChange": 2.56
+          },
+          "ma20Trend": {
+            "value": 0.003987545198874898,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -38.153846153846935
+        },
+        "categories": []
+      },
+      {
+        "symbol": "SPG",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/SPG",
+          "barChart": "https://www.barchart.com/stocks/SPG"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 121.95,
+            "max": 122.38,
+            "percentChange": 0.35
+          },
+          "ma20Trend": {
+            "value": 0.0022397335291390874,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 20.500000000001453
+        },
+        "categories": []
+      },
+      {
+        "symbol": "ZION",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/ZION",
+          "barChart": "https://www.barchart.com/stocks/ZION"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 2,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 56.09,
+            "max": 58.1,
+            "percentChange": 3.58,
+            "dailyPercentChange": 3.58
+          },
+          "ma20Trend": {
+            "value": 0.0033356993864228635,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -10.66359447004608
+        },
+        "categories": []
+      },
+      {
+        "symbol": "CINF",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/CINF",
+          "barChart": "https://www.barchart.com/stocks/CINF"
+        },
+        "summary": {
+          "ma20Trend": "STRONG",
+          "categories": [
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 119.59,
+            "max": 120.28,
+            "percentChange": 0.58
+          },
+          "ma20Trend": {
+            "value": 0.004699300699300801,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 158.24999999999042
+        },
+        "categories": []
+      },
+      {
+        "symbol": "PFG",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/PFG",
+          "barChart": "https://www.barchart.com/stocks/PFG"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 64.46,
+            "max": 65.66,
+            "percentChange": 1.86,
+            "dailyPercentChange": 1.86
+          },
+          "ma20Trend": {
+            "value": 0.0022735154714652595,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -12.206611570247832
+        },
+        "categories": []
+      },
+      {
+        "symbol": "OKE",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/OKE",
+          "barChart": "https://www.barchart.com/stocks/OKE"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 0,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 53.21,
+            "max": 53.26,
+            "percentChange": 0.09
+          },
+          "ma20Trend": {
+            "value": 0.002517246926782235,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -5.314285714285705
+        },
+        "categories": []
+      },
+      {
+        "symbol": "NLSN",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/NLSN",
+          "barChart": "https://www.barchart.com/stocks/NLSN"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 2,
+          "streakDays": 0,
+          "magnitude": {
+            "min": 26.65,
+            "max": 27.15,
+            "percentChange": 1.88
+          },
+          "ma20Trend": {
+            "value": 0.002898442320997896,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": true,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -4.842105263157894
+        },
+        "categories": []
+      },
+      {
+        "symbol": "USB",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/USB",
+          "barChart": "https://www.barchart.com/stocks/USB"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 1,
+          "streakDays": 1,
+          "magnitude": {
+            "min": 59.11,
+            "max": 60.37,
+            "percentChange": 2.13,
+            "dailyPercentChange": 2.13
+          },
+          "ma20Trend": {
+            "value": 0.0026135521836478937,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -8.521739130434764
+        },
+        "categories": []
+      }
+    ],
+    "RISER": [
+      {
+        "symbol": "MMC",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/MMC",
+          "barChart": "https://www.barchart.com/stocks/MMC"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "RISER",
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 3,
+          "streakDays": 3,
+          "magnitude": {
+            "min": 133.42,
+            "max": 136.18,
+            "percentChange": 2.07,
+            "dailyPercentChange": 0.69
+          },
+          "ma20Trend": {
+            "value": 0.0031643216229884086,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 9.20118343195272
+        },
+        "categories": []
+      },
+      {
+        "symbol": "GPC",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/GPC",
+          "barChart": "https://www.barchart.com/stocks/GPC"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "RISER",
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 3,
+          "streakDays": 2,
+          "magnitude": {
+            "min": 128.44,
+            "max": 131.43,
+            "percentChange": 2.33,
+            "dailyPercentChange": 1.17
+          },
+          "ma20Trend": {
+            "value": 0.003530826834283962,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -21.4565217391308
+        },
+        "categories": []
+      },
+      {
+        "symbol": "ALL",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/ALL",
+          "barChart": "https://www.barchart.com/stocks/ALL"
+        },
+        "summary": {
+          "ma20Trend": "STRONG",
+          "categories": [
+            "RISER",
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 2,
+          "streakDays": 2,
+          "magnitude": {
+            "min": 133.25,
+            "max": 137.43,
+            "percentChange": 3.14,
+            "dailyPercentChange": 1.57
+          },
+          "ma20Trend": {
+            "value": 0.004706168578151537,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -17.628930817610197
+        },
+        "categories": []
+      },
+      {
+        "symbol": "BLK",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/BLK",
+          "barChart": "https://www.barchart.com/stocks/BLK"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "RISER",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 3,
+          "streakDays": 2,
+          "magnitude": {
+            "min": 821.02,
+            "max": 860.77,
+            "percentChange": 4.84,
+            "dailyPercentChange": 2.42
+          },
+          "ma20Trend": {
+            "value": 0.002839621065693132,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 20.981432360742893
+        },
+        "categories": []
+      },
+      {
+        "symbol": "NA.TO",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/NA.TO",
+          "barChart": "https://www.barchart.com/stocks/NA.TO"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "RISER",
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 2,
+          "streakDays": 2,
+          "magnitude": {
+            "min": 91.84,
+            "max": 93.67,
+            "percentChange": 1.99,
+            "dailyPercentChange": 0.99
+          },
+          "ma20Trend": {
+            "value": 0.0031122511028314204,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 9.806818181818198
+        },
+        "categories": []
+      },
+      {
+        "symbol": "BX",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/BX",
+          "barChart": "https://www.barchart.com/stocks/BX"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "RISER",
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 3,
+          "streakDays": 2,
+          "magnitude": {
+            "min": 85.74,
+            "max": 90.74,
+            "percentChange": 5.83,
+            "dailyPercentChange": 2.92
+          },
+          "ma20Trend": {
+            "value": 0.0020007047937340428,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 7.533783783783764
+        },
+        "categories": []
+      },
+      {
+        "symbol": "TD.TO",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/TD.TO",
+          "barChart": "https://www.barchart.com/stocks/TD.TO"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "RISER",
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 2,
+          "streakDays": 2,
+          "magnitude": {
+            "min": 87.16,
+            "max": 88.11,
+            "percentChange": 1.09,
+            "dailyPercentChange": 0.55
+          },
+          "ma20Trend": {
+            "value": 0.002271562368948432,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -19.692307692307025
+        },
+        "categories": []
+      },
+      {
+        "symbol": "LAMR",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/LAMR",
+          "barChart": "https://www.barchart.com/stocks/LAMR"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "RISER",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 2,
+          "streakDays": 2,
+          "magnitude": {
+            "min": 99.44,
+            "max": 103.16,
+            "percentChange": 3.74,
+            "dailyPercentChange": 1.87
+          },
+          "ma20Trend": {
+            "value": 0.0021891763963395316,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 31.224489795918203
+        },
+        "categories": []
+      },
+      {
+        "symbol": "K",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/K",
+          "barChart": "https://www.barchart.com/stocks/K"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "RISER",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 3,
+          "streakDays": 2,
+          "magnitude": {
+            "min": 65.39,
+            "max": 66.5,
+            "percentChange": 1.7,
+            "dailyPercentChange": 0.85
+          },
+          "ma20Trend": {
+            "value": 0.002479383388131362,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 25.5555555555536
+        },
+        "categories": []
+      },
+      {
+        "symbol": "FRC",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/FRC",
+          "barChart": "https://www.barchart.com/stocks/FRC"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "RISER",
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 2,
+          "streakDays": 2,
+          "magnitude": {
+            "min": 182.33,
+            "max": 189.67,
+            "percentChange": 4.03,
+            "dailyPercentChange": 2.02
+          },
+          "ma20Trend": {
+            "value": 0.00284742652020209,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -126.25000000000084
+        },
+        "categories": []
+      },
+      {
+        "symbol": "MS",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/MS",
+          "barChart": "https://www.barchart.com/stocks/MS"
+        },
+        "summary": {
+          "ma20Trend": "STRONG",
+          "categories": [
+            "RISER",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 3,
+          "streakDays": 2,
+          "magnitude": {
+            "min": 84.32,
+            "max": 88.34,
+            "percentChange": 4.77,
+            "dailyPercentChange": 2.38
+          },
+          "ma20Trend": {
+            "value": 0.004366709014092862,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 105.59999999999883
+        },
+        "categories": []
+      },
+      {
+        "symbol": "MDLZ",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/MDLZ",
+          "barChart": "https://www.barchart.com/stocks/MDLZ"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "RISER",
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 3,
+          "streakDays": 3,
+          "magnitude": {
+            "min": 62.07,
+            "max": 63.36,
+            "percentChange": 2.08,
+            "dailyPercentChange": 0.69
+          },
+          "ma20Trend": {
+            "value": 0.0031379900562396035,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 8.764044943820185
+        },
+        "categories": []
+      },
+      {
+        "symbol": "AXP",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/AXP",
+          "barChart": "https://www.barchart.com/stocks/AXP"
+        },
+        "summary": {
+          "ma20Trend": "STRONG",
+          "categories": [
+            "RISER",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 3,
+          "streakDays": 2,
+          "magnitude": {
+            "min": 151.72,
+            "max": 156.87,
+            "percentChange": 3.39,
+            "dailyPercentChange": 1.7
+          },
+          "ma20Trend": {
+            "value": 0.0040636706547241275,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 2675.000000001228
+        },
+        "categories": []
+      },
+      {
+        "symbol": "PNR",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/PNR",
+          "barChart": "https://www.barchart.com/stocks/PNR"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "RISER",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 3,
+          "streakDays": 2,
+          "magnitude": {
+            "min": 65.72,
+            "max": 68,
+            "percentChange": 3.47,
+            "dailyPercentChange": 1.74
+          },
+          "ma20Trend": {
+            "value": 0.0027759806207967586,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": null
+        },
+        "categories": []
+      },
+      {
+        "symbol": "TROW",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/TROW",
+          "barChart": "https://www.barchart.com/stocks/TROW"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "RISER",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 3,
+          "streakDays": 2,
+          "magnitude": {
+            "min": 182.9,
+            "max": 192.17,
+            "percentChange": 5.07,
+            "dailyPercentChange": 2.54
+          },
+          "ma20Trend": {
+            "value": 0.00367659969906442,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 67.49999999999923
+        },
+        "categories": []
+      },
+      {
+        "symbol": "IPG",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/IPG",
+          "barChart": "https://www.barchart.com/stocks/IPG"
+        },
+        "summary": {
+          "ma20Trend": "STRONG",
+          "categories": [
+            "RISER",
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 3,
+          "streakDays": 3,
+          "magnitude": {
+            "min": 32.47,
+            "max": 33.22,
+            "percentChange": 2.31,
+            "dailyPercentChange": 0.77
+          },
+          "ma20Trend": {
+            "value": 0.0054676393857495675,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 6.9230769230768825
+        },
+        "categories": []
+      },
+      {
+        "symbol": "RY.TO",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/RY.TO",
+          "barChart": "https://www.barchart.com/stocks/RY.TO"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "RISER",
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 8,
+          "streakDays": 2,
+          "magnitude": {
+            "min": 121.8,
+            "max": 123.47,
+            "percentChange": 1.37,
+            "dailyPercentChange": 0.69
+          },
+          "ma20Trend": {
+            "value": 0.0028882767729880854,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 4.389830508474519
+        },
+        "categories": []
+      },
+      {
+        "symbol": "CM.TO",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/CM.TO",
+          "barChart": "https://www.barchart.com/stocks/CM.TO"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "RISER",
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 3,
+          "streakDays": 7,
+          "magnitude": {
+            "min": 129.74,
+            "max": 135.35,
+            "percentChange": 4.32,
+            "dailyPercentChange": 0.62
+          },
+          "ma20Trend": {
+            "value": 0.003395461694346791,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 5.928571428571505
+        },
+        "categories": []
+      },
+      {
+        "symbol": "HSY",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/HSY",
+          "barChart": "https://www.barchart.com/stocks/HSY"
+        },
+        "summary": {
+          "ma20Trend": "WEAK",
+          "categories": [
+            "RISER",
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 5,
+          "streakDays": 2,
+          "magnitude": {
+            "min": 171.12,
+            "max": 173.76,
+            "percentChange": 1.54,
+            "dailyPercentChange": 0.77
+          },
+          "ma20Trend": {
+            "value": 0.00368514018775401,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": 7.28346456692925
+        },
+        "categories": []
+      },
+      {
+        "symbol": "TAP",
+        "links": {
+          "yahooChart": "https://finance.yahoo.com/chart/TAP",
+          "barChart": "https://www.barchart.com/stocks/TAP"
+        },
+        "summary": {
+          "ma20Trend": "STRONG",
+          "categories": [
+            "RISER",
+            "STEADY",
+            "APPROACHING BUY ZONE"
+          ]
+        },
+        "momentumAnalysis": {
+          "greenDays": 3,
+          "streakDays": 3,
+          "magnitude": {
+            "min": 55.42,
+            "max": 57.15,
+            "percentChange": 3.12,
+            "dailyPercentChange": 1.04
+          },
+          "ma20Trend": {
+            "value": 0.004335118904849278,
+            "gainAt20Sessions": null
+          }
+        },
+        "buyZoneApproach": {
+          "aboveMa20": true,
+          "approachingMa20": false,
+          "closeToMa20": true,
+          "positiveMa20Trend": true
+        },
+        "volatility": {
+          "5day": -32.064102564102654
+        },
+        "categories": []
+      }
+    ]
+  }
+}
