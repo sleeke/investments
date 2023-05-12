@@ -3,14 +3,12 @@
 
 
 //@version=5
-indicator('1.3.8.1: Indiscriminate daily extreme breaker', '1.3.8.1', false, format.inherit, 3)
+indicator('Exp: 1.3.8.1: Indiscriminate daily extreme breaker', 'Exp', false, format.inherit, 3)
 
 // ------//
 // TO-DO //
 // ------//
 
-// - Give warning of upcoming fulfillment
-//  - Count of criteria?
 // - How to quantify success/fail?
 //  - Once extreme is broken, register max change & drawdown
 
@@ -50,6 +48,12 @@ requiredMomentum = input.float(
 trailingStop = input.float(
      title="price drop to halt trade", 
      defval=0.8, 
+     minval=0, 
+     maxval=10)
+
+purchaseThreshold = input.float(
+     title="price difference required past previous extreme before entering trade", 
+     defval=0.0, 
      minval=0, 
      maxval=10)
 
@@ -121,6 +125,28 @@ varip latestMinMax = 1
 varip buyBarCloseTime = 0
 varip direction = 0
 
+varip unset = -1.0
+
+// ------- //
+// Metrics //
+// ------- //
+
+varip numTradesIndex = 0
+varip numSuccessIndex = 1
+varip metrics = array.new_float(2, 0)
+
+getNumTrades() => 
+    array.get(metrics, numTradesIndex)
+
+setNumTrades(trades) => 
+    array.set(metrics, numTradesIndex, trades)
+
+getSuccessTrades() => 
+    array.get(metrics, numSuccessIndex)
+
+setSuccessTrades(trades) => 
+    array.set(metrics, numSuccessIndex, trades)
+
 // ------------------//
 // Utility functions //
 // ------------------//
@@ -157,11 +183,16 @@ setTotalGain(value) =>
 
 endTrade() =>
 
+    setNumTrades(getNumTrades() + 1)
+    
+    if getGain() > 0
+        setSuccessTrades(getSuccessTrades() + 1)
+
     setTotalGain(getGain() + getTotalGain())
 
     array.set(tradeExtremes, minIndex, -1.0)
     array.set(tradeExtremes, maxIndex, -1.0)
-    array.set(tradeResults, buyIndex, 0)
+    array.set(tradeResults, buyIndex, unset)
     setDrawdown(0)
     setGain(0)
     
@@ -189,7 +220,7 @@ if (hour < 9 or (hour == 9 and minute < 30) or hour > 15)
     array.set(minimaHistory, latestMinMax, -1.0)
     array.set(tradeExtremes, minIndex, -1.0)
     array.set(tradeExtremes, maxIndex, -1.0)
-    setBuyPrice(0)
+    setBuyPrice(unset)
     setDrawdown(0)
     array.set(tradeResults, maxDrawdownIndex, 0.0)
     setGain(0)
@@ -205,8 +236,19 @@ else if (hour < 9 or (hour == 9 and minute < 30 + studyRange * 2) or hour > 15)
         array.set(dayExtremes, maxIndex, high)
         ignore = true   // Hack to prevent the array assignment scrwwing with the conditionals
 
+
+// THere should be something tracking the absolute min/max so that buying only happens outside that range....
+
 else
     // Inside trading hours; game on!
+
+    if (low[1] < dayMin or dayMin < 0)
+        array.set(dayExtremes, minIndex, low[1])
+        ignore = true   // Hack to prevent the array assignment scrwwing with the conditionals
+
+    else if (high[1] > dayMax or dayMax < 0)
+        array.set(dayExtremes, maxIndex, high[1])
+        ignore = true   // Hack to prevent the array assignment scrwwing with the conditionals
 
     if (array.get(maximaStudyPeriod, studyRange) >= localMaxima and deltaPercent > requiredDeltaPercent)
         array.shift(maximaHistory)
@@ -235,60 +277,47 @@ else
     // Put / Call Scores //
     //-------------------//
 
-    // if (array.get(dayExtremes, minIndex) > 0)                   // Day min is set
-    //     putScore += 1
-
     if (low < array.get(dayExtremes, minIndex))                 // Price is lower than day min
         putScore += 1
-        
-    // if (latestMinima > 0)                                       // First minima has been set
-    //     putScore += 1
-        
-    // if (array.get(dayExtremes, maxIndex) > 0)                   // Day max is set
-    //     callScore += 1
         
     if (high > array.get(dayExtremes, maxIndex))                // Price is higher than day max
         callScore += 1
         
-    // if (latestMaxima > 0)                                       // First maxima has been set
-    //     callScore += 1
-        
     if (math.abs(maTrend * 100) > requiredMomentum)             // Momentum is sufficient
         putScore += 1
         callScore += 1
-        
 
 
 
-    if (array.get(dayExtremes, minIndex) > 0 and low < array.get(dayExtremes, minIndex) and latestMinima > 0 and math.abs(maTrend * 100) > requiredMomentum)
+    if (array.get(dayExtremes, minIndex) > 0 and low < array.get(dayExtremes, minIndex) - purchaseThreshold and latestMinima > 0 and math.abs(maTrend * 100) > requiredMomentum)
 
         // Sufficient to buy put
 
-        if (getBuyPrice() == 0 or direction > 0)
+        if (getBuyPrice() < 0 or direction > 0)
 
             // New low and buy price hasn't been set (or direction has changed); set buy price
 
-            setBuyPrice(low)
+            setBuyPrice(low)    // This is being called during a trade
             buyBarCloseTime := time_close("")
             direction := -1
             setGain(0)
             setDrawdown(0)
 
-    else if (array.get(dayExtremes, maxIndex) > 0 and high > array.get(dayExtremes, maxIndex) and latestMaxima > 0 and math.abs(maTrend * 100) > requiredMomentum)
+    else if (array.get(dayExtremes, maxIndex) > 0 and high > array.get(dayExtremes, maxIndex) + purchaseThreshold and latestMaxima > 0 and math.abs(maTrend * 100) > requiredMomentum)
 
         // Sufficient to buy call
 
-        if (getBuyPrice() == 0 or direction < 0)
+        if (getBuyPrice() < 0 or direction < 0)
 
             // New high and buy price hasn't been set (or direction has changed); set buy price
 
-            setBuyPrice(high)
+            // setBuyPrice(high)
             buyBarCloseTime := time_close("")
             direction := 1
             setGain(0)
             setDrawdown(0)
 
-    if (getBuyPrice() != 0.0)
+    if (getBuyPrice() > 0)
 
         // buyPrice is set; track drawdown and max gain
 
@@ -354,7 +383,12 @@ plot(direction, title="Direction", style=plot.style_line, color = buyColor)
 plot(getMaxDrawdown(), title="Max Drawdown For Day", style=plot.style_line, color = negativeColor)
 plot(maTrend * 100, title="Momentum", style=plot.style_line, color = debugColor)
 plot(math.max(callScore, putScore), title="Put / call score", style=plot.style_line, color = putCallScore)
+
+// Metric plots
 plot(getTotalGain(), title="Total Gain", style=plot.style_line, color = positiveColor)
+// plot(getNumTrades(), title="Trades", style=plot.style_line, color = debugColor)
+// plot(getSuccessTrades(), title="Success", style=plot.style_line, color = debugColor)
+// plot(getSuccessTrades() / getNumTrades(), title="Ratio", style=plot.style_line, color = debugColor)
 
 
 // -----------//
@@ -365,14 +399,14 @@ plot(getTotalGain(), title="Total Gain", style=plot.style_line, color = positive
 latestMinima = array.get(minimaHistory, latestMinMax)
 latestMaxima = array.get(maximaHistory, latestMinMax)
 
-if (getBuyPrice() != 0) 
+if (getBuyPrice() > 0) 
     // Stop the trade if it drops below the latest extreme
-    if (direction > 0 and low < latestMinima - reversalThreshold)
+    if (direction > 0 and latestMinima > 0 and low < latestMinima - reversalThreshold)
         direction := 0
         endTrade()
         ingoreReturnTypeAgain = true
 
-    if (direction < 0 and high > latestMaxima + reversalThreshold)
+    if (direction < 0 and latestMaxima > 0 and high > latestMaxima + reversalThreshold)
         direction := 0
         endTrade()
         ingoreReturnTypeAgain = true
