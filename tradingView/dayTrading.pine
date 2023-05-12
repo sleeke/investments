@@ -1,0 +1,120 @@
+// This source code is subject to the terms of the Mozilla Public License 2.0 at https://mozilla.org/MPL/2.0/
+// © BritishBritishColumbian
+
+
+//@version=4
+study("Day trading")
+
+
+// -------//
+// Inputs //
+// -------//
+
+// The number of sessions to use for the moving average
+emaPeriod = input(       
+     title="EMA period", 
+     type=input.integer, 
+     defval=5, 
+     minval=1, 
+     maxval=200)
+
+// The required percentage trend in the moving average to indicate bullishness about the stock
+bullishEmaTrendPercent = input(
+     title="Required trend percent for bullish signal on EMA", 
+     type=input.float, 
+     defval=0.1, 
+     minval=-100, 
+     maxval=100)
+
+// The required number of candles to determine position above/below EMA
+bullishEmaCandles = input(
+     title="Required candles closing above EMA for bullish signal", 
+     type=input.float, 
+     defval=3, 
+     minval=1, 
+     maxval=10)
+
+// ---------------------------//
+// Moving Average calculation //
+// ---------------------------//
+
+ema = ema(close, emaPeriod)
+emaTrend = ema / ema[1] - 1
+
+// ---------------------//
+// Momentum calculation //
+// ---------------------//
+
+numCandles = 0.0
+prevAboveEma = false
+
+for candle = 0 to 20
+    aboveEma = close[candle] >= ema[candle]                         // candle = 1; aboveEma = true
+    if (candle == 0)
+        prevAboveEma := aboveEma
+
+    if (aboveEma == true and prevAboveEma == true)             // true
+        numCandles := numCandles + 1                            // numCandles = 2
+    if (aboveEma == false and prevAboveEma == false)// no-op
+        numCandles := numCandles - 1
+
+    if (aboveEma != prevAboveEma)
+        // numCandles := 0
+        break
+
+    prevAboveEma := aboveEma                                        // prevAboveEma = true
+
+
+
+// --------------//
+// Study outputs //
+// --------------//
+
+// Plot colors
+emaTrendColorInput = input(#53A4F3, "Short MA trend percent", input.color, group="EMA")
+emaTrendColor = color.new(emaTrendColorInput, 60)
+emaTrendInvalidColor = color.new(emaTrendColor, 90)
+
+bullishPercentColorInput = input(#009E90, "Bullish trend percent", input.color, group="EMA")
+bearishPercentColorInput = input(#FA4040, "Bearish trend percent", input.color, group="EMA")
+bullishPercentColor = color.new(bullishPercentColorInput, 70)
+bearishPercentColor = color.new(bearishPercentColorInput, 70)
+bullishPercentColorInvalid = color.new(bullishPercentColorInput, 90)
+bearishPercentColorInvalid = color.new(bearishPercentColorInput, 90)
+
+offsetPercentShort = ((close/ema)-1) * 100
+zeroAxis = #0000001F
+
+// Trend values
+
+emaTrendPercent = emaTrend * 100
+
+aboveBullishShortTrendValue = emaTrendPercent > bullishEmaTrendPercent
+belowBearishShortTrendValue = emaTrendPercent < -bullishEmaTrendPercent
+
+// --------------//
+// Normalization //
+// --------------//
+
+
+varip maxEma = 0.0
+if (emaTrendPercent > maxEma)
+    maxEma := emaTrendPercent
+
+varip maxCandles = 0.0
+maxCandles := max(maxCandles, numCandles)
+
+normalRatio = maxCandles / maxEma * 4
+
+
+// ------//
+// Plots //
+// ------//
+
+significantNumCandles = abs(numCandles) >= bullishEmaCandles
+plot(numCandles / normalRatio, style=plot.style_columns, color=(numCandles >= 0 ? (significantNumCandles ? bullishPercentColor : bullishPercentColorInvalid) : (significantNumCandles ? bearishPercentColor : bearishPercentColorInvalid)))
+plot(emaTrendPercent, style=plot.style_columns, color = (aboveBullishShortTrendValue or belowBearishShortTrendValue ? emaTrendColor : emaTrendInvalidColor))
+
+plot(0, color=zeroAxis)
+plot(bullishEmaTrendPercent, color=bullishPercentColor)
+plot(-bullishEmaTrendPercent, color=bearishPercentColor)

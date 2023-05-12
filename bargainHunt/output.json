@@ -1,0 +1,173 @@
+{
+  "symbols": [
+    {
+      "symbol": "XPH",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/XPH",
+        "barChart": "https://www.barchart.com/stocks/XPH"
+      },
+      "movingAverageCompliance": {
+        "version": "0.3",
+        "ma20": 0.8415094339622642,
+        "ma50": 0.9130434782608695
+      }
+    },
+    {
+      "symbol": "XLY",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/XLY",
+        "barChart": "https://www.barchart.com/stocks/XLY"
+      },
+      "movingAverageCompliance": {
+        "version": "0.3",
+        "ma20": 0.7643312101910829,
+        "ma50": 0.8893617021276595
+      }
+    },
+    {
+      "symbol": "XRT",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/XRT",
+        "barChart": "https://www.barchart.com/stocks/XRT"
+      },
+      "movingAverageCompliance": {
+        "version": "0.3",
+        "ma20": 0.8323353293413174,
+        "ma50": 0.9038461538461539
+      }
+    },
+    {
+      "symbol": "EWZ",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/EWZ",
+        "barChart": "https://www.barchart.com/stocks/EWZ"
+      },
+      "movingAverageCompliance": {
+        "version": "0.3",
+        "ma20": 0.8136020151133502,
+        "ma50": 0.8244514106583072
+      }
+    },
+    {
+      "symbol": "XTL",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/XTL",
+        "barChart": "https://www.barchart.com/stocks/XTL"
+      },
+      "movingAverageCompliance": {
+        "version": "0.3",
+        "ma20": 0.8131487889273357,
+        "ma50": 0.889763779527559
+      }
+    },
+    {
+      "symbol": "XLB",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/XLB",
+        "barChart": "https://www.barchart.com/stocks/XLB"
+      },
+      "movingAverageCompliance": {
+        "version": "0.3",
+        "ma20": 0.9156626506024096,
+        "ma50": 0.8011695906432749
+      }
+    },
+    {
+      "symbol": "XLU",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/XLU",
+        "barChart": "https://www.barchart.com/stocks/XLU"
+      },
+      "movingAverageCompliance": {
+        "version": "0.3",
+        "ma20": 0.8606271777003485,
+        "ma50": 0.8473282442748091
+      }
+    },
+    {
+      "symbol": "XLV",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/XLV",
+        "barChart": "https://www.barchart.com/stocks/XLV"
+      },
+      "movingAverageCompliance": {
+        "version": "0.3",
+        "ma20": 0.916030534351145,
+        "ma50": 0.956989247311828
+      }
+    },
+    {
+      "symbol": "XLF",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/XLF",
+        "barChart": "https://www.barchart.com/stocks/XLF"
+      },
+      "movingAverageCompliance": {
+        "version": "0.3",
+        "ma20": 0.8481848184818482,
+        "ma50": 0.8992805755395683
+      }
+    },
+    {
+      "symbol": "XME",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/XME",
+        "barChart": "https://www.barchart.com/stocks/XME"
+      },
+      "movingAverageCompliance": {
+        "version": "0.3",
+        "ma20": 0.8393782383419689,
+        "ma50": 0.7520661157024794
+      }
+    },
+    {
+      "symbol": "SLV",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/SLV",
+        "barChart": "https://www.barchart.com/stocks/SLV"
+      },
+      "movingAverageCompliance": {
+        "version": "0.3",
+        "ma20": 0.7960339943342776,
+        "ma50": 0.9538461538461539
+      }
+    },
+    {
+      "symbol": "PICK",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/PICK",
+        "barChart": "https://www.barchart.com/stocks/PICK"
+      },
+      "movingAverageCompliance": {
+        "version": "0.3",
+        "ma20": 0.8366197183098592,
+        "ma50": 0.8692307692307693
+      }
+    },
+    {
+      "symbol": "URA",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/URA",
+        "barChart": "https://www.barchart.com/stocks/URA"
+      },
+      "movingAverageCompliance": {
+        "version": "0.3",
+        "ma20": 0.770573566084788,
+        "ma50": 0.8397435897435898
+      }
+    },
+    {
+      "symbol": "PPLT",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/PPLT",
+        "barChart": "https://www.barchart.com/stocks/PPLT"
+      },
+      "movingAverageCompliance": {
+        "version": "0.3",
+        "ma20": 0.7804154302670623,
+        "ma50": 0.9528301886792453
+      }
+    }
+  ],
+  "categories": {}
+}

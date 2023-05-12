@@ -1,0 +1,17 @@
+{
+  "symbols": [
+    {
+      "symbol": "SPY",
+      "links": {
+        "yahooChart": "https://finance.yahoo.com/chart/SPY",
+        "barChart": "https://www.barchart.com/stocks/SPY"
+      },
+      "movingAverageCompliance": {
+        "version": "0.3",
+        "ma20": 0.8419243986254296,
+        "ma50": 0.9384615384615385
+      }
+    }
+  ],
+  "categories": {}
+}

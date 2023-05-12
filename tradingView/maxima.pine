@@ -1,0 +1,109 @@
+// This source code is subject to the terms of the Mozilla Public License 2.0 at https://mozilla.org/MPL/2.0/
+// © BritishBritishColumbian
+
+
+//@version=4
+study("Local Maxima")
+
+
+// -------//
+// Inputs //
+// -------//
+
+// The number of sessions to use for the maxima/minima
+studyRange = input(       
+     title="Number of sessions either side of local maxima/minima", 
+     type=input.integer, 
+     defval=2, 
+     minval=1, 
+     maxval=100)
+
+requiredDeltaPercent = input(       
+     title="percent change required for local maxima/minima", 
+     type=input.float, 
+     defval=0, 
+     minval=0, 
+     maxval=10)
+
+
+// ---------------------------//
+// Maxima/minima calculation //
+// ---------------------------//
+
+varip maximaHistory = array.new_float(2, 0.0)
+varip minimaHistory = array.new_float(2, 0.0)
+
+minimaStudyPeriod = array.new_float()
+maximaStudyPeriod = array.new_float()
+for i = 0 to studyRange * 2
+	array.push(minimaStudyPeriod, low[i])
+	array.push(maximaStudyPeriod, high[i])
+
+
+localMinima = array.min(minimaStudyPeriod)
+localMaxima = array.max(maximaStudyPeriod)
+deltaPercent = abs(localMaxima / localMinima - 1) * 100
+
+minimaFound = 0
+maximaFound = 0
+
+
+if (array.get(maximaStudyPeriod, studyRange) >= localMaxima and deltaPercent > requiredDeltaPercent)
+    array.shift(maximaHistory)
+    array.push(maximaHistory, localMaxima)
+    maximaFound := 1
+
+if (array.get(minimaStudyPeriod, studyRange) <= localMinima and deltaPercent > requiredDeltaPercent)
+    array.shift(minimaHistory)
+    array.push(minimaHistory, localMinima)
+    minimaFound := 1
+
+// --------------//
+// Study outputs //
+// --------------//
+
+// Plot colors
+priceAboveMaximaColorInput = input(#53A4F3, "Price above last maxima", input.color)
+positiveColor = color.new(#51B561, 30)
+positiveFadedColor = color.new(positiveColor, 70)
+priceAboveMinimaColorInput = input(#825FC2, "Price above last minima", input.color)
+negativeColor = color.new(#FA4040, 50)
+negativeFadedColor = color.new(negativeColor, 80)
+
+maximaDeltaColorInput = input(#53A4F3, "Maxima delta", input.color)
+minimaDeltaColorInput = input(#825FC2, "Minima delta", input.color)
+
+
+priceAboveLastMinima = low[studyRange] - array.get(minimaHistory, 1)
+priceAboveLastMaxima = high[studyRange] - array.get(maximaHistory, 1)
+
+minimaDiff = array.get(minimaHistory, 1) / array.get(minimaHistory, 0) - 1
+maximaDiff = array.get(maximaHistory, 1) / array.get(maximaHistory, 0) - 1
+
+minimaFound := minimaFound * (minimaDiff >= 0 ? 1 : -1)
+maximaFound := maximaFound * (maximaDiff >= 0 ? 1 : -1)
+
+exitSignal = 0.0
+
+if priceAboveLastMinima < 0
+    exitSignal := -1//abs(minimaCloseDiff)
+    
+enterSignal = 0.0
+if exitSignal == 0.0// and exitSignal[1] == 0.0
+    if priceAboveLastMaxima > 0.0 
+        enterSignal := 1//max(0, maximaDiff - minimaCloseDiff, maximaCloseDiff) // max(maximaCloseDiff, minimaDiff)
+        
+    // if minimaDiff > 0.0 and priceAboveLastMinima > 0.0
+    //     enterSignal := 1
+
+// ------//
+// Plots //
+// ------//
+
+// Entry/exit signals
+plot(exitSignal, style=plot.style_columns, color = negativeFadedColor, offset = -studyRange)
+plot(enterSignal, style=plot.style_columns, color = positiveFadedColor, offset = -studyRange)
+
+// Minima/maxima presence
+plot(minimaFound / 2, style=plot.style_columns, color = negativeColor, offset = -studyRange)
+plot(maximaFound / 2, style=plot.style_columns, color = positiveColor, offset = -studyRange)

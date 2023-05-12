@@ -1,0 +1,44 @@
+[
+  {
+    "ticker": "QQQ",
+    "account": "RRSP",
+    "offsetPercent": -0.5,
+    "links": {
+      "yahooChart": "https://finance.yahoo.com/chart/QQQ",
+      "barChart": "https://www.barchart.com/stocks/QQQ"
+    },
+    "goodDayPercent": 1.37,
+    "ma": 356.45,
+    "maTrend": -0.45,
+    "maPeriod": 20,
+    "newStop": 354.66
+  },
+  {
+    "ticker": "IWM",
+    "account": "RRSP",
+    "offsetPercent": 0,
+    "links": {
+      "yahooChart": "https://finance.yahoo.com/chart/IWM",
+      "barChart": "https://www.barchart.com/stocks/IWM"
+    },
+    "goodDayPercent": 1.49,
+    "ma": 200.46,
+    "maTrend": -0.34,
+    "maPeriod": 20,
+    "newStop": 200.46
+  },
+  {
+    "ticker": "SPY",
+    "account": "RRSP",
+    "offsetPercent": -5,
+    "links": {
+      "yahooChart": "https://finance.yahoo.com/chart/SPY",
+      "barChart": "https://www.barchart.com/stocks/SPY"
+    },
+    "goodDayPercent": 1,
+    "ma": 445.69,
+    "maTrend": -0.29,
+    "maPeriod": 20,
+    "newStop": 423.4
+  }
+]
