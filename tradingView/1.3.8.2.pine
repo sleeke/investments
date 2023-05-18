@@ -24,7 +24,7 @@ indicator('Exp: 1.3.8.2: Indiscriminate daily extreme breaker', '1.3.8.2', false
 studyRange = input.int(       
      title="Number of sessions either side of local maxima/minima", 
      defval=8, 
-     minval=1, 
+     minval=2, 
      maxval=100)
 
 requiredDeltaPercent = input.float(       
@@ -35,13 +35,13 @@ requiredDeltaPercent = input.float(
 
 emaPeriod = input.int(       
      title="candles to use for momentum calculation", 
-     defval=48, 
+     defval=16, 
      minval=1, 
      maxval=100)
 
 requiredMomentum = input.float(       
      title="momentum required for trade", 
-     defval=0.02, 
+     defval=0.04, 
      minval=0, 
      maxval=1)
 
@@ -53,7 +53,7 @@ trailingStop = input.float(
 
 purchaseThreshold = input.float(
      title="price difference required past previous extreme before entering trade", 
-     defval=0.0, 
+     defval=0.2, 
      minval=0, 
      maxval=10)
 
@@ -310,12 +310,6 @@ else
     //-------------------//
     varip prevTradeWarning = 0
     
-    // if (low < getDayMin())                                      // Price is lower than day min
-    //     putScore += 1
-        
-    // if (high > getDayMax())                                     // Price is higher than day max
-    //     callScore += 1
-        
     if (math.abs(maTrend * 100) > requiredMomentum * 0.7)             // Momentum is sufficient
         putScore += 1
         callScore += 1
