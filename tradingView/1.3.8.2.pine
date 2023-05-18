@@ -3,7 +3,7 @@
 
 
 //@version=5
-indicator('Exp: 1.3.8.1: Indiscriminate daily extreme breaker', 'Exp', false, format.inherit, 3)
+indicator('Exp: 1.3.8.2: Indiscriminate daily extreme breaker', '1.3.8.2', false, format.inherit, 3)
 
 // ------//
 // TO-DO //
@@ -23,7 +23,7 @@ indicator('Exp: 1.3.8.1: Indiscriminate daily extreme breaker', 'Exp', false, fo
 // The number of sessions to use for the maxima/minima
 studyRange = input.int(       
      title="Number of sessions either side of local maxima/minima", 
-     defval=7, 
+     defval=8, 
      minval=1, 
      maxval=100)
 
@@ -47,7 +47,7 @@ requiredMomentum = input.float(
 
 trailingStop = input.float(
      title="price drop to halt trade", 
-     defval=0.8, 
+     defval=0.7, 
      minval=0, 
      maxval=10)
 
@@ -59,7 +59,7 @@ purchaseThreshold = input.float(
 
 reversalThreshold = input.float(
      title="price to allow past previous opposing extreme before exiting trade", 
-     defval=0.0, 
+     defval=0.6, 
      minval=0, 
      maxval=10)
 
@@ -77,6 +77,8 @@ negativeFadedColor = color.new(negativeColor, 80)
 
 maximaDeltaColorInput = input.color(#53A4F3, "Maxima delta")
 minimaDeltaColorInput = input.color(#825FC2, "Minima delta")
+
+momentumColor = input.color(#007FFF, "Momentum")
 
 buyColor = color.new(#7A00FA, 50)
 debugColor = color.new(#FF7F00, 0)
@@ -124,6 +126,12 @@ varip maxIndex = 1
 varip latestMinMax = 1
 varip buyBarCloseTime = 0
 varip direction = 0
+
+// Reset each bar
+
+varip buySignal = 0
+varip sellSignal = 0
+varip prevBarClose = 0
 
 varip unset = -1.0
 
@@ -214,6 +222,12 @@ endTrade() =>
     array.set(tradeResults, buyIndex, unset)
     setDrawdown(0)
     setGain(0)
+
+tradeOpen() => 
+    getBuyPrice() > 0
+
+newBar() =>
+    time_close("") > prevBarClose
     
 // ---------------------------//
 // Temp variables from arrays //
@@ -302,7 +316,7 @@ else
     // if (high > getDayMax())                                     // Price is higher than day max
     //     callScore += 1
         
-    if (math.abs(maTrend * 100) > requiredMomentum * 0.5)             // Momentum is sufficient
+    if (math.abs(maTrend * 100) > requiredMomentum * 0.7)             // Momentum is sufficient
         putScore += 1
         callScore += 1
         tradeWarning := 1
@@ -314,35 +328,53 @@ else
     // prevScore := math.max(putScore, callScore)
     prevTradeWarning := tradeWarning
 
-    if (getDayMin() > 0 and low < getDayMin() - purchaseThreshold and latestMinima > 0 and math.abs(maTrend * 100) > requiredMomentum)
+    if (getDayMin() > 0
+     and low < getDayMin() - purchaseThreshold 
+     and latestMinima > 0 
+     and math.abs(maTrend * 100) > requiredMomentum
+     and not (hour >= 15 and minute >= 30))
 
         // Sufficient to buy put
 
-        if (getBuyPrice() < 0 or direction > 0)
+        if (not tradeOpen() or direction > 0)
 
             // New low and buy price hasn't been set (or direction has changed); set buy price
+
+            if (tradeOpen())
+                sellSignal := -1
+                endTrade()
 
             setBuyPrice(low)    // This is being called during a trade
             buyBarCloseTime := time_close("")
             direction := -1
             setGain(0)
             setDrawdown(0)
+            buySignal := 1
 
-    else if (getDayMax() > 0 and high > getDayMax() + purchaseThreshold and latestMaxima > 0 and math.abs(maTrend * 100) > requiredMomentum)
+    else if (getDayMax() > 0 
+     and high > getDayMax() + purchaseThreshold 
+     and latestMaxima > 0 
+     and math.abs(maTrend * 100) > requiredMomentum
+     and not (hour >= 15 and minute >= 30))
 
         // Sufficient to buy call
 
-        if (getBuyPrice() < 0 or direction < 0)
+        if (not tradeOpen() or direction < 0)
 
             // New high and buy price hasn't been set (or direction has changed); set buy price
 
-            // setBuyPrice(high)
+            if (tradeOpen())
+                sellSignal := -1
+                endTrade()
+
+            setBuyPrice(high)
             buyBarCloseTime := time_close("")
             direction := 1
             setGain(0)
             setDrawdown(0)
+            buySignal := 1
 
-    if (getBuyPrice() > 0)
+    if (tradeOpen())
 
         // buyPrice is set; track drawdown and max gain
 
@@ -404,47 +436,67 @@ plot(getGain(), title="Gain", style=plot.style_columns, color = positiveFadedCol
 // plot(maximaFound / 2, style=plot.style_columns, color = positiveColor, offset = -studyRange)
 
 // Debug plots
-plot(tradeWarning, title="Put / call score", style=plot.style_line, color = putCallScore)
-plot(direction, title="Direction", style=plot.style_line, color = buyColor)
+plot(tradeWarning, title="Trade warning", style=plot.style_line, color = putCallScore)
+// plot(direction, title="Direction", style=plot.style_line, color = buyColor)
+plot(buySignal, title="Buy signal", style=plot.style_columns, color = buyColor)
+plot(sellSignal, title="Sell signal", style=plot.style_columns, color = buyColor)
 plot(getMaxDrawdown(), title="Max Drawdown For Day", style=plot.style_line, color = negativeColor)
-plot(maTrend * 100, title="Momentum", style=plot.style_line, color = debugColor)
+plot(maTrend * 100, title="Momentum", style=plot.style_line, color = momentumColor)
+plot(maTrend * 100 / requiredMomentum, title="Momentum %", style=plot.style_line, color = momentumColor)
+// plot(getBuyPrice(), title="Buy Price", style=plot.style_line, color = debugColor)
 
 // Metric plots
 plot(getTotalGain(), title="Total Gain", style=plot.style_line, color = positiveColor)
 plot(getNumTrades(), title="Trades", style=plot.style_line, color = debugColor)
 // plot(getSuccessTrades(), title="Success", style=plot.style_line, color = debugColor)
-// plot(getSuccessTrades() / getNumTrades(), title="Ratio", style=plot.style_line, color = debugColor)
+plot(getSuccessTrades() / getNumTrades(), title="Success Ratio", style=plot.style_line, color = debugColor)
 plot(getWarnings(), title="Warnings", style=plot.style_line, color = debugColor)
-plot(getNumTrades() / getWarnings(), title="Ratio", style=plot.style_line, color = debugColor)
+// plot(getWarnings() /getNumTrades(), title="Warning Success Ratio", style=plot.style_line, color = debugColor)
+
+
+// End calculations
+
+
+if (newBar())
+    buySignal := 0
+    sellSignal := 0
+
+prevBarClose := time_close("")
 
 
 // -----------//
 // End trade? //
 // -----------//
 
+
 // Only end the trade after everything has been plotted
 latestMinima = array.get(minimaHistory, latestMinMax)
 latestMaxima = array.get(maximaHistory, latestMinMax)
 
-if (getBuyPrice() > 0) 
+if (tradeOpen()) 
     // Stop the trade if it drops below the latest extreme
     if (direction > 0 and latestMinima > 0 and low < latestMinima - reversalThreshold)
         direction := 0
+        sellSignal := -1
         endTrade()
         ingoreReturnTypeAgain = true
 
     if (direction < 0 and latestMaxima > 0 and high > latestMaxima + reversalThreshold)
         direction := 0
+        sellSignal := -1
         endTrade()
         ingoreReturnTypeAgain = true
 
     // Stop the trade if drawdown < stop limit
     if (getDrawdown() < -trailingStop)
         direction := 0
+        sellSignal := -1
         endTrade()
         ingoreReturnTypeAgain = true
 
-    if (hour == 15 and minute == 59)
+    if (hour == 15 and minute >= 59 - timeframe.in_seconds() / 60)
         direction := 0
+        sellSignal := -1
         endTrade()
         ingoreReturnTypeAgain = true
+
