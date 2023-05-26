@@ -28,43 +28,43 @@ indicator('1.3.8.2: Indiscriminate daily extreme breaker', '1.3.8.2', false, for
 // The number of sessions to use for the maxima/minima
 studyRange = input.int(       
      title="Number of sessions either side of local maxima/minima", 
-     defval=2, 
-     minval=1, 
+     defval=8, 
+     minval=2, 
      maxval=100)
 
 requiredDeltaPercent = input.float(       
      title="percent change required for local maxima/minima", 
-     defval=1.4, 
+     defval=0, 
      minval=0, 
      maxval=10)
 
 emaPeriod = input.int(       
      title="candles to use for momentum calculation", 
-     defval=52, 
+     defval=16, 
      minval=1, 
      maxval=100)
 
 requiredMomentum = input.float(       
      title="momentum required for trade", 
-     defval=0.015, 
+     defval=0.04, 
      minval=0, 
      maxval=1)
 
 trailingStop = input.float(
      title="price drop to halt trade", 
-     defval=1.02, 
+     defval=0.7, 
      minval=0, 
      maxval=10)
 
 purchaseThreshold = input.float(
      title="price difference required past previous extreme before entering trade", 
-     defval=0, 
+     defval=0.2, 
      minval=0, 
      maxval=10)
 
 reversalThreshold = input.float(
      title="price to allow past previous opposing extreme before exiting trade", 
-     defval=0.15, 
+     defval=0.6, 
      minval=0, 
      maxval=10)
 
