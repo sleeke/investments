@@ -319,6 +319,9 @@ outsideTradingHours() =>
 inDaytime() =>
     hour < 9 or (hour == 9 and minute < 30 + studyRange * 2 * timeframe.in_seconds() / 60) or hour > 15
 
+tooLateInTheDay() => 
+    hour == 14 and minute >= 30 or hour >= 15
+
 // ---------------------------//
 // Temp variables from arrays //
 // ---------------------------//
@@ -414,8 +417,8 @@ else
     if (getDayMin() > 0
      and low < getDayMin() - purchaseThreshold 
      and getLatestMinima() > 0 
-     and math.abs(maTrend * 100) > requiredMomentum
-     and not (hour >= 15 and minute >= 30))
+     and maTrend * 100 > requiredMomentum
+     and not (tooLateInTheDay()))
 
         // Sufficient to buy put
 
@@ -436,8 +439,8 @@ else
     else if (getDayMax() > 0 
      and high > getDayMax() + purchaseThreshold 
      and getLatestMaxima() > 0 
-     and math.abs(maTrend * 100) > requiredMomentum
-     and not (hour >= 15 and minute >= 30))
+     and maTrend * 100 > requiredMomentum
+     and not (tooLateInTheDay()))
 
         // Sufficient to buy call
 
