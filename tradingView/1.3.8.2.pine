@@ -166,6 +166,7 @@ varip numSuccessIndex = 1
 varip numWarningsIndex = 2
 varip metrics = array.new_float(3, 0)
 varip tradeWarning = 0
+varip continuousTradeWarning = 0.0
 
 getLatestMaxima() =>
     array.get(maximaHistory, latestMinMax)
@@ -298,6 +299,8 @@ if (hour < 9 or (hour == 9 and minute < 30) or hour > 15)
     array.set(tradeResults, maxDailyDrawdownIndex, 0.0)
     setGain(0)
     tradeWarning := 0
+    continuousTradeWarning := 0.0
+    
 
     setDirection(0)
 
@@ -358,10 +361,35 @@ else
     else if (math.abs(maTrend * 100) < requiredMomentum * 0.3)             // Momentum is sufficient
         tradeWarning := 0        
 
-    if (tradeWarning == 1 and prevTradeWarning == 0)
-        setWarnings(getWarnings() + 1)
 
     prevTradeWarning := tradeWarning
+
+
+    //--------------------------//
+    // Continuous trade warning //
+    //--------------------------//
+
+    varip prevContinuousTradeWarning = 0.0
+    varip extremeThreshold = 1.0
+    momentum = math.abs(maTrend * 100)
+
+    if (getLatestMaxima() > 0 and momentum > 0)
+        distanceToMax = close - dayMax
+        continuousTradeWarning := math.max(0, extremeThreshold - distanceToMax) + momentum / requiredMomentum
+
+    if (getLatestMinima() > 0 and momentum < 0)
+        distanceToMin = dayMin - close
+        continuousTradeWarning := math.max(0, extremeThreshold - distanceToMin) + momentum / requiredMomentum
+
+    if (continuousTradeWarning >= 1 and prevContinuousTradeWarning < 1)
+        setWarnings(getWarnings() + 1)
+
+    prevContinuousTradeWarning := continuousTradeWarning
+
+
+    //-------------//
+    // Open trade? //
+    //-------------//
 
     if (getDayMin() > 0
      and low < getDayMin() - purchaseThreshold 
@@ -479,7 +507,7 @@ plot(maximaFound / 2, title="Maxima", style=plot.style_columns, color = debugCol
 // plot(getLatestMaxima(), title="Latest Maxima", style=plot.style_line, color = debugColor)
 
 // Debug plots
-plot(tradeWarning, title="Trade warning", style=plot.style_line, color = putCallScore)
+plot(continuousTradeWarning, title="Continuous trade warning", style=plot.style_line, color = putCallScore)
 // plot(direction, title="Direction", style=plot.style_line, color = buyColor)
 plot(getBuySignal(), title="Buy signal", style=plot.style_columns, color = buyColor)
 plot(getSellSignal(), title="Sell signal", style=plot.style_columns, color = buyColor)
@@ -494,8 +522,8 @@ plot(getTotalGain(), title="Total Gain", style=plot.style_line, color = positive
 plot(getNumTrades(), title="Trades", style=plot.style_line, color = debugColor)
 // plot(getSuccessTrades(), title="Success", style=plot.style_line, color = debugColor)
 plot(getSuccessTrades() / getNumTrades(), title="Success Ratio", style=plot.style_line, color = debugColor)
-// plot(getWarnings(), title="Warnings", style=plot.style_line, color = debugColor)
-plot(getWarnings() /getNumTrades(), title="Warning Success Ratio", style=plot.style_line, color = debugColor)
+plot(getWarnings(), title="Warnings", style=plot.style_line, color = debugColor)
+plot(getNumTrades() / getWarnings(), title="Warning Success Ratio", style=plot.style_line, color = debugColor)
 
 
 // End calculations
