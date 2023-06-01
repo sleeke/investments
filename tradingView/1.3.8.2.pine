@@ -108,6 +108,7 @@ momentumColor =         input.color(#007FFF, "Momentum")
 // ----------//
 
 varip unset = -1.0
+varip continuousTradeWarningRequired = 0.8
 
 
 // ---------------------------//
@@ -181,7 +182,7 @@ varip numWarningsIndex = 2
 
 varip prevBarClose = 0
 varip continuousTradeWarning = 0.0
-
+tradeWarning = 0
 
 // ----------//
 // Accessors //
@@ -361,13 +362,17 @@ newBar() =>
     time_close("") > prevBarClose
     
 outsideTradingHours() =>
-    hour < 9 or (hour == 9 and minute < 30) or hour > 15
+    hour < 9 
+     or (hour == 9 and minute < 30) 
+     or hour > 15
 
 validForExtremeCalculation() =>
-    hour > 9 or (hour == 9 and minute < 30 + studyRange * 2 * timeframe.in_seconds() / 60) and hour < 15
+    (hour == 9 and minute > 30 + studyRange * 2 * timeframe.in_seconds() / 60) 
+     or (hour > 9 and hour < 16)
 
 inDaytime() =>
-    hour > 9 or (hour == 9 and minute < 30) and hour < 15
+    hour > 9 
+     or (hour == 9 and minute > 30) and hour < 15
 
 tooLateInTheDay() => 
     hour == 14 and minute >= 30 or hour >= 15
@@ -385,35 +390,8 @@ tradeMax = array.get(tradeExtremes, maxIndex)
 movingAverage = ta.sma(close[1], movingAveragePeriod)
 maTrend = movingAverage / movingAverage[1] - 1
 
-if (outsideTradingHours())
-    resetEverything()
-    continuousTradeWarning := 0.0
-
-else if (inDaytime() and not validForExtremeCalculation())
-    if (low < dayMin or dayMin < 0)
-        setDayMin(low)
-        ignore = true   // Hack to prevent the array assignment screwing with the conditionals
-
-    else if (high > dayMax or dayMax < 0)
-        setDayMax(high)
-        ignore = true   // Hack to prevent the array assignment screwing with the conditionals
-
-
-// THere should be something tracking the absolute min/max so that buying only happens outside that range....
-
-else
-    // Inside trading hours; game on!
-    // TODO: Define exactly what each of these conditionals represents...
-
-    if (low[1] < dayMin or dayMin < 0)
-        setDayMin(low[1])
-        ignore = true   // Hack to prevent the array assignment scrwwing with the conditionals
-
-    else if (high[1] > dayMax or dayMax < 0)
-        setDayMax(high[1])
-        ignore = true   // Hack to prevent the array assignment scrwwing with the conditionals
-
-    // TODO: Accessor for minimaStudyPeriod etc..
+if (validForExtremeCalculation())
+// TODO: Accessor for minimaStudyPeriod etc..
     if (array.get(maximaStudyPeriod, studyRange) >= localMaxima and deltaPercent > requiredDeltaPercent)
         array.shift(maximaHistory)
         array.push(maximaHistory, localMaxima)
@@ -441,25 +419,50 @@ else
         if (higherMaximaFound)                
             setDayMax(getLatestMaxima())
 
+if (outsideTradingHours())
+    resetEverything()
+    continuousTradeWarning := 0.0
+
+else
+    // Inside trading hours; game on!
+    // TODO: Define exactly what each of these conditionals represents...
+
+    if (low[1] < dayMin or dayMin < 0)
+        setDayMin(low[1])
+        ignore = true   // Hack to prevent the array assignment scrwwing with the conditionals
+
+    else if (high[1] > dayMax or dayMax < 0)
+        setDayMax(high[1])
+        ignore = true   // Hack to prevent the array assignment scrwwing with the conditionals
+
 
     //--------------------------//
     // Continuous trade warning //
     //--------------------------//
 
     varip prevContinuousTradeWarning = 0.0
-    varip extremeThreshold = 1.0
-    momentum = math.abs(maTrend * 100)
+    varip extremeThreshold = 0.35
+    varip requiredMomentumFraction = 0.7 
 
-    if (getLatestMaxima() > 0 and momentum > 0)
-        distanceToMax = close - dayMax
-        continuousTradeWarning := math.max(0, extremeThreshold - distanceToMax) + momentum / requiredMomentum
+    momentum = (maTrend * 100)
 
-    if (getLatestMinima() > 0 and momentum < 0)
-        distanceToMin = dayMin - close
-        continuousTradeWarning := math.max(0, extremeThreshold - distanceToMin) + momentum / requiredMomentum
+    if (getLatestMaxima() > 0 and momentum > 0 and allowCalls)
+        distanceToMax = high - dayMax   // +ve if higher than day max
+        if (momentum > requiredMomentum * requiredMomentumFraction and distanceToMax > -extremeThreshold)
+            continuousTradeWarning := 1
 
-    if (continuousTradeWarning >= 1 and prevContinuousTradeWarning < 1)
+
+    else if (getLatestMinima() > 0 and momentum < 0 and allowPuts)
+        distanceToMin = dayMin - low    // +ve if lower than day min 
+        if (momentum < -requiredMomentum * requiredMomentumFraction and distanceToMin > -extremeThreshold)
+            continuousTradeWarning := 1
+
+    else 
+        continuousTradeWarning := 0
+
+    if (continuousTradeWarning >= continuousTradeWarningRequired and prevContinuousTradeWarning < continuousTradeWarningRequired)
         setWarnings(getWarnings() + 1)
+        tradeWarning := 1
 
     prevContinuousTradeWarning := continuousTradeWarning
 
@@ -585,21 +588,23 @@ plot(maximaFound / 2, title="Maxima", style=plot.style_columns, color = debugCol
 // plot(getLatestMaxima(), title="Latest Maxima", style=plot.style_line, color = debugColor)
 
 // Debug plots
-plot(continuousTradeWarning, title="Continuous trade warning", style=plot.style_line, color = tradeWarningColor)
-plot(getDirection(), title="Direction", style=plot.style_line, color = buyColor)
+warningColor = color.new(buyColor, 80)
+plot(tradeWarning * 2, title="Trade warning", style=plot.style_columns, color = warningColor)
+// plot(getDirection(), title="Direction", style=plot.style_line, color = buyColor)
 plot(getBuySignal(), title="Buy signal", style=plot.style_columns, color = buyColor)
 plot(getSellSignal(), title="Sell signal", style=plot.style_columns, color = buyColor)
 plot(getMaxDailyDrawdown(), title="Max Drawdown For Day", style=plot.style_line, color = negativeColor)
 // plot(maTrend * 100, title="Momentum", style=plot.style_line, color = momentumColor)
 plot(maTrend * 100 / requiredMomentum, title="Momentum %", style=plot.style_line, color = momentumColor)
-plot(getMaxDrawdown(), title="Max Drawdown", style=plot.style_line, color = debugColor)
+// plot(getMaxDrawdown(), title="Max Drawdown", style=plot.style_line, color = debugColor)
 // plot(getBuyPrice(), title="Buy Price", style=plot.style_line, color = debugColor)
+// plot((validForExtremeCalculation() ? 1 : 0), title="Valid", style=plot.style_columns, color = debugColor)
 
 // Metric plots
 plot(getTotalGain(), title="Total Gain", style=plot.style_line, color = positiveColor)
 plot(getNumTrades(), title="Trades", style=plot.style_line, color = debugColor)
 // plot(getSuccessTrades(), title="Success", style=plot.style_line, color = debugColor)
-plot(getSuccessTrades() / getNumTrades(), title="Success Ratio", style=plot.style_line, color = debugColor)
+// plot(getSuccessTrades() / getNumTrades(), title="Success Ratio", style=plot.style_line, color = debugColor)
 plot(getWarnings(), title="Warnings", style=plot.style_line, color = debugColor)
 plot(getNumTrades() / getWarnings(), title="Warning Success Ratio", style=plot.style_line, color = debugColor)
 
