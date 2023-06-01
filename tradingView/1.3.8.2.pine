@@ -67,6 +67,14 @@ reversalThreshold = input.float(
      minval=0, 
      maxval=10)
 
+allowCalls = input.bool(
+     title="whether to allow calls",
+     defval=true)
+
+allowPuts = input.bool(
+     title="whether to allow puts",
+     defval=true)
+
 // ------------//
 // Plot colors //
 // ------------//
@@ -451,9 +459,9 @@ else
     // Open trade? //
     //-------------//
 
-    if (true
-    //  and getDayMin() > 0
-    //  and low < getDayMin() - purchaseThreshold 
+    if (allowPuts
+     and getDayMin() > 0
+     and low < getDayMin() - purchaseThreshold 
      and getLowestMinima() > 0 
      and low < getLowestMinima() - purchaseThreshold
      and maTrend * 100 <= -requiredMomentum
@@ -475,9 +483,9 @@ else
             setDrawdown(0)
             setBuySignal(1)
 
-    else if (true 
-    //  and getDayMax() > 0 
-    //  and high > getDayMax() + purchaseThreshold 
+    else if (allowCalls 
+     and getDayMax() > 0 
+     and high > getDayMax() + purchaseThreshold 
      and getHighestMaxima() > 0 
      and high > getHighestMaxima() + purchaseThreshold
      and maTrend * 100 >= requiredMomentum
