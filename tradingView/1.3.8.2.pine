@@ -26,53 +26,62 @@ strategy(
 
 // The number of sessions to use for the maxima/minima
 studyRange = input.int(       
+     group="Study parameters",
      title="Number of sessions either side of local maxima/minima", 
      defval=5, 
      minval=2, 
      maxval=100)
 
 requiredDeltaPercent = input.float(       
+     group="Study parameters",
      title="percent change required for local maxima/minima", 
      defval=0, 
      minval=0, 
      maxval=10)
 
 movingAveragePeriod = input.int(       
+     group="Study parameters",
      title="candles to use for momentum calculation", 
      defval=16, 
      minval=1, 
      maxval=100)
 
 requiredMomentum = input.float(       
+     group="Trade Entry",
      title="momentum required for trade", 
      defval=0.01, 
      minval=0, 
      maxval=1)
 
 trailingStop = input.float(
+     group="Trade Exit",
      title="price drop to halt trade", 
      defval=0.7, 
      minval=0, 
      maxval=10)
 
 purchaseThreshold = input.float(
+     group="Trade Entry",
      title="price difference required past previous extreme before entering trade", 
      defval=0.2, 
      minval=0, 
      maxval=10)
 
 reversalThreshold = input.float(
+     group="Trade Exit",
      title="price to allow past previous opposing extreme before exiting trade", 
      defval=0, 
      minval=0, 
      maxval=10)
 
 allowCalls = input.bool(
-     title="whether to allow calls",
+     group="Trades allowed",
+     title="Allow calls",
      defval=true)
 
 allowPuts = input.bool(
-     title="whether to allow puts",
+     group="Trades allowed",
+     title="Allow puts",
      defval=true)
 
 // ------------//
