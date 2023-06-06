@@ -28,7 +28,7 @@ strategy(
 studyRange = input.int(       
      group="Study parameters",
      title="Number of sessions either side of local maxima/minima", 
-     defval=5, 
+     defval=2, 
      minval=2, 
      maxval=100)
 
@@ -49,28 +49,28 @@ movingAveragePeriod = input.int(
 requiredMomentum = input.float(       
      group="Trade Entry",
      title="momentum required for trade", 
-     defval=0.01, 
+     defval=0.05, 
      minval=0, 
      maxval=1)
 
 trailingStop = input.float(
      group="Trade Exit",
      title="price drop to halt trade", 
-     defval=0.7, 
+     defval=1.1, 
      minval=0, 
      maxval=10)
 
 purchaseThreshold = input.float(
      group="Trade Entry",
      title="price difference required past previous extreme before entering trade", 
-     defval=0.2, 
+     defval=0.0, 
      minval=0, 
      maxval=10)
 
 reversalThreshold = input.float(
      group="Trade Exit",
      title="price to allow past previous opposing extreme before exiting trade", 
-     defval=0, 
+     defval=0.01, 
      minval=0, 
      maxval=10)
 
@@ -82,7 +82,7 @@ allowCalls = input.bool(
 allowPuts = input.bool(
      group="Trades allowed",
      title="Allow puts",
-     defval=true)
+     defval=false)
 
 // ------------//
 // Plot colors //
@@ -121,8 +121,8 @@ varip minimaHistory = array.new_float(2, 0.0)
 minimaStudyPeriod = array.new_float()
 maximaStudyPeriod = array.new_float()
 for i = 0 to studyRange * 2
-	array.push(minimaStudyPeriod, low[i])
-	array.push(maximaStudyPeriod, high[i])
+	array.push(minimaStudyPeriod, low[i + 1])   // +1 to avoid current bar interfering with calculation
+	array.push(maximaStudyPeriod, high[i + 1])
 
 localMinima = array.min(minimaStudyPeriod)
 localMaxima = array.max(maximaStudyPeriod)
@@ -390,6 +390,18 @@ tradeMax = array.get(tradeExtremes, maxIndex)
 movingAverage = ta.sma(close[1], movingAveragePeriod)
 maTrend = movingAverage / movingAverage[1] - 1
 
+//---------------------//
+// Tidy up for new bar //
+//---------------------//
+
+if (newBar())
+    setBuySignal(0)
+    setSellSignal(0)
+
+//-------------------//
+// Start calculating //
+//-------------------//
+
 if (validForExtremeCalculation())
 // TODO: Accessor for minimaStudyPeriod etc..
     if (array.get(maximaStudyPeriod, studyRange) >= localMaxima and deltaPercent > requiredDeltaPercent)
@@ -583,8 +595,8 @@ plot(getDrawdown(), title="Drawdown", style=plot.style_columns, color = negative
 plot(getGain(), title="Gain", style=plot.style_columns, color = positiveFadedColor)
 
 // Minima/maxima presence
-plot(minimaFound / -2, title="Minima", style=plot.style_columns, color = debugColor, offset = -studyRange)
-plot(maximaFound / 2, title="Maxima", style=plot.style_columns, color = debugColor, offset = -studyRange)
+plot(minimaFound / -2, title="Minima", style=plot.style_columns, color = debugColor, offset = -(studyRange + 1))
+plot(maximaFound / 2, title="Maxima", style=plot.style_columns, color = debugColor, offset = -(studyRange + 1))
 // plot(getLatestMaxima(), title="Latest Maxima", style=plot.style_line, color = debugColor)
 
 // Debug plots
@@ -609,15 +621,9 @@ plot(getWarnings(), title="Warnings", style=plot.style_line, color = debugColor)
 plot(getNumTrades() / getWarnings(), title="Warning Success Ratio", style=plot.style_line, color = debugColor)
 
 
-//----------------------------//
-// End calculations (tidy up) //
-//----------------------------//
-
-if (newBar())
-    setBuySignal(0)
-    setSellSignal(0)
-
+// Track the close of this bar so we can determine if the next run is a new bar    
 prevBarClose := time_close("")
+
 
 
 // -----------//
