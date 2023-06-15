@@ -18,7 +18,7 @@ strategy(
 // TO-DO //
 // ------//
 
-// Wow, so much empty...
+// Early warning could be split into 1) sufficient momentum & minima found, and 2) close to extrema
 
 // -------//
 // Inputs //
@@ -82,7 +82,7 @@ allowCalls = input.bool(
 allowPuts = input.bool(
      group="Trades allowed",
      title="Allow puts",
-     defval=false)
+     defval=true)
 
 // ------------//
 // Plot colors //
@@ -542,11 +542,16 @@ else
                 gainAtOpen = open - getBuyPrice()
                 setGain(gainAtOpen)
                 drawdownAtOpen = open - tradeMin
-                setDrawdown(math.min(0, -drawdownAtOpen))
+                setDrawdown(math.min(0, -drawdownAtOpen)) // TODO: Error here? +ve vs -ve...?
                 if (drawdownAtOpen > trailingStop) // this is needed due to sequential scope of functions
                     endTrade()
                 else
-                    localGain = getBuyPrice() - high
+                    // Find the best case exit within the bar (i.e. as soon as the trailing stop is hit)
+                    bestCasePriceInsideBar = high
+                    if (bestCasePriceInsideBar > tradeMin + trailingStop)
+                        bestCasePriceInsideBar := tradeMin + trailingStop
+
+                    localGain = getBuyPrice() - bestCasePriceInsideBar
                     setGain(localGain)
                     localDrawdown = high - tradeMin
                     setDrawdown(math.min(0, -localDrawdown))
@@ -564,7 +569,12 @@ else
                 if (drawdownAtOpen > trailingStop) // this is needed due to sequential scope of functions
                     endTrade()
                 else
-                    localGain = high - getBuyPrice()
+                    // Find the best case exit within the bar (i.e. as soon as the trailing stop is hit)
+                    bestCasePriceInsideBar = low
+                    if (bestCasePriceInsideBar < tradeMax - trailingStop)
+                        bestCasePriceInsideBar := tradeMax - trailingStop
+
+                    localGain = bestCasePriceInsideBar - getBuyPrice()
                     setGain(localGain)
                     localDrawdown = tradeMax - low 
                     setDrawdown(math.min(0, -localDrawdown))
@@ -616,7 +626,7 @@ plot(maTrend * 100 / requiredMomentum, title="Momentum %", style=plot.style_line
 plot(getTotalGain(), title="Total Gain", style=plot.style_line, color = positiveColor)
 plot(getNumTrades(), title="Trades", style=plot.style_line, color = debugColor)
 // plot(getSuccessTrades(), title="Success", style=plot.style_line, color = debugColor)
-// plot(getSuccessTrades() / getNumTrades(), title="Success Ratio", style=plot.style_line, color = debugColor)
+plot(getSuccessTrades() / getNumTrades(), title="Success Ratio", style=plot.style_line, color = debugColor)
 plot(getWarnings(), title="Warnings", style=plot.style_line, color = debugColor)
 plot(getNumTrades() / getWarnings(), title="Warning Success Ratio", style=plot.style_line, color = debugColor)
 
