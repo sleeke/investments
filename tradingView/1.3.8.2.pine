@@ -196,8 +196,6 @@ getBuySignal() =>
 
 setBuySignal(value) => 
     array.set(signals, buySignalIndex, value)
-    if (value == 1)
-        strategy.entry("Long", strategy.long, 1) 
 
 getSellSignal() => 
     array.get(signals, sellSignalIndex)
@@ -443,7 +441,7 @@ else
         setDayMin(low[1])
         ignore = true   // Hack to prevent the array assignment scrwwing with the conditionals
 
-    else if (high[1] > dayMax or dayMax < 0)
+    if (high[1] > dayMax or dayMax < 0)
         setDayMax(high[1])
         ignore = true   // Hack to prevent the array assignment scrwwing with the conditionals
 
@@ -541,9 +539,9 @@ else
             if (time_close("") > buyBarCloseTime)   // Avoid drawdown on the first candle
                 gainAtOpen = open - getBuyPrice()
                 setGain(gainAtOpen)
-                drawdownAtOpen = open - tradeMin
-                setDrawdown(math.min(0, -drawdownAtOpen)) // TODO: Error here? +ve vs -ve...?
-                if (drawdownAtOpen > trailingStop) // this is needed due to sequential scope of functions
+                drawdownAtOpen = open - tradeMin            // -ve if open is below previous min
+                setDrawdown(math.min(0, -drawdownAtOpen))   // saved drawdown is always -ve
+                if (drawdownAtOpen > trailingStop)          // this is needed due to sequential scope of functions
                     endTrade()
                 else
                     // Find the best case exit within the bar (i.e. as soon as the trailing stop is hit)
@@ -564,9 +562,9 @@ else
             if (time_close("") > buyBarCloseTime)   // Avoid drawdown on the first candle
                 gainAtOpen = open - getBuyPrice()
                 setGain(gainAtOpen)
-                drawdownAtOpen = tradeMax - open
-                setDrawdown(math.min(0, -drawdownAtOpen))
-                if (drawdownAtOpen > trailingStop) // this is needed due to sequential scope of functions
+                drawdownAtOpen = tradeMax - open            // -ve if open is above previous max
+                setDrawdown(math.min(0, -drawdownAtOpen))   // saved drawdown is always -ve
+                if (drawdownAtOpen > trailingStop)          // this is needed due to sequential scope of functions
                     endTrade()
                 else
                     // Find the best case exit within the bar (i.e. as soon as the trailing stop is hit)
@@ -578,7 +576,7 @@ else
                     setGain(localGain)
                     localDrawdown = tradeMax - low 
                     setDrawdown(math.min(0, -localDrawdown))
-                    if (localDrawdown > trailingStop) // this is needed due to sequential scope of functions
+                    if (localDrawdown > trailingStop)       // this is needed due to sequential scope of functions
                         endTrade()
                     
         // Set trade min/max
