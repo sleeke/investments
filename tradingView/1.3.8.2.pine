@@ -18,6 +18,7 @@ indicator('1.3.8.2: Indiscriminate daily extreme breaker', '1.3.8.2', false, for
 // TO-DO //
 // ------//
 
+// Extrema should only be calculated on closed bars, otherwise they could end a trade in realtime, e.g. 2023-06-01 10:40
 // Early warning could be split into 1) sufficient momentum & minima found, and 2) close to extrema
 
 // -------//
@@ -145,13 +146,14 @@ varip tradeExtremes = array.new_float(2, -1.0)
 
 // Trade results
 
-varip tradeResults = array.new_float(6, 0)
+varip tradeResults = array.new_float(7, 0)
 varip buyIndex = 0
 varip drawdownIndex = 1
 varip gainIndex = 2
 varip maxDailyDrawdownIndex = 3
 varip maxDrawdownIndex = 4
 varip totalGainIndex = 5
+varip sellIndex = 6
 
 
 // Global indices
@@ -277,6 +279,9 @@ getBuyPrice() =>
 setBuyPrice(value) =>
     array.set(tradeResults, buyIndex, value)
 
+getSellPrice() =>
+    array.get(tradeResults, sellIndex)
+
 getGain() =>
     array.get(tradeResults, gainIndex)
 
@@ -311,20 +316,29 @@ setDayMax(value) =>
 // Actions //
 //---------//
 
-endTrade() =>
+endTrade(sellPrice) =>
+    var actualGain = 0.0
+    if (getDirection() > 0) 
+        actualGain := sellPrice - getBuyPrice()
+    else 
+        actualGain := getBuyPrice() - sellPrice
+
     setSellSignal(-1)
     setDirection(0)
 
     setNumTrades(getNumTrades() + 1)
+
     
-    if getGain() > 0.2
+    if actualGain > 0.2
         setSuccessTrades(getSuccessTrades() + 1)
 
-    setTotalGain(getGain() + getTotalGain())
+    setTotalGain(actualGain + getTotalGain())
 
     array.set(tradeExtremes, minIndex, -1.0)
     array.set(tradeExtremes, maxIndex, -1.0)
     array.set(tradeResults, buyIndex, unset)
+    array.set(tradeResults, sellIndex, sellPrice)
+
     setDrawdown(0)
     setGain(0)
 
@@ -494,7 +508,7 @@ else
             // New low and buy price hasn't been set (or direction has changed); set buy price
 
             if (tradeOpen())
-                endTrade()
+                endTrade(low)
 
             setBuyPrice(low)    // This is being called during a trade
             buyBarCloseTime := time_close("")
@@ -518,7 +532,7 @@ else
             // New high and buy price hasn't been set (or direction has changed); set buy price
 
             if (tradeOpen())
-                endTrade()
+                endTrade(high)
 
             setBuyPrice(high)
             buyBarCloseTime := time_close("")
@@ -535,24 +549,30 @@ else
 
             // TODO: Should the drawdown be ignored on the first candle? Perhaps, since the strategy takes the extreme from that bar
             if (time_close("") > buyBarCloseTime)   // Avoid drawdown on the first candle
-                gainAtOpen = open - getBuyPrice()
+                gainAtOpen = getBuyPrice() - open
                 setGain(gainAtOpen)
-                drawdownAtOpen = open - tradeMin            // -ve if open is below previous min
-                setDrawdown(math.min(0, -drawdownAtOpen))   // saved drawdown is always -ve
-                if (drawdownAtOpen > trailingStop)          // this is needed due to sequential scope of functions
-                    endTrade()
+                drawdownAtOpen = tradeMin - open            // -ve if open is above previous min
+                setDrawdown(math.min(0, drawdownAtOpen))   // saved drawdown is always -ve
+                if (drawdownAtOpen < -trailingStop)          // this is needed due to sequential scope of functions
+                    endTrade(open)
+                // else if (gainAtOpen >= gainStop)
+                //     endTrade(open)
                 else
                     // Find the best case exit within the bar (i.e. as soon as the trailing stop is hit)
                     bestCasePriceInsideBar = high
                     if (bestCasePriceInsideBar > tradeMin + trailingStop)
                         bestCasePriceInsideBar := tradeMin + trailingStop
+                    else
+                        bestCasePriceInsideBar := low
 
                     localGain = getBuyPrice() - bestCasePriceInsideBar
                     setGain(localGain)
-                    localDrawdown = high - tradeMin
-                    setDrawdown(math.min(0, -localDrawdown))
-                    if (localDrawdown > trailingStop) // this is needed due to sequential scope of functions
-                        endTrade()
+                    localDrawdown = tradeMin - high
+                    setDrawdown(math.min(0, localDrawdown))
+                    if (localDrawdown < -trailingStop) // this is needed due to sequential scope of functions
+                        endTrade(bestCasePriceInsideBar)
+                    // else if (localGain >= gainStop)
+                    //     endTrade(high)
 
         
         else if (getDirection() > 0)  // Heading up
@@ -563,19 +583,21 @@ else
                 drawdownAtOpen = tradeMax - open            // -ve if open is above previous max
                 setDrawdown(math.min(0, -drawdownAtOpen))   // saved drawdown is always -ve
                 if (drawdownAtOpen > trailingStop)          // this is needed due to sequential scope of functions
-                    endTrade()
+                    endTrade(open)
                 else
                     // Find the best case exit within the bar (i.e. as soon as the trailing stop is hit)
                     bestCasePriceInsideBar = low
                     if (bestCasePriceInsideBar < tradeMax - trailingStop)
                         bestCasePriceInsideBar := tradeMax - trailingStop
+                    else 
+                        bestCasePriceInsideBar := high
 
                     localGain = bestCasePriceInsideBar - getBuyPrice()
                     setGain(localGain)
                     localDrawdown = tradeMax - low 
                     setDrawdown(math.min(0, -localDrawdown))
                     if (localDrawdown > trailingStop)       // this is needed due to sequential scope of functions
-                        endTrade()
+                        endTrade(bestCasePriceInsideBar)
                     
         // Set trade min/max
         // TODO: I think there's an issue here.. The trade min/max should be set based on direction, no?
@@ -641,18 +663,18 @@ prevBarClose := time_close("")
 if (tradeOpen()) 
     // Stop the trade if it drops below the latest extreme
     if (getDirection() > 0 and getLatestMinima() > 0 and low < getLatestMinima() - reversalThreshold)
-        endTrade()
+        endTrade(low)
         ingoreReturnTypeAgain = true
 
     if (getDirection() < 0 and getLatestMaxima() > 0 and high > getLatestMaxima() + reversalThreshold)
-        endTrade()
+        endTrade(high)
         ingoreReturnTypeAgain = true
 
     // Stop the trade if drawdown < stop limit
     if (getDrawdown() < -trailingStop)
-        endTrade()
+        endTrade(close)
         ingoreReturnTypeAgain = true
 
     if (hour == 15 and minute >= 59 - timeframe.in_seconds() / 60)
-        endTrade()
+        endTrade(close)
         ingoreReturnTypeAgain = true
