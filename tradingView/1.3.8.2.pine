@@ -75,6 +75,47 @@ reversalThreshold = input.float(
      minval=0, 
      maxval=10)
 
+// TODO: This should perhaps be extended to cover specifying a wider range of ranges, 
+// e.g. "Less than -1 or more than 1", or "between 1 and 2"
+requiredOvernightChangeMin = input.float(
+     group="Previous Change",
+     title="minimum percentage overnight change to allow trade", 
+     minval=-100, 
+     defval=0, 
+     maxval=100)
+
+requiredOvernightChangeMax = input.float(
+     group="Previous Change",
+     title="maximum percentage overnight change to allow trade", 
+     minval=-100, 
+     defval=0, 
+     maxval=100)
+
+useOutsideOvernightChange = input.bool(
+     group="Previous Change",
+     title="Use outside of overnight range",
+     defval=true)
+
+requiredIntradayChangeMin = input.float(
+     group="Previous Change",
+     title="minimum percentage intraday change to allow trade", 
+     minval=-100, 
+     defval=0, 
+     maxval=100)
+
+requiredIntradayChangeMax = input.float(
+     group="Previous Change",
+     title="maximum percentage intraday change to allow trade", 
+     minval=-100, 
+     defval=0, 
+     maxval=100)
+
+useOutsideIntradayChange = input.bool(
+     group="Previous Change",
+     title="Use outside of intraday range",
+     defval=true)
+
+
 allowCalls = input.bool(
      group="Trades allowed",
      title="Allow calls",
@@ -102,6 +143,8 @@ tradeWarningColor =     input.color(#d0d0d0, 'Trade warning')
 maximaDeltaColorInput = input.color(#53A4F3, "Maxima delta")
 minimaDeltaColorInput = input.color(#825FC2, "Minima delta")
 momentumColor =         input.color(#007FFF40, "Momentum")
+overnightChangeColor =  input.color(color.rgb(71, 77, 255), "Overnight change")
+intradayChangeColor =   input.color(color.rgb(255, 200, 0), "Intraday change")
 
 
 // ----------//
@@ -320,7 +363,6 @@ getDayMax() =>
 setDayMax(value) =>
     array.set(dayExtremes, maxIndex, value)
 
-
 //---------//
 // Actions //
 //---------//
@@ -397,6 +439,39 @@ inDaytime() =>
 
 tooLateInTheDay() => 
     hour >= 15 //hour == 14 and minute >= 30 or hour >= 15
+
+// ---------------------------------------- //
+// Calculate overnight and intraday changes //
+// ---------------------------------------- //
+
+varip float prevDayClose = na
+varip float currentDayOpen = na
+varip bool newDay = false
+varip int prevDay = 0
+
+tempPrevDayClose = request.security(syminfo.tickerid, "1D", close)  // Changes with current price
+
+newDay := dayofmonth(time) != prevDay and not outsideTradingHours()
+
+if newDay 
+    prevDay := dayofmonth(time)
+    prevDayClose := tempPrevDayClose
+    currentDayOpen := open
+
+intradayChange = (close / currentDayOpen - 1) * 100
+overnightChange = (currentDayOpen / prevDayClose - 1) * 100
+
+overnightChangeIsValid() => 
+    if useOutsideOvernightChange 
+        overnightChange > requiredOvernightChangeMax or overnightChange < requiredOvernightChangeMin
+    else 
+        overnightChange < requiredOvernightChangeMax and overnightChange > requiredOvernightChangeMin
+
+intradayChangeIsValid() => 
+    if useOutsideIntradayChange 
+        intradayChange > requiredIntradayChangeMax or intradayChange < requiredIntradayChangeMin
+    else 
+        intradayChange < requiredIntradayChangeMax and intradayChange > requiredIntradayChangeMin
 
 // ---------------------------//
 // Temp variables from arrays //
@@ -481,13 +556,13 @@ else
 
     if (getLatestMaxima() > 0 and momentum > 0 and allowCalls)
         distanceToMax = high - dayMax   // +ve if higher than day max
-        if (momentum > requiredMomentum * requiredMomentumFraction and distanceToMax > -extremeThreshold)
+        if (momentum > requiredMomentum * requiredMomentumFraction and distanceToMax > -extremeThreshold and overnightChangeIsValid() and intradayChangeIsValid())
             continuousTradeWarning := 1
 
 
     else if (getLatestMinima() > 0 and momentum < 0 and allowPuts)
         distanceToMin = dayMin - low    // +ve if lower than day min 
-        if (momentum < -requiredMomentum * requiredMomentumFraction and distanceToMin > -extremeThreshold)
+        if (momentum < -requiredMomentum * requiredMomentumFraction and distanceToMin > -extremeThreshold and overnightChangeIsValid() and intradayChangeIsValid())
             continuousTradeWarning := 1
 
     else 
@@ -510,6 +585,8 @@ else
      and getLowestMinima() > 0 
      and low < getLowestMinima() - purchaseThreshold
      and maTrend * 100 <= -requiredMomentum
+     and intradayChangeIsValid()
+     and overnightChangeIsValid()
      and not (tooLateInTheDay()))
 
         // Sufficient to buy put
@@ -533,6 +610,8 @@ else
      and getHighestMaxima() > 0 
      and high > getHighestMaxima() + purchaseThreshold
      and maTrend * 100 >= requiredMomentum
+     and intradayChangeIsValid()
+     and overnightChangeIsValid()
      and not (tooLateInTheDay()))
 
         // Sufficient to buy call
@@ -627,24 +706,11 @@ else
 // Plots //
 // ------//
 
-// Calculate previous day's close
-varip float prevDayClose = na
-varip float currentDayOpen = na
-varip bool newDay = false
-varip int prevDay = 0
-
-tempPrevDayClose = request.security(syminfo.tickerid, "1D", close)  // Changes with current price
-
-newDay := dayofmonth(time) != prevDay and not outsideTradingHours()
-
-if newDay 
-    prevDay := dayofmonth(time)
-    prevDayClose := tempPrevDayClose
-    currentDayOpen := open
 
 // Current concern
-plot((currentDayOpen/prevDayClose-1)*100, title="Overnight change", style=plot.style_line, color = color.aqua)
-plot((close/currentDayOpen-1)*100, title="Intraday change", style=plot.style_line, color = color.aqua)
+plot(overnightChange, title="Overnight change", style=plot.style_line, color = overnightChangeColor)
+plot(intradayChange, title="Intraday change", style=plot.style_line, color = intradayChangeColor)
+
 // Gain / Drawdown
 plot(getDrawdown(), title="Drawdown", style=plot.style_columns, color = negativeFadedColor)
 plot(getGain(), title="Gain", style=plot.style_columns, color = positiveFadedColor)
