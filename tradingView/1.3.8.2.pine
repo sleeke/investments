@@ -635,7 +635,7 @@ plot(getBuySignal(), title="Buy signal", style=plot.style_columns, color = buyCo
 plot(getSellSignal(), title="Sell signal", style=plot.style_columns, color = buyColor)
 plot(getMaxDailyDrawdown(), title="Max Drawdown For Day", style=plot.style_line, color = negativeColor)
 // plot(maTrend * 100, title="Momentum", style=plot.style_line, color = momentumColor)
-plot(maTrend * 100 / requiredMomentum, title="Momentum %", style=plot.style_line, color = momentumColor)
+plot(maTrend * 100 / requiredMomentum, title="Momentum %", style=plot.style_area, color = momentumColor)
 // plot(getMaxDrawdown(), title="Max Drawdown", style=plot.style_line, color = debugColor)
 // plot(getBuyPrice(), title="Buy Price", style=plot.style_line, color = debugColor)
 // plot((validForExtremeCalculation() ? 1 : 0), title="Valid", style=plot.style_columns, color = debugColor)
