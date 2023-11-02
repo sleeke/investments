@@ -627,6 +627,24 @@ else
 // Plots //
 // ------//
 
+// Calculate previous day's close
+varip float prevDayClose = na
+varip float currentDayOpen = na
+varip bool newDay = false
+varip int prevDay = 0
+
+tempPrevDayClose = request.security(syminfo.tickerid, "1D", close)  // Changes with current price
+
+newDay := dayofmonth(time) != prevDay and not outsideTradingHours()
+
+if newDay 
+    prevDay := dayofmonth(time)
+    prevDayClose := tempPrevDayClose
+    currentDayOpen := open
+
+// Current concern
+plot((currentDayOpen/prevDayClose-1)*100, title="Overnight change", style=plot.style_line, color = color.aqua)
+plot((close/currentDayOpen-1)*100, title="Intraday change", style=plot.style_line, color = color.aqua)
 // Gain / Drawdown
 plot(getDrawdown(), title="Drawdown", style=plot.style_columns, color = negativeFadedColor)
 plot(getGain(), title="Gain", style=plot.style_columns, color = positiveFadedColor)
