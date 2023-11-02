@@ -29,7 +29,7 @@ indicator('1.3.8.2: Indiscriminate daily extreme breaker', '1.3.8.2', false, for
 studyRange = input.int(       
      group="Study parameters",
      title="Number of sessions either side of local maxima/minima", 
-     defval=2, 
+     defval=5, 
      minval=2, 
      maxval=100)
 
@@ -50,7 +50,7 @@ movingAveragePeriod = input.int(
 requiredMomentum = input.float(       
      group="Trade Entry",
      title="momentum required for trade", 
-     defval=0.05, 
+     defval=0.01, 
      minval=0, 
      maxval=1)
 
@@ -64,14 +64,14 @@ trailingStop = input.float(
 purchaseThreshold = input.float(
      group="Trade Entry",
      title="price difference required past previous extreme before entering trade", 
-     defval=0.0, 
+     defval=0, 
      minval=0, 
      maxval=10)
 
 reversalThreshold = input.float(
      group="Trade Exit",
      title="price to allow past previous opposing extreme before exiting trade", 
-     defval=0.01, 
+     defval=0, 
      minval=0, 
      maxval=10)
 
@@ -101,7 +101,7 @@ debugColor = color.new(#FF7F00, 80)
 tradeWarningColor =     input.color(#d0d0d0, 'Trade warning')
 maximaDeltaColorInput = input.color(#53A4F3, "Maxima delta")
 minimaDeltaColorInput = input.color(#825FC2, "Minima delta")
-momentumColor =         input.color(#007FFF, "Momentum")
+momentumColor =         input.color(#007FFF40, "Momentum")
 
 
 // ----------//
@@ -204,12 +204,18 @@ getSellSignal() =>
 
 setSellSignal(value) => 
     array.set(signals, sellSignalIndex, value)
+    // if (value == -1)
+    //     strategy.close_all()
 
 getDirection() => 
     array.get(signals, directionIndex)
 
 setDirection(value) => 
     array.set(signals, directionIndex, value)
+    // if (value == 1)
+    //     strategy.entry("Call", strategy.long, 1) 
+    // else if (value == -1)
+    //     strategy.entry("Put", strategy.short, 1)
 
 
 // Maxima History
@@ -282,6 +288,9 @@ setBuyPrice(value) =>
 getSellPrice() =>
     array.get(tradeResults, sellIndex)
 
+setSellPrice(value) =>
+    array.set(tradeResults, sellIndex, value)
+
 getGain() =>
     array.get(tradeResults, gainIndex)
 
@@ -336,8 +345,8 @@ endTrade(sellPrice) =>
 
     array.set(tradeExtremes, minIndex, -1.0)
     array.set(tradeExtremes, maxIndex, -1.0)
-    array.set(tradeResults, buyIndex, unset)
-    array.set(tradeResults, sellIndex, sellPrice)
+    setBuyPrice(unset)
+    setSellPrice(sellPrice)
 
     setDrawdown(0)
     setGain(0)
@@ -369,7 +378,9 @@ tradeOpen() =>
     getBuyPrice() > 0
 
 newBar() =>
+    // TODO: This isn't accurate when using realtime data
     time_close("") > prevBarClose
+    // time_close("") / 1000 % timeframe.in_seconds() == 0
     
 outsideTradingHours() =>
     hour < 9 
@@ -385,7 +396,7 @@ inDaytime() =>
      or (hour == 9 and minute > 30) and hour < 15
 
 tooLateInTheDay() => 
-    hour == 14 and minute >= 30 or hour >= 15
+    hour >= 15 //hour == 14 and minute >= 30 or hour >= 15
 
 // ---------------------------//
 // Temp variables from arrays //
@@ -507,10 +518,9 @@ else
 
             // New low and buy price hasn't been set (or direction has changed); set buy price
 
-            if (tradeOpen())
-                endTrade(low)
 
-            setBuyPrice(low)    // This is being called during a trade
+            buyPrice = math.min(getLowestMinima(), getDayMin()) - purchaseThreshold
+            setBuyPrice(buyPrice)    // This is being called during a trade
             buyBarCloseTime := time_close("")
             setDirection(-1)
             setGain(0)
@@ -531,10 +541,9 @@ else
 
             // New high and buy price hasn't been set (or direction has changed); set buy price
 
-            if (tradeOpen())
-                endTrade(high)
 
-            setBuyPrice(high)
+            buyPrice = math.max(getHighestMaxima(), getDayMax()) + purchaseThreshold
+            setBuyPrice(buyPrice)
             buyBarCloseTime := time_close("")
             setDirection(1)
             setGain(0)
@@ -623,8 +632,8 @@ plot(getDrawdown(), title="Drawdown", style=plot.style_columns, color = negative
 plot(getGain(), title="Gain", style=plot.style_columns, color = positiveFadedColor)
 
 // Minima/maxima presence
-plot(minimaFound / -2, title="Minima", style=plot.style_columns, color = debugColor, offset = -(studyRange + 1))
-plot(maximaFound / 2, title="Maxima", style=plot.style_columns, color = debugColor, offset = -(studyRange + 1))
+plot(minimaFound / -2, title="Minima", style=plot.style_area, color = debugColor, offset = -(studyRange + 1), linewidth=2)
+plot(maximaFound / 2, title="Maxima", style=plot.style_area, color = debugColor, offset = -(studyRange + 1), linewidth=2)
 // plot(getLatestMaxima(), title="Latest Maxima", style=plot.style_line, color = debugColor)
 
 // Debug plots
@@ -635,23 +644,28 @@ plot(getBuySignal(), title="Buy signal", style=plot.style_columns, color = buyCo
 plot(getSellSignal(), title="Sell signal", style=plot.style_columns, color = buyColor)
 plot(getMaxDailyDrawdown(), title="Max Drawdown For Day", style=plot.style_line, color = negativeColor)
 // plot(maTrend * 100, title="Momentum", style=plot.style_line, color = momentumColor)
-plot(maTrend * 100 / requiredMomentum, title="Momentum %", style=plot.style_area, color = momentumColor)
+plot(maTrend * 100 / requiredMomentum, title="Momentum %", style=plot.style_area, color = momentumColor, linewidth=2)
 // plot(getMaxDrawdown(), title="Max Drawdown", style=plot.style_line, color = debugColor)
-// plot(getBuyPrice(), title="Buy Price", style=plot.style_line, color = debugColor)
+plot(getBuyPrice(), title="Buy Price", style=plot.style_line, color = debugColor)
+plot(getSellPrice(), title="Sell Price", style=plot.style_line, color = debugColor)
 // plot((validForExtremeCalculation() ? 1 : 0), title="Valid", style=plot.style_columns, color = debugColor)
+// plot(timenow / 1000 % timeframe.in_seconds(), title="new bar?", style=plot.style_columns, color = debugColor)
+// plot(newbartest, title="new bar?", style=plot.style_columns, color = debugColor)
+plot(getDayMin(), title="Day Min", style=plot.style_line, color = debugColor)
+plot(getDayMax(), title="Day Max", style=plot.style_line, color = debugColor)
+plot(getLowestMinima(), title="Lowest Minima", style=plot.style_line, color = debugColor)
+plot(getHighestMaxima(), title="Higest Maxima", style=plot.style_line, color = debugColor)
 
 // Metric plots
 plot(getTotalGain(), title="Total Gain", style=plot.style_line, color = positiveColor)
-plot(getNumTrades(), title="Trades", style=plot.style_line, color = debugColor)
+// plot(getNumTrades(), title="Trades", style=plot.style_line, color = debugColor)
 // plot(getSuccessTrades(), title="Success", style=plot.style_line, color = debugColor)
 plot(getSuccessTrades() / getNumTrades(), title="Success Ratio", style=plot.style_line, color = debugColor)
-plot(getWarnings(), title="Warnings", style=plot.style_line, color = debugColor)
-plot(getNumTrades() / getWarnings(), title="Warning Success Ratio", style=plot.style_line, color = debugColor)
-
+// plot(getWarnings(), title="Warnings", style=plot.style_line, color = debugColor)
+// plot(getNumTrades() / getWarnings(), title="Warning Success Ratio", style=plot.style_line, color = debugColor)
 
 // Track the close of this bar so we can determine if the next run is a new bar    
 prevBarClose := time_close("")
-
 
 
 // -----------//
@@ -666,15 +680,15 @@ if (tradeOpen())
         endTrade(low)
         ingoreReturnTypeAgain = true
 
-    if (getDirection() < 0 and getLatestMaxima() > 0 and high > getLatestMaxima() + reversalThreshold)
+    else if (getDirection() < 0 and getLatestMaxima() > 0 and high > getLatestMaxima() + reversalThreshold)
         endTrade(high)
         ingoreReturnTypeAgain = true
 
     // Stop the trade if drawdown < stop limit
-    if (getDrawdown() < -trailingStop)
+    else if (getDrawdown() < -trailingStop)
         endTrade(close)
         ingoreReturnTypeAgain = true
 
-    if (hour == 15 and minute >= 59 - timeframe.in_seconds() / 60)
+    else if (hour == 15 and minute >= 58 - timeframe.in_seconds() / 60)
         endTrade(close)
         ingoreReturnTypeAgain = true
