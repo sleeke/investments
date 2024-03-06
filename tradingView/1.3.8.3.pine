@@ -1,0 +1,783 @@
+// This source code is subject to the terms of the Mozilla Public License 2.0 at https://mozilla.org/MPL/2.0/
+// © BritishBritishColumbian
+
+
+//@version=5
+indicator('1.3.8.3: Avg-based daily extreme breaker', '1.3.8.3', false, format.inherit, 3)
+
+// strategy(
+//      "1.3.8.3: Avg-based daily extreme breaker",
+//      overlay=true, 
+//      margin_long=0, 
+//      margin_short=0, 
+//      default_qty_type=strategy.percent_of_equity, 
+//      default_qty_value=1,
+//      calc_on_every_tick=true)
+
+// ------//
+// TO-DO //
+// ------//
+
+// Extrema should only be calculated on closed bars, otherwise they could end a trade in realtime, e.g. 2023-06-01 10:40
+// Early warning could be split into 1) sufficient momentum & minima found, and 2) close to extrema
+
+// -------//
+// Inputs //
+// -------//
+
+// The number of sessions to use for the maxima/minima
+studyRange = input.int(       
+     group="Study parameters",
+     title="Number of sessions either side of local maxima/minima", 
+     defval=5, 
+     minval=2, 
+     maxval=100)
+
+requiredDeltaPercent = input.float(       
+     group="Study parameters",
+     title="percent change required for local maxima/minima", 
+     defval=0, 
+     minval=0, 
+     maxval=10)
+
+movingAveragePeriod = input.int(       
+     group="Study parameters",
+     title="candles to use for momentum calculation", 
+     defval=16, 
+     minval=1, 
+     maxval=100)
+
+requiredMomentum = input.float(       
+     group="Trade Entry",
+     title="momentum required for trade", 
+     defval=0.01, 
+     minval=0, 
+     maxval=1)
+
+trailingStop = input.float(
+     group="Trade Exit",
+     title="price drop to halt trade", 
+     defval=1.1, 
+     minval=0, 
+     maxval=10)
+
+purchaseThreshold = input.float(
+     group="Trade Entry",
+     title="price difference required past previous extreme before entering trade", 
+     defval=0, 
+     minval=0, 
+     maxval=10)
+
+reversalThreshold = input.float(
+     group="Trade Exit",
+     title="price to allow past previous opposing extreme before exiting trade", 
+     defval=0, 
+     minval=0, 
+     maxval=1000)
+
+// TODO: This should perhaps be extended to cover specifying a wider range of ranges, 
+// e.g. "Less than -1 or more than 1", or "between 1 and 2"
+requiredOvernightChangeMin = input.float(
+     group="Previous Change",
+     title="minimum percentage overnight change to allow trade", 
+     minval=-100, 
+     defval=0, 
+     maxval=100)
+
+requiredOvernightChangeMax = input.float(
+     group="Previous Change",
+     title="maximum percentage overnight change to allow trade", 
+     minval=-100, 
+     defval=0, 
+     maxval=100)
+
+useOutsideOvernightChange = input.bool(
+     group="Previous Change",
+     title="Use outside of overnight range",
+     defval=true)
+
+requiredIntradayChangeMin = input.float(
+     group="Previous Change",
+     title="minimum percentage intraday change to allow trade", 
+     minval=-100, 
+     defval=0, 
+     maxval=100)
+
+requiredIntradayChangeMax = input.float(
+     group="Previous Change",
+     title="maximum percentage intraday change to allow trade", 
+     minval=-100, 
+     defval=0, 
+     maxval=100)
+
+useOutsideIntradayChange = input.bool(
+     group="Previous Change",
+     title="Use outside of intraday range",
+     defval=true)
+
+
+allowCalls = input.bool(
+     group="Trades allowed",
+     title="Allow calls",
+     defval=true)
+
+allowPuts = input.bool(
+     group="Trades allowed",
+     title="Allow puts",
+     defval=true)
+
+// ------------//
+// Plot colors //
+// ------------//
+
+// Fixed colors
+positiveColor = color.new(#51B561, 30)
+positiveFadedColor = color.new(positiveColor, 70)
+negativeColor = color.new(#FA4040, 50)
+negativeFadedColor = color.new(negativeColor, 80)
+buyColor = color.new(#7A00FA, 50)
+debugColor = color.new(#FF7F00, 80)
+
+// Customizable colors
+tradeWarningColor =     input.color(#d0d0d0, 'Trade warning')
+maximaDeltaColorInput = input.color(#53A4F3, "Maxima delta")
+minimaDeltaColorInput = input.color(#825FC2, "Minima delta")
+momentumColor =         input.color(#007FFF40, "Momentum")
+overnightChangeColor =  input.color(color.rgb(71, 77, 255), "Overnight change")
+intradayChangeColor =   input.color(color.rgb(255, 200, 0), "Intraday change")
+
+
+// ----------//
+// Constants //
+// ----------//
+
+varip unset = -1.0
+varip continuousTradeWarningRequired = 1.8
+
+
+// ---------------------------//
+// Maxima/minima calculation //
+// ---------------------------//
+
+varip maximaHistory = array.new_float(2, 0.0)
+varip minimaHistory = array.new_float(2, 0.0)
+
+minimaStudyPeriod = array.new_float()
+maximaStudyPeriod = array.new_float()
+for i = 0 to studyRange * 2
+	array.push(minimaStudyPeriod, low[i + 1])   // +1 to avoid current bar interfering with calculation
+	array.push(maximaStudyPeriod, high[i + 1])
+
+localMinima = array.min(minimaStudyPeriod)
+localMaxima = array.max(maximaStudyPeriod)
+deltaPercent = math.abs(localMaxima / localMinima - 1) * 100
+
+minimaFound = 0
+maximaFound = 0
+
+
+// -----------------//
+// Accessor backing //
+// -----------------//
+
+varip dayExtremes = array.new_float(2, -1.0)
+varip extremaExtremes = array.new_float(2, -1.0)
+varip tradeExtremes = array.new_float(2, -1.0)
+
+
+
+
+// Trade results
+
+varip tradeResults = array.new_float(7, 0)
+varip buyIndex = 0
+varip drawdownIndex = 1
+varip gainIndex = 2
+varip maxDailyDrawdownIndex = 3
+varip maxDrawdownIndex = 4
+varip totalGainIndex = 5
+varip sellIndex = 6
+
+
+// Global indices
+
+varip minIndex = 0
+varip maxIndex = 1
+varip latestMinMax = 1
+varip buyBarCloseTime = 0
+
+
+// Signals
+
+varip signals = array.new_float(3, 0)
+varip directionIndex = 0
+varip buySignalIndex = 1
+varip sellSignalIndex = 2
+
+
+// Metrics
+
+varip metrics = array.new_float(3, 0)
+varip numTradesIndex = 0
+varip numSuccessIndex = 1
+varip numWarningsIndex = 2
+
+
+// Temp variables (reset each bar)
+
+varip prevBarClose = 0
+varip continuousTradeWarning = 0.0
+tradeWarning = 0
+
+// ----------//
+// Accessors //
+// ----------//
+
+
+// Signals
+
+getBuySignal() => 
+    array.get(signals, buySignalIndex)
+
+setBuySignal(value) => 
+    array.set(signals, buySignalIndex, value)
+
+getSellSignal() => 
+    array.get(signals, sellSignalIndex)
+
+setSellSignal(value) => 
+    array.set(signals, sellSignalIndex, value)
+    // if (value == -1)
+    //     strategy.close_all()
+
+getDirection() => 
+    array.get(signals, directionIndex)
+
+setDirection(value) => 
+    array.set(signals, directionIndex, value)
+    // if (value == 1)
+    //     strategy.entry("Call", strategy.long, 1) 
+    // else if (value == -1)
+    //     strategy.entry("Put", strategy.short, 1)
+
+
+// Maxima History
+
+getLatestMaxima() =>
+    array.get(maximaHistory, latestMinMax)
+
+getLatestMinima() =>
+    array.get(minimaHistory, latestMinMax)
+
+getHighestMaxima() =>
+    array.get(extremaExtremes, maxIndex)
+
+setHighestMaxima(value) =>
+    array.set(extremaExtremes, maxIndex, value)
+
+getLowestMinima() =>
+    array.get(extremaExtremes, minIndex)
+
+setLowestMinima(value) =>
+    array.set(extremaExtremes, minIndex, value)
+
+
+// Metrics
+
+getNumTrades() => 
+    array.get(metrics, numTradesIndex)
+
+setNumTrades(trades) => 
+    array.set(metrics, numTradesIndex, trades)
+
+getSuccessTrades() => 
+    array.get(metrics, numSuccessIndex)
+
+setSuccessTrades(trades) => 
+    array.set(metrics, numSuccessIndex, trades)
+
+getWarnings() => 
+    array.get(metrics, numWarningsIndex)
+
+setWarnings(trades) => 
+    array.set(metrics, numWarningsIndex, trades)
+
+
+// Trade Results
+
+getDrawdown() =>
+    array.get(tradeResults, drawdownIndex)
+
+getMaxDailyDrawdown() =>
+    array.get(tradeResults, maxDailyDrawdownIndex)
+
+getMaxDrawdown() =>
+    array.get(tradeResults, maxDrawdownIndex)
+
+setMaxDrawdown(value) =>
+    array.set(tradeResults, maxDrawdownIndex, value)
+
+setDrawdown(value) =>
+    array.set(tradeResults, drawdownIndex, value)
+    if (value < array.get(tradeResults, maxDailyDrawdownIndex) and value > -100)
+        array.set(tradeResults, maxDailyDrawdownIndex, value)
+
+getBuyPrice() =>
+    array.get(tradeResults, buyIndex)
+
+setBuyPrice(value) =>
+    array.set(tradeResults, buyIndex, value)
+
+getSellPrice() =>
+    array.get(tradeResults, sellIndex)
+
+setSellPrice(value) =>
+    array.set(tradeResults, sellIndex, value)
+
+getGain() =>
+    array.get(tradeResults, gainIndex)
+
+setGain(value) =>
+    array.set(tradeResults, gainIndex, value)
+
+getTotalGain() =>
+    array.get(tradeResults, totalGainIndex)
+
+setTotalGain(value) =>
+    array.set(tradeResults, totalGainIndex, value)
+    if (value < getMaxDrawdown())
+        setMaxDrawdown(value)
+
+
+// Day Extremes
+
+getDayMin() =>
+    array.get(dayExtremes, minIndex)
+
+setDayMin(value) =>
+    array.set(dayExtremes, minIndex, value)
+
+getDayMax() =>
+    array.get(dayExtremes, maxIndex)
+
+setDayMax(value) =>
+    array.set(dayExtremes, maxIndex, value)
+
+//---------//
+// Actions //
+//---------//
+
+endTrade(sellPrice) =>
+    var actualGain = 0.0
+    if (getDirection() > 0) 
+        actualGain := sellPrice - getBuyPrice()
+    else 
+        actualGain := getBuyPrice() - sellPrice
+
+    setSellSignal(-1)
+    setDirection(0)
+
+    setNumTrades(getNumTrades() + 1)
+
+    
+    if actualGain > 0.2
+        setSuccessTrades(getSuccessTrades() + 1)
+
+    setTotalGain(actualGain + getTotalGain())
+
+    array.set(tradeExtremes, minIndex, -1.0)
+    array.set(tradeExtremes, maxIndex, -1.0)
+    setBuyPrice(unset)
+    setSellPrice(sellPrice)
+
+    setDrawdown(0)
+    setGain(0)
+
+resetEverything() =>
+    setDayMin(-1.0)
+    setDayMax(-1.0)
+    setHighestMaxima(-1.0)
+    setLowestMinima(-1.0)
+    array.set(maximaHistory, 0, -1.0)
+    array.set(minimaHistory, 0, -1.0)
+    array.set(maximaHistory, 1, -1.0)
+    array.set(minimaHistory, 1, -1.0)
+    array.set(tradeExtremes, minIndex, -1.0)
+    array.set(tradeExtremes, maxIndex, -1.0)
+    setBuyPrice(unset)
+    setDrawdown(0)
+    array.set(tradeResults, maxDailyDrawdownIndex, 0.0)
+    setGain(0)
+    setDirection(0)
+
+
+
+//--------------//
+// Conditionals //
+//--------------//
+
+tradeOpen() => 
+    getBuyPrice() > 0
+
+newBar() =>
+    // TODO: This isn't accurate when using realtime data
+    time_close("") > prevBarClose
+    // time_close("") / 1000 % timeframe.in_seconds() == 0
+    
+outsideTradingHours() =>
+    hour < 9 
+     or (hour == 9 and minute < 30) 
+     or hour > 15
+
+validForExtremeCalculation() =>
+    (hour == 9 and minute > 30 + studyRange * 2 * timeframe.in_seconds() / 60) 
+     or (hour > 9 and hour < 16)
+
+inDaytime() =>
+    hour > 9 
+     or (hour == 9 and minute > 30) and hour < 15
+
+tooLateInTheDay() => 
+    hour >= 15 //hour == 14 and minute >= 30 or hour >= 15
+
+// ---------------------------------------- //
+// Calculate overnight and intraday changes //
+// ---------------------------------------- //
+
+varip float prevDayClose = na
+varip float currentDayOpen = na
+varip bool newDay = false
+varip int prevDay = 0
+
+tempPrevDayClose = request.security(syminfo.tickerid, "1D", close)  // Changes with current price
+
+newDay := dayofmonth(time) != prevDay and not outsideTradingHours()
+
+if newDay 
+    prevDay := dayofmonth(time)
+    prevDayClose := tempPrevDayClose
+    currentDayOpen := open
+
+intradayChange = (close / currentDayOpen - 1) * 100
+overnightChange = (currentDayOpen / prevDayClose - 1) * 100
+
+overnightChangeIsValid() => 
+    if useOutsideOvernightChange 
+        overnightChange > requiredOvernightChangeMax or overnightChange < requiredOvernightChangeMin
+    else 
+        overnightChange < requiredOvernightChangeMax and overnightChange > requiredOvernightChangeMin
+
+intradayChangeIsValid() => 
+    if useOutsideIntradayChange 
+        intradayChange > requiredIntradayChangeMax or intradayChange < requiredIntradayChangeMin
+    else 
+        intradayChange < requiredIntradayChangeMax and intradayChange > requiredIntradayChangeMin
+
+// ---------------------------//
+// Temp variables from arrays //
+// ---------------------------//
+
+dayMin = getDayMin()
+dayMax = getDayMax()
+
+tradeMin = array.get(tradeExtremes, minIndex)
+tradeMax = array.get(tradeExtremes, maxIndex)
+
+movingAverage = ta.sma(close[1], movingAveragePeriod)
+maTrend = movingAverage / movingAverage[1] - 1
+
+//---------------------//
+// Tidy up for new bar //
+//---------------------//
+
+if (newBar())
+    setBuySignal(0)
+    setSellSignal(0)
+
+//-------------------//
+// Start calculating //
+//-------------------//
+
+if (validForExtremeCalculation())
+// TODO: Accessor for minimaStudyPeriod etc..
+    if (array.get(maximaStudyPeriod, studyRange) >= localMaxima and deltaPercent > requiredDeltaPercent)
+        array.shift(maximaHistory)
+        array.push(maximaHistory, localMaxima)
+        maximaFound := 1
+        if (getHighestMaxima() < 0 or localMaxima > getHighestMaxima())
+            setHighestMaxima(localMaxima)
+
+    if (array.get(minimaStudyPeriod, studyRange) <= localMinima and deltaPercent > requiredDeltaPercent)
+        array.shift(minimaHistory)
+        array.push(minimaHistory, localMinima)
+        minimaFound := 1
+        if (getLowestMinima() < 0 or localMinima < getLowestMinima())
+            setLowestMinima(localMinima)
+
+    if (minimaFound == 1)
+        lowerMinimaFound = dayMin < 0 or getLatestMinima() < dayMin
+
+        if (lowerMinimaFound)                
+            setDayMin(getLatestMinima())
+
+    if (maximaFound == 1)
+        
+        higherMaximaFound = dayMax < 0 or getLatestMaxima() > dayMax
+        
+        if (higherMaximaFound)                
+            setDayMax(getLatestMaxima())
+
+if (outsideTradingHours())
+    resetEverything()
+    continuousTradeWarning := 0.0
+
+else
+    // Inside trading hours; game on!
+    // TODO: Define exactly what each of these conditionals represents...
+
+    if (low[1] < dayMin or dayMin < 0)
+        setDayMin(low[1])
+        ignore = true   // Hack to prevent the array assignment scrwwing with the conditionals
+
+    if (high[1] > dayMax or dayMax < 0)
+        setDayMax(high[1])
+        ignore = true   // Hack to prevent the array assignment scrwwing with the conditionals
+
+
+    //--------------------------//
+    // Continuous trade warning //
+    //--------------------------//
+
+    varip prevContinuousTradeWarning = 0.0
+    varip extremeThreshold = 0.35
+    varip requiredMomentumFraction = 0.7 
+
+    momentum = (maTrend * 100)
+    continuousTradeWarning := 0
+
+    if (overnightChangeIsValid() and intradayChangeIsValid() and ((momentum > 0 and allowCalls) or (momentum < 0 and allowPuts)))
+        continuousTradeWarning += 1
+
+    if (getLatestMaxima() > 0 and momentum > 0 and allowCalls)
+        distanceToMax = high - dayMax   // +ve if higher than day max
+        if (momentum > requiredMomentum * requiredMomentumFraction and distanceToMax > -extremeThreshold)
+            continuousTradeWarning += 1
+
+
+    else if (getLatestMinima() > 0 and momentum < 0 and allowPuts)
+        distanceToMin = dayMin - low    // +ve if lower than day min 
+        if (momentum < -requiredMomentum * requiredMomentumFraction and distanceToMin > -extremeThreshold)
+            continuousTradeWarning += 1
+
+    else 
+        continuousTradeWarning := 0
+
+    // if (continuousTradeWarning >= continuousTradeWarningRequired and prevContinuousTradeWarning < continuousTradeWarningRequired and not tradeOpen())
+    if (prevContinuousTradeWarning < continuousTradeWarning and not tradeOpen())
+        setWarnings(getWarnings() + 1)
+        tradeWarning := int(continuousTradeWarning)
+
+    prevContinuousTradeWarning := continuousTradeWarning
+
+
+    //-------------//
+    // Open trade? //
+    //-------------//
+
+    if (allowPuts
+     and getDayMin() > 0
+     and low < getDayMin() - purchaseThreshold 
+     and getLowestMinima() > 0 
+     and low < getLowestMinima() - purchaseThreshold
+     and maTrend * 100 <= -requiredMomentum
+     and intradayChangeIsValid()
+     and overnightChangeIsValid()
+     and not (tooLateInTheDay()))
+
+        // Sufficient to buy put
+
+        if (not tradeOpen() or getDirection() > 0)
+
+            // New low and buy price hasn't been set (or direction has changed); set buy price
+
+
+            buyPrice = math.min(getLowestMinima(), getDayMin()) - purchaseThreshold
+            setBuyPrice(buyPrice)    // This is being called during a trade
+            buyBarCloseTime := time_close("")
+            setDirection(-1)
+            setGain(0)
+            setDrawdown(0)
+            setBuySignal(1)
+
+    else if (allowCalls 
+     and getDayMax() > 0 
+     and high > getDayMax() + purchaseThreshold 
+     and getHighestMaxima() > 0 
+     and high > getHighestMaxima() + purchaseThreshold
+     and maTrend * 100 >= requiredMomentum
+     and intradayChangeIsValid()
+     and overnightChangeIsValid()
+     and not (tooLateInTheDay()))
+
+        // Sufficient to buy call
+
+        if (not tradeOpen() or getDirection() < 0)
+
+            // New high and buy price hasn't been set (or direction has changed); set buy price
+
+
+            buyPrice = math.max(getHighestMaxima(), getDayMax()) + purchaseThreshold
+            setBuyPrice(buyPrice)
+            buyBarCloseTime := time_close("")
+            setDirection(1)
+            setGain(0)
+            setDrawdown(0)
+            setBuySignal(1)
+
+    if (tradeOpen())
+
+        // Trade is open; track drawdown and gain
+
+        if (getDirection() < 0)  // Heading down
+
+            // TODO: Should the drawdown be ignored on the first candle? Perhaps, since the strategy takes the extreme from that bar
+            if (time_close("") > buyBarCloseTime)   // Avoid drawdown on the first candle
+                gainAtOpen = getBuyPrice() - open
+                setGain(gainAtOpen)
+                drawdownAtOpen = tradeMin - open            // -ve if open is above previous min
+                setDrawdown(math.min(0, drawdownAtOpen))   // saved drawdown is always -ve
+                if (drawdownAtOpen < -trailingStop)          // this is needed due to sequential scope of functions
+                    endTrade(open)
+                // else if (gainAtOpen >= gainStop)
+                //     endTrade(open)
+                else
+                    // Find the best case exit within the bar (i.e. as soon as the trailing stop is hit)
+                    bestCasePriceInsideBar = high
+                    if (bestCasePriceInsideBar > tradeMin + trailingStop)
+                        bestCasePriceInsideBar := tradeMin + trailingStop
+                    else
+                        bestCasePriceInsideBar := low
+
+                    localGain = getBuyPrice() - bestCasePriceInsideBar
+                    setGain(localGain)
+                    localDrawdown = tradeMin - high
+                    setDrawdown(math.min(0, localDrawdown))
+                    if (localDrawdown < -trailingStop) // this is needed due to sequential scope of functions
+                        endTrade(bestCasePriceInsideBar)
+                    // else if (localGain >= gainStop)
+                    //     endTrade(high)
+
+        
+        else if (getDirection() > 0)  // Heading up
+                
+            if (time_close("") > buyBarCloseTime)   // Avoid drawdown on the first candle
+                gainAtOpen = open - getBuyPrice()
+                setGain(gainAtOpen)
+                drawdownAtOpen = tradeMax - open            // -ve if open is above previous max
+                setDrawdown(math.min(0, -drawdownAtOpen))   // saved drawdown is always -ve
+                if (drawdownAtOpen > trailingStop)          // this is needed due to sequential scope of functions
+                    endTrade(open)
+                else
+                    // Find the best case exit within the bar (i.e. as soon as the trailing stop is hit)
+                    bestCasePriceInsideBar = low
+                    if (bestCasePriceInsideBar < tradeMax - trailingStop)
+                        bestCasePriceInsideBar := tradeMax - trailingStop
+                    else 
+                        bestCasePriceInsideBar := high
+
+                    localGain = bestCasePriceInsideBar - getBuyPrice()
+                    setGain(localGain)
+                    localDrawdown = tradeMax - low 
+                    setDrawdown(math.min(0, -localDrawdown))
+                    if (localDrawdown > trailingStop)       // this is needed due to sequential scope of functions
+                        endTrade(bestCasePriceInsideBar)
+                    
+        // Set trade min/max
+        // TODO: I think there's an issue here.. The trade min/max should be set based on direction, no?
+        if (tradeMin < 0)
+            array.set(tradeExtremes, minIndex, math.min(low, getBuyPrice()))
+        else
+            array.set(tradeExtremes, minIndex, math.min(low, tradeMin, getBuyPrice()))
+
+        if (tradeMax < 0)
+            array.set(tradeExtremes, maxIndex, math.max(high, getBuyPrice()))
+        else
+            array.set(tradeExtremes, maxIndex, math.max(high, tradeMax, getBuyPrice()))
+
+        ingoreReturnType = true
+
+
+// ------//
+// Plots //
+// ------//
+
+
+// Current concern
+plot(overnightChange, title="Overnight change", style=plot.style_line, color = overnightChangeColor)
+plot(intradayChange, title="Intraday change", style=plot.style_line, color = intradayChangeColor)
+
+// Gain / Drawdown
+plot(getDrawdown(), title="Drawdown", style=plot.style_columns, color = negativeFadedColor)
+plot(getGain(), title="Gain", style=plot.style_columns, color = positiveFadedColor)
+
+// Minima/maxima presence
+plot(minimaFound / -2, title="Minima", style=plot.style_area, color = debugColor, offset = -(studyRange + 1), linewidth=2)
+plot(maximaFound / 2, title="Maxima", style=plot.style_area, color = debugColor, offset = -(studyRange + 1), linewidth=2)
+// plot(getLatestMaxima(), title="Latest Maxima", style=plot.style_line, color = debugColor)
+
+// Debug plots
+warningColor = color.new(buyColor, 80)
+plot(tradeWarning * 2, title="Trade warning", style=plot.style_columns, color = warningColor)
+plot(getDirection(), title="Direction", style=plot.style_line, color = buyColor)
+plot(getBuySignal(), title="Buy signal", style=plot.style_columns, color = buyColor)
+plot(getSellSignal(), title="Sell signal", style=plot.style_columns, color = buyColor)
+plot(getMaxDailyDrawdown(), title="Max Drawdown For Day", style=plot.style_line, color = negativeColor)
+// plot(maTrend * 100, title="Momentum", style=plot.style_line, color = momentumColor)
+plot(maTrend * 100 / requiredMomentum, title="Momentum %", style=plot.style_area, color = momentumColor, linewidth=2)
+// plot(getMaxDrawdown(), title="Max Drawdown", style=plot.style_line, color = debugColor)
+plot(getBuyPrice(), title="Buy Price", style=plot.style_line, color = debugColor)
+plot(getSellPrice(), title="Sell Price", style=plot.style_line, color = debugColor)
+// plot((validForExtremeCalculation() ? 1 : 0), title="Valid", style=plot.style_columns, color = debugColor)
+// plot(timenow / 1000 % timeframe.in_seconds(), title="new bar?", style=plot.style_columns, color = debugColor)
+// plot(newbartest, title="new bar?", style=plot.style_columns, color = debugColor)
+plot(getDayMin(), title="Day Min", style=plot.style_line, color = debugColor)
+plot(getDayMax(), title="Day Max", style=plot.style_line, color = debugColor)
+plot(getLowestMinima(), title="Lowest Minima", style=plot.style_line, color = debugColor)
+plot(getHighestMaxima(), title="Higest Maxima", style=plot.style_line, color = debugColor)
+
+// Metric plots
+plot(getTotalGain(), title="Total Gain", style=plot.style_line, color = positiveColor)
+// plot(getNumTrades(), title="Trades", style=plot.style_line, color = debugColor)
+// plot(getSuccessTrades(), title="Success", style=plot.style_line, color = debugColor)
+plot(getSuccessTrades() / getNumTrades(), title="Success Ratio", style=plot.style_line, color = debugColor)
+// plot(getWarnings(), title="Warnings", style=plot.style_line, color = debugColor)
+// plot(getNumTrades() / getWarnings(), title="Warning Success Ratio", style=plot.style_line, color = debugColor)
+
+// Track the close of this bar so we can determine if the next run is a new bar    
+prevBarClose := time_close("")
+
+
+// -----------//
+// End trade? //
+// -----------//
+
+// Only end the trade after everything has been plotted
+
+if (tradeOpen()) 
+    // Stop the trade if it drops below the latest extreme
+    if (getDirection() > 0 and getLatestMinima() > 0 and low < getLatestMinima() - reversalThreshold)
+        endTrade(low)
+        ingoreReturnTypeAgain = true
+
+    else if (getDirection() < 0 and getLatestMaxima() > 0 and high > getLatestMaxima() + reversalThreshold)
+        endTrade(high)
+        ingoreReturnTypeAgain = true
+
+    // Stop the trade if drawdown < stop limit
+    else if (getDrawdown() < -trailingStop)
+        endTrade(close)
+        ingoreReturnTypeAgain = true
+
+    else if (hour == 15 and minute >= 58 - timeframe.in_seconds() / 60)
+        endTrade(close)
+        ingoreReturnTypeAgain = true
