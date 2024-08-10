@@ -210,6 +210,9 @@ varip tradeExtremes = array.new_float(2, -1.0)
 
 // Trade results
 
+varip tradeStatus = array.new_bool(1, 0)
+varip tradeOpenIndex = 0
+
 varip tradeResults = array.new_float(7, 0)
 varip buyIndex = 0
 varip drawdownIndex = 1
@@ -327,6 +330,12 @@ setWarnings(trades) =>
 
 // Trade Results
 
+getTradeOpen() =>
+    array.get(tradeStatus, tradeOpenIndex)
+
+setTradeOpen(bool value) =>
+    array.set(tradeStatus, tradeOpenIndex, value)
+
 getDrawdown() =>
     array.get(tradeResults, drawdownIndex)
 
@@ -390,6 +399,7 @@ setDayMax(value) =>
 //---------//
 
 endTrade(sellPrice) =>
+    setTradeOpen(false)
     var actualGain = 0.0
     if (getDirection() > 0) 
         actualGain := sellPrice - getBuyPrice()
@@ -416,6 +426,7 @@ endTrade(sellPrice) =>
     setGain(0)
 
 resetEverything() =>
+    setTradeOpen(false)
     setDayMin(-1.0)
     setDayMax(-1.0)
     setHighestMaxima(-1.0)
@@ -437,9 +448,6 @@ resetEverything() =>
 //--------------//
 // Conditionals //
 //--------------//
-
-tradeOpen() => 
-    getBuyPrice() > 0
 
 newBar() =>
     // TODO: This isn't accurate when using realtime data
@@ -623,7 +631,7 @@ else
         continuousTradeWarning := 0
 
     // if (continuousTradeWarning >= continuousTradeWarningRequired and prevContinuousTradeWarning < continuousTradeWarningRequired and not tradeOpen())
-    if (prevContinuousTradeWarning < continuousTradeWarning and not tradeOpen() and overnightChangeIsValid())
+    if (prevContinuousTradeWarning < continuousTradeWarning and not getTradeOpen() and overnightChangeIsValid())
         setWarnings(getWarnings() + 1)
         tradeWarning := int(continuousTradeWarning)
 
@@ -652,11 +660,11 @@ else
 
         // Sufficient to buy put
 
-        if (not tradeOpen() or getDirection() > 0)
+        if (getTradeOpen() == false)// or getDirection() > 0)
 
             // New low and buy price hasn't been set (or direction has changed); set buy price
 
-
+            setTradeOpen(true)
             buyPrice = math.min(getLowestMinima(), getDayMin()) - purchaseThreshold
             setBuyPrice(buyPrice)    // This is being called during a trade
             buyBarCloseTime := time_close("")
@@ -678,11 +686,11 @@ else
 
         // Sufficient to buy call
 
-        if (not tradeOpen() or getDirection() < 0)
+        if (getTradeOpen() == false)// or getDirection() < 0)
 
             // New high and buy price hasn't been set (or direction has changed); set buy price
 
-
+            setTradeOpen(true)
             buyPrice = math.max(getHighestMaxima(), getDayMax()) + purchaseThreshold
             setBuyPrice(buyPrice)
             buyBarCloseTime := time_close("")
@@ -691,7 +699,7 @@ else
             setDrawdown(0)
             setBuySignal(1)
 
-    if (tradeOpen())
+    if (getTradeOpen())
 
         // Trade is open; track drawdown and gain
 
@@ -824,7 +832,7 @@ prevBarClose := time_close("")
 
 // Only end the trade after everything has been plotted
 
-if (tradeOpen()) 
+if (getTradeOpen()) 
     // Stop the trade if it drops below the latest extreme
     if (getDirection() > 0 and getLatestMinima() > 0 and low < getLatestMinima() - reversalThreshold)
         endTrade(low)
