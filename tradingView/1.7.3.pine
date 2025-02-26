@@ -18,20 +18,6 @@ strategy(
 // Inputs //
 // -------//
 
-// The number of sessions to use for the maxima/minima
-studyRange = input.int(       
-     group="Study parameters",
-     title="Number of sessions either side of local maxima/minima", 
-     defval=5, 
-     minval=2, 
-     maxval=100)
-
-requiredDeltaPercent = input.float(       
-     group="Study parameters",
-     title="percent change required for local maxima/minima", 
-     defval=0, 
-     minval=0, 
-     maxval=10)
 
 movingAveragePeriod = input.int(       
      group="Study parameters",
@@ -61,19 +47,7 @@ capPercent = input.float(
      minval=0, 
      maxval=2.0)
 
-purchaseThreshold = input.float(
-     group="Trade Entry",
-     title="price difference required past previous extreme before entering trade", 
-     defval=0, 
-     minval=0, 
-     maxval=10)
 
-reversalThreshold = input.float(
-     group="Trade Exit",
-     title="price to allow past previous opposing extreme before exiting trade", 
-     defval=0, 
-     minval=0, 
-     maxval=1000)
 
 requiredOvernightChangeMin = input.float(
      group="Previous Change",
@@ -143,11 +117,6 @@ allowPuts = input.bool(
      title="Allow puts",
      defval=true)
 
-debugPlotsEnabled = input.bool(
-     group="Debug",
-     title="Show debug plots",
-     defval=false)
-
 lastTradeHour = input.int(
      group="Day bounds",
      title="Last trade (hour)",
@@ -162,6 +131,10 @@ lastTradeMinute = input.int(
      minval=0,
      maxval=59)
 
+debugPlotsEnabled = input.bool(
+     group="Debug",
+     title="Show debug plots",
+     defval=false)
 
 // ------------//
 // Plot colors //
@@ -192,28 +165,6 @@ totalChangeChanceColor =    input.color(#00b43c2F, "Total change chance")
 
 varip unset = -1.0
 varip continuousTradeWarningRequired = 1.8
-
-
-// ---------------------------//
-// Maxima/minima calculation //
-// ---------------------------//
-
-varip maximaHistory = array.new_float(2, 0.0)
-varip minimaHistory = array.new_float(2, 0.0)
-
-minimaStudyPeriod = array.new_float()
-maximaStudyPeriod = array.new_float()
-for i = 0 to studyRange * 2
-	array.push(minimaStudyPeriod, low[i + 1])   // +1 to avoid current bar interfering with calculation
-	array.push(maximaStudyPeriod, high[i + 1])
-
-localMinima = array.min(minimaStudyPeriod)
-localMaxima = array.max(maximaStudyPeriod)
-deltaPercent = math.abs(localMaxima / localMinima - 1) * 100
-
-minimaFound = 0
-maximaFound = 0
-
 
 // -----------------//
 // Accessor backing //
@@ -305,26 +256,6 @@ setDirection(value) =>
     else if (value == -1)
         strategy.entry("Put", strategy.short, 1)
 
-
-// Maxima History
-
-getLatestMaxima() =>
-    array.get(maximaHistory, latestMinMax)
-
-getLatestMinima() =>
-    array.get(minimaHistory, latestMinMax)
-
-getHighestMaxima() =>
-    array.get(extremaExtremes, maxIndex)
-
-setHighestMaxima(value) =>
-    array.set(extremaExtremes, maxIndex, value)
-
-getLowestMinima() =>
-    array.get(extremaExtremes, minIndex)
-
-setLowestMinima(value) =>
-    array.set(extremaExtremes, minIndex, value)
 
 
 // Metrics
@@ -462,12 +393,6 @@ resetEverything() =>
     setTradeOpen(false)
     setDayMin(-1.0)
     setDayMax(-1.0)
-    setHighestMaxima(-1.0)
-    setLowestMinima(-1.0)
-    array.set(maximaHistory, 0, -1.0)
-    array.set(minimaHistory, 0, -1.0)
-    array.set(maximaHistory, 1, -1.0)
-    array.set(minimaHistory, 1, -1.0)
     array.set(tradeExtremes, minIndex, -1.0)
     array.set(tradeExtremes, maxIndex, -1.0)
     setBuyPrice(unset)
@@ -590,35 +515,6 @@ if (newBar())
 // Start calculating //
 //-------------------//
 
-if (validForExtremeCalculation())
-// TODO: Accessor for minimaStudyPeriod etc..
-    if (array.get(maximaStudyPeriod, studyRange) >= localMaxima and deltaPercent > requiredDeltaPercent)
-        array.shift(maximaHistory)
-        array.push(maximaHistory, localMaxima)
-        maximaFound := 1
-        if (getHighestMaxima() < 0 or localMaxima > getHighestMaxima())
-            setHighestMaxima(localMaxima)
-
-    if (array.get(minimaStudyPeriod, studyRange) <= localMinima and deltaPercent > requiredDeltaPercent)
-        array.shift(minimaHistory)
-        array.push(minimaHistory, localMinima)
-        minimaFound := 1
-        if (getLowestMinima() < 0 or localMinima < getLowestMinima())
-            setLowestMinima(localMinima)
-
-    if (minimaFound == 1)
-        lowerMinimaFound = dayMin < 0 or getLatestMinima() < dayMin
-
-        if (lowerMinimaFound)                
-            setDayMin(getLatestMinima())
-
-    if (maximaFound == 1)
-        
-        higherMaximaFound = dayMax < 0 or getLatestMaxima() > dayMax
-        
-        if (higherMaximaFound)                
-            setDayMax(getLatestMaxima())
-
 if (outsideTradingHours())
     resetEverything()
     continuousTradeWarning := 0.0
@@ -650,13 +546,13 @@ else
     if (overnightChangeIsValid() and intradayChangeIsValid() and ((momentum > 0 and allowCalls) or (momentum < 0 and allowPuts)))
         continuousTradeWarning += 1
 
-    if (getLatestMaxima() > 0 and momentum > 0 and allowCalls)
+    if (momentum > 0 and allowCalls)
         distanceToMax = high - dayMax   // +ve if higher than day max
         if (momentum > requiredMomentum * requiredMomentumFraction and distanceToMax > -extremeThreshold)
             continuousTradeWarning += 1
 
 
-    else if (getLatestMinima() > 0 and momentum < 0 and allowPuts)
+    else if (momentum < 0 and allowPuts)
         distanceToMin = dayMin - low    // +ve if lower than day min 
         if (momentum < -requiredMomentum * requiredMomentumFraction and distanceToMin > -extremeThreshold)
             continuousTradeWarning += 1
@@ -823,10 +719,6 @@ plot(totalChangeChanceIsValid() ? 1 : 0, title="Total change chance valid", styl
 plot(getDrawdown(), title="Drawdown", style=plot.style_columns, color = negativeFadedColor, display = displayIfDebugEnabled)
 plot(getGain(), title="Gain", style=plot.style_columns, color = positiveFadedColor)
 
-// Minima/maxima presence
-plot(minimaFound / -2, title="Minima", style=plot.style_area, color = debugColor, offset = -(studyRange + 1), linewidth=2, display = dontDisplayInStatusBar)
-plot(maximaFound / 2, title="Maxima", style=plot.style_area, color = debugColor, offset = -(studyRange + 1), linewidth=2, display = dontDisplayInStatusBar)
-
 // Debug plots
 warningColor = color.new(buyColor, 80)
 plot(tradeWarning * 2, title="Trade warning", style=plot.style_columns, color = tradeWarning < 0 ? negativeColor : warningColor, display = dontDisplayInStatusBar)
@@ -840,8 +732,6 @@ plot(getSellPrice(), title="Sell Price", style=plot.style_line, color = debugCol
 plot((goodToTrade() ? 1 : 0), title="Good to trade", style=plot.style_columns, color = debugColor)
 plot(getDayMin(), title="Day Min", style=plot.style_line, color = debugColor, display = displayIfDebugEnabled)
 plot(getDayMax(), title="Day Max", style=plot.style_line, color = debugColor, display = displayIfDebugEnabled)
-plot(getLowestMinima(), title="Lowest Minima", style=plot.style_line, color = debugColor, display = displayIfDebugEnabled)
-plot(getHighestMaxima(), title="Higest Maxima", style=plot.style_line, color = debugColor, display = displayIfDebugEnabled)
 plot(prevDayClose, title="Previous Day's Close", style=plot.style_line, color = debugColor, display = displayIfDebugEnabled)
 
 // Metric plots
