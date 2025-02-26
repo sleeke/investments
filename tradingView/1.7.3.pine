@@ -487,16 +487,12 @@ resetEverything() =>
 newBar() =>
     // TODO: This isn't accurate when using realtime data
     time_close("") > prevBarClose
-    // time_close("") / 1000 % timeframe.in_seconds() == 0
     
 outsideTradingHours() =>
     hour < 9 
      or (hour == 9 and minute < 30) 
      or hour > 15
 
-// inDaytime() =>
-//     hour > 9 
-//      or (hour == 9 and minute > 30) and hour < 15
 validForExtremeCalculation() =>
     not na(time(timeframe.period, "0930-1600"))
 
@@ -668,7 +664,6 @@ else
     else 
         continuousTradeWarning := 0
 
-    // if (continuousTradeWarning >= continuousTradeWarningRequired and prevContinuousTradeWarning < continuousTradeWarningRequired and not tradeOpen())
     if (prevContinuousTradeWarning < continuousTradeWarning and not getTradeOpen() and overnightChangeIsValid())
         setWarnings(getWarnings() + 1)
         tradeWarning := int(continuousTradeWarning)
@@ -686,18 +681,11 @@ else
     //-------------//
 
     if (allowPuts
-    //  and getDayMin() > 0
-    //  and low < getDayMin() - purchaseThreshold 
-    //  and getLowestMinima() > 0 
-    //  and low < getLowestMinima() - purchaseThreshold
      and maTrend * 100 <= -requiredMomentum
-    //  and intradayChangeIsValid()
      and intradayChange < requiredIntradayChangeMin
      and totalChangeChanceIsValid()
      and totalChange < 0
-    //  and overnightChangeIsValid()
      and (getNumTradesToday() == 0)    // Prevents multiple trades
-    //  and getLastTradeDirection() >= 0    
      and goodToTrade())
         // Sufficient to buy put
 
@@ -707,7 +695,6 @@ else
 
             setTradeOpen(true)
             buyPrice = close
-            // buyPrice = math.min(getLowestMinima(), getDayMin()) - purchaseThreshold
             setBuyPrice(buyPrice)    // This is being called during a trade
             buyBarCloseTime := time_close("")
             setDirection(-1)
@@ -717,18 +704,11 @@ else
             setBuySignal(1)
 
     else if (allowCalls 
-    //  and getDayMax() > 0 
-    //  and high > getDayMax() + purchaseThreshold 
-    //  and getHighestMaxima() > 0 
-    //  and high > getHighestMaxima() + purchaseThreshold
      and maTrend * 100 >= requiredMomentum
-    //  and intradayChangeIsValid()
-    //  and overnightChangeIsValid()
      and intradayChange > requiredIntradayChangeMax
      and totalChangeChanceIsValid()
      and totalChange > 0
      and (getNumTradesToday() == 0)    // Prevents multiple trades
-    //  and getLastTradeDirection() <= 0
      and goodToTrade())
 
         // Sufficient to buy call
@@ -739,7 +719,6 @@ else
 
             setTradeOpen(true)
             buyPrice = close
-            // buyPrice = math.max(getHighestMaxima(), getDayMax()) + purchaseThreshold
             setBuyPrice(buyPrice)
             buyBarCloseTime := time_close("")
             setDirection(1)
@@ -767,8 +746,6 @@ else
                 setDrawdown(math.min(0, drawdownAtOpen))   // saved drawdown is always -ve
                 if (drawdownAtOpen < -trailingStop)          // this is needed due to sequential scope of functions
                     endTrade(open)
-                // else if (gainAtOpen >= gainStop)
-                //     endTrade(open)
                 else
                     // Find the best case exit within the bar (i.e. as soon as the trailing stop is hit)
                     bestCasePriceInsideBar = high
@@ -783,8 +760,6 @@ else
                     setDrawdown(math.min(0, localDrawdown))
                     if (localDrawdown < -trailingStop) // this is needed due to sequential scope of functions
                         endTrade(bestCasePriceInsideBar)
-                    // else if (localGain >= gainStop)
-                    //     endTrade(high)
 
         
         else if (getDirection() > 0)  // Heading up
@@ -841,7 +816,6 @@ var displayIfDebugEnabled = debugPlotsEnabled ? display.all : display.none
 // Current concern
 plot(overnightChange, title="Overnight change", style=plot.style_line, color = overnightChangeColor, display = displayIfDebugEnabled)
 plot(intradayChange, title="Intraday change", style=plot.style_line, color = intradayChangeColor, display = displayIfDebugEnabled)
-// plot(totalChange, title="Total change", style=plot.style_line, color = totalChangeColor)
 plot(totalChangeChance(), title="Total change chance", style=plot.style_area, color = totalChangeChanceColor, display = displayIfDebugEnabled)
 plot(totalChangeChanceIsValid() ? 1 : 0, title="Total change chance valid", style=plot.style_area, color = totalChangeChanceColor, display = dontDisplayInStatusBar)
 
@@ -852,7 +826,6 @@ plot(getGain(), title="Gain", style=plot.style_columns, color = positiveFadedCol
 // Minima/maxima presence
 plot(minimaFound / -2, title="Minima", style=plot.style_area, color = debugColor, offset = -(studyRange + 1), linewidth=2, display = dontDisplayInStatusBar)
 plot(maximaFound / 2, title="Maxima", style=plot.style_area, color = debugColor, offset = -(studyRange + 1), linewidth=2, display = dontDisplayInStatusBar)
-// plot(getLatestMaxima(), title="Latest Maxima", style=plot.style_line, color = debugColor)
 
 // Debug plots
 warningColor = color.new(buyColor, 80)
@@ -861,14 +834,10 @@ plot(getDirection(), title="Direction", style=plot.style_line, color = buyColor,
 plot(getBuySignal(), title="Buy signal", style=plot.style_columns, color = buyColor, display = dontDisplayInStatusBar)
 plot(getSellSignal(), title="Sell signal", style=plot.style_columns, color = buyColor, display = dontDisplayInStatusBar)
 plot(getMaxDailyDrawdown(), title="Max Drawdown For Day", style=plot.style_line, color = negativeColor, display = displayIfDebugEnabled)
-// plot(maTrend * 100, title="Momentum", style=plot.style_line, color = momentumColor)
 plot(maTrend * 100 / requiredMomentum, title="Momentum %", style=plot.style_area, color = momentumColor, linewidth=2)
-// plot(getMaxDrawdown(), title="Max Drawdown", style=plot.style_line, color = debugColor)
 plot(getBuyPrice(), title="Buy Price", style=plot.style_line, color = debugColor, display = displayIfDebugEnabled)
 plot(getSellPrice(), title="Sell Price", style=plot.style_line, color = debugColor, display = displayIfDebugEnabled)
 plot((goodToTrade() ? 1 : 0), title="Good to trade", style=plot.style_columns, color = debugColor)
-// plot(timenow / 1000 % timeframe.in_seconds(), title="new bar?", style=plot.style_columns, color = debugColor)
-// plot(newbartest, title="new bar?", style=plot.style_columns, color = debugColor)
 plot(getDayMin(), title="Day Min", style=plot.style_line, color = debugColor, display = displayIfDebugEnabled)
 plot(getDayMax(), title="Day Max", style=plot.style_line, color = debugColor, display = displayIfDebugEnabled)
 plot(getLowestMinima(), title="Lowest Minima", style=plot.style_line, color = debugColor, display = displayIfDebugEnabled)
@@ -878,10 +847,7 @@ plot(prevDayClose, title="Previous Day's Close", style=plot.style_line, color = 
 // Metric plots
 plot(getTotalGain(), title="Total Gain", style=plot.style_line, color = positiveColor)
 plot(getNumTradesToday(), title="Trades", style=plot.style_line, color = debugColor)
-// plot(getSuccessTrades(), title="Success", style=plot.style_line, color = debugColor)
 plot(getSuccessTrades() / getNumTrades(), title="Success Ratio", style=plot.style_line, color = debugColor)
-// plot(getWarnings(), title="Warnings", style=plot.style_line, color = debugColor)
-// plot(getNumTrades() / getWarnings(), title="Warning Success Ratio", style=plot.style_line, color = debugColor)
 
 // Track the close of this bar so we can determine if the next run is a new bar    
 prevBarClose := time_close("")
@@ -894,21 +860,10 @@ prevBarClose := time_close("")
 // Only end the trade after everything has been plotted
 
 if (getTradeOpen()) 
-    // Stop the trade if it drops below the latest extreme
-    // if (getDirection() > 0 and getLatestMinima() > 0 and low < getLatestMinima() - reversalThreshold)
-    //     endTrade(low)
-    //     ingoreReturnTypeAgain = true
-
-    // else if (getDirection() < 0 and getLatestMaxima() > 0 and high > getLatestMaxima() + reversalThreshold)
-    //     endTrade(high)
-    //     ingoreReturnTypeAgain = true
-
-    // Stop the trade if drawdown < stop limit
-    // else 
     if (getDrawdown() < -trailingStop)
         endTrade(close)
         ingoreReturnTypeAgain = true
 
-    else if (hour == 15 and minute >= 45)//8 - timeframe.in_seconds() / 60)
+    else if (hour == 15 and minute >= 45)
         endTrade(close)
         ingoreReturnTypeAgain = true
