@@ -42,10 +42,10 @@ trailingStopPercent = input.float(
 
 capPercent = input.float(
      group="Trade Exit",
-     title="percentage of risk to exit on the positive side of the trade", 
+     title="fraction or multiple of risk to exit on the positive side of the trade", 
      defval=0.3, 
      minval=0, 
-     maxval=2.0)
+     maxval=5.0)
 
 
 
@@ -707,12 +707,13 @@ else
 // ------//
 
 var dontDisplayInStatusBar = display.all - display.status_line
+var dontDisplayInChart = display.all - display.pane
 var displayIfDebugEnabled = debugPlotsEnabled ? display.all : display.none
 
 // Current concern
 plot(overnightChange, title="Overnight change", style=plot.style_line, color = overnightChangeColor, display = displayIfDebugEnabled)
 plot(intradayChange, title="Intraday change", style=plot.style_line, color = intradayChangeColor, display = displayIfDebugEnabled)
-plot(totalChangeChance(), title="Total change chance", style=plot.style_area, color = totalChangeChanceColor, display = displayIfDebugEnabled)
+plot(totalChangeChance(), title="Total change chance", style=plot.style_area, color = totalChangeChanceColor, display = display.all)
 plot(totalChangeChanceIsValid() ? 1 : 0, title="Total change chance valid", style=plot.style_area, color = totalChangeChanceColor, display = dontDisplayInStatusBar)
 
 // Gain / Drawdown
@@ -735,7 +736,7 @@ plot(getDayMax(), title="Day Max", style=plot.style_line, color = debugColor, di
 plot(prevDayClose, title="Previous Day's Close", style=plot.style_line, color = debugColor, display = displayIfDebugEnabled)
 
 // Metric plots
-plot(getTotalGain(), title="Total Gain", style=plot.style_line, color = positiveColor)
+plot(getTotalGain(), title="Total Gain", style=plot.style_line, color = positiveColor, display = dontDisplayInChart)
 plot(getNumTradesToday(), title="Trades", style=plot.style_line, color = debugColor)
 plot(getSuccessTrades() / getNumTrades(), title="Success Ratio", style=plot.style_line, color = debugColor)
 
