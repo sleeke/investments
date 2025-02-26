@@ -6,20 +6,13 @@
 // indicator('1.7.3: Simple market open follower', '1.7.3', false, format.inherit, 3)
 
 strategy(
-     "1.7.3: Simple market open rebound",
+     "1.7.3: Simple market open follower",
      overlay=true, 
      margin_long=0, 
      margin_short=0, 
      default_qty_type=strategy.percent_of_equity, 
      default_qty_value=1,
      calc_on_every_tick=true)
-
-// ------//
-// TO-DO //
-// ------//
-
-// Extrema should only be calculated on closed bars, otherwise they could end a trade in realtime, e.g. 2023-06-01 10:40
-// Early warning could be split into 1) sufficient momentum & minima found, and 2) close to extrema
 
 // -------//
 // Inputs //
@@ -82,8 +75,6 @@ reversalThreshold = input.float(
      minval=0, 
      maxval=1000)
 
-// TODO: This should perhaps be extended to cover specifying a wider range of ranges, 
-// e.g. "Less than -1 or more than 1", or "between 1 and 2"
 requiredOvernightChangeMin = input.float(
      group="Previous Change",
      title="minimum percentage overnight change to allow trade", 
@@ -156,6 +147,21 @@ debugPlotsEnabled = input.bool(
      group="Debug",
      title="Show debug plots",
      defval=false)
+
+lastTradeHour = input.int(
+     group="Day bounds",
+     title="Last trade (hour)",
+     defval=9,
+     minval=0,
+     maxval=24)
+
+lastTradeMinute = input.int(
+     group="Day bounds",
+     title="Last trade (minute)",
+     defval=30,
+     minval=0,
+     maxval=59)
+
 
 // ------------//
 // Plot colors //
@@ -488,31 +494,19 @@ outsideTradingHours() =>
      or (hour == 9 and minute < 30) 
      or hour > 15
 
-var millisecondsInMinute = 1000 * 60
-var studyRangeBufferMinutes = studyRange * 2 * timeframe.in_seconds() / 60
-
-startHour = 4
-startMinute = 0
-endHour = 16
-endMinute = 0
-
-startMinute := startMinute + studyRangeBufferMinutes
-while startMinute >= 60 
-    startHour := startHour + 1
-    startMinute := startMinute - 60
-
-startString = str.tostring(startHour, "00") + str.tostring(startMinute, "00")
-endString = str.tostring(endHour, "00") + str.tostring(endMinute, "00")
-
+// inDaytime() =>
+//     hour > 9 
+//      or (hour == 9 and minute > 30) and hour < 15
 validForExtremeCalculation() =>
+    not na(time(timeframe.period, "0930-1600"))
+
+goodToTrade() => 
+    dayStartHour = 9
+    dayStartMinute = 30
+    startString = str.tostring(dayStartHour, "00") + str.tostring(dayStartMinute, "00")
+    endString = str.tostring(lastTradeHour, "00") + str.tostring(lastTradeMinute, "00")
+
     not na(time(timeframe.period, startString + "-" + endString))
-
-inDaytime() =>
-    hour > 9 
-     or (hour == 9 and minute > 30) and hour < 15
-
-tooLateInTheDay() => 
-    hour >= 10 //hour == 14 and minute >= 30 or hour >= 15
 
 // ---------------------------------------- //
 // Calculate overnight and intraday changes //
@@ -704,8 +698,7 @@ else
     //  and overnightChangeIsValid()
      and (getNumTradesToday() == 0)    // Prevents multiple trades
     //  and getLastTradeDirection() >= 0    
-     and not (tooLateInTheDay()))
-
+     and goodToTrade())
         // Sufficient to buy put
 
         if (getTradeOpen() == false)// or getDirection() > 0)
@@ -736,7 +729,7 @@ else
      and totalChange > 0
      and (getNumTradesToday() == 0)    // Prevents multiple trades
     //  and getLastTradeDirection() <= 0
-     and not (tooLateInTheDay()))
+     and goodToTrade())
 
         // Sufficient to buy call
 
@@ -873,7 +866,7 @@ plot(maTrend * 100 / requiredMomentum, title="Momentum %", style=plot.style_area
 // plot(getMaxDrawdown(), title="Max Drawdown", style=plot.style_line, color = debugColor)
 plot(getBuyPrice(), title="Buy Price", style=plot.style_line, color = debugColor, display = displayIfDebugEnabled)
 plot(getSellPrice(), title="Sell Price", style=plot.style_line, color = debugColor, display = displayIfDebugEnabled)
-plot((validForExtremeCalculation() ? 1 : 0), title="Valid", style=plot.style_columns, color = debugColor)
+plot((goodToTrade() ? 1 : 0), title="Good to trade", style=plot.style_columns, color = debugColor)
 // plot(timenow / 1000 % timeframe.in_seconds(), title="new bar?", style=plot.style_columns, color = debugColor)
 // plot(newbartest, title="new bar?", style=plot.style_columns, color = debugColor)
 plot(getDayMin(), title="Day Min", style=plot.style_line, color = debugColor, display = displayIfDebugEnabled)
