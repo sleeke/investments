@@ -3,10 +3,10 @@
 
 
 //@version=5
-// indicator('1.3.9.1: Simple market open follower', '1.3.9.1', false, format.inherit, 3)
+// indicator('1.3.9.2: Simple market open follower', '1.3.9.2', false, format.inherit, 3)
 
 strategy(
-     "1.3.9.1: Historic extreme breaker",
+     "1.3.9.2: Historic extreme breaker",
      overlay=true, 
      margin_long=0, 
      margin_short=0, 
@@ -47,6 +47,13 @@ capPercent = input.float(
      defval=0.3, 
      minval=0, 
      maxval=5.0)
+
+purchaseThreshold = input.float(
+     group="Trade Entry",
+     title="price difference required past previous extreme before entering trade", 
+     defval=0, 
+     minval=0, 
+     maxval=10)
 
 requiredOvernightChangeMin = input.float(
      group="Previous Change",
@@ -576,10 +583,10 @@ totalChangeChanceIsValid() =>
 
 outsideExtremes(int direction) =>
     if (direction < 0)
-        close < getPremarketMin() //and close < getPrevDayMin()
+        low < getPremarketMin() - purchaseThreshold //and close < getPrevDayMin()
 
     else if (direction > 0)
-        close > getPremarketMax() //and close > getPrevDayMax()
+        high > getPremarketMax() + purchaseThreshold//and close > getPrevDayMax()
 
 tradeValid(int direction, float maTrend) =>
     bool momentumValid = false
@@ -596,9 +603,9 @@ tradeValid(int direction, float maTrend) =>
      and (getNumTradesToday() == 0)    // Prevents multiple trades
     //  and goodToTrade()
 
-openTrade(int direction) =>
+openTrade(int direction, priceWhenValid) =>
     setTradeOpen(true)
-    buyPrice = close
+    buyPrice = priceWhenValid
     setBuyPrice(buyPrice)    // This is being called during a trade
     setDirection(direction)
     setLastTradeDirection(direction)
@@ -720,7 +727,7 @@ else
         if (getTradeOpen() == false)// or getDirection() > 0)
 
             // New low and buy price hasn't been set (or direction has changed); set buy price
-            openTrade(-1)
+            openTrade(-1, getPremarketMin() - purchaseThreshold)
             buyBarCloseTime := time_close("")
 
 
@@ -730,7 +737,7 @@ else
         if (getTradeOpen() == false)// or getDirection() < 0)
 
             // New high and buy price hasn't been set (or direction has changed); set buy price
-            openTrade(1)
+            openTrade(1, getPremarketMax() + purchaseThreshold)
             buyBarCloseTime := time_close("")
 
     if (getTradeOpen())
